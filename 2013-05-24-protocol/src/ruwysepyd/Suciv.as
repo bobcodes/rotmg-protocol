@@ -12,7 +12,7 @@ package ruwysepyd
    import kysy.Ducuqa;
    import fom.Kyh;
    import flash.system.Capabilities;
-   import sakugyt.Tobafavu;
+   import aaa.rotmg.ui.ServersScreenUI;
    import sebehesa.Komukuho;
    import nafa.Vahoz;
    import flash.events.Event;
@@ -103,7 +103,7 @@ package ruwysepyd
       private function fybe() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.zogytuso.dispatch(new Tobafavu());
+         this.zogytuso.dispatch(new ServersScreenUI());
          return;
       }
 

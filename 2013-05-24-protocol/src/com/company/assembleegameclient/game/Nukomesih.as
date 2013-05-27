@@ -7,7 +7,7 @@ package com.company.assembleegameclient.game
    import hotewa.Baqifa;
    import ruwysepyd.Jyjimagi;
    import com.company.assembleegameclient.map.Wypyj;
-   import bisok.Qiwycuz;
+   import aaa.rotmg.action.mapping.RotMGActionMapperAbstract;
    import com.company.assembleegameclient.objects.GameObject;
    import quqe.Cinyl;
 
@@ -43,7 +43,7 @@ package com.company.assembleegameclient.game
 
       public var camera_:Wypyj;
 
-      public var gsc_:Qiwycuz;
+      public var gsc_:RotMGActionMapperAbstract;
 
       public function initialize() : void {
          return;

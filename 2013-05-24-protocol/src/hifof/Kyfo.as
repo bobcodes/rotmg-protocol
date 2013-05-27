@@ -5,12 +5,12 @@ package hifof
    import voto.Cala;
    import lagizizoq.Mys;
    import voto.Nemo;
-   import kogyc.Lifew;
+   import aaa.rotmg.ui.ServersContainer;
    import tasig.Zyhifo;
    import tasig.Lyfijo;
    import tasig.Miwe;
    import jiha.Kysysine;
-   import leji.Qavazit;
+   import aaa.rotmg.net.ServersXMLParser;
 
 
    public class Kyfo extends Object implements Silikyta
@@ -50,14 +50,14 @@ package hifof
       private function piqawa() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.cemohoqal.map(Lifew).lyvov(Zyhifo);
+         this.cemohoqal.map(ServersContainer).lyvov(Zyhifo);
          return;
       }
 
       private function dec() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.cemohoqal.map(Lifew).cufypy(this.cacihed());
+         this.cemohoqal.map(ServersContainer).cufypy(this.cacihed());
          return;
       }
 
@@ -68,8 +68,8 @@ package hifof
       private function lijomeh() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.cemohoqal.map(Lifew).lyvov(Miwe);
-         this.davyl.map(Kysysine).bez(Qavazit);
+         this.cemohoqal.map(ServersContainer).lyvov(Miwe);
+         this.davyl.map(Kysysine).bez(ServersXMLParser);
          return;
       }
    }

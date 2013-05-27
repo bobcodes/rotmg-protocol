@@ -3,7 +3,7 @@ package najilihak
    import fulaw.Dasin;
    import jypuq.Pyzokipu;
    import aaa.rotmg.net.RotMGNetworkHandler;
-   import bisok.Qiwycuz;
+   import aaa.rotmg.action.mapping.RotMGActionMapperAbstract;
    import sonepyc.Symukytu;
 
 
@@ -25,7 +25,7 @@ package najilihak
       public function execute() : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         var _loc1_:Symukytu = this.govizupas.runozak(Qiwycuz.RESKIN) as Symukytu;
+         var _loc1_:Symukytu = this.govizupas.runozak(RotMGActionMapperAbstract.RESKIN) as Symukytu;
          _loc1_.skinID=this.skin.id;
          this.server.sendMessage(_loc1_);
          return;

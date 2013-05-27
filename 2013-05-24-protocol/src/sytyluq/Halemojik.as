@@ -13,7 +13,7 @@ package sytyluq
    import fuquqo.Peh;
    import zubamyki.Sywyvu;
    import fuquqo.Ryreqo;
-   import bisok.Qiwycuz;
+   import aaa.rotmg.action.mapping.RotMGActionMapperAbstract;
    import quqe.Text;
    import fuquqo.Lygub;
    import fuquqo.Tybyze;
@@ -56,7 +56,7 @@ package sytyluq
          this.cemohoqal.map(Kunyma).pybe();
          this.cemohoqal.map(Peh).pybe();
          this.davyl.map(Sywyvu).bez(Ryreqo);
-         this.dyje.map(Qiwycuz.TEXT).rafakone(Text).hitizy(Lygub);
+         this.dyje.map(RotMGActionMapperAbstract.TEXT).rafakone(Text).hitizy(Lygub);
          this.davyl.map(Tybyze).bez(Zehesat);
          this.mediatorMap.map(Lazegi).zusu(Kidyzy);
          this.mediatorMap.map(Zelyly).zusu(Zuseleki);

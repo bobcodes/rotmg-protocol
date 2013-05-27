@@ -16,7 +16,7 @@ package bebero
    import najilihak.Majurav;
    import najilihak.Putinil;
    import najilihak.Levewe;
-   import bisok.Qiwycuz;
+   import aaa.rotmg.action.mapping.RotMGActionMapperAbstract;
    import sonepyc.Symukytu;
    import najilihak.Tegiqon;
 
@@ -48,7 +48,7 @@ package bebero
          this.davyl.map(Lelequ).bez(Kov);
          this.davyl.map(Tofud).bez(Majurav);
          this.davyl.map(Putinil).bez(Levewe);
-         this.dyje.map(Qiwycuz.RESKIN).rafakone(Symukytu).hitizy(Tegiqon);
+         this.dyje.map(RotMGActionMapperAbstract.RESKIN).rafakone(Symukytu).hitizy(Tegiqon);
          this.context.fyf.rewyji(this.cijakini);
          return;
       }

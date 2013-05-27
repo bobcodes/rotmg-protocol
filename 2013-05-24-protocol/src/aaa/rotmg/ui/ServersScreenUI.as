@@ -1,4 +1,4 @@
-package sakugyt
+package aaa.rotmg.ui
 {
    import flash.display.Sprite;
    import movimet.Lufub;
@@ -18,9 +18,9 @@ package sakugyt
    import vahejo.Tetywybil;
 
 
-   public class Tobafavu extends Sprite
+   public class ServersScreenUI extends Sprite
    {
-      public function Tobafavu() {
+      public function ServersScreenUI() {
          var _loc1_:* = false;
          var _loc2_:* = true;
          super();
@@ -37,7 +37,7 @@ package sakugyt
 
       private var fir:Sprite;
 
-      private var cahug:Wemufuq;
+      private var _serverListUI:ServerList;
 
       private var cunahide:Tira;
 
@@ -48,7 +48,7 @@ package sakugyt
       private function qugar(param1:Event) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         this.cahug.y=8-this.cunahide.cimubito()*(this.cahug.height-400);
+         this._serverListUI.y=8-this.cunahide.cimubito()*(this._serverListUI.height-400);
          return;
       }
 
@@ -82,7 +82,7 @@ package sakugyt
          this.cunahide=new Tira(16,400);
          this.cunahide.x=800-this.cunahide.width-4;
          this.cunahide.y=104;
-         this.cunahide.jyqecubi(400,this.cahug.height);
+         this.cunahide.jyqecubi(400,this._serverListUI.height);
          this.cunahide.addEventListener(Event.CHANGE,this.qugar);
          addChild(this.cunahide);
          return;
@@ -91,10 +91,10 @@ package sakugyt
       private function zigyzuv() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.cahug=new Wemufuq(this.servers);
-         this.cahug.y=8;
-         this.cahug.addEventListener(Event.COMPLETE,this.zun);
-         this.fir.addChild(this.cahug);
+         this._serverListUI=new ServerList(this.servers);
+         this._serverListUI.y=8;
+         this._serverListUI.addEventListener(Event.COMPLETE,this.zun);
+         this.fir.addChild(this._serverListUI);
          return;
       }
 

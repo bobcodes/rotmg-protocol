@@ -16,7 +16,7 @@ package qylir
    import hif.Rorody;
    import com.company.assembleegameclient.util.Kibaviv;
    import com.company.assembleegameclient.map.Map;
-   import bisok.Qiwycuz;
+   import aaa.rotmg.action.mapping.RotMGActionMapperAbstract;
    import pirus.Vimaz;
    import com.company.assembleegameclient.objects.OneWayContainer;
    import com.company.assembleegameclient.objects.Container;
@@ -116,7 +116,7 @@ package qylir
                   _loc6_=_loc2_.hywot.curPlayer.nextAvailableInventorySlot();
                   if(_loc6_!=-1)
                   {
-                     Qiwycuz.worunyjub.invSwap(this.view.curPlayer,_loc2_.hywot.owner,_loc2_.nejidebup,_loc2_.cyjop.itemId,this.view.curPlayer,_loc6_,Vimaz.sufybefyr);
+                     RotMGActionMapperAbstract.worunyjub.invSwap(this.view.curPlayer,_loc2_.hywot.owner,_loc2_.nejidebup,_loc2_.cyjop.itemId,this.view.curPlayer,_loc6_,Vimaz.sufybefyr);
                      _loc2_.setItem(Vimaz.sufybefyr);
                      _loc2_.towiqoju(this.view.curPlayer);
                   }
@@ -176,11 +176,11 @@ package qylir
       private function rutazurek(param1:Moho) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(!Qiwycuz.worunyjub||!this.view.kacubuhu||!param1||this.gihopuheg.bomokic(param1.vycuc()).komysolad<=this.ruhakony.qizys.map.player_.getPotionCount(param1.vycuc()))
+         if(!RotMGActionMapperAbstract.worunyjub||!this.view.kacubuhu||!param1||this.gihopuheg.bomokic(param1.vycuc()).komysolad<=this.ruhakony.qizys.map.player_.getPotionCount(param1.vycuc()))
          {
             return;
          }
-         Qiwycuz.worunyjub.invSwapPotion(this.view.curPlayer,this.view.owner,param1.nejidebup,param1.cyjop.itemId,this.view.curPlayer,Dewydo.fil(param1.vycuc()),Vimaz.sufybefyr);
+         RotMGActionMapperAbstract.worunyjub.invSwapPotion(this.view.curPlayer,this.view.owner,param1.nejidebup,param1.cyjop.itemId,this.view.curPlayer,Dewydo.fil(param1.vycuc()),Vimaz.sufybefyr);
          param1.setItem(Vimaz.sufybefyr);
          param1.towiqoju(this.view.curPlayer);
          return;
@@ -239,12 +239,12 @@ package qylir
                }
                else
                {
-                  Qiwycuz.worunyjub.invDrop(this.view.owner,param1.nejidebup,param1.vycuc());
+                  RotMGActionMapperAbstract.worunyjub.invDrop(this.view.owner,param1.nejidebup,param1.vycuc());
                }
             }
             else
             {
-               Qiwycuz.worunyjub.invDrop(this.view.owner,param1.nejidebup,param1.vycuc());
+               RotMGActionMapperAbstract.worunyjub.invDrop(this.view.owner,param1.nejidebup,param1.vycuc());
             }
          }
          param1.setItem(-1);
@@ -254,11 +254,11 @@ package qylir
       private function ruc(param1:Zyciwu, param2:Zyciwu) : Boolean {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         if(!Qiwycuz.worunyjub||!this.view.kacubuhu||!param1||!param2)
+         if(!RotMGActionMapperAbstract.worunyjub||!this.view.kacubuhu||!param1||!param2)
          {
             return false;
          }
-         Qiwycuz.worunyjub.invSwap(this.view.curPlayer,this.view.owner,param1.nejidebup,param1.cyjop.itemId,param2.hywot.owner,param2.nejidebup,param2.cyjop.itemId);
+         RotMGActionMapperAbstract.worunyjub.invSwap(this.view.curPlayer,this.view.owner,param1.nejidebup,param1.cyjop.itemId,param2.hywot.owner,param2.nejidebup,param2.cyjop.itemId);
          var _loc3_:int = param1.vycuc();
          param1.setItem(param2.vycuc());
          param2.setItem(_loc3_);
@@ -270,11 +270,11 @@ package qylir
       private function gojywuq(param1:Zyciwu, param2:Container, param3:int) : void {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         if(!Qiwycuz.worunyjub||!this.view.kacubuhu||!param1||!param2)
+         if(!RotMGActionMapperAbstract.worunyjub||!this.view.kacubuhu||!param1||!param2)
          {
             return;
          }
-         Qiwycuz.worunyjub.invSwap(this.view.curPlayer,this.view.owner,param1.nejidebup,param1.cyjop.itemId,param2,param3,-1);
+         RotMGActionMapperAbstract.worunyjub.invSwap(this.view.curPlayer,this.view.owner,param1.nejidebup,param1.cyjop.itemId,param2,param3,-1);
          param1.setItem(Vimaz.sufybefyr);
          return;
       }
@@ -285,7 +285,7 @@ package qylir
          var _loc2_:Moho = param1.tile;
          if(_loc2_.hywot is Tarus||_loc2_.hywot is Tynefuti)
          {
-            Qiwycuz.worunyjub.useItem_new(_loc2_.hywot.owner,_loc2_.nejidebup);
+            RotMGActionMapperAbstract.worunyjub.useItem_new(_loc2_.hywot.owner,_loc2_.nejidebup);
          }
          return;
       }
@@ -303,7 +303,7 @@ package qylir
                _loc3_=_loc2_.hywot.curPlayer.swapInventoryIndex(this.pog.digyqy);
                if(_loc3_!=-1)
                {
-                  Qiwycuz.worunyjub.invSwap(this.view.curPlayer,_loc2_.hywot.owner,_loc2_.nejidebup,_loc2_.cyjop.itemId,this.view.curPlayer,_loc3_,Vimaz.sufybefyr);
+                  RotMGActionMapperAbstract.worunyjub.invSwap(this.view.curPlayer,_loc2_.hywot.owner,_loc2_.nejidebup,_loc2_.cyjop.itemId,this.view.curPlayer,_loc3_,Vimaz.sufybefyr);
                   _loc2_.setItem(Vimaz.sufybefyr);
                   _loc2_.towiqoju(this.view.curPlayer);
                }
@@ -347,7 +347,7 @@ package qylir
          var _loc2_:int = this.view.curPlayer.nextAvailableInventorySlot();
          if(_loc2_!=-1)
          {
-            Qiwycuz.worunyjub.invSwap(this.view.curPlayer,this.view.owner,param1.nejidebup,param1.cyjop.itemId,this.view.curPlayer,_loc2_,Vimaz.sufybefyr);
+            RotMGActionMapperAbstract.worunyjub.invSwap(this.view.curPlayer,this.view.owner,param1.nejidebup,param1.cyjop.itemId,this.view.curPlayer,_loc2_,Vimaz.sufybefyr);
          }
          return;
       }
@@ -360,11 +360,11 @@ package qylir
          var _loc4_:int = this.view.curPlayer.nextAvailableInventorySlot();
          if(_loc4_!=-1)
          {
-            Qiwycuz.worunyjub.invSwap(_loc3_,this.view.owner,param1.nejidebup,param1.cyjop.itemId,this.view.curPlayer,_loc4_,Vimaz.sufybefyr);
+            RotMGActionMapperAbstract.worunyjub.invSwap(_loc3_,this.view.owner,param1.nejidebup,param1.cyjop.itemId,this.view.curPlayer,_loc4_,Vimaz.sufybefyr);
          }
          else
          {
-            Qiwycuz.worunyjub.useItem_new(_loc2_,param1.nejidebup);
+            RotMGActionMapperAbstract.worunyjub.useItem_new(_loc2_,param1.nejidebup);
          }
          return;
       }
@@ -377,11 +377,11 @@ package qylir
          var _loc4_:int = ObjectLibrary.moqofulo(param1.vycuc(),_loc3_);
          if(_loc4_!=-1)
          {
-            Qiwycuz.worunyjub.invSwap(_loc3_,_loc2_,param1.nejidebup,param1.vycuc(),_loc3_,_loc4_,_loc3_.jevuqike[_loc4_]);
+            RotMGActionMapperAbstract.worunyjub.invSwap(_loc3_,_loc2_,param1.nejidebup,param1.vycuc(),_loc3_,_loc4_,_loc3_.jevuqike[_loc4_]);
          }
          else
          {
-            Qiwycuz.worunyjub.useItem_new(_loc2_,param1.nejidebup);
+            RotMGActionMapperAbstract.worunyjub.useItem_new(_loc2_,param1.nejidebup);
          }
          return;
       }

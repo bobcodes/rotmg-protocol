@@ -4,7 +4,7 @@ package qice
    import cuwyg.Dewydo;
    import fom.Hepeg;
    import komawowag.Becepog;
-   import bisok.Qiwycuz;
+   import aaa.rotmg.action.mapping.RotMGActionMapperAbstract;
    import com.company.assembleegameclient.objects.Player;
    import fom.Cosen;
    import aaa.rotmg.config.UserConfig;
@@ -18,7 +18,7 @@ package qice
       public function UseBuyPotionCommand() {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.cehode=Qiwycuz.worunyjub;
+         this.cehode=RotMGActionMapperAbstract.worunyjub;
          super();
          return;
       }
@@ -31,7 +31,7 @@ package qice
 
       public var qiqely:Becepog;
 
-      private var cehode:Qiwycuz;
+      private var cehode:RotMGActionMapperAbstract;
 
       private var player:Player;
 

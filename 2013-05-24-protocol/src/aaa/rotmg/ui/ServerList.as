@@ -1,15 +1,16 @@
-package sakugyt
+package aaa.rotmg.ui
 {
    import flash.display.Sprite;
    import __AS3__.vec.Vector;
    import flash.events.MouseEvent;
    import aaa.rotmg.config.UserConfig;
    import aaa.rotmg.net.Server;
+   import aaa.rotmg.ui.ServerBox;
 
 
-   public class Wemufuq extends Sprite
+   public class ServerList extends Sprite
    {
-      public function Wemufuq(param1:Vector.<Server>) {
+      public function ServerList(param1:Vector.<Server>) {
          var _loc7_:* = true;
          var _loc8_:* = false;
          var _loc2_:ServerBox = null;

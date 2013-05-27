@@ -1,12 +1,12 @@
 package tasig
 {
-   import kogyc.Lifew;
+   import aaa.rotmg.ui.ServersContainer;
    import aaa.rotmg.net.Server;
    import __AS3__.vec.Vector;
    import aaa.rotmg.config.UserConfig;
 
 
-   public class Zyhifo extends Object implements Lifew
+   public class Zyhifo extends Object implements ServersContainer
    {
       public function Zyhifo() {
          var _loc1_:* = false;
@@ -18,20 +18,20 @@ package tasig
 
       private var localhost:Server;
 
-      public function konozylo() : Vector.<Server> {
+      public function getServers() : Vector.<Server> {
          new Vector.<Server>(1)[0]=this.localhost;
          return new Vector.<Server>(1);
       }
 
-      public function zypyfyjo() : Server {
+      public function getBestServer() : Server {
          return this.localhost;
       }
 
-      public function pevanuga() : Boolean {
+      public function hasServers() : Boolean {
          return true;
       }
 
-      public function rytory(param1:Vector.<Server>) : void {
+      public function setServers(param1:Vector.<Server>) : void {
          return;
       }
    }

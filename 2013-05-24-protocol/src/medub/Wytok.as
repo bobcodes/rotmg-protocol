@@ -5,7 +5,7 @@ package medub
    import raqu.Wolugyty;
    import zubamyki.Qaf;
    import wegyluke.Hez;
-   import kogyc.Lifew;
+   import aaa.rotmg.ui.ServersContainer;
    import rilyq.Fen;
    import sakugyt.CharacterSelectionAndNewsScreen;
    import cuwyg.Tibeto;
@@ -31,7 +31,7 @@ package medub
 
       public var naval:Hez;
 
-      public var servers:Lifew;
+      public var servers:ServersContainer;
 
       public var wyke:Fen;
 
@@ -40,7 +40,7 @@ package medub
       public function execute() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         if(!this.servers.pevanuga())
+         if(!this.servers.hasServers())
          {
             this.gotu();
          }

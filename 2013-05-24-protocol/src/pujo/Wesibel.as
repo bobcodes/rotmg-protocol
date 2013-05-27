@@ -8,7 +8,7 @@ package pujo
    import wegyluke.Hez;
    import bisok.Mynaqu;
    import zoroc.Tokaj;
-   import bisok.Qiwycuz;
+   import aaa.rotmg.action.mapping.RotMGActionMapperAbstract;
    import zoroc.Dyziwif;
    import zoroc.Gipi;
    import kat.Puqyfebal;
@@ -50,14 +50,14 @@ package pujo
             {
                this.mutale(viby);
             }
-            _loc1_=this.govizupas.runozak(Qiwycuz.fumygak) as Mynaqu;
+            _loc1_=this.govizupas.runozak(RotMGActionMapperAbstract.fumygak) as Mynaqu;
             _loc1_.zokubip=1;
             _loc1_.objectId=Tokaj(this.qocuseho).wohacu;
             _loc1_.bymuhok=Tokaj(this.qocuseho).bymuhok;
          }
          if(this.qocuseho is Dyziwif)
          {
-            _loc1_=this.govizupas.runozak(Qiwycuz.fumygak) as Mynaqu;
+            _loc1_=this.govizupas.runozak(RotMGActionMapperAbstract.fumygak) as Mynaqu;
             _loc1_.zokubip=2;
             _loc1_.peluq=Dyziwif(this.qocuseho).zyrypolet;
             _loc1_.wigyq=Dyziwif(this.qocuseho).wigyq;
@@ -65,7 +65,7 @@ package pujo
          }
          if(this.qocuseho is Gipi)
          {
-            _loc1_=this.govizupas.runozak(Qiwycuz.fumygak) as Mynaqu;
+            _loc1_=this.govizupas.runozak(RotMGActionMapperAbstract.fumygak) as Mynaqu;
             _loc1_.zokubip=3;
             _loc1_.peluq=Gipi(this.qocuseho).tycuc;
             _loc1_.bidugylu=Gipi(this.qocuseho).hadamoh;

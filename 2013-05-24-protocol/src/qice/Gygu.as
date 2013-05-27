@@ -4,7 +4,7 @@ package qice
    import cuwyg.Tibeto;
    import hotewa.Baqifa;
    import zoroc.Gecezyw;
-   import kogyc.Lifew;
+   import aaa.rotmg.ui.ServersContainer;
    import dopumitud.Wib;
    import gag.Gawu;
    import rucag.Qyvasiz;
@@ -39,7 +39,7 @@ package qice
 
       public var duqa:Gecezyw;
 
-      public var servers:Lifew;
+      public var servers:ServersContainer;
 
       public var zoritu:Wib;
 
@@ -90,7 +90,7 @@ package qice
       private function gilere() : void {
          var _loc7_:* = true;
          var _loc8_:* = false;
-         var _loc1_:Server = (this.data.server)||(this.servers.zypyfyjo());
+         var _loc1_:Server = (this.data.server)||(this.servers.getBestServer());
          var _loc2_:int = this.data.myto?this.maliz():this.data.juf;
          var _loc3_:Boolean = this.data.susuka;
          var _loc4_:int = this.data.charId;

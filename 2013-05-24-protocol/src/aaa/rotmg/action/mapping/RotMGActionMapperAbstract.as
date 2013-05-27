@@ -1,4 +1,4 @@
-package bisok
+package aaa.rotmg.action.mapping
 {
    import tulunyno.Hugyqufyq;
    import com.company.assembleegameclient.game.Nukomesih;
@@ -11,14 +11,14 @@ package bisok
    import com.company.assembleegameclient.objects.Player;
 
 
-   public class Qiwycuz extends Object
+   public class RotMGActionMapperAbstract extends Object
    {
       {
          var _loc1_:* = false;
          var _loc2_:* = true;
       }
 
-      public function Qiwycuz() {
+      public function RotMGActionMapperAbstract() {
          var _loc1_:* = false;
          var _loc2_:* = true;
          super();
@@ -183,7 +183,7 @@ package bisok
 
       public static const cyh:int = 87;
 
-      public static var worunyjub:Qiwycuz;
+      public static var worunyjub:RotMGActionMapperAbstract;
 
       public var wijyf:Hugyqufyq;
 

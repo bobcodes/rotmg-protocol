@@ -1,4 +1,4 @@
-package sakugyt
+package aaa.rotmg.ui
 {
    import flash.display.Sprite;
    import movimet.Lufub;

@@ -47,7 +47,7 @@ package com.company.assembleegameclient.game
    import flash.utils.ByteArray;
    import hotewa.Baqifa;
    import flash.display.Sprite;
-   import aaa.rotmg.action.RotMGActionMapper;
+   import aaa.rotmg.action.mapping.RotMGActionMapper;
 
 
    public class GameSprite extends Nukomesih

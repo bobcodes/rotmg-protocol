@@ -1,4 +1,4 @@
-package aaa.rotmg.action
+package aaa.rotmg.action.mapping
 {
    import jypuq.Pyzokipu;
    import com.company.assembleegameclient.objects.Player;
@@ -186,7 +186,7 @@ package aaa.rotmg.action
    import aaa.rotmg.net.RotMGNetworkHandler;
 
 
-   public class RotMGActionMapper extends Qiwycuz
+   public class RotMGActionMapper extends RotMGActionMapperAbstract
    {
       {
          var _loc1_:* = false;

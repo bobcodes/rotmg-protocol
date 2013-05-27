@@ -3,7 +3,7 @@ package ruwysepyd
    import qov.Kalefu;
    import nafa.Vahoz;
    import hotewa.Baqifa;
-   import kogyc.Lifew;
+   import aaa.rotmg.ui.ServersContainer;
 
 
    public class Vosurypy extends Kalefu
@@ -19,12 +19,12 @@ package ruwysepyd
 
       public var model:Baqifa;
 
-      public var servers:Lifew;
+      public var servers:ServersContainer;
 
       override public function initialize() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.view.initialize(this.model,this.servers.zypyfyjo());
+         this.view.initialize(this.model,this.servers.getBestServer());
          return;
       }
    }

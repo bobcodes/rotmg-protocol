@@ -25,7 +25,7 @@ package jybazigiq
    import medub.Wytok;
    import sakugyt.Nalenym;
    import ruwysepyd.Nazupyp;
-   import sakugyt.Tobafavu;
+   import aaa.rotmg.ui.ServersScreenUI;
    import ruwysepyd.Zisifo;
    import sakugyt.Pabacuviz;
    import ruwysepyd.Gucowyqan;
@@ -150,7 +150,7 @@ package jybazigiq
          this.davyl.map(Lafani).bez(Kip);
          this.davyl.map(Cisobysu).bez(Wytok);
          this.mediatorMap.map(Nalenym).zusu(Nazupyp);
-         this.mediatorMap.map(Tobafavu).zusu(Zisifo);
+         this.mediatorMap.map(ServersScreenUI).zusu(Zisifo);
          this.mediatorMap.map(Pabacuviz).zusu(Gucowyqan);
          this.mediatorMap.map(CharacterSelectionAndNewsScreen).zusu(Tazyzufa);
          this.mediatorMap.map(Jyhyk).zusu(Sek);

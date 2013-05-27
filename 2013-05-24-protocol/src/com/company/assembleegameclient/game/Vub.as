@@ -33,7 +33,7 @@ package com.company.assembleegameclient.game
    import com.company.assembleegameclient.util.TextureRedrawer;
    import pepyca.Depagy;
    import pirus.Lekakyry;
-   import bisok.Qiwycuz;
+   import aaa.rotmg.action.mapping.RotMGActionMapperAbstract;
    import jag.Giq;
    import kyco.Nun;
    import cucowury.Vylasy;
@@ -571,7 +571,7 @@ package com.company.assembleegameclient.game
          {
             param1=param1+Lekakyry.mucitify;
          }
-         Qiwycuz.worunyjub.useItem_new(this.gs_.map.player_,param1);
+         RotMGActionMapperAbstract.worunyjub.useItem_new(this.gs_.map.player_,param1);
          return;
       }
 

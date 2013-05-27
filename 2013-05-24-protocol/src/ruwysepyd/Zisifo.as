@@ -1,44 +1,36 @@
 package ruwysepyd
 {
    import qov.Kalefu;
-   import sakugyt.Tobafavu;
-   import kogyc.Lifew;
+   import aaa.rotmg.ui.ServersScreenUI;
+   import aaa.rotmg.ui.ServersContainer;
    import raqu.Calogu;
 
 
    public class Zisifo extends Kalefu
    {
       public function Zisifo() {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
          super();
          return;
       }
 
-      public var view:Tobafavu;
+      public var view:ServersScreenUI;
 
-      public var servers:Lifew;
+      public var servers:ServersContainer;
 
       public var zogytuso:Calogu;
 
       override public function initialize() : void {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
          this.view.sewig.add(this.tih);
-         this.view.initialize(this.servers.konozylo());
+         this.view.initialize(this.servers.getServers());
          return;
       }
 
       override public function destroy() : void {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
          this.view.sewig.remove(this.tih);
          return;
       }
 
       private function tih() : void {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
          this.zogytuso.dispatch(new TitleView());
          return;
       }

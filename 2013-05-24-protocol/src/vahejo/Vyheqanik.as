@@ -13,7 +13,7 @@ package vahejo
    import com.company.assembleegameclient.util.Kibaviv;
    import com.company.assembleegameclient.map.Map;
    import hif.Rorody;
-   import bisok.Qiwycuz;
+   import aaa.rotmg.action.mapping.RotMGActionMapperAbstract;
    import pirus.Vimaz;
    import cuwyg.Giri;
 
@@ -91,7 +91,7 @@ package vahejo
          var _loc3_:* = Kibaviv.bikymecup(param1,Moho,Map,Rorody);
          if(_loc3_ is Map)
          {
-            Qiwycuz.worunyjub.invDrop(_loc2_,Dewydo.fil(this.view.objectType),this.view.objectType);
+            RotMGActionMapperAbstract.worunyjub.invDrop(_loc2_,Dewydo.fil(this.view.objectType),this.view.objectType);
          }
          else
          {
@@ -100,7 +100,7 @@ package vahejo
                _loc4_=_loc3_ as Moho;
                if(_loc4_.vycuc()==Vimaz.sufybefyr&&!(_loc4_.hywot.owner==_loc2_))
                {
-                  Qiwycuz.worunyjub.invSwapPotion(_loc2_,_loc2_,Dewydo.fil(this.view.objectType),this.view.objectType,_loc4_.hywot.owner,_loc4_.nejidebup,Vimaz.sufybefyr);
+                  RotMGActionMapperAbstract.worunyjub.invSwapPotion(_loc2_,_loc2_,Dewydo.fil(this.view.objectType),this.view.objectType,_loc4_.hywot.owner,_loc4_.nejidebup,Vimaz.sufybefyr);
                }
             }
          }
