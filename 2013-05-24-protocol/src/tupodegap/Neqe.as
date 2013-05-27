@@ -2,13 +2,13 @@ package tupodegap
 {
 [CLASS8]   import komawowag.Silikyta;
    import komawowag.Net;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import kyco.Nun;
-   import negirilu.Zufafymy;
-   import dopifo.Myg;
+   import aaaa.rotmg.net.HttpClient;
+   import aaa.rotmg.net.HttpClientUrlParams;
    import dopifo.AppEngineRequestStats;
    import dopifo.Rujahin;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import dopifo.Zyto;
    import dopifo.Paqe;
 
@@ -26,7 +26,7 @@ package tupodegap
 
       public var context:Net;
 
-      public var setup:Vylasy;
+      public var setup:GoogleAppConfig;
 
       public var cemohoqal:Nun;
 
@@ -55,7 +55,7 @@ package tupodegap
       private function kugadaly() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.cemohoqal.map(Zufafymy).jotovaq(Myg);
+         this.cemohoqal.map(HttpClient).jotovaq(HttpClientUrlParams);
          return;
       }
 
@@ -64,7 +64,7 @@ package tupodegap
          var _loc2_:* = false;
          this.cemohoqal.map(AppEngineRequestStats).pybe();
          this.cemohoqal.map(Rujahin);
-         this.cemohoqal.map(Fuzi).jotovaq(Zyto);
+         this.cemohoqal.map(HttpClientWrapper).jotovaq(Zyto);
          return;
       }
 
@@ -72,14 +72,14 @@ package tupodegap
          var _loc1_:* = false;
          var _loc2_:* = true;
          this.cemohoqal.map(Rujahin);
-         this.cemohoqal.map(Fuzi).jotovaq(Paqe);
+         this.cemohoqal.map(HttpClientWrapper).jotovaq(Paqe);
          return;
       }
 
       private function gonedyvus() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.cemohoqal.map(Fuzi).jotovaq(Rujahin);
+         this.cemohoqal.map(HttpClientWrapper).jotovaq(Rujahin);
          return;
       }
    }

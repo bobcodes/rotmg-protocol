@@ -1,10 +1,10 @@
 package bigesufy
 {
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import aaa.rotmg.config.UserConfig;
 
 
-   public class Quzu extends Object implements Vylasy
+   public class Quzu extends Object implements GoogleAppConfig
    {
       public function Quzu() {
          var _loc1_:* = true;
@@ -19,15 +19,15 @@ package bigesufy
 
       private const geri:String = "<font color=\'#FFEE00\'>LOCALHOST</font> #{VERSION}";
 
-      public function jodohyfewo(param1:Boolean=false) : String {
+      public function getRotmgAppUrl(param1:Boolean=false) : String {
          return this.femykojus;
       }
 
-      public function rul() : String {
+      public function getGoogleAccountNumber() : String {
          return this.nuw;
       }
 
-      public function qiken() : String {
+      public function getBuildDisplayLabel() : String {
          var _loc2_:* = false;
          var _loc3_:* = true;
          var _loc1_:String = UserConfig.BUILD_VERSION+"."+UserConfig.MINOR_VERSION;

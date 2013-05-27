@@ -3,7 +3,7 @@ package coh
    import qov.Kalefu;
    import wegyluke.Hez;
    import zoroc.Gecezyw;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import flash.events.MouseEvent;
    import zoroc.Fywisiku;
    import fidymu.CaretakerQueryDialog;

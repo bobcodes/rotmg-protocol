@@ -2,7 +2,7 @@ package cyza
 {
    import gag.Fijarih;
    import dopumitud.Lufanon;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import com.company.assembleegameclient.util.offer.Offer;
    import nasokuqa.Lotop;
    import aaa.rotmg.config.UserConfig;

@@ -5,7 +5,7 @@ package ceny
    import fuquqo.Peh;
    import fuquqo.Kunyma;
    import fuquqo.Rupo;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import pepyca.Depagy;
    import aaa.rotmg.config.UserConfig;
 
@@ -31,7 +31,7 @@ package ceny
 
       public var qebofez:Pahu;
 
-      public var setup:Vylasy;
+      public var setup:GoogleAppConfig;
 
       override public function initialize() : void {
          var _loc4_:* = true;
@@ -94,7 +94,7 @@ package ceny
       private function repis() : String {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         var _loc1_:String = this.setup.qiken();
+         var _loc1_:String = this.setup.getBuildDisplayLabel();
          _loc1_=_loc1_.replace(new RegExp("<font .+>(.+)<\\/font>","g"),"$1");
          return _loc1_;
       }

@@ -4,7 +4,7 @@ package cyt
    import kyco.Nun;
    import bidav.Duwuweb;
    import lagizizoq.Mys;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import nasokuqa.Myky;
    import tuzusana.Cyvuliv;
    import jiha.Kysysine;

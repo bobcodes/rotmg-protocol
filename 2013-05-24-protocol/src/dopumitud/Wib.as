@@ -1,8 +1,8 @@
 package dopumitud
 {
    import gag.Fijarih;
-   import ruwa.Account;
-   import negirilu.Fuzi;
+   import aaa.rotmg.account.Account;
+   import aaa.rotmg.net.HttpClientWrapper;
    import hotewa.Baqifa;
    import raqu.Mezafi;
    import jiha.Kysysine;
@@ -31,7 +31,7 @@ package dopumitud
 
       public var account:Account;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       public var model:Baqifa;
 
@@ -82,7 +82,7 @@ package dopumitud
          var _loc3_:* = true;
          var _loc1_:Object = {};
          _loc1_.game_net_user_id=this.account.zyz();
-         _loc1_.game_net=this.account.vajydor();
+         _loc1_.game_net=this.account.getAccountType();
          _loc1_.play_platform=this.account.bicydyn();
          _loc1_.do_login=UserConfig.niqeqoly;
          Vuwewuc.hohohev(_loc1_,this.account.venupog());

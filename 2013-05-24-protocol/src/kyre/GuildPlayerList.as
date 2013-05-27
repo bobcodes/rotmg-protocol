@@ -1,7 +1,7 @@
 package kyre
 {
    import flash.display.Sprite;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import movimet.Lufub;
    import com.company.ui.Sytubyvyg;
    import flash.display.Bitmap;
@@ -15,7 +15,7 @@ package kyre
    import flash.text.TextFieldAutoSize;
    import flash.events.Event;
    import jag.Giq;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import com.company.util.Vuwewuc;
 
 
@@ -45,7 +45,7 @@ package kyre
             }
          ;
          Vuwewuc.hohohev(_loc6_,_loc5_.venupog());
-         this.vymo=Giq.kid().getInstance(Fuzi);
+         this.vymo=Giq.kid().getInstance(HttpClientWrapper);
          this.vymo.fug(2);
          this.vymo.complete.addOnce(this.onComplete);
          this.vymo.sendRequest("/guild/listMembers",_loc6_);
@@ -60,7 +60,7 @@ package kyre
 
       private var myjare:int;
 
-      private var vymo:Fuzi;
+      private var vymo:HttpClientWrapper;
 
       private var kijuf:Lufub;
 

@@ -4,7 +4,7 @@ package dokohi
    import kyco.Nun;
    import lagizizoq.Mys;
    import kyku.Qodibyl;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import byzany.Qopel;
    import byzany.Jujaqo;
    import byzany.Nagumy;
@@ -33,7 +33,7 @@ package dokohi
 
       public var startup:Qodibyl;
 
-      public var nerynuk:Vylasy;
+      public var nerynuk:GoogleAppConfig;
 
       public function configure() : void {
          var _loc1_:* = false;

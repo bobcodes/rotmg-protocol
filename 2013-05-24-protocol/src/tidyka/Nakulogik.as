@@ -1,7 +1,7 @@
 package tidyka
 {
    import gag.Fijarih;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import hotewa.Baqifa;
    import sibaworop.Pamokut;
    import sibaworop.Fezabaga;
@@ -19,7 +19,7 @@ package tidyka
          return;
       }
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       public var player:Baqifa;
 

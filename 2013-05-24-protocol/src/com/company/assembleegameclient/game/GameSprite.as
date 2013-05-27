@@ -21,8 +21,8 @@ package com.company.assembleegameclient.game
    import ruwysepyd.Jyjimagi;
    import lyfo.Rotahy;
    import com.company.assembleegameclient.map.Map;
-   import negirilu.Fuzi;
-   import ruwa.Account;
+   import aaa.rotmg.net.HttpClientWrapper;
+   import aaa.rotmg.account.Account;
    import com.company.util.Vuwewuc;
    import aaa.rotmg.config.UserConfig;
    import jybazigiq.Litewev;
@@ -186,12 +186,12 @@ package com.company.assembleegameclient.game
             this.pitosad.momel++;
          }
          this.isNexus_=map.name_==Map.copyvy;
-         var _loc1_:Fuzi = Giq.kid().getInstance(Fuzi);
+         var _loc1_:HttpClientWrapper = Giq.kid().getInstance(HttpClientWrapper);
          var _loc2_:Account = Giq.kid().getInstance(Account);
          var _loc3_:Object = 
             {
                game_net_user_id:_loc2_.zyz(),
-               game_net:_loc2_.vajydor(),
+               game_net:_loc2_.getAccountType(),
                play_platform:_loc2_.bicydyn()
             }
          ;

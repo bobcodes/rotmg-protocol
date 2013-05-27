@@ -4,7 +4,7 @@ package dijojygeg
    import kyco.Nun;
    import bidav.Duwuweb;
    import lagizizoq.Mys;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import vapihufy.Hogoh;
    import nasokuqa.Myky;
    import mytuk.Qanewoce;

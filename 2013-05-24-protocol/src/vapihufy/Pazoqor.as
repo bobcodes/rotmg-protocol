@@ -2,11 +2,11 @@ package vapihufy
 {
    import gag.Fijarih;
    import dopumitud.Riqyh;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import nukobi.Fozydo;
    import vavufer.Bicowu;
    import regym.Dazihyr;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
 
 
    public class Pazoqor extends Fijarih implements Riqyh
@@ -33,7 +33,7 @@ package vapihufy
 
       public var cuwot:Dazihyr;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = false;

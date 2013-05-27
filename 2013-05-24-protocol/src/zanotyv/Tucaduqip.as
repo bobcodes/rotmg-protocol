@@ -4,7 +4,7 @@ package zanotyv
    import byzany.Qopel;
    import byzany.Nagumy;
    import wegyluke.Hez;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import nas.ErrorDialog;
 
 
@@ -30,7 +30,7 @@ package zanotyv
 
       public var naval:Hez;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       private var language:String;
 

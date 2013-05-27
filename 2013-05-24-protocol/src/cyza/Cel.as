@@ -2,9 +2,9 @@ package cyza
 {
    import gag.Fijarih;
    import dopumitud.Wok;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import raqu.Sikywybu;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import cidehov.Hyzifiraj;
 
 
@@ -21,7 +21,7 @@ package cyza
 
       public var tyc:Sikywybu;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = false;

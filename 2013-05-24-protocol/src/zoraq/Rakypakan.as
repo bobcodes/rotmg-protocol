@@ -1,7 +1,7 @@
 package zoraq
 {
    import gag.Fijarih;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import wegyluke.Hez;
    import fulaw.Vihekivuc;
    import kabam.rotmg.assets.model.Jyzirilof;
@@ -20,7 +20,7 @@ package zoraq
          return;
       }
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       public var naval:Hez;
 

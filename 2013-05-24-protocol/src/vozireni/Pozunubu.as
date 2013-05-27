@@ -3,7 +3,7 @@ package vozireni
    import flash.utils.Dictionary;
    import flash.media.Sound;
    import flash.events.IOErrorEvent;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import jag.Giq;
    import flash.net.URLRequest;
    import flash.media.SoundTransform;
@@ -50,12 +50,12 @@ package vozireni
       private static function gunapejag() : String {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         var setup:Vylasy = null;
+         var setup:GoogleAppConfig = null;
          var base:String = "";
          try
          {
-            setup=Giq.kid().getInstance(Vylasy);
-            base=setup.jodohyfewo(true);
+            setup=Giq.kid().getInstance(GoogleAppConfig);
+            base=setup.getRotmgAppUrl(true);
          }
          catch(error:Error)
          {

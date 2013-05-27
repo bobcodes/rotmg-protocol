@@ -1,8 +1,8 @@
 package dopumitud
 {
    import gag.Fijarih;
-   import ruwa.Account;
-   import negirilu.Fuzi;
+   import aaa.rotmg.account.Account;
+   import aaa.rotmg.net.HttpClientWrapper;
    import wegyluke.Hez;
    import hotewa.Baqifa;
 
@@ -20,7 +20,7 @@ package dopumitud
 
       public var price:int;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       public var naval:Hez;
 

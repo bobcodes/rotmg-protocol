@@ -1,7 +1,7 @@
 package mafu
 {
    import qov.Kalefu;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import raqu.Sikywybu;
    import jiha.Dabopo;
    import wegyluke.Hez;

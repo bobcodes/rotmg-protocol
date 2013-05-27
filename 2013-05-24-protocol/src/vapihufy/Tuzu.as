@@ -2,9 +2,9 @@ package vapihufy
 {
    import gag.Fijarih;
    import dopumitud.Suquzujow;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import nukobi.Fozydo;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
 
 
    public class Tuzu extends Fijarih implements Suquzujow
@@ -22,7 +22,7 @@ package vapihufy
 
       public var local:Hogoh;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = false;

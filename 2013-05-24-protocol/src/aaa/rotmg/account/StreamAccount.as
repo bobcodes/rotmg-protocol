@@ -1,10 +1,10 @@
-package cyt
+package aaa.rotmg.account
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import com.company.util.Zutywapo;
 
 
-   public class Car extends Object implements Account
+   public class StreamAccount extends Object implements Account
    {
       {
          var _loc1_:* = true;
@@ -18,7 +18,7 @@ package cyt
          return;
       }
 
-      public static const tatuzo:String = "steam";
+      public static const ACCOUNT_TYPE:String = "steam";
 
       public var zefy:Zivovype;
 
@@ -82,8 +82,8 @@ package cyt
          return this.zefy.berygo();
       }
 
-      public function vajydor() : String {
-         return tatuzo;
+      public function getAccountType() : String {
+         return ACCOUNT_TYPE;
       }
 
       public function bicydyn() : String {

@@ -6,7 +6,7 @@ package zyciwin
    import ruwa.Hytezod;
    import wegyluke.Hez;
    import komawowag.Becepog;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import com.company.assembleegameclient.util.offer.Offer;
    import nas.Vyha;
 
@@ -28,9 +28,9 @@ package zyciwin
 
       public var qiqely:Becepog;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
-      public var tuzol:Fuzi;
+      public var tuzol:HttpClientWrapper;
 
       private var offer:Offer;
 

@@ -7,7 +7,7 @@ package ruwysepyd
    import sasacen.Cisobysu;
    import jiha.Cemy;
    import wegyluke.Hez;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import nitotohyk.Zyqyt;
    import kysy.Ducuqa;
    import fom.Kyh;
@@ -41,7 +41,7 @@ package ruwysepyd
 
       public var naval:Hez;
 
-      public var setup:Vylasy;
+      public var setup:GoogleAppConfig;
 
       public var dom:Zyqyt;
 
@@ -78,7 +78,7 @@ package ruwysepyd
          var _loc1_:Kyh = new Kyh();
          _loc1_.pesigemut=Capabilities.playerType=="Desktop";
          _loc1_.kuzuqi=this.muwi.kuzuqi();
-         _loc1_.piwo=this.setup.qiken();
+         _loc1_.piwo=this.setup.getBuildDisplayLabel();
          return _loc1_;
       }
 

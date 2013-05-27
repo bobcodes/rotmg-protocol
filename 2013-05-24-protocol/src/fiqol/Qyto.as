@@ -1,6 +1,6 @@
 package fiqol
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import kagijawil.Cibiqot;
    import wegyluke.Hez;
    import wuqe.Vequl;

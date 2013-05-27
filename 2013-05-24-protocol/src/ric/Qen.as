@@ -4,7 +4,7 @@ package ric
    import kyco.Nun;
    import bidav.Duwuweb;
    import lagizizoq.Mys;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import nasokuqa.Myky;
    import vavufer.Nutacuj;
    import jiha.Cemy;
@@ -79,7 +79,7 @@ package ric
       protected function lofylise() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.cemohoqal.map(Account).lyvov(Durujeduj);
+         this.cemohoqal.map(Account).lyvov(RotmgAccount);
          this.cemohoqal.map(Myky).lyvov(Nutacuj);
          return;
       }

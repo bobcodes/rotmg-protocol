@@ -1,12 +1,12 @@
 package peciryf
 {
    import nasokuqa.Gepygaz;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import nasokuqa.Myky;
    import wegyluke.Hez;
    import komawowag.Becepog;
    import voto.Cala;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import hotewa.Baqifa;
    import nas.ErrorDialog;
    import flash.net.URLVariables;
@@ -40,7 +40,7 @@ package peciryf
 
       public var vujik:Hez;
 
-      public var nerynuk:Vylasy;
+      public var nerynuk:GoogleAppConfig;
 
       public var muwi:Baqifa;
 
@@ -99,7 +99,7 @@ package peciryf
       private function koroc() : void {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         var _loc1_:String = this.nerynuk.jodohyfewo(true);
+         var _loc1_:String = this.nerynuk.getRotmgAppUrl(true);
          var _loc2_:URLVariables = new URLVariables();
          var _loc3_:URLRequest = new URLRequest();
          _loc2_.naid=this.account.rozabuweq();

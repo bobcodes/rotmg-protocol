@@ -2,7 +2,7 @@ package jag
 {
    import komawowag.Silikyta;
    import komawowag.Net;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import flash.display.DisplayObjectContainer;
    import kyco.Nun;
    import lagizizoq.Mys;
@@ -63,7 +63,7 @@ package jag
 
       public var context:Net;
 
-      public var setup:Vylasy;
+      public var setup:GoogleAppConfig;
 
       public var gimenon:DisplayObjectContainer;
 

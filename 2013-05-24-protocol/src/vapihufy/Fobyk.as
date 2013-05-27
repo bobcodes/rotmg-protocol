@@ -2,10 +2,10 @@ package vapihufy
 {
    import gag.Fijarih;
    import dopumitud.Hiwa;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import vavufer.Bicowu;
    import nukobi.Fozydo;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
 
 
    public class Fobyk extends Fijarih implements Hiwa
@@ -23,7 +23,7 @@ package vapihufy
 
       public var zefy:Fozydo;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = true;

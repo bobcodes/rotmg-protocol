@@ -2,7 +2,7 @@ package ceny
 {
    import qov.Kalefu;
    import pepyca.Fifu;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import pepyca.Kar;
    import fuquqo.Peh;
    import fuquqo.Kunyma;

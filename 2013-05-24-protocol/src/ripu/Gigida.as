@@ -1,6 +1,6 @@
 package ripu
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import wegyluke.Hez;
    import mafu.WebAccountDetailDialog;
    import mafu.Zad;

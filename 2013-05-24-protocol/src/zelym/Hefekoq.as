@@ -3,9 +3,9 @@ package zelym
    import flash.display.Sprite;
    import flash.display.Shape;
    import nas.Dialog;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import jag.Giq;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import flash.events.Event;
    import com.company.util.Vuwewuc;
    import flash.display.Graphics;
@@ -41,13 +41,13 @@ package zelym
 
       private var nuzu:Bawisedi;
 
-      private var client:Fuzi;
+      private var client:HttpClientWrapper;
 
       private function load() : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
          var _loc1_:Account = Giq.kid().getInstance(Account);
-         this.client=Giq.kid().getInstance(Fuzi);
+         this.client=Giq.kid().getInstance(HttpClientWrapper);
          this.client.complete.addOnce(this.ciwy);
          this.client.sendRequest("/guild/getBoard",_loc1_.venupog());
          this.pokuj=new Dialog(null,"Loading...",null,null,null);
@@ -129,7 +129,7 @@ package zelym
          var _loc2_:Account = Giq.kid().getInstance(Account);
          var _loc3_:Object = {board:this.nuzu.geheza()};
          Vuwewuc.hohohev(_loc3_,_loc2_.venupog());
-         this.client=Giq.kid().getInstance(Fuzi);
+         this.client=Giq.kid().getInstance(HttpClientWrapper);
          this.client.complete.addOnce(this.sefakiho);
          this.client.sendRequest("/guild/setBoard",_loc3_);
          removeChild(this.nuzu);

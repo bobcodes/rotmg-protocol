@@ -1,8 +1,8 @@
 package zokece
 {
    import gag.Fijarih;
-   import negirilu.Fuzi;
-   import ruwa.Account;
+   import aaa.rotmg.net.HttpClientWrapper;
+   import aaa.rotmg.account.Account;
    import hotewa.Baqifa;
    import com.company.assembleegameclient.map.Volyrowu;
    import damul.Qyfa;
@@ -26,7 +26,7 @@ package zokece
 
       private static const cylovedi:Array = ["Package is not Available","Package is not Available Right Now","Invalid PackageId"];
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       public var account:Account;
 

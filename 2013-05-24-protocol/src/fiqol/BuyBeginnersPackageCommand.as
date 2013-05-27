@@ -1,13 +1,13 @@
 package fiqol
 {
    import aaa.rotmg.i18n.I18nKeys;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import kagijawil.Cibiqot;
    import wegyluke.Hez;
    import jiha.Fiso;
    import juw.Coqihyqin;
-   import ric.Durujeduj;
-   import ninu.Ryq;
+   import aaa.rotmg.account.RotmgAccount;
+   import aaa.rotmg.account.KabamAccount;
    import difu.Kirygym;
    import ruwa.Hytezod;
    import kat.Puqyfebal;
@@ -56,7 +56,7 @@ package fiqol
       private function wijufyvy() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         if(this.account is Durujeduj||this.account is Ryq)
+         if(this.account is RotmgAccount||this.account is KabamAccount)
          {
             this.naval.dispatch(new Kirygym());
          }

@@ -1,7 +1,7 @@
 package tycerinos
 {
    import qov.Kalefu;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import cyt.Zivovype;
    import wegyluke.Cowymute;
    import wegyluke.Hez;

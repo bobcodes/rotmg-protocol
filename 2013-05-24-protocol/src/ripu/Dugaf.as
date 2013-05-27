@@ -1,7 +1,7 @@
 package ripu
 {
-   import ruwa.Account;
-   import ric.Durujeduj;
+   import aaa.rotmg.account.Account;
+   import aaa.rotmg.account.RotmgAccount;
 
 
    public class Dugaf extends Object
@@ -21,7 +21,7 @@ package ripu
          var _loc3_:* = true;
          var _loc4_:* = false;
          var _loc2_:XML = null;
-         var _loc1_:Durujeduj = this.account as Durujeduj;
+         var _loc1_:RotmgAccount = this.account as RotmgAccount;
          if(this.zitypykoq.hasOwnProperty("KabamPaymentInfo"))
          {
             _loc2_=XML(this.zitypykoq.KabamPaymentInfo);

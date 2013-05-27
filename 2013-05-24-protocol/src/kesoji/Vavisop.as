@@ -1,6 +1,6 @@
 package kesoji
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import nukobi.Fozydo;
    import wegyluke.Hez;
    import nukobi.KongregateAccountDetailDialog;

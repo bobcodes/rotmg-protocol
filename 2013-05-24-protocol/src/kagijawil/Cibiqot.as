@@ -1,6 +1,6 @@
 package kagijawil
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import nasokuqa.Lotop;
    import tulunyno.Hugyqufyq;
    import com.company.assembleegameclient.util.Pygymy;

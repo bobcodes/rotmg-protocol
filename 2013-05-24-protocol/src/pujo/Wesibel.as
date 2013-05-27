@@ -4,7 +4,7 @@ package pujo
    import zoroc.Labe;
    import jypuq.Pyzokipu;
    import aaa.rotmg.net.RotMGNetworkHandler;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import wegyluke.Hez;
    import bisok.Mynaqu;
    import zoroc.Tokaj;

@@ -3,7 +3,7 @@ package gepa
    import qov.Kalefu;
    import zoroc.Gecezyw;
    import pujo.Vitibuc;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import wegyluke.Hez;
    import wegyluke.Cowymute;
    import zoroc.Rycezedi;

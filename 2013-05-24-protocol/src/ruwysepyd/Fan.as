@@ -1,7 +1,7 @@
 package ruwysepyd
 {
    import qov.Kalefu;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import dopumitud.Kanyr;
    import wegyluke.Cowymute;
    import jiha.Hevorim;

@@ -6,7 +6,7 @@ package wehagec
    import voto.Cala;
    import flash.display.LoaderInfo;
    import likikul.Fop;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import cucowury.Fym;
    import likikul.Wubeh;
    import voto.Nemo;
@@ -39,14 +39,14 @@ package wehagec
       public function configure() : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         var _loc1_:Vylasy = this.moga();
+         var _loc1_:GoogleAppConfig = this.moga();
          this.cemohoqal.map(Fym).cufypy(_loc1_);
-         this.cemohoqal.map(Vylasy).cufypy(_loc1_);
+         this.cemohoqal.map(GoogleAppConfig).cufypy(_loc1_);
          this.cemohoqal.map(Wubeh).pybe();
          return;
       }
 
-      private function moga() : Vylasy {
+      private function moga() : GoogleAppConfig {
          var _loc3_:* = true;
          var _loc4_:* = false;
          var _loc1_:Nemo = this.data.jeluf();

@@ -1,7 +1,7 @@
 package lijite
 {
    import rejukohub.Nemygyq;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import __AS3__.vec.Vector;
 
 
@@ -97,7 +97,7 @@ package lijite
       private function lezo(param1:Nyzena) : Boolean {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         var _loc2_:String = this.account.vajydor();
+         var _loc2_:String = this.account.getAccountType();
          return !(param1.jycutozyt.indexOf(_loc2_)==-1);
       }
    }

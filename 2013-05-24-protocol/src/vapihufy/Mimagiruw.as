@@ -4,9 +4,9 @@ package vapihufy
    import dopumitud.Rykuzen;
    import vavufer.Bicowu;
    import nukobi.Fozydo;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import raqu.Sikywybu;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import cidehov.Hyzifiraj;
 
 
@@ -27,7 +27,7 @@ package vapihufy
 
       public var tyc:Sikywybu;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = true;

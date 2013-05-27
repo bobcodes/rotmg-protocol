@@ -1,6 +1,6 @@
 package medub
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import hotewa.Baqifa;
    import raqu.Wolugyty;
    import zubamyki.Qaf;

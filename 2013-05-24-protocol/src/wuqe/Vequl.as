@@ -1,9 +1,9 @@
 package wuqe
 {
    import gag.Fijarih;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import kagijawil.Cibiqot;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
 
 
    public class Vequl extends Fijarih
@@ -19,7 +19,7 @@ package wuqe
 
       public var model:Cibiqot;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = true;

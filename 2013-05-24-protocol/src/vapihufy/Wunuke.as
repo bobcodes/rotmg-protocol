@@ -3,7 +3,7 @@ package vapihufy
    import gag.Fijarih;
    import dopumitud.Gilapik;
    import ruwa.Hytezod;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import nukobi.Fozydo;
    import com.company.assembleegameclient.util.offer.Offer;
 

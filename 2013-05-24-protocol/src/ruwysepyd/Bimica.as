@@ -2,7 +2,7 @@ package ruwysepyd
 {
    import qov.Kalefu;
    import sakugyt.Mecunenim;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import hotewa.Baqifa;
    import raqu.Hujuhy;
    import raqu.Goq;
@@ -11,10 +11,10 @@ package ruwysepyd
    import naj.KabamAccountInfoView;
    import nukobi.KongregateAccountInfoView;
    import tycerinos.Madiwuj;
-   import ric.Durujeduj;
-   import ninu.Ryq;
-   import dijojygeg.Pan;
-   import cyt.Car;
+   import aaa.rotmg.account.RotmgAccount;
+   import aaa.rotmg.account.KabamAccount;
+   import aaa.rotmg.account.KongregateAccount;
+   import aaa.rotmg.account.StreamAccount;
    import povopito.Ryduwi;
 
 
@@ -51,18 +51,18 @@ package ruwysepyd
          var _loc3_:* = false;
          var _loc4_:* = true;
          var _loc1_:Jyhyk = null;
-         switch(this.account.vajydor())
+         switch(this.account.getAccountType())
          {
-            case Durujeduj.tatuzo:
+            case RotmgAccount.ACCOUNT_TYPE:
                _loc1_=new Few();
                break;
-            case Ryq.tatuzo:
+            case KabamAccount.ACCOUNT_TYPE:
                _loc1_=new KabamAccountInfoView();
                break;
-            case Pan.tatuzo:
+            case KongregateAccount.ACCOUNT_TYPE:
                _loc1_=new KongregateAccountInfoView();
                break;
-            case Car.tatuzo:
+            case StreamAccount.ACCOUNT_TYPE:
                _loc1_=new Madiwuj();
                break;
          }

@@ -5,7 +5,7 @@ package vujybuz
    import kyco.Nun;
    import bidav.Duwuweb;
    import lagizizoq.Mys;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import zubamyki.Fomyp;
    import zubamyki.Pagac;
    import zubamyki.Tegahol;
@@ -90,7 +90,7 @@ package vujybuz
 
       public var davyl:Mys;
 
-      public var setup:Vylasy;
+      public var setup:GoogleAppConfig;
 
       private function lasuwi() : void {
          var _loc1_:* = false;

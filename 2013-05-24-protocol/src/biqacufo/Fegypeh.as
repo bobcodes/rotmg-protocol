@@ -4,7 +4,7 @@ package biqacufo
    import wyrovu.Tivehy;
    import zubamyki.Mogedut;
    import cuwyg.Zubo;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import cuwyg.Dyqy;
    import wyrovu.Tyjo;
 

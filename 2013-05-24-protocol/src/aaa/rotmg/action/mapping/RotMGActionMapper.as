@@ -124,7 +124,7 @@ package aaa.rotmg.action.mapping
    import com.hurlant.crypto.rsa.RSAKey;
    import flash.utils.ByteArray;
    import com.hurlant.util.Base64;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import com.company.assembleegameclient.map.Wuwa;
    import com.company.assembleegameclient.util.Hidad;
    import vaqob.TradeRequestPanel;
@@ -1070,7 +1070,7 @@ package aaa.rotmg.action.mapping
          _loc2_.key_.length=0;
          _loc2_.sofabe=sofabe==null?"":sofabe;
          _loc2_.vukyluz=_loc1_.qujipoj();
-         _loc2_.soq=_loc1_.vajydor();
+         _loc2_.soq=_loc1_.getAccountType();
          _loc2_.metulocy=_loc1_.zyz();
          _loc2_.bicydyn=_loc1_.bicydyn();
          _loc2_.kofimupo=_loc1_.rowyr();

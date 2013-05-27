@@ -2,12 +2,12 @@ package zyciwin
 {
    import gag.Fijarih;
    import dopumitud.Lufanon;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import cyt.Zivovype;
    import com.company.assembleegameclient.util.offer.Offer;
    import wegyluke.Hez;
    import komawowag.Becepog;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import nas.Vyha;
 
 
@@ -32,9 +32,9 @@ package zyciwin
 
       public var qiqely:Becepog;
 
-      public var first:Fuzi;
+      public var first:HttpClientWrapper;
 
-      public var tuzol:Fuzi;
+      public var tuzol:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = true;

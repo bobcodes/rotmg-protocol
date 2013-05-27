@@ -1,6 +1,6 @@
 package medub
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import wegyluke.Hez;
    import flash.display.Sprite;
    import gib.NewChooseNameFrame;

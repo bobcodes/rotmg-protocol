@@ -2,11 +2,11 @@ package zyciwin
 {
    import gag.Fijarih;
    import dopumitud.Rykuzen;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import cyt.Zivovype;
    import vavufer.Bicowu;
    import komawowag.Becepog;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
 
 
    public class Karycol extends Fijarih implements Rykuzen
@@ -26,7 +26,7 @@ package zyciwin
 
       public var qiqely:Becepog;
 
-      private var client:Fuzi;
+      private var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = false;

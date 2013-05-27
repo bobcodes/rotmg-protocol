@@ -6,7 +6,7 @@ package ninu
    import lagizizoq.Mys;
    import wokobewig.Haqy;
    import wokobewig.Vevizu;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import nasokuqa.Myky;
    import wokobewig.Wogate;
    import jiha.Kysysine;
@@ -53,7 +53,7 @@ package ninu
          var _loc1_:* = false;
          var _loc2_:* = true;
          this.cemohoqal.map(Haqy).lyvov(Vevizu);
-         this.cemohoqal.map(Account).lyvov(Ryq);
+         this.cemohoqal.map(Account).lyvov(KabamAccount);
          this.cemohoqal.map(Myky).lyvov(Wogate);
          this.cemohoqal.map(Kysysine).pybe();
          return;

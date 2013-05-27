@@ -4,7 +4,7 @@ package qetitat
    import kyco.Nun;
    import bidav.Duwuweb;
    import lagizizoq.Mys;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import boryb.Fihyvy;
    import vuvanadov.Lazi;
    import vuvanadov.Cadi;
@@ -26,7 +26,7 @@ package qetitat
 
       public var davyl:Mys;
 
-      public var setup:Vylasy;
+      public var setup:GoogleAppConfig;
 
       public function configure() : void {
          var _loc1_:* = false;

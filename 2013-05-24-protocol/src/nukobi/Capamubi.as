@@ -1,7 +1,7 @@
 package nukobi
 {
    import qov.Kalefu;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import wegyluke.Cowymute;
    import wegyluke.Hez;
    import com.company.util.Zutywapo;

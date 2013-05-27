@@ -2,8 +2,8 @@ package zokece
 {
    import gag.Fijarih;
    import flash.utils.Timer;
-   import negirilu.Fuzi;
-   import ruwa.Account;
+   import aaa.rotmg.net.HttpClientWrapper;
+   import aaa.rotmg.account.Account;
    import komawowag.Becepog;
    import byzany.Qopel;
    import flash.events.TimerEvent;
@@ -29,7 +29,7 @@ package zokece
 
       public var timer:Timer;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       public var pitosad:Buquk;
 

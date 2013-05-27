@@ -1,8 +1,8 @@
 package com.company.assembleegameclient.appengine
 {
    import komawowag.Becepog;
-   import dopifo.Myg;
-   import negirilu.Zufafymy;
+   import aaa.rotmg.net.HttpClientUrlParams;
+   import aaaa.rotmg.net.HttpClient;
    import flash.net.URLLoaderDataFormat;
    import flash.utils.ByteArray;
    import tamy.Rytova;
@@ -52,7 +52,7 @@ package com.company.assembleegameclient.appengine
          var _loc3_:Object = {};
          _loc3_.id=this.id_;
          _loc3_.time=pirufirud;
-         var _loc4_:Zufafymy = new Myg();
+         var _loc4_:HttpClient = new HttpClientUrlParams();
          _loc4_.sucunuj(URLLoaderDataFormat.BINARY);
          _loc4_.complete.addOnce(this.onComplete);
          _loc4_.sendRequest(_loc2_,_loc3_);

@@ -3,7 +3,7 @@ package ludutaz
    import komawowag.Silikyta;
    import kyco.Nun;
    import bidav.Duwuweb;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import heko.Kup;
    import movimet.Parari;
    import cynyjegi.Sivigyda;
@@ -28,7 +28,7 @@ package ludutaz
 
       public var mediatorMap:Duwuweb;
 
-      public var nerynuk:Vylasy;
+      public var nerynuk:GoogleAppConfig;
 
       public function configure() : void {
          var _loc1_:* = false;

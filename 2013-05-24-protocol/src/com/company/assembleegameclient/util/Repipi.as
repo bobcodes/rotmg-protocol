@@ -4,8 +4,8 @@ package com.company.assembleegameclient.util
    import aaa.rotmg.i18n.I18nKeys;
    import com.company.assembleegameclient.util.offer.Offer;
    import jag.Giq;
-   import ruwa.Account;
-   import cucowury.Vylasy;
+   import aaa.rotmg.account.Account;
+   import aaa.rotmg.config.GoogleAppConfig;
    import flash.net.URLVariables;
 
 
@@ -58,7 +58,7 @@ package com.company.assembleegameclient.util
          var _loc8_:* = false;
          var _loc9_:* = true;
          var _loc4_:Account = Giq.kid().getInstance(Account);
-         var _loc5_:Vylasy = Giq.kid().getInstance(Vylasy);
+         var _loc5_:GoogleAppConfig = Giq.kid().getInstance(GoogleAppConfig);
          var _loc6_:URLVariables = new URLVariables();
          _loc6_["tok"]=param1;
          _loc6_["exp"]=param2;
@@ -75,7 +75,7 @@ package com.company.assembleegameclient.util
                _loc6_["paymentid"]=this.mizyg;
                break;
          }
-         return _loc5_.jodohyfewo(true)+"/credits/add?"+_loc6_.toString();
+         return _loc5_.getRotmgAppUrl(true)+"/credits/add?"+_loc6_.toString();
       }
    }
 

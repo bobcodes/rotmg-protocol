@@ -4,10 +4,10 @@ package kat
    import wegyluke.Hez;
    import jiha.Nikyqy;
    import raqu.Zer;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import raqu.Fesezosit;
-   import cyt.Car;
-   import dijojygeg.Pan;
+   import aaa.rotmg.account.StreamAccount;
+   import aaa.rotmg.account.KongregateAccount;
    import nukobi.KongregateAccountDetailDialog;
    import vavufer.Bicowu;
    import gag.Bysyg;
@@ -47,13 +47,13 @@ package kat
       private function lonavug() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         if(this.account is Car)
+         if(this.account is StreamAccount)
          {
             this.wekyrap.dispatch("/linkSteamAccount");
          }
          else
          {
-            if(this.account is Pan)
+            if(this.account is KongregateAccount)
             {
                this.wekyrap.dispatch("/linkKongregateAccount");
             }

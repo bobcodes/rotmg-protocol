@@ -2,8 +2,8 @@ package cidehov
 {
    import gag.Fijarih;
    import komawowag.Becepog;
-   import negirilu.Fuzi;
-   import ruwa.Account;
+   import aaa.rotmg.net.HttpClientWrapper;
+   import aaa.rotmg.account.Account;
    import raqu.Mojemetor;
 
 
@@ -18,7 +18,7 @@ package cidehov
 
       public var qiqely:Becepog;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       public var account:Account;
 
@@ -29,7 +29,7 @@ package cidehov
          var _loc2_:* = true;
          this.client.fug(2);
          this.client.complete.addOnce(this.onComplete);
-         this.client.sendRequest("/app/init",{game_net:this.account.vajydor()});
+         this.client.sendRequest("/app/init",{game_net:this.account.getAccountType()});
          return;
       }
 

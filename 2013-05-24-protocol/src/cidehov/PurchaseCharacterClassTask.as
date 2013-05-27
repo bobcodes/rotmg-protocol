@@ -1,8 +1,8 @@
 package cidehov
 {
    import gag.Fijarih;
-   import ruwa.Account;
-   import negirilu.Fuzi;
+   import aaa.rotmg.account.Account;
+   import aaa.rotmg.net.HttpClientWrapper;
    import hotewa.Baqifa;
    import komawowag.Becepog;
    import aaa.rotmg.config.UserConfig;
@@ -23,7 +23,7 @@ package cidehov
 
       public var account:Account;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       public var muwi:Baqifa;
 
@@ -43,7 +43,7 @@ package cidehov
          var _loc3_:* = true;
          var _loc1_:Object = {};
          _loc1_.game_net_user_id=this.account.zyz();
-         _loc1_.game_net=this.account.vajydor();
+         _loc1_.game_net=this.account.getAccountType();
          _loc1_.play_platform=this.account.bicydyn();
          _loc1_.do_login=UserConfig.niqeqoly;
          _loc1_.classType=this.classType;

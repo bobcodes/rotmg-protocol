@@ -2,7 +2,7 @@ package com.company.assembleegameclient.objects
 {
    import flash.display.BitmapData;
    import jag.Giq;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import com.company.assembleegameclient.util.Biloqu;
    import com.company.assembleegameclient.appengine.RemoteTexture;
    import com.company.util.AssetLibrary;
@@ -88,7 +88,7 @@ package com.company.assembleegameclient.objects
       }
 
       private function kalacyfir() : Boolean {
-         var _loc1_:Vylasy = Giq.kid().getInstance(Vylasy);
+         var _loc1_:GoogleAppConfig = Giq.kid().getInstance(GoogleAppConfig);
          return _loc1_.dokoza();
       }
 

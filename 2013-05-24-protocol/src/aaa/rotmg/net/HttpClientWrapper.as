@@ -1,9 +1,9 @@
-package negirilu
+package aaa.rotmg.net
 {
    import tulunyno.Vobaqe;
 
 
-   public interface Fuzi
+   public interface HttpClientWrapper
    {
       sygylano function get complete() : Vobaqe;
 

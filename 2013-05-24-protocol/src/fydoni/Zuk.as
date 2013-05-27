@@ -1,7 +1,7 @@
 package fydoni
 {
    import komawowag.Tom;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import wegyluke.Hez;
    import kat.Puqyfebal;
 

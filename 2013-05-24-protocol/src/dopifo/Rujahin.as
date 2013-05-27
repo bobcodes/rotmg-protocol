@@ -1,13 +1,13 @@
 package dopifo
 {
-   import negirilu.Fuzi;
-   import negirilu.Zufafymy;
-   import cucowury.Vylasy;
+   import aaa.rotmg.net.HttpClientWrapper;
+   import aaaa.rotmg.net.HttpClient;
+   import aaa.rotmg.config.GoogleAppConfig;
    import tulunyno.Vobaqe;
    import flash.net.URLLoaderDataFormat;
 
 
-   public class Rujahin extends Object implements Fuzi
+   public class Rujahin extends Object implements HttpClientWrapper
    {
       public function Rujahin() {
          var _loc1_:* = false;
@@ -19,9 +19,9 @@ package dopifo
          return;
       }
 
-      public var loader:Zufafymy;
+      public var loader:HttpClient;
 
-      public var setup:Vylasy;
+      public var setup:GoogleAppConfig;
 
       private var lujoqi:Boolean;
 
@@ -68,7 +68,7 @@ package dopifo
          {
             param1="/"+param1;
          }
-         return this.setup.jodohyfewo()+param1;
+         return this.setup.getRotmgAppUrl()+param1;
       }
    }
 

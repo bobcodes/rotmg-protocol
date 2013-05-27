@@ -1,10 +1,10 @@
 package bigesufy
 {
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import aaa.rotmg.config.UserConfig;
 
 
-   public class Rodygyv extends Object implements Vylasy
+   public class Rodygyv extends Object implements GoogleAppConfig
    {
       public function Rodygyv() {
          var _loc1_:* = true;
@@ -23,15 +23,15 @@ package bigesufy
 
       private const geri:String = "RotMG #{VERSION}.{MINOR}";
 
-      public function jodohyfewo(param1:Boolean=false) : String {
+      public function getRotmgAppUrl(param1:Boolean=false) : String {
          return param1?this.rotmgAppHttp:this.rotmgAppHttps;
       }
 
-      public function rul() : String {
+      public function getGoogleAccountNumber() : String {
          return this.nuw;
       }
 
-      public function qiken() : String {
+      public function getBuildDisplayLabel() : String {
          return this.geri.replace("{VERSION}",UserConfig.BUILD_VERSION).replace("{MINOR}",UserConfig.MINOR_VERSION);
       }
 

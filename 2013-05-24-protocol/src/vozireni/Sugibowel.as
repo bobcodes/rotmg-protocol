@@ -3,7 +3,7 @@ package vozireni
    import flash.media.Sound;
    import flash.media.SoundChannel;
    import jag.Giq;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import flash.net.URLRequest;
    import flash.media.SoundTransform;
    import aaa.rotmg.config.UserConfig;
@@ -31,8 +31,8 @@ package vozireni
       public static function load() : void {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         var _loc1_:Vylasy = Giq.kid().getInstance(Vylasy);
-         var _loc2_:* = _loc1_.jodohyfewo(true)+"/music/sorc.mp3";
+         var _loc1_:GoogleAppConfig = Giq.kid().getInstance(GoogleAppConfig);
+         var _loc2_:* = _loc1_.getRotmgAppUrl(true)+"/music/sorc.mp3";
          ficur=new Sound();
          ficur.load(new URLRequest(_loc2_));
          suk=ficur.play(0,int.MAX_VALUE,new SoundTransform(UserConfig.data_.playMusic?0.3:0));

@@ -7,7 +7,7 @@ package com.company.assembleegameclient.appengine
    import jag.Giq;
    import kyco.Nun;
    import com.company.assembleegameclient.objects.ObjectLibrary;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
 
 
    public class Kewisesa extends Event

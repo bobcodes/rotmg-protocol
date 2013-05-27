@@ -2,8 +2,8 @@ package nozil
 {
    import gag.Fijarih;
    import com.company.assembleegameclient.appengine.SavedCharacter;
-   import negirilu.Fuzi;
-   import ruwa.Account;
+   import aaa.rotmg.net.HttpClientWrapper;
+   import aaa.rotmg.account.Account;
    import cicaqyp.Qejopahy;
 
 
@@ -18,7 +18,7 @@ package nozil
 
       public var character:SavedCharacter;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       public var account:Account;
 

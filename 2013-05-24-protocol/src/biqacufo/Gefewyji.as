@@ -1,7 +1,7 @@
 package biqacufo
 {
    import qov.Kalefu;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import wegyluke.Hez;
    import com.company.assembleegameclient.objects.SellableObject;
    import kat.Puqyfebal;

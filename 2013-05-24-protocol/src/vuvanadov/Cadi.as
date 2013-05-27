@@ -1,8 +1,8 @@
 package vuvanadov
 {
-   import ruwa.Account;
-   import negirilu.Fuzi;
-   import cucowury.Vylasy;
+   import aaa.rotmg.account.Account;
+   import aaa.rotmg.net.HttpClientWrapper;
+   import aaa.rotmg.config.GoogleAppConfig;
    import flash.events.ErrorEvent;
    import com.company.util.Babepoc;
 
@@ -18,9 +18,9 @@ package vuvanadov
 
       public var account:Account;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
-      public var setup:Vylasy;
+      public var setup:GoogleAppConfig;
 
       public var event:ErrorEvent;
 
@@ -33,7 +33,7 @@ package vuvanadov
          this.error=this.event["error"];
          this.jip();
          var _loc1_:Array = [];
-         _loc1_.push("Build: "+this.setup.qiken());
+         _loc1_.push("Build: "+this.setup.getBuildDisplayLabel());
          _loc1_.push("message: "+this.jip());
          _loc1_.push("stackTrace: "+this.getStackTrace());
          _loc1_.push(Babepoc.hycis());

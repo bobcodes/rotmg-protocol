@@ -1,18 +1,18 @@
-package ninu
+package aaa.rotmg.account
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import kyt.Zurucuvy;
    import flash.external.ExternalInterface;
 
 
-   public class Ryq extends Object implements Account
+   public class KabamAccount extends Object implements Account
    {
       {
          var _loc1_:* = false;
          var _loc2_:* = true;
       }
 
-      public function Ryq() {
+      public function KabamAccount() {
          var _loc3_:* = false;
          var _loc4_:* = true;
          var _loc1_:String = null;
@@ -31,7 +31,7 @@ package ninu
          return;
       }
 
-      public static const tatuzo:String = "kabam.com";
+      public static const ACCOUNT_TYPE:String = "kabam.com";
 
       private static const fyz:String = "kabam.com";
 
@@ -89,8 +89,8 @@ package ninu
          return this.userSession["kabam_naid"];
       }
 
-      public function vajydor() : String {
-         return tatuzo;
+      public function getAccountType() : String {
+         return ACCOUNT_TYPE;
       }
 
       public function nenyzeqe() : String {

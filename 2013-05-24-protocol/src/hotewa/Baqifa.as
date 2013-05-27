@@ -2,8 +2,8 @@ package hotewa
 {
    import tulunyno.Hugyqufyq;
    import com.company.assembleegameclient.appengine.Kewisesa;
-   import ruwa.Account;
-   import dijojygeg.Pan;
+   import aaa.rotmg.account.Account;
+   import aaa.rotmg.account.KongregateAccount;
    import aaa.rotmg.config.UserConfig;
    import com.company.assembleegameclient.appengine.SavedCharacter;
    import __AS3__.vec.Vector;
@@ -60,7 +60,7 @@ package hotewa
       public function gywufo() : Boolean {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         return (this.isAgeVerified)||this.account is Pan||(this.qyk.isAgeVerified);
+         return (this.isAgeVerified)||this.account is KongregateAccount||(this.qyk.isAgeVerified);
       }
 
       public function cufelehed(param1:Boolean) : void {

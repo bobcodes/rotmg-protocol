@@ -1,4 +1,4 @@
-package ruwa
+package aaa.rotmg.account
 {
 
 
@@ -30,7 +30,7 @@ package ruwa
 
       divib function zyz() : String;
 
-      divib function vajydor() : String;
+      divib function getAccountType() : String;
 
       divib function bicydyn() : String;
 

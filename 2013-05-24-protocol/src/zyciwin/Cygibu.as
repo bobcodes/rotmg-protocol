@@ -2,10 +2,10 @@ package zyciwin
 {
    import gag.Fijarih;
    import dopumitud.Hiwa;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import vavufer.Bicowu;
    import cyt.Zivovype;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
 
 
    public class Cygibu extends Fijarih implements Hiwa
@@ -23,7 +23,7 @@ package zyciwin
 
       public var zefy:Zivovype;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = false;

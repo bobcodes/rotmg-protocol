@@ -1,6 +1,6 @@
 package ripu
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import raqu.Pobu;
    import raqu.Wolugyty;
    import hotewa.Nowuved;

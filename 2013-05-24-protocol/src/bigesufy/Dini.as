@@ -1,10 +1,10 @@
 package bigesufy
 {
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import aaa.rotmg.config.UserConfig;
 
 
-   public class Dini extends Object implements Vylasy
+   public class Dini extends Object implements GoogleAppConfig
    {
       public function Dini() {
          var _loc1_:* = true;
@@ -13,40 +13,36 @@ package bigesufy
          return;
       }
 
-      private const femykojus:String = "rotmgtesting.appspot.com";
+      private const _testingAppDomain:String = "rotmgtesting.appspot.com";
 
-      private const patij:String = "http://"+this.femykojus;
+      private const _testingAppHttp:String = "http://"+this._testingAppDomain;
 
-      private const rody:String = "https://"+this.femykojus;
+      private const _testingAppHttps:String = "https://"+this._testingAppDomain;
 
-      private const nuw:String = "UA-99999999-1";
+      private const _googleAccountNumber:String = "UA-99999999-1";
 
-      private const geri:String = "<font color=\'#9900FF\'>{IP}</font> #{VERSION}";
+      private const _lblAddressVersion:String = "<font color=\'#9900FF\'>{IP}</font> #{VERSION}";
 
-      private var gaj:String;
+      private var _address:String;
 
       public function setAddress(param1:String) : Dini {
-         var _loc2_:* = true;
-         var _loc3_:* = false;
-         this.gaj=param1;
+         this._address=param1;
          return this;
       }
 
-      public function jodohyfewo(param1:Boolean=false) : String {
+      public function getRotmgAppUrl(param1:Boolean=false) : String {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         return param1?this.patij:this.rody;
+         return param1?this._testingAppHttp:this._testingAppHttps;
       }
 
-      public function rul() : String {
-         return this.nuw;
+      public function getGoogleAccountNumber() : String {
+         return this._googleAccountNumber;
       }
 
-      public function qiken() : String {
-         var _loc2_:* = false;
-         var _loc3_:* = true;
+      public function getBuildDisplayLabel() : String {
          var _loc1_:String = UserConfig.BUILD_VERSION+"."+UserConfig.MINOR_VERSION;
-         return this.geri.replace("{IP}",this.gaj).replace("{VERSION}",_loc1_);
+         return this._lblAddressVersion.replace("{IP}",this._address).replace("{VERSION}",_loc1_);
       }
 
       public function dokoza() : Boolean {

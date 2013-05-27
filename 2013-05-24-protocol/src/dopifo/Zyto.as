@@ -1,12 +1,12 @@
 package dopifo
 {
    import flash.events.EventDispatcher;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import tulunyno.Vobaqe;
    import flash.utils.getTimer;
 
 
-   public class Zyto extends EventDispatcher implements Fuzi
+   public class Zyto extends EventDispatcher implements HttpClientWrapper
    {
       public function Zyto() {
          var _loc1_:* = false;

@@ -1,20 +1,20 @@
-package ric
+package aaa.rotmg.account
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import com.company.assembleegameclient.util.GUID;
    import flash.net.SharedObject;
    import aaa.rotmg.config.UserConfig;
    import flash.external.ExternalInterface;
 
 
-   public class Durujeduj extends Object implements Account
+   public class RotmgAccount extends Object implements Account
    {
       {
          var _loc1_:* = false;
          var _loc2_:* = true;
       }
 
-      public function Durujeduj() {
+      public function RotmgAccount() {
          var _loc2_:* = true;
          var _loc3_:* = false;
          super();
@@ -28,7 +28,7 @@ package ric
          return;
       }
 
-      public static const tatuzo:String = "rotmg";
+      public static const ACCOUNT_TYPE:String = "rotmg";
 
       private static const nobifac:String = "";
 
@@ -120,8 +120,8 @@ package ric
          return nobifac;
       }
 
-      public function vajydor() : String {
-         return tatuzo;
+      public function getAccountType() : String {
+         return ACCOUNT_TYPE;
       }
 
       public function bicydyn() : String {

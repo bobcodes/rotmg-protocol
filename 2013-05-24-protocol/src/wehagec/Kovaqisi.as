@@ -2,7 +2,7 @@ package wehagec
 {
 [CLASS3]   import komawowag.Silikyta;
    import komawowag.Net;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import ginarasew.Kal;
 
 
@@ -17,7 +17,7 @@ package wehagec
 
       public var context:Net;
 
-      public var nerynuk:Vylasy;
+      public var nerynuk:GoogleAppConfig;
 
       public function configure() : void {
          var _loc1_:* = false;

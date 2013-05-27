@@ -2,11 +2,11 @@ package kevusu
 {
    import gag.Fijarih;
    import dopumitud.Jetemiqon;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import wokobewig.Haqy;
    import wegyluke.Hez;
-   import negirilu.Fuzi;
-   import ninu.Ryq;
+   import aaa.rotmg.net.HttpClientWrapper;
+   import aaa.rotmg.account.KabamAccount;
    import naj.Kajoraqu;
 
 
@@ -25,14 +25,14 @@ package kevusu
 
       public var naval:Hez;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
-      private var kabam:Ryq;
+      private var kabam:KabamAccount;
 
       override protected function startTask() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.kabam=this.account as Ryq;
+         this.kabam=this.account as KabamAccount;
          this.kabam.signedRequest=this.parameters.mabyze();
          this.kabam.userSession=this.parameters.tol();
          if(this.kabam.userSession==null)

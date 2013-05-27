@@ -1,14 +1,13 @@
-package cucowury
+package aaa.rotmg.config
 {
 
-
-   public interface Vylasy extends Fym
+   public interface GoogleAppConfig extends Fym
    {
-      cyb function qiken() : String;
+      cyb function getBuildDisplayLabel() : String;
 
-      cyb function jodohyfewo(param1:Boolean=false) : String;
+      cyb function getRotmgAppUrl(param1:Boolean=false) : String;
 
-      cyb function rul() : String;
+      cyb function getGoogleAccountNumber() : String;
 
       cyb function dokoza() : Boolean;
 

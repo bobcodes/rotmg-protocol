@@ -1,13 +1,13 @@
 package dopifo
 {
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import raqu.Sikywybu;
    import tulunyno.Vobaqe;
    import flash.utils.getTimer;
    import cidehov.Hyzifiraj;
 
 
-   public class Paqe extends Object implements Fuzi
+   public class Paqe extends Object implements HttpClientWrapper
    {
       public function Paqe() {
          var _loc1_:* = false;

@@ -2,8 +2,8 @@ package cyza
 {
    import gag.Fijarih;
    import dopumitud.Jetemiqon;
-   import ruwa.Account;
-   import negirilu.Fuzi;
+   import aaa.rotmg.account.Account;
+   import aaa.rotmg.net.HttpClientWrapper;
    import vavufer.Bicowu;
    import flash.net.SharedObject;
    import gag.Bysyg;
@@ -21,7 +21,7 @@ package cyza
 
       public var account:Account;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       private var data:Bicowu;
 

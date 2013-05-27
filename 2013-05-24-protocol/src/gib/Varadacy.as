@@ -1,11 +1,11 @@
 package gib
 {
    import qov.Kalefu;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import wegyluke.Hez;
    import wegyluke.Cowymute;
    import sasacen.Mygotuwo;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import com.company.util.Vuwewuc;
 
 
@@ -28,7 +28,7 @@ package gib
 
       public var ryqo:Mygotuwo;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       private var name:String;
 

@@ -1,12 +1,12 @@
 package zybome
 {
    import lagizizoq.Mys;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import jiha.Hevorim;
    import peciryf.Qupicyrab;
    import peciryf.Lizyk;
-   import ninu.Ryq;
-   import ric.Durujeduj;
+   import aaa.rotmg.account.KabamAccount;
+   import aaa.rotmg.account.RotmgAccount;
 
 
    public class Vec extends Object
@@ -40,7 +40,7 @@ package zybome
       private function segagagyw() : Boolean {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         return (this.account is Ryq||this.account is Durujeduj)&&this.data["UseExternalPayments"]==null||(Boolean(int(this.data["UseExternalPayments"])));
+         return (this.account is KabamAccount||this.account is RotmgAccount)&&this.data["UseExternalPayments"]==null||(Boolean(int(this.data["UseExternalPayments"])));
       }
    }
 

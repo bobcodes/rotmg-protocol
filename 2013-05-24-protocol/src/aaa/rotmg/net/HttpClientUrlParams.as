@@ -1,6 +1,6 @@
-package dopifo
+package aaa.rotmg.net
 {
-   import negirilu.Zufafymy;
+   import aaaa.rotmg.net.HttpClient;
    import tulunyno.Vobaqe;
    import flash.net.URLRequest;
    import flash.net.URLLoader;
@@ -14,9 +14,9 @@ package dopifo
    import flash.utils.ByteArray;
 
 
-   public class Myg extends Object implements Zufafymy
+   public class HttpClientUrlParams extends Object implements HttpClient
    {
-      public function Myg() {
+      public function HttpClientUrlParams() {
          var _loc1_:* = true;
          var _loc2_:* = false;
          super();
@@ -60,8 +60,6 @@ package dopifo
       }
 
       public function sendRequest(param1:String, param2:Object) : void {
-         var _loc3_:* = true;
-         var _loc4_:* = false;
          this.url=param1;
          this.params=param2;
          this.kysidoto=this.pasyhumi;

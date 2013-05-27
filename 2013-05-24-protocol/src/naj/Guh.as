@@ -1,7 +1,7 @@
 package naj
 {
    import qov.Kalefu;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import wegyluke.Cowymute;
 
 

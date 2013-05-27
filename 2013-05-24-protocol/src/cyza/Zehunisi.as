@@ -2,9 +2,9 @@ package cyza
 {
    import gag.Fijarih;
    import dopumitud.Suquzujow;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import vavufer.Bicowu;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
 
 
    public class Zehunisi extends Fijarih implements Suquzujow
@@ -20,7 +20,7 @@ package cyza
 
       public var data:Bicowu;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = false;

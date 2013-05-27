@@ -3,9 +3,9 @@ package cyza
    import gag.Fijarih;
    import dopumitud.Rykuzen;
    import vavufer.Bicowu;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import hotewa.Baqifa;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
 
 
    public class Duma extends Fijarih implements Rykuzen
@@ -23,7 +23,7 @@ package cyza
 
       public var model:Baqifa;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = true;

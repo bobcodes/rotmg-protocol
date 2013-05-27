@@ -4,7 +4,7 @@ package jybazigiq
    import kyco.Nun;
    import bidav.Duwuweb;
    import lagizizoq.Mys;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import kyku.Qodibyl;
    import sasacen.Mygotuwo;
    import cuwyg.Dewydo;
@@ -129,7 +129,7 @@ package jybazigiq
 
       public var davyl:Mys;
 
-      public var setup:Vylasy;
+      public var setup:GoogleAppConfig;
 
       public var startup:Qodibyl;
 

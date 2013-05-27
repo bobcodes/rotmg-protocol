@@ -3,7 +3,7 @@ package vapihufy
    import gag.Fijarih;
    import dopumitud.Suquzujow;
    import nukobi.Fozydo;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import gag.Bysyg;
 
 

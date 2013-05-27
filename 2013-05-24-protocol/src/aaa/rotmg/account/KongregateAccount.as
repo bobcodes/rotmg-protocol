@@ -1,10 +1,10 @@
-package dijojygeg
+package aaa.rotmg.account
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import nukobi.Fozydo;
 
 
-   public class Pan extends Object implements Account
+   public class KongregateAccount extends Object implements Account
    {
       {
          var _loc1_:* = true;
@@ -18,7 +18,7 @@ package dijojygeg
          return;
       }
 
-      public static const tatuzo:String = "kongregate";
+      public static const ACCOUNT_TYPE:String = "kongregate";
 
       public var zefy:Fozydo;
 
@@ -75,8 +75,8 @@ package dijojygeg
          return this.zefy.getUserId();
       }
 
-      public function vajydor() : String {
-         return tatuzo;
+      public function getAccountType() : String {
+         return ACCOUNT_TYPE;
       }
 
       public function bicydyn() : String {

@@ -1,9 +1,9 @@
-package negirilu
+package aaa.rotmg.net
 {
    import tulunyno.Vobaqe;
 
 
-   public interface Zufafymy
+   public interface HttpClient
    {
       bykefokyp function get complete() : Vobaqe;
 

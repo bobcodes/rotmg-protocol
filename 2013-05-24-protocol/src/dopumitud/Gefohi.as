@@ -1,9 +1,9 @@
 package dopumitud
 {
    import gag.Fijarih;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import hotewa.Baqifa;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
 
 
    public class Gefohi extends Fijarih
@@ -19,7 +19,7 @@ package dopumitud
 
       public var muwi:Baqifa;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc1_:* = false;

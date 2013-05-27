@@ -36,7 +36,7 @@ package com.company.assembleegameclient.game
    import aaa.rotmg.action.mapping.RotMGActionMapperAbstract;
    import jag.Giq;
    import kyco.Nun;
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
 
 
    public class Vub extends Object
@@ -65,7 +65,7 @@ package com.company.assembleegameclient.game
          this.pog=_loc2_.getInstance(Lihivak);
          this.dom=_loc2_.getInstance(Zyqyt);
          this.rinumeho=_loc2_.getInstance(Gylotu);
-         var _loc3_:Vylasy = _loc2_.getInstance(Vylasy);
+         var _loc3_:GoogleAppConfig = _loc2_.getInstance(GoogleAppConfig);
          this.dewozo=_loc3_.sonyh();
          return;
       }

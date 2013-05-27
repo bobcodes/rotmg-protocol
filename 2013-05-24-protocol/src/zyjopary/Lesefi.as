@@ -1,7 +1,7 @@
 package zyjopary
 {
    import gag.Fijarih;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import wegyluke.Hez;
    import lijite.Sapes;
    import byzany.Qopel;
@@ -20,7 +20,7 @@ package zyjopary
          return;
       }
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       public var naval:Hez;
 

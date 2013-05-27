@@ -1,10 +1,10 @@
 package bigesufy
 {
-   import cucowury.Vylasy;
+   import aaa.rotmg.config.GoogleAppConfig;
    import aaa.rotmg.config.UserConfig;
 
 
-   public class Vuca extends Object implements Vylasy
+   public class Vuca extends Object implements GoogleAppConfig
    {
       public function Vuca() {
          var _loc1_:* = false;
@@ -23,17 +23,17 @@ package bigesufy
 
       private const geri:String = "<font color=\'#FFEE00\'>TESTING APP ENGINE, PRIVATE SERVER</font> #{VERSION}";
 
-      public function jodohyfewo(param1:Boolean=false) : String {
+      public function getRotmgAppUrl(param1:Boolean=false) : String {
          var _loc2_:* = true;
          var _loc3_:* = false;
          return param1?this.patij:this.rody;
       }
 
-      public function rul() : String {
+      public function getGoogleAccountNumber() : String {
          return this.nuw;
       }
 
-      public function qiken() : String {
+      public function getBuildDisplayLabel() : String {
          var _loc2_:* = true;
          var _loc3_:* = false;
          var _loc1_:String = UserConfig.BUILD_VERSION+"."+UserConfig.MINOR_VERSION;

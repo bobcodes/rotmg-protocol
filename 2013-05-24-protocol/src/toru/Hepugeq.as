@@ -2,8 +2,8 @@ package toru
 {
    import gag.Fijarih;
    import fulaw.Dasin;
-   import negirilu.Fuzi;
-   import ruwa.Account;
+   import aaa.rotmg.net.HttpClientWrapper;
+   import aaa.rotmg.account.Account;
    import hotewa.Baqifa;
    import wegyluke.Hez;
    import fulaw.Wuduler;
@@ -21,7 +21,7 @@ package toru
 
       public var skin:Dasin;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       public var account:Account;
 

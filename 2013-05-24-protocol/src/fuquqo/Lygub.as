@@ -1,6 +1,6 @@
 package fuquqo
 {
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import cuwyg.Nihuvi;
    import zubamyki.Sywyvu;
    import zubamyki.Mogedut;

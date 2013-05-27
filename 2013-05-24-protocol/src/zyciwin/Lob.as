@@ -1,10 +1,10 @@
 package zyciwin
 {
    import gag.Fijarih;
-   import ruwa.Account;
+   import aaa.rotmg.account.Account;
    import cyt.Zivovype;
    import wegyluke.Hez;
-   import negirilu.Fuzi;
+   import aaa.rotmg.net.HttpClientWrapper;
    import nas.Vyha;
 
 
@@ -30,7 +30,7 @@ package zyciwin
 
       public var naval:Hez;
 
-      public var client:Fuzi;
+      public var client:HttpClientWrapper;
 
       override protected function startTask() : void {
          var _loc2_:* = false;
