@@ -1,0 +1,246 @@
+package {
+    import com.company.versionedloader.*;
+
+    public class AGCLoader extends VersionedLoader {
+
+        public function AGCLoader(){
+            super("AssembleeGameClient");
+        }
+    }
+}//package 
+﻿package com.company.rotmg.graphics.logo {
+    import flash.display.*;
+
+    public dynamic class Clouds extends MovieClip {
+
+    }
+}//package com.company.rotmg.graphics.logo 
+﻿package com.company.rotmg.graphics.logo {
+    import flash.display.*;
+
+    public dynamic class Guy extends MovieClip {
+
+    }
+}//package com.company.rotmg.graphics.logo 
+﻿package com.company.logo {
+    import flash.events.*;
+    import flash.display.*;
+    import com.company.rotmg.graphics.logo.*;
+    import flash.utils.*;
+    import flash.geom.*;
+
+    public class AnimatedLogo extends Sprite {
+
+        private static const PERIOD:int = 2000;
+
+        private var background_:Bitmap;
+        private var overlay_:Sprite;
+        private var startTime_:int = -1;
+
+        public function AnimatedLogo(){
+            this.background_ = getBackground();
+            this.overlay_ = getOverlay();
+            addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+            addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+        }
+        private static function getBackground():Bitmap{
+            var _local1:BitmapData = new BitmapData(0x0100, 0x0100, false, 0xFF000000);
+            var _local2:int = (Math.random() * int.MAX_VALUE);
+            _local1.perlinNoise(_local1.width, _local1.height, 8, _local2, true, false, ((BitmapDataChannel.RED | BitmapDataChannel.GREEN) | BitmapDataChannel.BLUE), true, null);
+            var _local3:ColorTransform = new ColorTransform(2, 2, 2, 1, 0, 0, 0, 0);
+            _local1.colorTransform(_local1.rect, _local3);
+            var _local4:BitmapData = new BitmapData((_local1.width * 2), _local1.height, false);
+            _local4.copyPixels(_local1, _local1.rect, new Point(0, 0));
+            _local4.copyPixels(_local1, _local1.rect, new Point(_local1.width, 0));
+            _local1.dispose();
+            return (new Bitmap(_local4));
+        }
+        private static function getOverlay():Sprite{
+            var _local1:Sprite = new Sprite();
+            _local1.blendMode = BlendMode.LAYER;
+            _local1.addChild(new Clouds());
+            var _local2:Guy = new Guy();
+            _local2.x = ((_local1.width / 2) - (_local2.width / 2));
+            _local2.y = ((_local1.height / 2) - (_local2.height / 2));
+            _local2.blendMode = BlendMode.ERASE;
+            _local1.addChild(_local2);
+            _local1.x = ((800 / 2) - (_local1.width / 2));
+            _local1.y = ((600 / 2) - (_local1.height / 2));
+            _local1.blendMode = BlendMode.ERASE;
+            var _local3:Sprite = new Sprite();
+            _local3.blendMode = BlendMode.LAYER;
+            _local3.graphics.beginFill(0, 1);
+            _local3.graphics.drawRect(0, 0, 800, 600);
+            _local3.graphics.endFill();
+            _local3.addChild(_local1);
+            return (_local3);
+        }
+
+        private function onAddedToStage(_arg1:Event):void{
+            addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
+        }
+        private function onRemovedFromStage(_arg1:Event):void{
+            removeEventListener(Event.ENTER_FRAME, this.onEnterFrame);
+        }
+        private function onEnterFrame(_arg1:Event):void{
+            this.moveBackground();
+        }
+        private function moveBackground():void{
+            var _local1:int = getTimer();
+            if (this.startTime_ == -1){
+                this.startTime_ = _local1;
+                addChild(this.background_);
+                addChild(this.overlay_);
+            };
+            var _local2:Number = (((_local1 - this.startTime_) % PERIOD) / PERIOD);
+            this.background_.x = (0x0100 * _local2);
+            this.background_.y = ((600 / 2) - (this.background_.height / 2));
+        }
+
+    }
+}//package com.company.logo 
+﻿package com.company.versionedloader {
+    import flash.events.*;
+    import flash.display.*;
+    import com.company.logo.*;
+    import flash.text.*;
+    import flash.net.*;
+    import flash.system.*;
+    import flash.utils.*;
+
+    public class VersionedLoader extends Sprite {
+
+        private static const ALLOWED_DOMAINS:Array = ["testing.realmofthemadgod.com", "www.realmofthemadgod.com", "realmofthemadgod.appspot.com", "rotmgtesting.appspot.com", "localhost"];
+        private static const DEFAULT_BYTES_TOTAL:int = (1 << 20);
+
+        private var domain_:String;
+        private var swfPrefix_:String;
+        private var logo_:AnimatedLogo;
+        private var status_:TextField;
+        private var urlLoader_:URLLoader;
+        private var loader_:Loader;
+        private var game_:Sprite;
+        private var protocol_:String = "http:";
+
+        public function VersionedLoader(_arg1:String){
+            var _local3:String;
+            var _local4:Object;
+            super();
+            var _local2:LocalConnection = new LocalConnection();
+            this.domain_ = "www.realmofthemadgod.com";
+            for each (_local3 in ALLOWED_DOMAINS) {
+                if (_local2.domain == _local3){
+                    this.domain_ = _local3;
+                };
+            };
+            this.swfPrefix_ = _arg1;
+            Security.allowDomain("*");
+            _local4 = LoaderInfo(this.loaderInfo).parameters;
+            if (_local4.rotmg_loader_protocol == "https:"){
+                this.protocol_ = _local4.rotmg_loader_protocol;
+            };
+            if (_local4.rotmg_loader_port != null){
+                this.domain_ = (this.domain_ + _local4.rotmg_loader_port);
+            };
+            this.logo_ = new AnimatedLogo();
+            this.status_ = new TextField();
+            this.status_.selectable = false;
+            var _local5:TextFormat = new TextFormat();
+            _local5.size = 10;
+            _local5.color = 4286545791;
+            this.status_.defaultTextFormat = _local5;
+            this.status_.width = 800;
+            this.status_.y = 360;
+            this.setStatus("initializing");
+            this.urlLoader_ = new URLLoader();
+            this.urlLoader_.addEventListener(Event.COMPLETE, this.onVersionComplete);
+            this.urlLoader_.addEventListener(IOErrorEvent.IO_ERROR, this.onVersionIOError);
+            this.urlLoader_.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this.onVersionSecurityError);
+            this.loadVersion();
+        }
+        private function setStatus(_arg1:String):void{
+            addChild(this.logo_);
+            addChild(this.status_);
+            this.status_.htmlText = (("<p align=\"center\">" + _arg1) + "</p>");
+        }
+        private function removeStatus():void{
+            removeChild(this.logo_);
+            removeChild(this.status_);
+        }
+        private function loadVersion():void{
+            var _local1 = (((this.protocol_ + "//") + this.domain_) + "/version.txt");
+            var _local2:URLRequest = new URLRequest(_local1);
+            _local2.data = new URLVariables(("time=" + Number(new Date().getTime())));
+            this.urlLoader_.load(_local2);
+            this.setStatus("loading version");
+        }
+        private function onVersionComplete(_arg1:Event):void{
+            var _local2:String = this.urlLoader_.data;
+            this.loadSWF(_local2);
+        }
+        private function onVersionIOError(_arg1:IOErrorEvent):void{
+            this.retryLoadVersion();
+        }
+        private function onVersionSecurityError(_arg1:SecurityErrorEvent):void{
+            this.retryLoadVersion();
+        }
+        private function retryLoadVersion():void{
+            this.setStatus("version loading error, retrying...");
+            var _local1:Timer = new Timer(1000, 1);
+            _local1.addEventListener(TimerEvent.TIMER_COMPLETE, this.onWaitDone);
+        }
+        private function onWaitDone(_arg1:TimerEvent):void{
+            this.loadVersion();
+        }
+        private function loadSWF(_arg1:String):void{
+            var _local2 = ((((((this.protocol_ + "//") + this.domain_) + "/") + this.swfPrefix_) + _arg1) + ".swf");
+            var _local3:URLRequest = new URLRequest(_local2);
+            this.loader_ = new Loader();
+            this.loader_.load(_local3);
+            this.loader_.contentLoaderInfo.addEventListener(ProgressEvent.PROGRESS, this.onSWFProgress);
+            this.loader_.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onSWFComplete);
+            this.loader_.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.onSWFIOError);
+            this.setStatus("loading SWF");
+        }
+        private function onSWFProgress(_arg1:ProgressEvent):void{
+            var _local2:Number = (((_arg1.bytesTotal == 0)) ? DEFAULT_BYTES_TOTAL : _arg1.bytesTotal);
+            var _local3:Number = Math.min(1, (_arg1.bytesLoaded / _local2));
+            this.setStatus((int((_local3 * 100)).toString() + "%"));
+        }
+        private function onSWFComplete(_arg1:Event):void{
+            this.removeLoaderListeners();
+            this.runSWF();
+        }
+        private function onSWFIOError(_arg1:Event):void{
+            this.removeLoaderListeners();
+            this.restart();
+        }
+        private function removeLoaderListeners():void{
+            this.loader_.contentLoaderInfo.removeEventListener(ProgressEvent.PROGRESS, this.onSWFProgress);
+            this.loader_.contentLoaderInfo.removeEventListener(Event.COMPLETE, this.onSWFComplete);
+            this.loader_.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR, this.onSWFIOError);
+        }
+        private function runSWF():void{
+            this.removeStatus();
+            this.game_ = Sprite(this.loader_.content);
+            this.game_.addEventListener(Event.COMPLETE, this.onGameComplete);
+            addChild(this.game_);
+        }
+        private function onGameComplete(_arg1:Event):void{
+            this.restart();
+        }
+        private function restart():void{
+            if (this.game_ != null){
+                this.game_.removeEventListener(Event.COMPLETE, this.onGameComplete);
+                removeChild(this.game_);
+                this.game_ = null;
+            };
+            if (this.loader_ != null){
+                this.loader_.unloadAndStop(true);
+                this.loader_ = null;
+            };
+            this.loadVersion();
+        }
+
+    }
+}//package com.company.versionedloader
