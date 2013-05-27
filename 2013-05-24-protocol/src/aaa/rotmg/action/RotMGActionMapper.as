@@ -166,7 +166,7 @@ package aaa.rotmg.action
    import com.company.assembleegameclient.objects.NameChanger;
    import pirus.Lekakyry;
    import sonepyc.Symukytu;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import pov.Rus;
    import com.company.assembleegameclient.map.Qezab;
    import com.company.assembleegameclient.ui.Delifu;

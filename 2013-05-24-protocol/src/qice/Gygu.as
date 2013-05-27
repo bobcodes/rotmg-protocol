@@ -10,7 +10,7 @@ package qice
    import rucag.Qyvasiz;
    import com.company.assembleegameclient.appengine.SavedCharacter;
    import aaa.rotmg.config.UserConfig;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import flash.utils.ByteArray;
    import com.company.assembleegameclient.game.GameSprite;
 

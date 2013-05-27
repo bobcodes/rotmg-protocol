@@ -2,7 +2,7 @@ package leji
 {
    import kogyc.Lifew;
    import __AS3__.vec.Vector;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import aaa.rotmg.config.UserConfig;
 
 

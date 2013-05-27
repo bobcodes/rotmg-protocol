@@ -2,7 +2,7 @@ package sakugyt
 {
    import flash.display.Sprite;
    import movimet.Lufub;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import flash.text.TextFieldAutoSize;
    import nec.Sire;
    import flash.filters.DropShadowFilter;
@@ -74,14 +74,14 @@ package sakugyt
          {
             color=65280;
             text="ServerBox.normal";
-            if(server.jami())
+            if(server.isServerFull())
             {
                color=16711680;
                text="ServerBox.full";
             }
             else
             {
-               if(server.gulysuka())
+               if(server.isServerCrowded())
                {
                   color=16549442;
                   text="ServerBox.crowded";

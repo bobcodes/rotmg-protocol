@@ -36,7 +36,7 @@ package bigesufy
       public function qiken() : String {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         var _loc1_:String = UserConfig.BUILD_VERSION+"."+UserConfig.cyg;
+         var _loc1_:String = UserConfig.BUILD_VERSION+"."+UserConfig.MINOR_VERSION;
          return this.geri.replace("{VERSION}",_loc1_);
       }
 

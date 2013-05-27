@@ -2,7 +2,7 @@ package bisok
 {
    import tulunyno.Hugyqufyq;
    import com.company.assembleegameclient.game.Nukomesih;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import flash.utils.ByteArray;
    import aaa.rotmg.net.RotMGNetworkHandler;
    import com.company.assembleegameclient.objects.GameObject;

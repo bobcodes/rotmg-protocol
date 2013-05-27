@@ -4,7 +4,7 @@ package sakugyt
    import __AS3__.vec.Vector;
    import flash.events.MouseEvent;
    import aaa.rotmg.config.UserConfig;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
 
 
    public class Wemufuq extends Sprite

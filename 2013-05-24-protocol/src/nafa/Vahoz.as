@@ -2,7 +2,7 @@ package nafa
 {
    import flash.display.Sprite;
    import hotewa.Baqifa;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import com.company.assembleegameclient.game.GameSprite;
    import aaa.rotmg.config.UserConfig;
    import flash.events.Event;

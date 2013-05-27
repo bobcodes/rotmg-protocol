@@ -13,20 +13,18 @@ package bigesufy
          return;
       }
 
-      private const femykojus:String = "realmofthemadgod.appspot.com";
+      private const rotmgAppHost:String = "realmofthemadgod.appspot.com";
 
-      private const patij:String = "http://"+this.femykojus;
+      private const rotmgAppHttp:String = "http://"+this.rotmgAppHost;
 
-      private const rody:String = "https://"+this.femykojus;
+      private const rotmgAppHttps:String = "https://"+this.rotmgAppHost;
 
       private const nuw:String = "UA-11236645-4";
 
       private const geri:String = "RotMG #{VERSION}.{MINOR}";
 
       public function jodohyfewo(param1:Boolean=false) : String {
-         var _loc2_:* = true;
-         var _loc3_:* = false;
-         return param1?this.patij:this.rody;
+         return param1?this.rotmgAppHttp:this.rotmgAppHttps;
       }
 
       public function rul() : String {
@@ -34,7 +32,7 @@ package bigesufy
       }
 
       public function qiken() : String {
-         return this.geri.replace("{VERSION}",UserConfig.BUILD_VERSION).replace("{MINOR}",UserConfig.cyg);
+         return this.geri.replace("{VERSION}",UserConfig.BUILD_VERSION).replace("{MINOR}",UserConfig.MINOR_VERSION);
       }
 
       public function dokoza() : Boolean {

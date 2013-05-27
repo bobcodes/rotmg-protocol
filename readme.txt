@@ -44,3 +44,6 @@
 	d) I am guessing this RECONNECT msg is sent after you
 	   initially connect with the server
 	e) now I'm looking for the host and port to connect to
+	f) came across the Server and ServerBox object. what ever
+	   creates this, is probably what obtains the list of
+	   servers to connect to

@@ -23,7 +23,7 @@ package aaa.rotmg.config
 
       public static const BUILD_VERSION:String = "13.3";
 
-      public static const cyg:String = "0";
+      public static const MINOR_VERSION:String = "0";
 
       public static const cit:Boolean = true;
 

@@ -3,7 +3,7 @@ package tasig
    import kogyc.Lifew;
    import hotewa.Baqifa;
    import __AS3__.vec.Vector;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import kogyc.Mile;
    import aaa.rotmg.config.UserConfig;
 
@@ -50,7 +50,7 @@ package tasig
          var _loc5_:int = int.MAX_VALUE;
          for each (_loc6_ in this.servers)
          {
-            if((_loc6_.jami())&&!_loc1_)
+            if((_loc6_.isServerFull())&&!_loc1_)
             {
             }
             else
@@ -60,7 +60,7 @@ package tasig
                   return _loc6_;
                }
                _loc7_=_loc6_.priority();
-               _loc8_=Mile.distance(_loc2_,_loc6_.kik);
+               _loc8_=Mile.distance(_loc2_,_loc6_.latLong);
                if(_loc7_<_loc5_||_loc7_==_loc5_&&_loc8_<_loc4_)
                {
                   _loc3_=_loc6_;

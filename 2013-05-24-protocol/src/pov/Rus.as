@@ -1,7 +1,7 @@
 package pov
 {
    import flash.events.Event;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import flash.utils.ByteArray;
 
 

@@ -5,7 +5,7 @@ package sakugyt
    import flash.display.Shape;
    import com.company.assembleegameclient.ui.Tira;
    import __AS3__.vec.Vector;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import tulunyno.Hugyqufyq;
    import flash.events.Event;
    import com.company.googleanalytics.GA;

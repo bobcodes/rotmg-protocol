@@ -43,7 +43,7 @@ package com.company.assembleegameclient.game
    import com.company.assembleegameclient.util.TextureRedrawer;
    import com.company.assembleegameclient.objects.Projectile;
    import com.company.googleanalytics.GA;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import flash.utils.ByteArray;
    import hotewa.Baqifa;
    import flash.display.Sprite;

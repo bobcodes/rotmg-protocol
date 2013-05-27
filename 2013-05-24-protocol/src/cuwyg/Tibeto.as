@@ -1,6 +1,6 @@
 package cuwyg
 {
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import flash.utils.ByteArray;
 
 

@@ -1,7 +1,7 @@
 package tasig
 {
    import kogyc.Lifew;
-   import kogyc.Server;
+   import aaa.rotmg.net.Server;
    import __AS3__.vec.Vector;
    import aaa.rotmg.config.UserConfig;
 
