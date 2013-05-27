@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Lyqo extends Tego
+   public class Lyqo extends IncomingOnlyNetworkMessage
    {
       public function Lyqo(param1:uint, param2:Function) {
          var _loc3_:* = true;

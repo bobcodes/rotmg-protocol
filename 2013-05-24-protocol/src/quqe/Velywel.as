@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Velywel extends Tego
+   public class Velywel extends IncomingOnlyNetworkMessage
    {
       public function Velywel(param1:uint, param2:Function) {
          var _loc3_:* = false;

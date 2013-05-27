@@ -5,7 +5,7 @@ package quqe
    import flash.utils.ByteArray;
 
 
-   public class Pic extends Tego
+   public class Pic extends IncomingOnlyNetworkMessage
    {
       public function Pic(param1:uint, param2:Function) {
          var _loc3_:* = false;

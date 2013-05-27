@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Bowe extends Tego
+   public class Bowe extends IncomingOnlyNetworkMessage
    {
       public function Bowe(param1:uint, param2:Function) {
          var _loc3_:* = true;

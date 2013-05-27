@@ -75,7 +75,7 @@ package aaa.rotmg.action
    import quqe.Zopomepu;
    import quqe.Zicesu;
    import quqe.Zug;
-   import quqe.Had;
+   import aaa.rotmg.action.ReconnectResultMsg;
    import quqe.Tolil;
    import quqe.Cinyl;
    import quqe.Pic;
@@ -214,7 +214,7 @@ package aaa.rotmg.action
          this.newiq=this.cemohoqal.getInstance(Dos);
          this.tuqebeg=this.cemohoqal.getInstance(Ruh);
          this.sydo=this.cemohoqal.getInstance(Vihekivuc);
-         rotmgNetworkHandler=this.cemohoqal.getInstance(RotMGNetworkHandler);
+         _rotmgNetworkHandler=this.cemohoqal.getInstance(RotMGNetworkHandler);
          this.govizupas=this.cemohoqal.getInstance(Pyzokipu);
          this.model=this.cemohoqal.getInstance(Nihuvi);
          gs_=param1;
@@ -298,16 +298,16 @@ package aaa.rotmg.action
          var _loc2_:* = false;
          this.tav();
          this.qifi();
-         rotmgNetworkHandler.disconnect();
+         _rotmgNetworkHandler.disconnect();
          return;
       }
 
       private function tav() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         rotmgNetworkHandler.connected.remove(this.micyzi);
-         rotmgNetworkHandler.closed.remove(this.pomuwok);
-         rotmgNetworkHandler.error.remove(this.jyqoqonuz);
+         _rotmgNetworkHandler.connected.remove(this.onNetworkHandlerConnected);
+         _rotmgNetworkHandler.closed.remove(this.pomuwok);
+         _rotmgNetworkHandler.error.remove(this.jyqoqonuz);
          return;
       }
 
@@ -321,16 +321,14 @@ package aaa.rotmg.action
          _loc1_.text=I18nKeys.vicy;
          _loc1_.tokens={serverName:server_.name};
          this.fyve.dispatch(_loc1_);
-         rotmgNetworkHandler.connect(server_.address,server_.port);
+         _rotmgNetworkHandler.connect(server_.address,server_.port);
          return;
       }
 
       public function babafifog() : void {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
-         rotmgNetworkHandler.connected.add(this.micyzi);
-         rotmgNetworkHandler.closed.add(this.pomuwok);
-         rotmgNetworkHandler.error.add(this.jyqoqonuz);
+         _rotmgNetworkHandler.connected.add(this.onNetworkHandlerConnected);
+         _rotmgNetworkHandler.closed.add(this.pomuwok);
+         _rotmgNetworkHandler.error.add(this.jyqoqonuz);
          return;
       }
 
@@ -387,7 +385,7 @@ package aaa.rotmg.action
          _loc1_.map(libyk).rafakone(Zopomepu).puqaloryf(this.wotybyg);
          _loc1_.map(GOTO).rafakone(Zicesu).puqaloryf(this.jihaweky);
          _loc1_.map(INVRESULT).rafakone(Zug).puqaloryf(this.dygivy);
-         _loc1_.map(RECONNECT).rafakone(Had).puqaloryf(this.womewykyh);
+         _loc1_.map(RECONNECT).rafakone(ReconnectResultMsg).puqaloryf(this.onReconnectResultMsg);
          _loc1_.map(PING).rafakone(Tolil).puqaloryf(this.kajec);
          _loc1_.map(MAPINFO).rafakone(Cinyl).puqaloryf(this.fomysuzyn);
          _loc1_.map(PIC).rafakone(Pic).puqaloryf(this.tejid);
@@ -553,8 +551,8 @@ package aaa.rotmg.action
          {
             _loc1_=Crypto.getCipher("rc4",Dapiby.dahicamo(UserConfig.OutGoingSecretKey));
             _loc2_=Crypto.getCipher("rc4",Dapiby.dahicamo(UserConfig.InComingSecretKey));
-            rotmgNetworkHandler.setOutgoingCipher(_loc1_);
-            rotmgNetworkHandler.setIncomingCipher(_loc2_);
+            _rotmgNetworkHandler.setOutgoingCipher(_loc1_);
+            _rotmgNetworkHandler.setIncomingCipher(_loc2_);
          }
          return;
       }
@@ -590,7 +588,7 @@ package aaa.rotmg.action
          var _loc2_:Create = this.govizupas.runozak(CREATE) as Create;
          _loc2_.classType=_loc1_.id;
          _loc2_.skinType=_loc1_.socucu.mipozilin().id;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -599,7 +597,7 @@ package aaa.rotmg.action
          var _loc3_:* = true;
          var _loc1_:Lyrafe = this.govizupas.runozak(LOAD) as Lyrafe;
          _loc1_.charId_=charId_;
-         rotmgNetworkHandler.sendMessage(_loc1_);
+         _rotmgNetworkHandler.sendMessage(_loc1_);
          return;
       }
 
@@ -613,7 +611,7 @@ package aaa.rotmg.action
          _loc3_.startingPos_.x_=param2.x_;
          _loc3_.startingPos_.y_=param2.y_;
          _loc3_.angle_=param2.angle_;
-         rotmgNetworkHandler.sendMessage(_loc3_);
+         _rotmgNetworkHandler.sendMessage(_loc3_);
          return;
       }
 
@@ -623,7 +621,7 @@ package aaa.rotmg.action
          var _loc3_:Kikumona = this.govizupas.runozak(PLAYERHIT) as Kikumona;
          _loc3_.bulletId_=param1;
          _loc3_.objectId_=param2;
-         rotmgNetworkHandler.sendMessage(_loc3_);
+         _rotmgNetworkHandler.sendMessage(_loc3_);
          return;
       }
 
@@ -635,7 +633,7 @@ package aaa.rotmg.action
          _loc5_.bulletId_=param2;
          _loc5_.targetId_=param3;
          _loc5_.kill_=param4;
-         rotmgNetworkHandler.sendMessage(_loc5_);
+         _rotmgNetworkHandler.sendMessage(_loc5_);
          return;
       }
 
@@ -647,7 +645,7 @@ package aaa.rotmg.action
          _loc5_.bulletId_=param2;
          _loc5_.objectId_=param3;
          _loc5_.targetId_=param4;
-         rotmgNetworkHandler.sendMessage(_loc5_);
+         _rotmgNetworkHandler.sendMessage(_loc5_);
          return;
       }
 
@@ -658,7 +656,7 @@ package aaa.rotmg.action
          _loc4_.time_=param1;
          _loc4_.bulletId_=param2;
          _loc4_.objectId_=param3;
-         rotmgNetworkHandler.sendMessage(_loc4_);
+         _rotmgNetworkHandler.sendMessage(_loc4_);
          return;
       }
 
@@ -669,7 +667,7 @@ package aaa.rotmg.action
          _loc4_.time_=param1;
          _loc4_.position_.x_=param2;
          _loc4_.position_.y_=param3;
-         rotmgNetworkHandler.sendMessage(_loc4_);
+         _rotmgNetworkHandler.sendMessage(_loc4_);
          return;
       }
 
@@ -680,7 +678,7 @@ package aaa.rotmg.action
          _loc4_.time_=param1;
          _loc4_.position_.x_=param2;
          _loc4_.position_.y_=param3;
-         rotmgNetworkHandler.sendMessage(_loc4_);
+         _rotmgNetworkHandler.sendMessage(_loc4_);
          return;
       }
 
@@ -689,7 +687,7 @@ package aaa.rotmg.action
          var _loc4_:* = true;
          var _loc2_:Tyv = this.govizupas.runozak(SHOOTACK) as Tyv;
          _loc2_.time_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -698,7 +696,7 @@ package aaa.rotmg.action
          var _loc4_:* = true;
          var _loc2_:Paryg = this.govizupas.runozak(PLAYERTEXT) as Paryg;
          _loc2_.text_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -719,7 +717,7 @@ package aaa.rotmg.action
          _loc8_.slotObject2_.objectId_=param5.objectId_;
          _loc8_.slotObject2_.byzezil=param6;
          _loc8_.slotObject2_.objectType_=param7;
-         rotmgNetworkHandler.sendMessage(_loc8_);
+         _rotmgNetworkHandler.sendMessage(_loc8_);
          var _loc9_:int = param2.jevuqike[param3];
          param2.jevuqike[param3]=param5.jevuqike[param6];
          param5.jevuqike[param6]=_loc9_;
@@ -756,7 +754,7 @@ package aaa.rotmg.action
                param1.basonuhe++;
             }
          }
-         rotmgNetworkHandler.sendMessage(_loc8_);
+         _rotmgNetworkHandler.sendMessage(_loc8_);
          Pozunubu.play("inventory_move_item");
          return true;
       }
@@ -768,7 +766,7 @@ package aaa.rotmg.action
          _loc4_.slotObject_.objectId_=param1.objectId_;
          _loc4_.slotObject_.byzezil=param2;
          _loc4_.slotObject_.objectType_=param3;
-         rotmgNetworkHandler.sendMessage(_loc4_);
+         _rotmgNetworkHandler.sendMessage(_loc4_);
          if(!(param2==Dewydo.tuvo)&&!(param2==Dewydo.tycewyn))
          {
             param1.jevuqike[param2]=Vimaz.sufybefyr;
@@ -787,7 +785,7 @@ package aaa.rotmg.action
          _loc8_.itemUsePos_.x_=param5;
          _loc8_.itemUsePos_.y_=param6;
          _loc8_.useType_=param7;
-         rotmgNetworkHandler.sendMessage(_loc8_);
+         _rotmgNetworkHandler.sendMessage(_loc8_);
          return;
       }
 
@@ -816,7 +814,7 @@ package aaa.rotmg.action
          _loc5_.slotObject_.objectType_=param3;
          _loc5_.itemUsePos_.x_=0;
          _loc5_.itemUsePos_.y_=0;
-         rotmgNetworkHandler.sendMessage(_loc5_);
+         _rotmgNetworkHandler.sendMessage(_loc5_);
          if(param4.hasOwnProperty("Consumable"))
          {
             param1.jevuqike[param2]=-1;
@@ -830,7 +828,7 @@ package aaa.rotmg.action
          var _loc3_:Lobywo = this.govizupas.runozak(SETCONDITION) as Lobywo;
          _loc3_.conditionEffect_=param1;
          _loc3_.conditionDuration_=param2;
-         rotmgNetworkHandler.sendMessage(_loc3_);
+         _rotmgNetworkHandler.sendMessage(_loc3_);
          return;
       }
 
@@ -871,7 +869,7 @@ package aaa.rotmg.action
             }
          }
          gs_.moveRecords_.clear(_loc5_.time_);
-         rotmgNetworkHandler.sendMessage(_loc5_);
+         _rotmgNetworkHandler.sendMessage(_loc5_);
          return;
       }
 
@@ -880,7 +878,7 @@ package aaa.rotmg.action
          var _loc4_:* = true;
          var _loc2_:Teleport = this.govizupas.runozak(TELEPORT) as Teleport;
          _loc2_.objectId_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -889,7 +887,7 @@ package aaa.rotmg.action
          var _loc4_:* = true;
          var _loc2_:Citu = this.govizupas.runozak(USEPORTAL) as Citu;
          _loc2_.objectId_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -913,7 +911,7 @@ package aaa.rotmg.action
          outstandingBuy_=new Gutom(_loc2_.soldObjectInternalName(),_loc2_.price_,_loc2_.currency_,_loc3_);
          var _loc4_:Buy = this.govizupas.runozak(BUY) as Buy;
          _loc4_.objectId_=param1;
-         rotmgNetworkHandler.sendMessage(_loc4_);
+         _rotmgNetworkHandler.sendMessage(_loc4_);
          return;
       }
 
@@ -922,7 +920,7 @@ package aaa.rotmg.action
          var _loc4_:* = false;
          var _loc2_:Dasisy = this.govizupas.runozak(GOTOACK) as Dasisy;
          _loc2_.time_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -933,7 +931,7 @@ package aaa.rotmg.action
          _loc4_.accountListId_=param1;
          _loc4_.add_=param2;
          _loc4_.objectId_=param3;
-         rotmgNetworkHandler.sendMessage(_loc4_);
+         _rotmgNetworkHandler.sendMessage(_loc4_);
          return;
       }
 
@@ -942,7 +940,7 @@ package aaa.rotmg.action
          var _loc4_:* = false;
          var _loc2_:Pes = this.govizupas.runozak(CHOOSENAME) as Pes;
          _loc2_.name_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -951,7 +949,7 @@ package aaa.rotmg.action
          var _loc4_:* = true;
          var _loc2_:Fynevyla = this.govizupas.runozak(CREATEGUILD) as Fynevyla;
          _loc2_.name_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -960,7 +958,7 @@ package aaa.rotmg.action
          var _loc4_:* = true;
          var _loc2_:Fyzegiz = this.govizupas.runozak(GUILDREMOVE) as Fyzegiz;
          _loc2_.name_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -969,7 +967,7 @@ package aaa.rotmg.action
          var _loc4_:* = true;
          var _loc2_:Cagowef = this.govizupas.runozak(GUILDINVITE) as Cagowef;
          _loc2_.name_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -978,7 +976,7 @@ package aaa.rotmg.action
          var _loc4_:* = true;
          var _loc2_:Sejafosi = this.govizupas.runozak(REQUESTTRADE) as Sejafosi;
          _loc2_.name_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -987,7 +985,7 @@ package aaa.rotmg.action
          var _loc4_:* = false;
          var _loc2_:Kicoh = this.govizupas.runozak(CHANGETRADE) as Kicoh;
          _loc2_.offer_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -997,21 +995,21 @@ package aaa.rotmg.action
          var _loc3_:Sydadec = this.govizupas.runozak(ACCEPTTRADE) as Sydadec;
          _loc3_.myOffer_=param1;
          _loc3_.yourOffer_=param2;
-         rotmgNetworkHandler.sendMessage(_loc3_);
+         _rotmgNetworkHandler.sendMessage(_loc3_);
          return;
       }
 
       override public function cancelTrade() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         rotmgNetworkHandler.sendMessage(this.govizupas.runozak(CANCELTRADE));
+         _rotmgNetworkHandler.sendMessage(this.govizupas.runozak(CANCELTRADE));
          return;
       }
 
       override public function checkCredits() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         rotmgNetworkHandler.sendMessage(this.govizupas.runozak(CHECKCREDITS));
+         _rotmgNetworkHandler.sendMessage(this.govizupas.runozak(CHECKCREDITS));
          return;
       }
 
@@ -1022,7 +1020,7 @@ package aaa.rotmg.action
          {
             return;
          }
-         rotmgNetworkHandler.sendMessage(this.govizupas.runozak(ESCAPE));
+         _rotmgNetworkHandler.sendMessage(this.govizupas.runozak(ESCAPE));
          return;
       }
 
@@ -1031,7 +1029,7 @@ package aaa.rotmg.action
          var _loc4_:* = true;
          var _loc2_:Telesa = this.govizupas.runozak(JOINGUILD) as Telesa;
          _loc2_.guildName_=param1;
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -1041,7 +1039,7 @@ package aaa.rotmg.action
          var _loc3_:Zahocy = this.govizupas.runozak(CHANGEGUILDRANK) as Zahocy;
          _loc3_.name_=param1;
          _loc3_.guildRank_=param2;
-         rotmgNetworkHandler.sendMessage(_loc3_);
+         _rotmgNetworkHandler.sendMessage(_loc3_);
          return;
       }
 
@@ -1056,14 +1054,14 @@ package aaa.rotmg.action
          return Base64.encodeByteArray(_loc4_);
       }
 
-      private function micyzi() : void {
+      private function onNetworkHandlerConnected() : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
          var _loc1_:Account = Giq.kid().getInstance(Account);
          this.fyve.dispatch(Depagy.make(UserConfig.pynezad,I18nKeys.lidubi));
          this.ryladiduq();
          var _loc2_:Tef = this.govizupas.runozak(HELLO) as Tef;
-         _loc2_.buildVersion_=UserConfig.kibevyha;
+         _loc2_.buildVersion_=UserConfig.BUILD_VERSION;
          _loc2_.gameId_=gameId_;
          _loc2_.guid_=this.qopy(_loc1_.getUserId());
          _loc2_.password_=this.qopy(_loc1_.vef());
@@ -1076,7 +1074,7 @@ package aaa.rotmg.action
          _loc2_.metulocy=_loc1_.zyz();
          _loc2_.bicydyn=_loc1_.bicydyn();
          _loc2_.kofimupo=_loc1_.rowyr();
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -1275,7 +1273,7 @@ package aaa.rotmg.action
          var _loc3_:* = 0;
          var _loc4_:Qado = null;
          var _loc2_:NetworkMessage = this.govizupas.runozak(poripajyl);
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          _loc3_=0;
          while(_loc3_<param1.tiles_.length)
          {
@@ -1901,15 +1899,13 @@ package aaa.rotmg.action
          return;
       }
 
-      private function womewykyh(param1:Had) : void {
-         var _loc9_:* = true;
-         var _loc10_:* = false;
-         var _loc2_:Server = new Server().setName(param1.name_).setAddress(param1.host_!=""?param1.host_:server_.address).setPort(param1.host_!=""?param1.port_:server_.port);
-         var _loc3_:int = param1.gameId_;
+      private function onReconnectResultMsg(reconnectResultMsg:ReconnectResultMsg) : void {
+         var _loc2_:Server = new Server().setName(reconnectResultMsg.name_).setAddress(reconnectResultMsg.host_!=""?reconnectResultMsg.host_:server_.address).setPort(reconnectResultMsg.host_!=""?reconnectResultMsg.port_:server_.port);
+         var _loc3_:int = reconnectResultMsg.gameId_;
          var _loc4_:Boolean = tacujov;
          var _loc5_:int = charId_;
-         var _loc6_:int = param1.keyTime_;
-         var _loc7_:ByteArray = param1.key_;
+         var _loc6_:int = reconnectResultMsg.keyTime_;
+         var _loc7_:ByteArray = reconnectResultMsg.key_;
          var _loc8_:Rus = new Rus(_loc2_,_loc3_,_loc4_,_loc5_,_loc6_,_loc7_);
          gs_.dispatchEvent(_loc8_);
          return;
@@ -1921,7 +1917,7 @@ package aaa.rotmg.action
          var _loc2_:Woh = this.govizupas.runozak(PONG) as Woh;
          _loc2_.serial_=param1.serial_;
          _loc2_.time_=getTimer();
-         rotmgNetworkHandler.sendMessage(_loc2_);
+         _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
 
@@ -2180,7 +2176,7 @@ package aaa.rotmg.action
       private function jed(param1:TimerEvent) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         rotmgNetworkHandler.connect(server_.address,server_.port);
+         _rotmgNetworkHandler.connect(server_.address,server_.port);
          return;
       }
 
@@ -2234,7 +2230,7 @@ package aaa.rotmg.action
          var _loc2_:Dialog = new Dialog(I18nKeys.jafu,"",I18nKeys.tazesik,null,"/clientUpdate");
          _loc2_.bipefybo(I18nKeys.bytyci,
             {
-               client:UserConfig.kibevyha,
+               client:UserConfig.BUILD_VERSION,
                server:param1.errorDescription_
             }
          );
@@ -2261,7 +2257,7 @@ package aaa.rotmg.action
       }
 
       override public function isConnected() : Boolean {
-         return rotmgNetworkHandler.isConnected();
+         return _rotmgNetworkHandler.isConnected();
       }
    }
 

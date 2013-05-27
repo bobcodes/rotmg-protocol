@@ -30,5 +30,17 @@
    a) anything object that has been named properly, I'll move to
       aaa
 10) PEM, RC4, incoming and outgoing cipher
+    a) at this point, all I knew was that stuff was getting encrypted
+	   which explained why it was super difficult for me to use
+	   Wireshark (packet sniffer) to learn about the network protocol
 11) actions
 12) attempting my first connection
+    a) secret is not used for logging in manually, it's for external
+	   logins like kongregate steam, and kabam
+    b) so I looked around for password and came across the HELLO
+	   action. I was looking at the data and it had a key time and
+       key
+	c) that brought me to the RECONNECT action which has a key
+	d) I am guessing this RECONNECT msg is sent after you
+	   initially connect with the server
+	e) now I'm looking for the host and port to connect to

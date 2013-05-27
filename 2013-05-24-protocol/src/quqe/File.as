@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class File extends Tego
+   public class File extends IncomingOnlyNetworkMessage
    {
       public function File(param1:uint, param2:Function) {
          var _loc3_:* = false;

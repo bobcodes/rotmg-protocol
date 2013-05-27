@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Nuryp extends Tego
+   public class Nuryp extends IncomingOnlyNetworkMessage
    {
       public function Nuryp(param1:uint, param2:Function) {
          var _loc3_:* = false;

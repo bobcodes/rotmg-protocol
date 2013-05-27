@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Zaluh extends Tego
+   public class Zaluh extends IncomingOnlyNetworkMessage
    {
       {
          var _loc1_:* = false;

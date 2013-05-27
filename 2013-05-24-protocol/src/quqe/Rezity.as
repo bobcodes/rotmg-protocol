@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Rezity extends Tego
+   public class Rezity extends IncomingOnlyNetworkMessage
    {
       public function Rezity(param1:uint, param2:Function) {
          var _loc3_:* = true;

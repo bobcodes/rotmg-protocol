@@ -4,7 +4,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Gykod extends Tego
+   public class Gykod extends IncomingOnlyNetworkMessage
    {
       public function Gykod(param1:uint, param2:Function) {
          var _loc3_:* = false;

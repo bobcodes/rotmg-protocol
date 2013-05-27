@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Kyqe extends Tego
+   public class Kyqe extends IncomingOnlyNetworkMessage
    {
       public function Kyqe(param1:uint, param2:Function) {
          var _loc3_:* = false;

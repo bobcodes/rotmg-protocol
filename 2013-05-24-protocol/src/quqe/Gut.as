@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Gut extends Tego
+   public class Gut extends IncomingOnlyNetworkMessage
    {
       public function Gut(param1:uint, param2:Function) {
          var _loc3_:* = true;

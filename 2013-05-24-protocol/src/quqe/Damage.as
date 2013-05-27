@@ -4,7 +4,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Damage extends Tego
+   public class Damage extends IncomingOnlyNetworkMessage
    {
       public function Damage(param1:uint, param2:Function) {
          var _loc3_:* = true;

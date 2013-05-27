@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Tolil extends Tego
+   public class Tolil extends IncomingOnlyNetworkMessage
    {
       public function Tolil(param1:uint, param2:Function) {
          var _loc3_:* = true;

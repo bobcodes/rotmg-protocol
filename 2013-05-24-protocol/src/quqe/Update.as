@@ -7,7 +7,7 @@ package quqe
    import com.company.assembleegameclient.util.Hidad;
 
 
-   public class Update extends Tego
+   public class Update extends IncomingOnlyNetworkMessage
    {
       public function Update(param1:uint, param2:Function) {
          var _loc3_:* = true;

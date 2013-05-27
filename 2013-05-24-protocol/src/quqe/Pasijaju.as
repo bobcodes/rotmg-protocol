@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Pasijaju extends Tego
+   public class Pasijaju extends IncomingOnlyNetworkMessage
    {
       public function Pasijaju(param1:uint, param2:Function) {
          var _loc3_:* = false;

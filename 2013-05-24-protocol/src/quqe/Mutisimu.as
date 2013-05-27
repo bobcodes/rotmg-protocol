@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Mutisimu extends Tego
+   public class Mutisimu extends IncomingOnlyNetworkMessage
    {
       {
          var _loc1_:* = true;

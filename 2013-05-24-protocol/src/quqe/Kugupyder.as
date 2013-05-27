@@ -6,7 +6,7 @@ package quqe
    import com.company.assembleegameclient.util.Hidad;
 
 
-   public class Kugupyder extends Tego
+   public class Kugupyder extends IncomingOnlyNetworkMessage
    {
       public function Kugupyder(param1:uint, param2:Function) {
          var _loc3_:* = true;

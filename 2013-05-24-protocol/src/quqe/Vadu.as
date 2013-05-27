@@ -4,7 +4,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Vadu extends Tego
+   public class Vadu extends IncomingOnlyNetworkMessage
    {
       public function Vadu(param1:uint, param2:Function) {
          var _loc3_:* = true;

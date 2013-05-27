@@ -1,12 +1,12 @@
-package quqe
+package aaa.rotmg.action
 {
    import flash.utils.ByteArray;
    import flash.utils.IDataInput;
 
 
-   public class Had extends Tego
+   public class ReconnectResultMsg extends IncomingOnlyNetworkMessage
    {
-      public function Had(param1:uint, param2:Function) {
+      public function ReconnectResultMsg(param1:uint, param2:Function) {
          var _loc3_:* = false;
          var _loc4_:* = true;
          this.key_=new ByteArray();

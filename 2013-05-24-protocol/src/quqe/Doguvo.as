@@ -4,7 +4,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Doguvo extends Tego
+   public class Doguvo extends IncomingOnlyNetworkMessage
    {
       public function Doguvo(param1:uint, param2:Function) {
          var _loc3_:* = false;

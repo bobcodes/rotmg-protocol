@@ -1,10 +1,10 @@
 package bisok
 {
-   import quqe.Tego;
+   import aaa.rotmg.net.IncomingOnlyNetworkMessage;
    import flash.utils.IDataInput;
 
 
-   public class Bimi extends Tego
+   public class Bimi extends IncomingOnlyNetworkMessage
    {
       public function Bimi(param1:uint, param2:Function) {
          var _loc3_:* = false;

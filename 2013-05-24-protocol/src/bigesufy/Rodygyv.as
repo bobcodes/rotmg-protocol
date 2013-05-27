@@ -34,7 +34,7 @@ package bigesufy
       }
 
       public function qiken() : String {
-         return this.geri.replace("{VERSION}",UserConfig.kibevyha).replace("{MINOR}",UserConfig.cyg);
+         return this.geri.replace("{VERSION}",UserConfig.BUILD_VERSION).replace("{MINOR}",UserConfig.cyg);
       }
 
       public function dokoza() : Boolean {

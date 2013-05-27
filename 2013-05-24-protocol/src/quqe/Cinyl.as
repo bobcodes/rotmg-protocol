@@ -4,7 +4,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Cinyl extends Tego
+   public class Cinyl extends IncomingOnlyNetworkMessage
    {
       public function Cinyl(param1:uint, param2:Function) {
          var _loc3_:* = false;

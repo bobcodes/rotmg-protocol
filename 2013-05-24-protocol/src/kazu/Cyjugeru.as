@@ -1,10 +1,10 @@
 package kazu
 {
-   import quqe.Tego;
+   import aaa.rotmg.net.IncomingOnlyNetworkMessage;
    import flash.utils.IDataInput;
 
 
-   public class Cyjugeru extends Tego
+   public class Cyjugeru extends IncomingOnlyNetworkMessage
    {
       public function Cyjugeru(param1:uint, param2:Function) {
          var _loc3_:* = true;

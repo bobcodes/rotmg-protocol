@@ -21,7 +21,7 @@ package aaa.rotmg.config
          return;
       }
 
-      public static const kibevyha:String = "13.3";
+      public static const BUILD_VERSION:String = "13.3";
 
       public static const cyg:String = "0";
 

@@ -1,12 +1,12 @@
-package quqe
+package aaa.rotmg.net
 {
    import aaa.rotmg.net.NetworkMessage;
    import flash.utils.IDataOutput;
 
 
-   public class Tego extends NetworkMessage
+   public class IncomingOnlyNetworkMessage extends NetworkMessage
    {
-      public function Tego(param1:uint, param2:Function) {
+      public function IncomingOnlyNetworkMessage(param1:uint, param2:Function) {
          var _loc3_:* = true;
          var _loc4_:* = false;
          super(param1,param2);

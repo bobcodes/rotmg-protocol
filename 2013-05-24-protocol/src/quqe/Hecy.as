@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Hecy extends Tego
+   public class Hecy extends IncomingOnlyNetworkMessage
    {
       {
          var _loc1_:* = false;

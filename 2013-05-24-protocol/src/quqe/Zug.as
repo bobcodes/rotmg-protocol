@@ -3,7 +3,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Zug extends Tego
+   public class Zug extends IncomingOnlyNetworkMessage
    {
       public function Zug(param1:uint, param2:Function) {
          var _loc3_:* = true;

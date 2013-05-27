@@ -4,7 +4,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Mizyza extends Tego
+   public class Mizyza extends IncomingOnlyNetworkMessage
    {
       public function Mizyza(param1:uint, param2:Function) {
          var _loc3_:* = false;

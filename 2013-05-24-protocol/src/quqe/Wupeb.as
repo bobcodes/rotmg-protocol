@@ -4,7 +4,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Wupeb extends Tego
+   public class Wupeb extends IncomingOnlyNetworkMessage
    {
       public function Wupeb(param1:uint, param2:Function) {
          var _loc3_:* = true;

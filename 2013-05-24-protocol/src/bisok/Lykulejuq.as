@@ -1,10 +1,10 @@
 package bisok
 {
-   import quqe.Tego;
+   import aaa.rotmg.net.IncomingOnlyNetworkMessage;
    import flash.utils.IDataInput;
 
 
-   public class Lykulejuq extends Tego
+   public class Lykulejuq extends IncomingOnlyNetworkMessage
    {
       public function Lykulejuq(param1:uint, param2:Function) {
          var _loc3_:* = false;

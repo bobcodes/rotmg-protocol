@@ -1,10 +1,10 @@
 package kazu
 {
-   import quqe.Tego;
+   import aaa.rotmg.net.IncomingOnlyNetworkMessage;
    import flash.utils.IDataInput;
 
 
-   public class Beryqaze extends Tego
+   public class Beryqaze extends IncomingOnlyNetworkMessage
    {
       public function Beryqaze(param1:uint, param2:Function) {
          var _loc3_:* = true;

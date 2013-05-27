@@ -4,7 +4,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Taw extends Tego
+   public class Taw extends IncomingOnlyNetworkMessage
    {
       public function Taw(param1:uint, param2:Function) {
          var _loc3_:* = false;

@@ -4,7 +4,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Jecy extends Tego
+   public class Jecy extends IncomingOnlyNetworkMessage
    {
       public function Jecy(param1:uint, param2:Function) {
          var _loc3_:* = false;

@@ -6,7 +6,7 @@ package quqe
    import com.company.assembleegameclient.util.Hidad;
 
 
-   public class Baliq extends Tego
+   public class Baliq extends IncomingOnlyNetworkMessage
    {
       public function Baliq(param1:uint, param2:Function) {
          var _loc3_:* = false;

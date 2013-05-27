@@ -4,7 +4,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Zopomepu extends Tego
+   public class Zopomepu extends IncomingOnlyNetworkMessage
    {
       {
          var _loc1_:* = true;

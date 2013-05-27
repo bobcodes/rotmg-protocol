@@ -4,7 +4,7 @@ package quqe
    import flash.utils.IDataInput;
 
 
-   public class Zicesu extends Tego
+   public class Zicesu extends IncomingOnlyNetworkMessage
    {
       public function Zicesu(param1:uint, param2:Function) {
          var _loc3_:* = false;
