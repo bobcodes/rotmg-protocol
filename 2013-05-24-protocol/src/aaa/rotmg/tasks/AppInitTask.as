@@ -1,4 +1,4 @@
-package cidehov
+package aaa.rotmg.tasks
 {
    import gag.Fijarih;
    import komawowag.Becepog;
@@ -7,9 +7,9 @@ package cidehov
    import raqu.Mojemetor;
 
 
-   public class Nocaf extends Fijarih
+   public class AppInitTask extends Fijarih
    {
-      public function Nocaf() {
+      public function AppInitTask() {
          var _loc1_:* = true;
          var _loc2_:* = false;
          super();

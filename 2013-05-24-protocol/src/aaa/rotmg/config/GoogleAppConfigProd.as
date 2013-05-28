@@ -1,12 +1,12 @@
-package bigesufy
+package aaa.rotmg.config
 {
    import aaa.rotmg.config.GoogleAppConfig;
    import aaa.rotmg.config.UserConfig;
 
 
-   public class Rodygyv extends Object implements GoogleAppConfig
+   public class GoogleAppConfigProd extends Object implements GoogleAppConfig
    {
-      public function Rodygyv() {
+      public function GoogleAppConfigProd() {
          var _loc1_:* = true;
          var _loc2_:* = false;
          super();

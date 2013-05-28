@@ -13,7 +13,7 @@ package wehagec
    import bigesufy.Quzu;
    import bigesufy.Vuca;
    import bigesufy.Vajukyz;
-   import bigesufy.Rodygyv;
+   import aaa.rotmg.config.GoogleAppConfigProd;
    import bigesufy.Dini;
 
 
@@ -61,7 +61,7 @@ package wehagec
             case Nemo.duke:
                return new Vajukyz();
             default:
-               return new Rodygyv();
+               return new GoogleAppConfigProd();
          }
       }
 

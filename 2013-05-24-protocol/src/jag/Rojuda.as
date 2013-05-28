@@ -11,7 +11,7 @@ package jag
    import nitotohyk.Zyqyt;
    import raqu.Cigules;
    import raqu.Poridu;
-   import cidehov.Nocaf;
+   import rotmg.aaa.taskAppInitTask;
    import hotewa.Baqifa;
    import hotewa.Lug;
    import hotewa.Nowuved;
@@ -87,7 +87,7 @@ package jag
          this.kujoly();
          this.startup.cequ(Cigules,-1000);
          this.startup.cequ(Poridu,-999);
-         this.startup.git(Nocaf);
+         this.startup.git(AppInitTask);
          this.context.fyf.rewyji(this.init);
          return;
       }
@@ -125,7 +125,7 @@ package jag
          this.cemohoqal.map(PurchaseCharacterClassTask);
          this.cemohoqal.map(Qeceseku);
          this.cemohoqal.map(Juw).pybe();
-         this.cemohoqal.map(Nocaf);
+         this.cemohoqal.map(AppInitTask);
          return;
       }
 
