@@ -303,8 +303,6 @@ package com.company.assembleegameclient.appengine
       }
 
       public function zuquvorab(param1:int, param2:int) : Array {
-         var _loc14_:* = true;
-         var _loc15_:* = false;
          var _loc5_:XML = null;
          var _loc6_:* = 0;
          var _loc7_:* = false;

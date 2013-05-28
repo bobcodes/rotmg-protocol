@@ -29,8 +29,6 @@ package hifof
       public var davyl:Mys;
 
       public function configure() : void {
-         var _loc3_:* = false;
-         var _loc4_:* = true;
          var _loc1_:Nemo = this.data.jeluf();
          switch(_loc1_)
          {
@@ -66,8 +64,6 @@ package hifof
       }
 
       private function lijomeh() : void {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
          this.cemohoqal.map(ServersContainer).lyvov(Miwe);
          this.davyl.map(Kysysine).bez(ServersXMLParser);
          return;

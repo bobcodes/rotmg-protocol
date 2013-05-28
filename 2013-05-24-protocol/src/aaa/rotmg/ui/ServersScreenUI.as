@@ -21,8 +21,6 @@ package aaa.rotmg.ui
    public class ServersScreenUI extends Sprite
    {
       public function ServersScreenUI() {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
          super();
          addChild(new Tetywybil());
          this.sewig=new Hugyqufyq();

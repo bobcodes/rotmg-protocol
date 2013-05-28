@@ -49,8 +49,6 @@ package
    public class WebMain extends Sprite
    {
       public function WebMain() {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
          super();
          if(stage)
          {

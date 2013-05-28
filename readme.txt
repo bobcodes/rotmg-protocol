@@ -47,3 +47,8 @@
 	f) came across the Server and ServerBox object. what ever
 	   creates this, is probably what obtains the list of
 	   servers to connect to
+	g) manually looked at http requests coming from browse and discovered
+	   https://realmofthemadgod.appspot.com/char/list and
+	   http://realmofthemadgod.appspot.com/char/list
+	   contained a list of servers
+	h) 

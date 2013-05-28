@@ -1922,8 +1922,6 @@ package aaa.rotmg.action.mapping
       }
 
       private function mewez(param1:String) : void {
-         var _loc3_:* = false;
-         var _loc4_:* = true;
          var _loc2_:XML = XML(param1);
          Qezab.vyce(_loc2_);
          ObjectLibrary.vyce(_loc2_);
@@ -1932,8 +1930,6 @@ package aaa.rotmg.action.mapping
       }
 
       private function fomysuzyn(param1:Cinyl) : void {
-         var _loc6_:* = false;
-         var _loc7_:* = true;
          var _loc2_:String = null;
          var _loc3_:String = null;
          for each (_loc2_ in param1.clientXML_)

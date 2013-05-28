@@ -104,8 +104,6 @@ package tulunyno
       }
 
       protected function ceryc(param1:Function, param2:Boolean=false) : Dovihyz {
-         var _loc4_:* = false;
-         var _loc5_:* = true;
          var _loc3_:Dovihyz = null;
          if(this.dajokogi(param1,param2))
          {
@@ -117,8 +115,6 @@ package tulunyno
       }
 
       protected function dajokogi(param1:Function, param2:Boolean) : Boolean {
-         var _loc4_:* = false;
-         var _loc5_:* = true;
          if(!this.hor.nonEmpty)
          {
             return true;

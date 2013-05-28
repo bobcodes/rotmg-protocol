@@ -64,8 +64,6 @@ package dopumitud
       }
 
       private function onComplete(param1:Boolean, param2:*) : void {
-         var _loc3_:* = true;
-         var _loc4_:* = false;
          if(param1)
          {
             this.qija(param2);
@@ -136,8 +134,6 @@ package dopumitud
       }
 
       private function letikakid() : void {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
          this.lunakepow.stop();
          this.lunakepow.removeEventListener(TimerEvent.TIMER_COMPLETE,this.jed);
          this.lunakepow=null;

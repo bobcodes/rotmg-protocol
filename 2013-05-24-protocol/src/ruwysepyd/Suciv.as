@@ -101,8 +101,6 @@ package ruwysepyd
       }
 
       private function fybe() : void {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
          this.zogytuso.dispatch(new ServersScreenUI());
          return;
       }
