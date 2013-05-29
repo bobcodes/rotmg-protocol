@@ -16,6 +16,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import rotmg.config.UserConfig;
+
 /**
  * <Chars nextCharId="1" maxNumChars="1">
  *   <Account><Credits>50</Credits>
@@ -77,11 +79,6 @@ import org.w3c.dom.NodeList;
  * @author bobcodes
  */
 public class AvailableServers {
-
-    /**
-     * Visit http://realmofthemadgod.appspot.com/ to determine this 
-     */
-    private static String GUEST_GUID = "<guid>";
     
     
     public static SortedMap<String,RotmgServer> getAvailableServers() throws Exception {
@@ -132,7 +129,7 @@ public class AvailableServers {
         post.addParameter(new NameValuePair("game_net_user_id", ""));
         post.addParameter(new NameValuePair("do_login", "true"));
         post.addParameter(new NameValuePair("play_platform", "rotmg"));
-        post.addParameter(new NameValuePair("guid", GUEST_GUID));
+        post.addParameter(new NameValuePair("guid", UserConfig.GUEST_GUID));
         post.addParameter(new NameValuePair("password", ""));
         return post;
     }
