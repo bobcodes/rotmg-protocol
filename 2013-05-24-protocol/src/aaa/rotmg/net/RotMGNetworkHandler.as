@@ -51,7 +51,7 @@ package aaa.rotmg.net
 
       private var wukycasew:NetworkMessage;
 
-      private var dokywi:int = -1;
+      private var payloadSize:int = -1;
 
       private var _outgoingCipher:ICipher;
 
@@ -75,7 +75,7 @@ package aaa.rotmg.net
          _server=param1;
          _port=param2;
          this.addListeners();
-         this.dokywi=-1;
+         this.payloadSize=-1;
          if(this.kod.cikyzyba)
          {
             this.reconnect();
@@ -187,8 +187,6 @@ package aaa.rotmg.net
       }
 
       private function onSocketData(param1:ProgressEvent=null) : void {
-         var _loc4_:* = true;
-         var _loc5_:* = false;
          var messageId:uint = 0;
          var message:NetworkMessage = null;
          var data:ByteArray = null;
@@ -196,7 +194,7 @@ package aaa.rotmg.net
          var _:ProgressEvent = param1;
          for(;!(this._tcpSocket==null||!this._tcpSocket.connected);continue loop0)
          {
-            if(this.dokywi==-1)
+            if(this.payloadSize==-1)
             {
                if(this._tcpSocket.bytesAvailable<4)
                {
@@ -204,38 +202,26 @@ package aaa.rotmg.net
                }
                try
                {
-                  this.dokywi=this._tcpSocket.readInt();
+                  this.payloadSize=this._tcpSocket.readInt();
                }
                catch(e:Error)
                {
-                  if(!(_loc5_&&(_loc3_)))
-                  {
-                  }
                   errorMessage=zis("Socket-Server Data Error: {0}: {1}",[e.name,e.message]);
-                  if(!_loc5_)
-                  {
-                     error.dispatch(errorMessage);
-                     if(_loc4_)
-                     {
-                     }
-                  }
-                  dokywi=-1;
-                  if(!(_loc5_&&(this)))
-                  {
-                  }
+				  error.dispatch(errorMessage);
+                  payloadSize=-1;
                   return;
                }
             }
-            if(this._tcpSocket.bytesAvailable<this.dokywi-tyju)
+            if(this._tcpSocket.bytesAvailable<this.payloadSize-tyju)
             {
                return;
             }
             messageId=this._tcpSocket.readUnsignedByte();
             message=this.govizupas.runozak(messageId);
             data=new ByteArray();
-            if(this.dokywi-5>0)
+            if(this.payloadSize-5>0)
             {
-               this._tcpSocket.readBytes(data,0,this.dokywi-5);
+               this._tcpSocket.readBytes(data,0,this.payloadSize-5);
             }
             data.position=0;
             if(this._incomingCipher!=null)
@@ -243,7 +229,7 @@ package aaa.rotmg.net
                this._incomingCipher.decrypt(data);
                data.position=0;
             }
-            this.dokywi=-1;
+            this.payloadSize=-1;
             if(message==null)
             {
                this.velo("Socket-Server Protocol Error: Unknown message");
