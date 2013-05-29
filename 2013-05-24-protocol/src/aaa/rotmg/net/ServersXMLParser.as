@@ -36,7 +36,7 @@ package aaa.rotmg.net
       }
 
       private function parseServerFromXML(param1:XML) : Server {
-         return new Server().setName(param1.Name).setAddress(param1.DNS).setPort(UserConfig.hyr).setLatLong(Number(param1.Lat),Number(param1.Long)).setUsage(param1.Usage).setIsAdminOnly(param1.hasOwnProperty("AdminOnly"));
+         return new Server().setName(param1.Name).setAddress(param1.DNS).setPort(UserConfig.PORT).setLatLong(Number(param1.Lat),Number(param1.Long)).setUsage(param1.Usage).setIsAdminOnly(param1.hasOwnProperty("AdminOnly"));
       }
    }
 

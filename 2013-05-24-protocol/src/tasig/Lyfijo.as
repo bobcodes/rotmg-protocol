@@ -12,7 +12,7 @@ package tasig
          var _loc1_:* = true;
          var _loc2_:* = false;
          super();
-         this.localhost=new Server().setName("localhost").setPort(UserConfig.hyr);
+         this.localhost=new Server().setName("localhost").setPort(UserConfig.PORT);
          return;
       }
 

@@ -27,7 +27,7 @@ package aaa.rotmg.config
 
       public static const cit:Boolean = true;
 
-      public static const hyr:int = 2050;
+      public static const PORT:int = 2050;
 
       public static const fyj:Boolean = false;
 
