@@ -129,8 +129,6 @@ package aaa.rotmg.account
       }
 
       public function qujipoj() : String {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
          return (this.homofu)||"";
       }
 
@@ -150,14 +148,10 @@ package aaa.rotmg.account
       }
 
       public function rowyr() : String {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
          return (this.kofimupo)||"";
       }
 
       public function rovehuhuv(param1:String) : void {
-         var _loc2_:* = true;
-         var _loc3_:* = false;
          this.kofimupo=param1;
          return;
       }

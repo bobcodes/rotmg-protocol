@@ -24,7 +24,7 @@ package fom
       public function haw() : String {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         return this.qizys.gsc_.gameId_==UserConfig.bipunomor?"OPTIONS_BUTTON":"NEXUS_BUTTON";
+         return this.qizys.gsc_.gameId_==UserConfig.SEND_TO_NEXUS?"OPTIONS_BUTTON":"NEXUS_BUTTON";
       }
    }
 

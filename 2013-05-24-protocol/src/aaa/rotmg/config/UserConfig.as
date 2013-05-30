@@ -69,11 +69,11 @@ package aaa.rotmg.config
 
       public static var niqeqoly:Boolean = true;
 
-      public static const kesopepi:int = -1;
+      public static const SEND_TO_TUTORIAL:int = -1;
 
-      public static const bipunomor:int = -2;
+      public static const SEND_TO_NEXUS:int = -2;
 
-      public static const buryruny:int = -3;
+      public static const SEND_TO_RANDOM_REALM:int = -3;
 
       public static const dugol:int = -6;
 

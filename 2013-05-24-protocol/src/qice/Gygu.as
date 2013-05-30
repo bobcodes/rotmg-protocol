@@ -80,33 +80,31 @@ package qice
 
       private function gilere() : void {
          var server:Server = (this.data.server)||(this.servers.getBestServer());
-         var _loc2_:int = this.data.myto?this.maliz():this.data.juf;
-         var _loc3_:Boolean = this.data.susuka;
+         var whereToSendPlayer:int = this.data.myto?this.getWhereToSendPlayer():this.data.whereToSendPlayer;
+         var needsToCreateNewChar:Boolean = this.data.needsToCreateNewChar;
          var charId:int = this.data.charId;
          var keyTime:int = this.data.myto?-1:this.data.keyTime;
          var key:ByteArray = this.data.key;
          this.model.charId=charId;
-         this.zogytuso.dispatch(new GameSprite(server,_loc2_,_loc3_,charId,keyTime,key,this.model,null));
+         this.zogytuso.dispatch(new GameSprite(server,whereToSendPlayer,needsToCreateNewChar,charId,keyTime,key,this.model,null));
          return;
       }
 
-      private function maliz() : int {
-         var _loc2_:* = true;
-         var _loc3_:* = false;
+      private function getWhereToSendPlayer() : int {
          var _loc1_:* = 0;
          if(UserConfig.data_.needsTutorial)
          {
-            _loc1_=UserConfig.kesopepi;
+            _loc1_=UserConfig.SEND_TO_TUTORIAL;
          }
          else
          {
             if(UserConfig.data_.needsRandomRealm)
             {
-               _loc1_=UserConfig.buryruny;
+               _loc1_=UserConfig.SEND_TO_RANDOM_REALM;
             }
             else
             {
-               _loc1_=UserConfig.bipunomor;
+               _loc1_=UserConfig.SEND_TO_NEXUS;
             }
          }
          return _loc1_;

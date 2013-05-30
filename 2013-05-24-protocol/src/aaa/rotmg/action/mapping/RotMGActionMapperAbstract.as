@@ -193,7 +193,7 @@ package aaa.rotmg.action.mapping
 
       public var gameId_:int;
 
-      public var tacujov:Boolean;
+      public var needsToCreateNewChar:Boolean;
 
       public var charId_:int;
 

@@ -57,8 +57,8 @@ package nico
          var _loc2_:* = true;
          var _loc3_:* = false;
          var _loc1_:Tibeto = new Tibeto();
-         _loc1_.susuka=true;
-         _loc1_.charId=this.model.ruzimusys();
+         _loc1_.needsToCreateNewChar=true;
+         _loc1_.charId=this.model.getNextCharId();
          _loc1_.keyTime=-1;
          _loc1_.myto=true;
          this.play.dispatch(_loc1_);

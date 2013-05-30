@@ -60,7 +60,7 @@ package pyw
          var _loc3_:* = false;
          this.closeDialogs.dispatch();
          var _loc1_:Tibeto = new Tibeto();
-         _loc1_.susuka=false;
+         _loc1_.needsToCreateNewChar=false;
          _loc1_.charId=this.muwi.charId;
          _loc1_.myto=true;
          this.luribodi.dispatch(_loc1_);

@@ -164,7 +164,7 @@ package hotewa
          return this.qyk.totalFame_;
       }
 
-      public function ruzimusys() : int {
+      public function getNextCharId() : int {
          return this.qyk.nextCharId_;
       }
 

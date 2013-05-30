@@ -1,14 +1,13 @@
-package sonepyc
+package aaa.rotmg.action
 {
+   import aaa.rotmg.net.OutgoingOnlyNetworkMessage;
    import flash.utils.ByteArray;
    import flash.utils.IDataOutput;
 
 
-   public class Tef extends OutgoingOnlyNetworkMessage
+   public class HelloNetworkMessage extends OutgoingOnlyNetworkMessage
    {
-      public function Tef(param1:uint, param2:Function) {
-         var _loc3_:* = false;
-         var _loc4_:* = true;
+      public function HelloNetworkMessage(param1:uint, param2:Function) {
          this.buildVersion_=new String();
          this.guid_=new String();
          this.password_=new String();
@@ -37,7 +36,7 @@ package sonepyc
 
       public var vukyluz:String = "";
 
-      public var soq:String = "";
+      public var accountType:String = "";
 
       public var metulocy:String = "";
 
@@ -59,7 +58,7 @@ package sonepyc
          param1.writeInt(this.sofabe.length);
          param1.writeUTFBytes(this.sofabe);
          param1.writeUTF(this.vukyluz);
-         param1.writeUTF(this.soq);
+         param1.writeUTF(this.accountType);
          param1.writeUTF(this.metulocy);
          param1.writeUTF(this.bicydyn);
          param1.writeUTF(this.kofimupo);

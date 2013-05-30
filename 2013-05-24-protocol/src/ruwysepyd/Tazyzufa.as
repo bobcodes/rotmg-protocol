@@ -156,7 +156,7 @@ package ruwysepyd
          _loc2_.value=_loc1_.level();
          this.tyc.dispatch(_loc2_);
          var _loc3_:Tibeto = new Tibeto();
-         _loc3_.susuka=false;
+         _loc3_.needsToCreateNewChar=false;
          _loc3_.charId=_loc1_.charId();
          _loc3_.myto=true;
          this.luribodi.dispatch(_loc3_);

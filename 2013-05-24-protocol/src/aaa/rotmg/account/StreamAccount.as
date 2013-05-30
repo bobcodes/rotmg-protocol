@@ -2,6 +2,7 @@ package aaa.rotmg.account
 {
    import aaa.rotmg.account.Account;
    import com.company.util.Zutywapo;
+   import cyt.Zivovype;
 
 
    public class StreamAccount extends Object implements Account

@@ -34,7 +34,7 @@ package aaa.rotmg.action.mapping
    import aaa.rotmg.net.NetworkMessage;
    import sonepyc.Ceko;
    import sonepyc.Nydadozon;
-   import sonepyc.Tef;
+   import aaa.rotmg.action.HelloNetworkMessage;
    import sonepyc.Gojuw;
    import sonepyc.Woh;
    import sonepyc.Lyrafe;
@@ -193,7 +193,7 @@ package aaa.rotmg.action.mapping
          var _loc2_:* = true;
       }
 
-      public function RotMGActionMapper(param1:Nukomesih, param2:Server, param3:int, param4:Boolean, param5:int, keyTime:int, key:ByteArray, param8:String) {
+      public function RotMGActionMapper(gameSprite:Nukomesih, param2:Server, whereToSendPlayer:int, needsToCreateNewCharParam:Boolean, charId:int, keyTime:int, key:ByteArray, param8:String) {
          var _loc9_:* = false;
          var _loc10_:* = true;
          super();
@@ -217,11 +217,11 @@ package aaa.rotmg.action.mapping
          _rotmgNetworkHandler=this.cemohoqal.getInstance(RotMGNetworkHandler);
          this.govizupas=this.cemohoqal.getInstance(Pyzokipu);
          this.model=this.cemohoqal.getInstance(Nihuvi);
-         gs_=param1;
+         gs_=gameSprite;
          server_=param2;
-         gameId_=param3;
-         tacujov=param4;
-         charId_=param5;
+         gameId_=whereToSendPlayer;
+         needsToCreateNewChar=needsToCreateNewCharParam;
+         charId_=charId;
          keyTime_=keyTime;
          key_=key;
          sofabe=param8;
@@ -343,7 +343,7 @@ package aaa.rotmg.action.mapping
          _loc1_.map(poripajyl).rafakone(NetworkMessage);
          _loc1_.map(INVSWAP).rafakone(Ceko);
          _loc1_.map(USEITEM).rafakone(Nydadozon);
-         _loc1_.map(HELLO).rafakone(Tef);
+         _loc1_.map(HELLO).rafakone(HelloNetworkMessage);
          _loc1_.map(INVDROP).rafakone(Gojuw);
          _loc1_.map(PONG).rafakone(Woh);
          _loc1_.map(LOAD).rafakone(Lyrafe);
@@ -582,8 +582,6 @@ package aaa.rotmg.action.mapping
       }
 
       private function create() : void {
-         var _loc3_:* = true;
-         var _loc4_:* = false;
          var _loc1_:Jimi = this.sydo.zega();
          var _loc2_:Create = this.govizupas.runozak(CREATE) as Create;
          _loc2_.classType=_loc1_.id;
@@ -1057,23 +1055,23 @@ package aaa.rotmg.action.mapping
       private function onNetworkHandlerConnected() : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         var _loc1_:Account = Giq.kid().getInstance(Account);
+         var account:Account = Giq.kid().getInstance(Account);
          this.fyve.dispatch(Depagy.make(UserConfig.pynezad,I18nKeys.lidubi));
          this.ryladiduq();
-         var _loc2_:Tef = this.govizupas.runozak(HELLO) as Tef;
+         var _loc2_:HelloNetworkMessage = this.govizupas.runozak(HELLO) as HelloNetworkMessage;
          _loc2_.buildVersion_=UserConfig.BUILD_VERSION;
          _loc2_.gameId_=gameId_;
-         _loc2_.guid_=this.qopy(_loc1_.getUserId());
-         _loc2_.password_=this.qopy(_loc1_.vef());
-         _loc2_.secret_=this.qopy(_loc1_.ducerubug());
+         _loc2_.guid_=this.qopy(account.getUserId());
+         _loc2_.password_=this.qopy(account.vef());
+         _loc2_.secret_=this.qopy(account.ducerubug());
          _loc2_.keyTime_=keyTime_;
          _loc2_.key_.length=0;
-         _loc2_.sofabe=sofabe==null?"":sofabe;
-         _loc2_.vukyluz=_loc1_.qujipoj();
-         _loc2_.soq=_loc1_.getAccountType();
-         _loc2_.metulocy=_loc1_.zyz();
-         _loc2_.bicydyn=_loc1_.bicydyn();
-         _loc2_.kofimupo=_loc1_.rowyr();
+         _loc2_.sofabe=sofabe==null?"":sofabe; // possibly empty
+         _loc2_.vukyluz=account.qujipoj(); // ExternalInterface.call("rotmg.UrlLib.getParam","entrypt");
+         _loc2_.accountType=account.getAccountType();
+         _loc2_.metulocy=account.zyz(); // empty for rotmg account
+         _loc2_.bicydyn=account.bicydyn(); // rotmg
+         _loc2_.kofimupo=account.rowyr(); // possibly empty
          _rotmgNetworkHandler.sendMessage(_loc2_);
          return;
       }
@@ -1084,7 +1082,7 @@ package aaa.rotmg.action.mapping
          this.vynegy=param1.objectId_;
          charId_=param1.charId_;
          gs_.initialize();
-         tacujov=false;
+         needsToCreateNewChar=false;
          return;
       }
 
@@ -1902,7 +1900,7 @@ package aaa.rotmg.action.mapping
       private function onReconnectResultMsg(reconnectResultMsg:ReconnectResultMsg) : void {
          var _loc2_:Server = new Server().setName(reconnectResultMsg.name_).setAddress(reconnectResultMsg.host_!=""?reconnectResultMsg.host_:server_.address).setPort(reconnectResultMsg.host_!=""?reconnectResultMsg.port_:server_.port);
          var _loc3_:int = reconnectResultMsg.gameId_;
-         var _loc4_:Boolean = tacujov;
+         var _loc4_:Boolean = needsToCreateNewChar;
          var _loc5_:int = charId_;
          var _loc6_:int = reconnectResultMsg.keyTime_;
          var _loc7_:ByteArray = reconnectResultMsg.key_;
@@ -1944,7 +1942,7 @@ package aaa.rotmg.action.mapping
          this.closeDialogs.dispatch();
          gs_.applyMapInfo(param1);
          this.cezafap=new Random(param1.fp_);
-         if(tacujov)
+         if(needsToCreateNewChar)
          {
             this.create();
          }

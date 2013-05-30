@@ -103,7 +103,7 @@ package ruwysepyd
          var _loc3_:* = true;
          var _loc4_:* = false;
          var _loc2_:Tibeto = new Tibeto();
-         _loc2_.susuka=false;
+         _loc2_.needsToCreateNewChar=false;
          _loc2_.charId=param1.charId();
          _loc2_.myto=true;
          this.luribodi.dispatch(_loc2_);

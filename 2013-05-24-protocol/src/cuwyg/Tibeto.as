@@ -15,9 +15,9 @@ package cuwyg
 
       public var server:Server;
 
-      public var juf:int;
+      public var whereToSendPlayer:int;
 
-      public var susuka:Boolean;
+      public var needsToCreateNewChar:Boolean;
 
       public var charId:int;
 

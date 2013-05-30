@@ -183,8 +183,8 @@ package biqacufo
          }
          var _loc2_:Tibeto = new Tibeto();
          _loc2_.server=param1.server_;
-         _loc2_.juf=param1.gameId_;
-         _loc2_.susuka=param1.tacujov;
+         _loc2_.whereToSendPlayer=param1.gameId_;
+         _loc2_.needsToCreateNewChar=param1.tacujov;
          _loc2_.charId=param1.charId_;
          _loc2_.keyTime=param1.keyTime_;
          _loc2_.key=param1.key_;
