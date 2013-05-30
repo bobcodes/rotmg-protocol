@@ -214,7 +214,7 @@ package sakugyt
          var _loc1_:* = false;
          var _loc2_:* = true;
          this.waza=new Kofapije();
-         this.waza.draw(this.model.cuvo(),this.model.cof());
+         this.waza.draw(this.model.getCredits(),this.model.cof());
          this.waza.x=this.wedi().width;
          this.waza.y=20;
          addChild(this.waza);

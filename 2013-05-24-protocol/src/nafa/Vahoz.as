@@ -39,40 +39,29 @@ package nafa
       }
 
       private function jedehe(param1:Hutisame) : void {
-         var _loc2_:* = false;
-         var _loc3_:* = true;
          removeChild(this.talobenor);
+		 
          this.nazu=new GameSprite(this.server,UserConfig.dugol,false,this.model.hidife()[0].charId(),-1,null,this.model,param1.sofabe);
          this.nazu.isEditor=true;
-         this.nazu.addEventListener(Event.COMPLETE,this.san);
-         this.nazu.addEventListener(Rus.RECONNECT,this.san);
-         this.nazu.addEventListener(Jocite.DEATH,this.san);
+         this.nazu.addEventListener(Event.COMPLETE,this.onGameEndCondition);
+         this.nazu.addEventListener(Rus.RECONNECT,this.onGameEndCondition);
+         this.nazu.addEventListener(Jocite.DEATH,this.onGameEndCondition);
          addChild(this.nazu);
          return;
       }
 
-      private function san(param1:Event) : void {
+      private function onGameEndCondition(param1:Event) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         this.pazama();
+         this.removeSelf();
          addChild(this.talobenor);
          return;
       }
 
-      private function noto(param1:Event) : void {
-         var _loc2_:* = true;
-         var _loc3_:* = false;
-         this.pazama();
-         addChild(this.talobenor);
-         return;
-      }
-
-      private function pazama() : void {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
-         this.nazu.removeEventListener(Event.COMPLETE,this.san);
-         this.nazu.removeEventListener(Rus.RECONNECT,this.san);
-         this.nazu.removeEventListener(Jocite.DEATH,this.san);
+      private function removeSelf() : void {
+         this.nazu.removeEventListener(Event.COMPLETE,this.onGameEndCondition);
+         this.nazu.removeEventListener(Rus.RECONNECT,this.onGameEndCondition);
+         this.nazu.removeEventListener(Jocite.DEATH,this.onGameEndCondition);
          removeChild(this.nazu);
          this.nazu=null;
          return;

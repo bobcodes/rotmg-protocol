@@ -91,8 +91,6 @@ package
       }
 
       private function pufycati() : void {
-         var _loc2_:* = false;
-         var _loc3_:* = true;
          this.context=new Giq();
          this.context.cemohoqal.map(LoaderInfo).cufypy(root.stage.root.loaderInfo);
          var _loc1_:Votif = new Votif(this);

@@ -21,7 +21,7 @@ package cuwyg
 
       public var charId:int;
 
-      public var kyzuwyg:int;
+      public var keyTime:int;
 
       public var key:ByteArray;
 

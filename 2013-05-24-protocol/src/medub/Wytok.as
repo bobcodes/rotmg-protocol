@@ -85,7 +85,7 @@ package medub
          var _loc1_:Tibeto = new Tibeto();
          _loc1_.susuka=true;
          _loc1_.charId=this.model.ruzimusys();
-         _loc1_.kyzuwyg=-1;
+         _loc1_.keyTime=-1;
          _loc1_.myto=true;
          return _loc1_;
       }

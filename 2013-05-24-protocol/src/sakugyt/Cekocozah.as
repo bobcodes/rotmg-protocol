@@ -66,7 +66,7 @@ package sakugyt
          this.tadilelis.setVerticalAlign(Lufub.MIDDLE);
          addChild(this.tadilelis);
          this.zinavy=new Kofapije();
-         this.zinavy.draw(param1.cuvo(),param1.cof());
+         this.zinavy.draw(param1.getCredits(),param1.cof());
          addChild(this.zinavy);
          var _loc2_:* = 0;
          while(_loc2_<ObjectLibrary.supy.length)

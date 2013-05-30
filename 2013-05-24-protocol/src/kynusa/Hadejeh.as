@@ -24,7 +24,7 @@ package kynusa
       public function approve() : Boolean {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         var _loc1_:* = this.muwi.cuvo()>=this.vifa.price;
+         var _loc1_:* = this.muwi.getCredits()>=this.vifa.price;
          if(!_loc1_)
          {
             this.biwihih.dispatch();

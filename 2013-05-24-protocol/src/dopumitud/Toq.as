@@ -45,7 +45,7 @@ package dopumitud
       private function sahulusy() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.model.pyjykusa(this.model.konor()+1);
+         this.model.setMaxChars(this.model.getMaxChars()+1);
          this.model.wemafowyq(-this.price);
          return;
       }

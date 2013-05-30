@@ -1,5 +1,10 @@
 package rotmg.actions.incoming;
 
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.util.Arrays;
+
 import rotmg.actions.IncomingAction;
 
 /**
@@ -14,7 +19,67 @@ import rotmg.actions.IncomingAction;
       public var keyTime_:int;
 
       public var key_:ByteArray;
+ * @author bobcodes
+ */
+public class ReconnectAction implements IncomingAction {
 
+    public final String name;
+    public final String host;
+    public final int port;
+    public final int gameId;
+    public final int keyTime;
+    public final byte [] key;
+    
+    public ReconnectAction() {
+        this(null,null,-1,-1,-1,null);
+    }
+
+
+    public ReconnectAction(String name, String host, int port, int gameId,
+            int keyTime, byte [] key) {
+        super();
+        this.name = name;
+        this.host = host;
+        this.port = port;
+        this.gameId = gameId;
+        this.keyTime = keyTime;
+        this.key = key;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+
+    public String getHost() {
+        return host;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+
+    public int getGameId() {
+        return gameId;
+    }
+
+
+    public int getKeyTime() {
+        return keyTime;
+    }
+
+
+    public byte [] getKey() {
+        return key;
+    }
+
+    @Override
+    public int getMessageId() {
+        return 39;
+    }
+
+    /**
       override public function parseFromInput(param1:IDataInput) : void {
          this.name_=param1.readUTF();
          this.host_=param1.readUTF();
@@ -26,80 +91,28 @@ import rotmg.actions.IncomingAction;
          param1.readBytes(this.key_,0,_loc2_);
          return;
       }
- * @author bobcodes
- */
-public class ReconnectAction implements IncomingAction {
-
-    public final String name;
-    public final String host;
-    public final int port;
-    public final int gameId;
-    public final int keyTime;
-    public final String key;
-    
-    public ReconnectAction() {
-        this(null,null,null,null,null,null);
+     */
+    @Override
+    public IncomingAction fromBytes(byte[] bytes) throws IOException {
+        DataInputStream din = new DataInputStream(new ByteArrayInputStream(bytes));
+        
+        String name = din.readUTF();
+        String host = din.readUTF();
+        int port = din.readInt();
+        int gameId = din.readInt();
+        int keyTime = din.readInt();
+        int keySize = din.readShort();
+        byte [] key = new byte[keySize];
+        din.read(key, 0, keySize);
+        
+        return new ReconnectAction(name, host, port, gameId, keyTime, key);
     }
-    
-    
-    
-    public ReconnectAction(String name, String host, String port,
-            String gameId, String keyTime, String key) {
-        this.name = name;
-        this.host = host;
-        this.port = port;
-        this.gameId = gameId;
-        this.keyTime = keyTime;
-        this.key = key;
-    }
-
-
-
-    public String getName() {
-        return name;
-    }
-
-
-
-    public String getHost() {
-        return host;
-    }
-
-
-
-    public String getPort() {
-        return port;
-    }
-
-
-
-    public String getGameId() {
-        return gameId;
-    }
-
-
-
-    public String getKeyTime() {
-        return keyTime;
-    }
-
-
-
-    public String getKey() {
-        return key;
-    }
-
 
 
     @Override
-    public IncomingAction fromBytes(byte[] bytes) {
-        // TODO Auto-generated method stub
-        return null;
+    public String toString() {
+        return "ReconnectAction [name=" + name + ", host=" + host + ", port="
+                + port + ", gameId=" + gameId + ", keyTime=" + keyTime
+                + ", key=" + Arrays.toString(key) + "]";
     }
-
-    @Override
-    public int getMessageId() {
-        return 39;
-    }
-
 }

@@ -41,8 +41,6 @@ package aaa.rotmg.net
       }
 
       protected function formatToString(param1:String, ... rest) : String {
-         var _loc5_:* = false;
-         var _loc6_:* = true;
          var _loc3_:String = "["+param1;
          var _loc4_:* = 0;
          while(_loc4_<rest.length)
@@ -55,8 +53,6 @@ package aaa.rotmg.net
       }
 
       public function consume() : void {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
          this.wacumod=null;
          this.next=null;
          this.pool.append(this);

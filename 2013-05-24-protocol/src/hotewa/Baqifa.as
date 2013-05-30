@@ -29,21 +29,19 @@ package hotewa
 
       public var napabapuq:Boolean;
 
-      private var julisubek:int;
+      private var _charId:int;
 
       private var isAgeVerified:Boolean;
 
       public var account:Account;
 
-      public function set pyt(param1:int) : void {
-         var _loc2_:* = false;
-         var _loc3_:* = true;
-         this.julisubek=param1;
+      public function set charId(param1:int) : void {
+         this._charId=param1;
          return;
       }
 
-      public function get pyt() : int {
-         return this.julisubek;
+      public function get charId() : int {
+         return this._charId;
       }
 
       public function fybema() : Boolean {
@@ -51,43 +49,33 @@ package hotewa
       }
 
       public function siqykol(param1:Boolean) : void {
-         var _loc2_:* = false;
-         var _loc3_:* = true;
          this.qyk.cygah=param1;
          return;
       }
 
       public function gywufo() : Boolean {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
          return (this.isAgeVerified)||this.account is KongregateAccount||(this.qyk.isAgeVerified);
       }
 
       public function cufelehed(param1:Boolean) : void {
-         var _loc2_:* = false;
-         var _loc3_:* = true;
          this.isAgeVerified=true;
          return;
       }
 
       public function koqifanu() : Boolean {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
          return (UserConfig.data_.needsTutorial)&&this.qyk.nextCharId_==1;
       }
 
-      public function konor() : int {
+      public function getMaxChars() : int {
          return this.qyk.maxNumChars_;
       }
 
-      public function pyjykusa(param1:int) : void {
-         var _loc2_:* = false;
-         var _loc3_:* = true;
+      public function setMaxChars(param1:int) : void {
          this.qyk.maxNumChars_=param1;
          return;
       }
 
-      public function cuvo() : int {
+      public function getCredits() : int {
          return this.qyk.credits_;
       }
 

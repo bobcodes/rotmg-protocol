@@ -67,7 +67,7 @@ package zoroc
          var _loc3_:* = true;
          var _loc4_:* = false;
          this.lolicafu=param1;
-         var _loc2_:SavedCharacter = this.muwi.qamas(this.muwi.pyt);
+         var _loc2_:SavedCharacter = this.muwi.qamas(this.muwi.charId);
          if(_loc2_)
          {
             _loc2_.sif(this.lolicafu);
@@ -83,7 +83,7 @@ package zoroc
       public function tovigyta() : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         var _loc1_:SavedCharacter = this.muwi.qamas(this.muwi.pyt);
+         var _loc1_:SavedCharacter = this.muwi.qamas(this.muwi.charId);
          if(_loc1_)
          {
             _loc1_.sif(null);

@@ -117,7 +117,7 @@ package zybome
       private function ciryhy() : Boolean {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         return !this.cost||this.cost<=this.muwi.cuvo();
+         return !this.cost||this.cost<=this.muwi.getCredits();
       }
    }
 

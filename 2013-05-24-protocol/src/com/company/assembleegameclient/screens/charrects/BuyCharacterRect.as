@@ -20,7 +20,7 @@ package com.company.assembleegameclient.screens.charrects
          this.model=param1;
          super.color=2039583;
          super.overColor=4342338;
-         className=new Sire().setParams(BUY_CHARACTER_RECT_CLASS_NAME_TEXT,{nth:param1.konor()+1});
+         className=new Sire().setParams(BUY_CHARACTER_RECT_CLASS_NAME_TEXT,{nth:param1.getMaxChars()+1});
          super.init();
          this.makeIcon();
          this.makeTagline();

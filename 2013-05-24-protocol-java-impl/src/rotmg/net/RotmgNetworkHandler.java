@@ -7,8 +7,16 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
 
 import rotmg.actions.Actions;
 import rotmg.actions.IncomingAction;
@@ -18,8 +26,8 @@ import rotmg.actions.OutgoingAction;
 public class RotmgNetworkHandler implements NetworkHandler, Closeable {
 
     private static int PORT = 2050;
-    private static final String outGoingSecretKey = "311f80691451c71b09a13a2a6e";
-    private static final String inComingSecretKey = "72c5583cafb6818995cbd74b80";
+    private static final String outgoingSecretKey = "311f80691451c71b09a13a2a6e";
+    private static final String incomingSecretKey = "72c5583cafb6818995cbd74b80";
     
     /**
      * Public key for encrypting passwords
@@ -36,7 +44,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
     private final Socket _socket;
     private final DataInputStream _din;
     private final BufferedOutputStream _bout;
-    private Map<Integer, IncomingAction> _incomingActionMapper;
+    private final Map<Integer, IncomingAction> _incomingActionMapper;
     
     public RotmgNetworkHandler(RotmgServer server) throws IOException {
         _server = server;
@@ -64,25 +72,25 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
     }
     
     /**
-     * 
-            this.payloadSize=this._tcpSocket.readInt();
-            if(this._tcpSocket.bytesAvailable<4) {
-                return;
-            } 
-            if(this._tcpSocket.bytesAvailable<this.payloadSize-tyju)
-            {
-               return;
-            }
-            messageId=this._tcpSocket.readUnsignedByte();
-            message=this.govizupas.runozak(messageId);
-            data=new ByteArray();
-            if(this.payloadSize-5>0)
-            {
-               this._tcpSocket.readBytes(data,0,this.payloadSize-5);
-            }
-            this._incomingCipher.decrypt(data);
-            message.parseFromInput(data);
-     * @return
+        _loc2_=Crypto.getCipher("rc4",Dapiby.dahicamo(UserConfig.InComingSecretKey));
+        
+        this.payloadSize=this._tcpSocket.readInt();
+        if(this._tcpSocket.bytesAvailable<4) {
+            return;
+        } 
+        if(this._tcpSocket.bytesAvailable<this.payloadSize-tyju)
+        {
+           return;
+        }
+        messageId=this._tcpSocket.readUnsignedByte();
+        message=this.govizupas.runozak(messageId);
+        data=new ByteArray();
+        if(this.payloadSize-5>0)
+        {
+           this._tcpSocket.readBytes(data,0,this.payloadSize-5);
+        }
+        this._incomingCipher.decrypt(data);
+        message.parseFromInput(data);
      */
     private IncomingAction parse() throws IOException {
         int payloadSize = _din.readInt();
@@ -90,6 +98,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         
         byte [] bytes = new byte[payloadSize-5];
         _din.read(bytes, 0, payloadSize-5);
+        bytes = decrypt(bytes);
         
         IncomingAction iaParser = _incomingActionMapper.get(msgId);
         IncomingAction ia = null;
@@ -100,6 +109,17 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         return ia;
     }
     
+    private byte[] decrypt(byte[] bytes) throws IOException {
+        try {
+            Cipher rc4 = Cipher.getInstance("RC4");
+            SecretKeySpec rc4Key = new SecretKeySpec(incomingSecretKey.getBytes("ASCII"), "RC4");
+            rc4.init(Cipher.DECRYPT_MODE, rc4Key);
+            return rc4.doFinal(bytes);
+        } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | IllegalBlockSizeException | BadPaddingException e) {
+            throw new IOException(e);
+        }
+    }
+
     /**
      * from decompiled code
      * this.data.clear();

@@ -186,7 +186,7 @@ package biqacufo
          _loc2_.juf=param1.gameId_;
          _loc2_.susuka=param1.tacujov;
          _loc2_.charId=param1.charId_;
-         _loc2_.kyzuwyg=param1.keyTime_;
+         _loc2_.keyTime=param1.keyTime_;
          _loc2_.key=param1.key_;
          this.luribodi.dispatch(_loc2_);
          return;

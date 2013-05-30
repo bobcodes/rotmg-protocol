@@ -61,7 +61,7 @@ package ruwysepyd
       private function kysimew(param1:int) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         this.view.ciri(this.muwi.cuvo(),this.muwi.cof());
+         this.view.ciri(this.muwi.getCredits(),this.muwi.cof());
          return;
       }
 

@@ -57,7 +57,7 @@ package tuma
       }
 
       private function vezahaq() : Boolean {
-         return this.model.cuvo()>=this.skin.cost;
+         return this.model.getCredits()>=this.skin.cost;
       }
 
       private function durago() : void {

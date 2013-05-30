@@ -15,14 +15,9 @@ package aaa.rotmg.net
 
    public class RotMGNetworkHandler extends Object
    {
-      {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
-      }
-
       public function RotMGNetworkHandler() {
-         this.naril=this.gutubyfad;
-         this.wukycasew=this.gutubyfad;
+         this._headMessageToWrite=this._nullMessage;
+         this._tailMessageToWrite=this._nullMessage;
          super();
          return;
       }
@@ -43,13 +38,13 @@ package aaa.rotmg.net
 
       public var _reconnectTimer:Timer;
 
-      private const gutubyfad:NetworkMessage = new NetworkMessage(0);
+      private const _nullMessage:NetworkMessage = new NetworkMessage(0);
 
       private const data:ByteArray = new ByteArray();
 
-      private var naril:NetworkMessage;
+      private var _headMessageToWrite:NetworkMessage;
 
-      private var wukycasew:NetworkMessage;
+      private var _tailMessageToWrite:NetworkMessage;
 
       private var payloadSize:int = -1;
 
@@ -110,8 +105,6 @@ package aaa.rotmg.net
       }
 
       public function disconnect() : void {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
          this._tcpSocket.close();
          this.removeListeners();
          this.closed.dispatch();
@@ -127,21 +120,18 @@ package aaa.rotmg.net
          return;
       }
 
-      public function sendMessage(param1:NetworkMessage) : void {
-         var _loc2_:* = false;
-         var _loc3_:* = true;
-         this.wukycasew.next=param1;
-         this.wukycasew=param1;
+      public function sendMessage(msgToSend:NetworkMessage) : void {
+         this._tailMessageToWrite.next=msgToSend;
+         this._tailMessageToWrite=msgToSend;
          return;
       }
 
-      private function ritevi() : void {
-         var _loc1_:NetworkMessage = this.naril.next;
-         var _loc2_:NetworkMessage = _loc1_;
-         while(_loc2_)
+      private function writePendingMessages() : void {
+         var currentMessage:NetworkMessage = this._headMessageToWrite.next;
+         while(currentMessage)
          {
             this.data.clear();
-            _loc2_.writeToOutput(this.data);
+            currentMessage.writeToOutput(this.data);
             this.data.position=0;
             if(this._outgoingCipher!=null)
             {
@@ -149,20 +139,20 @@ package aaa.rotmg.net
                this.data.position=0;
             }
             this._tcpSocket.writeInt(this.data.bytesAvailable+5);
-            this._tcpSocket.writeByte(_loc2_.id);
+            this._tcpSocket.writeByte(currentMessage.id);
             this._tcpSocket.writeBytes(this.data);
-            _loc2_.consume();
-            _loc2_=_loc2_.next;
+            currentMessage.consume();
+            currentMessage=currentMessage.next;
          }
          this._tcpSocket.flush();
-         this.gutubyfad.next=null;
-         this.gutubyfad.wacumod=null;
-         this.naril=this.wukycasew=this.gutubyfad;
+         this._nullMessage.next=null;
+         this._nullMessage.wacumod=null;
+         this._headMessageToWrite=this._tailMessageToWrite=this._nullMessage;
          return;
       }
 
       private function onConnect(param1:Event) : void {
-         this.ritevi();
+         this.writePendingMessages();
          this.connected.dispatch();
          return;
       }

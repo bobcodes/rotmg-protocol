@@ -26,7 +26,7 @@ package biqacufo
          this.model.gyquzenu.add(this.jihysim);
          this.model.hywelenyz.add(this.qelu);
          this.view.rezybyha.add(this.dudadyrys);
-         this.view.draw(this.model.cuvo(),this.model.cof());
+         this.view.draw(this.model.getCredits(),this.model.cof());
          return;
       }
 
@@ -49,7 +49,7 @@ package biqacufo
       private function qelu(param1:int) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         this.view.draw(this.model.cuvo(),param1);
+         this.view.draw(this.model.getCredits(),param1);
          return;
       }
 

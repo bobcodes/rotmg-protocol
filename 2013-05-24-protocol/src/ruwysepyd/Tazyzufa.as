@@ -148,7 +148,7 @@ package ruwysepyd
          var _loc4_:* = false;
          var _loc5_:* = true;
          var _loc1_:SavedCharacter = this.muwi.kodytosu(0);
-         this.muwi.pyt=_loc1_.charId();
+         this.muwi.charId=_loc1_.charId();
          var _loc2_:Hyzifiraj = new Hyzifiraj();
          _loc2_.category="character";
          _loc2_.hiris="select";

@@ -2,7 +2,11 @@ package rotmg.experiment;
 
 import java.util.SortedMap;
 
+import rotmg.actions.IncomingActionBroadcaster;
+import rotmg.actions.IncomingActionListener;
+import rotmg.actions.incoming.ReconnectAction;
 import rotmg.net.AvailableServers;
+import rotmg.net.RotmgNetworkHandler;
 import rotmg.net.RotmgServer;
 
 public class Main {
@@ -17,6 +21,15 @@ public class Main {
 	    
 	    RotmgServer eunorth2 = availableServers.get("EUNorth2");
         System.out.println(eunorth2);
+        
+        RotmgNetworkHandler nwHandler = new RotmgNetworkHandler(eunorth2);
+        IncomingActionBroadcaster.get().subscribe(ReconnectAction.class, new IncomingActionListener<ReconnectAction>() {
+            @Override
+            public void receive(ReconnectAction action) {
+                System.out.println(action);
+            }
+        });
+        nwHandler.run();
     }
 	
 }

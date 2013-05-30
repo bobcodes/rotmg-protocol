@@ -17,14 +17,7 @@ package qice
 
    public class Gygu extends Object
    {
-      {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
-      }
-
       public function Gygu() {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
          super();
          return;
       }
@@ -63,14 +56,14 @@ package qice
       private function qemi() : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         var _loc1_:SavedCharacter = this.model.qamas(this.model.pyt);
+         var _loc1_:SavedCharacter = this.model.qamas(this.model.charId);
          if(_loc1_)
          {
             this.duqa.qoqycofy(_loc1_.getPetVO());
          }
          else
          {
-            if((this.model.pyt)&&(this.duqa.rizidakuv())&&!this.data.myto)
+            if((this.model.charId)&&(this.duqa.rizidakuv())&&!this.data.myto)
             {
                return;
             }
@@ -80,24 +73,20 @@ package qice
       }
 
       private function nopyde() : void {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
          UserConfig.data_.charIdUseMap[this.data.charId]=new Date().getTime();
          UserConfig.save();
          return;
       }
 
       private function gilere() : void {
-         var _loc7_:* = true;
-         var _loc8_:* = false;
-         var _loc1_:Server = (this.data.server)||(this.servers.getBestServer());
+         var server:Server = (this.data.server)||(this.servers.getBestServer());
          var _loc2_:int = this.data.myto?this.maliz():this.data.juf;
          var _loc3_:Boolean = this.data.susuka;
-         var _loc4_:int = this.data.charId;
-         var _loc5_:int = this.data.myto?-1:this.data.kyzuwyg;
-         var _loc6_:ByteArray = this.data.key;
-         this.model.pyt=_loc4_;
-         this.zogytuso.dispatch(new GameSprite(_loc1_,_loc2_,_loc3_,_loc4_,_loc5_,_loc6_,this.model,null));
+         var charId:int = this.data.charId;
+         var keyTime:int = this.data.myto?-1:this.data.keyTime;
+         var key:ByteArray = this.data.key;
+         this.model.charId=charId;
+         this.zogytuso.dispatch(new GameSprite(server,_loc2_,_loc3_,charId,keyTime,key,this.model,null));
          return;
       }
 

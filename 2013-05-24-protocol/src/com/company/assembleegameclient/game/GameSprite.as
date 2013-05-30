@@ -52,21 +52,14 @@ package com.company.assembleegameclient.game
 
    public class GameSprite extends Nukomesih
    {
-      {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
-      }
-
-      public function GameSprite(param1:Server, param2:int, param3:Boolean, param4:int, param5:int, param6:ByteArray, param7:Baqifa, param8:String) {
-         var _loc9_:* = false;
-         var _loc10_:* = true;
+      public function GameSprite(serverToConnectTo:Server, param2:int, param3:Boolean, param4:int, keyTime:int, key:ByteArray, param7:Baqifa, param8:String) {
          this.radezez=new Hugyqufyq();
          this.guhud=new Sprite();
          super();
          this.model=param7;
          map=new Map(this);
          addChild(map);
-         gsc_=new RotMGActionMapper(this,param1,param2,param3,param4,param5,param6,param8);
+         gsc_=new RotMGActionMapper(this,serverToConnectTo,param2,param3,param4,keyTime,key,param8);
          mui_=new Vub(this);
          this.reki=new Chat();
          addChild(this.reki);

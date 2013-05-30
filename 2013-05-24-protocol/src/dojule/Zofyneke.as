@@ -37,7 +37,7 @@ package dojule
       public function make() : Animation {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.puw=this.muwi.qamas(this.muwi.pyt);
+         this.puw=this.muwi.qamas(this.muwi.charId);
          this.faranaji=this.puw?this.defehyle():this.bogipywo();
          this.skin=this.faranaji.socucu.mipozilin();
          this.tex1=this.puw?this.puw.tex1():0;

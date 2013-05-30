@@ -60,7 +60,7 @@ package ruwa
       }
 
       private function geto() : Boolean {
-         return this.model.cuvo()<this.model.kut();
+         return this.model.getCredits()<this.model.kut();
       }
 
       private function cow() : void {

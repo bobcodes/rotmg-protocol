@@ -193,7 +193,7 @@ package aaa.rotmg.action.mapping
          var _loc2_:* = true;
       }
 
-      public function RotMGActionMapper(param1:Nukomesih, param2:Server, param3:int, param4:Boolean, param5:int, param6:int, param7:ByteArray, param8:String) {
+      public function RotMGActionMapper(param1:Nukomesih, param2:Server, param3:int, param4:Boolean, param5:int, keyTime:int, key:ByteArray, param8:String) {
          var _loc9_:* = false;
          var _loc10_:* = true;
          super();
@@ -222,8 +222,8 @@ package aaa.rotmg.action.mapping
          gameId_=param3;
          tacujov=param4;
          charId_=param5;
-         keyTime_=param6;
-         key_=param7;
+         keyTime_=keyTime;
+         key_=key;
          sofabe=param8;
          this.qugu();
          worunyjub=this;
@@ -2170,8 +2170,6 @@ package aaa.rotmg.action.mapping
       }
 
       private function jed(param1:TimerEvent) : void {
-         var _loc2_:* = true;
-         var _loc3_:* = false;
          _rotmgNetworkHandler.connect(server_.address,server_.port);
          return;
       }

@@ -125,11 +125,13 @@ public class AvailableServers {
     private static PostMethod makePost() {
         PostMethod post = new PostMethod("https://realmofthemadgod.appspot.com/char/list");
         post.addParameter(new NameValuePair("game_net", "rotmg"));
-        post.addParameter(new NameValuePair("ignore", "9858"));
+        post.addParameter(new NameValuePair("ignore", "9193"));
         post.addParameter(new NameValuePair("game_net_user_id", ""));
         post.addParameter(new NameValuePair("do_login", "true"));
         post.addParameter(new NameValuePair("play_platform", "rotmg"));
-        post.addParameter(new NameValuePair("guid", UserConfig.GUEST_GUID));
+        if(UserConfig.GUEST_GUID != null) {
+            post.addParameter(new NameValuePair("guid", UserConfig.GUEST_GUID));
+        }
         post.addParameter(new NameValuePair("password", ""));
         return post;
     }
