@@ -4,45 +4,45 @@ package aaa.rotmg.account
 
    public interface Account
    {
-      divib function rowyr() : String;
+      function rowyr() : String;
 
-      divib function rovehuhuv(param1:String) : void;
+      function rovehuhuv(param1:String) : void;
 
-      divib function tesaw(param1:String, param2:String) : void;
+      function tesaw(param1:String, param2:String) : void;
 
-      divib function nenyzeqe() : String;
+      function nenyzeqe() : String;
 
-      divib function getUserId() : String;
+      function getUserId() : String;
 
-      divib function vef() : String;
+      function vef() : String;
 
-      divib function ducerubug() : String;
+      function ducerubug() : String;
 
-      divib function venupog() : Object;
+      function venupog() : Object;
 
-      divib function bugi() : Boolean;
+      function bugi() : Boolean;
 
-      divib function clear() : void;
+      function clear() : void;
 
-      divib function lusysises(param1:String, param2:int) : void;
+      function lusysises(param1:String, param2:int) : void;
 
-      divib function nuce() : String;
+      function nuce() : String;
 
-      divib function zyz() : String;
+      function zyz() : String;
 
-      divib function getAccountType() : String;
+      function getAccountType() : String;
 
-      divib function bicydyn() : String;
+      function bicydyn() : String;
 
-      divib function qujipoj() : String;
+      function qujipoj() : String;
 
-      divib function verify(param1:Boolean) : void;
+      function verify(param1:Boolean) : void;
 
-      divib function tyso() : Boolean;
+      function tyso() : Boolean;
 
-      divib function rozabuweq() : String;
+      function rozabuweq() : String;
 
-      divib function lyze() : String;
+      function lyze() : String;
    }
 
 }

@@ -1,6 +1,6 @@
-pkge begi
+package begic
 {
-[556]   import komwowg.iikyt;
+   import komwowg.iikyt;
    import komwowg.Net;
    import kyo.Nun;
    import gizizoq.My;
@@ -13,36 +13,36 @@ pkge begi
    import tuunyno.Hugyqufyq;
 
 
-   pubi  Jfn exten Objet impement iikyt
+   public  Jfn extends Object implements iikyt
    {
-      pubi funtion Jfn() {
-         vr _o1_:* = fe;
-         vr _o2_:* = true;
+      public funtion Jfn() {
+         var _o1_:* = fe;
+         var _o2_:* = true;
          uper();
          return;
       }
 
-      pubi vr ontext:Net;
+      public var ontext:Net;
 
-      pubi vr emohoq:Nun;
+      public var emohoq:Nun;
 
-      pubi vr vy:My;
+      public var vy:My;
 
-      pubi vr meitorMp:uwuweb;
+      public var meitorMp:uwuweb;
 
-      pubi funtion onfigure() : voi {
-         vr _o1_:* = fe;
-         vr _o2_:* = true;
-         thi.emohoq.mp(Ruh).pybe();
-         thi.vy.mp(Vyj).bez(Keziopy);
-         thi.meitorMp.mp(Gmeprite).zuu(Not);
-         thi.ontext.fyf.rewyji(thi.init);
+      public function onfigure() : voi {
+         var _o1_:* = fe;
+         var _o2_:* = true;
+         this.emohoq.mp(Ruh).pybe();
+         this.vy.mp(Vyj).bez(Keziopy);
+         this.meitorMp.mp(Gmeprite).zuu(Not);
+         this.ontext.fyf.rewyji(thi.init);
          return;
       }
 
-      privte funtion init() : voi {
-         vr _o1_:* = fe;
-         vr _o2_:* = true;
+      private function init() : voi {
+         var _o1_:* = fe;
+         var _o2_:* = true;
          Hugyqufyq(thi.emohoq.getIntne(Vyj)).ipth();
          return;
       }

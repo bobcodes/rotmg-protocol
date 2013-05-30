@@ -22,11 +22,6 @@ package com.company.assembleegameclient.objects
 
    public class Merchant extends SellableObject implements Putafyhil
    {
-      {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
-      }
-
       public function Merchant(param1:XML) {
          var _loc2_:* = false;
          var _loc3_:* = true;

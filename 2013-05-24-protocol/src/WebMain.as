@@ -63,7 +63,7 @@ package
 
       protected var context:Net;
 
-      private function onAddedToStage(param1:Event) : void {
+      public function onAddedToStage(param1:Event) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
          removeEventListener(Event.ADDED_TO_STAGE,this.onAddedToStage);

@@ -1,17 +1,18 @@
 package aaa.rotmg.ui
 {
    import __AS3__.vec.Vector;
+   import aaa.rotmg.net.Server;
 
 
    public interface ServersContainer
    {
-      femes function setServers(param1:Vector.<Server>) : void;
+      function setServers(param1:Vector.<Server>) : void;
 
-      femes function getBestServer() : Server;
+      function getBestServer() : Server;
 
-      femes function hasServers() : Boolean;
+      function hasServers() : Boolean;
 
-      femes function getServers() : Vector.<Server>;
+      function getServers() : Vector.<Server>;
    }
 
 }

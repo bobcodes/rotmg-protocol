@@ -5,9 +5,9 @@ package nec
 
    public interface Zirewe
    {
-      jevi function menyhaky(param1:Nagumy) : void;
+      function menyhaky(param1:Nagumy) : void;
 
-      jevi function getString() : String;
+      function getString() : String;
    }
 
 }

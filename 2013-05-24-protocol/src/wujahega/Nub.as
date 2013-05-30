@@ -6,13 +6,13 @@ package wujahega
 
    public interface Nub
    {
-      gibymec function addItem(param1:DisplayObject) : void;
+      function addItem(param1:DisplayObject) : void;
 
-      gibymec function setItems(param1:Vector.<DisplayObject>) : void;
+      function setItems(param1:Vector.<DisplayObject>) : void;
 
-      gibymec function dytipahir(param1:int) : DisplayObject;
+      function dytipahir(param1:int) : DisplayObject;
 
-      gibymec function qetodufeq() : int;
+      function qetodufeq() : int;
    }
 
 }

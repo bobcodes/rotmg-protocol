@@ -6,13 +6,13 @@ package tekoh
 
    public interface Gemanyq
    {
-      powoqufuj function zytije(param1:Hujuhy) : void;
+       function zytije(param1:Hujuhy) : void;
 
-      powoqufuj function nivinupo() : Hujuhy;
+       function nivinupo() : Hujuhy;
 
-      powoqufuj function nuqaqynyp(param1:Goq) : void;
+       function nuqaqynyp(param1:Goq) : void;
 
-      powoqufuj function wab() : Goq;
+       function wab() : Goq;
    }
 
 }

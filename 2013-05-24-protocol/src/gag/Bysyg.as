@@ -5,23 +5,23 @@ package gag
 
    public interface Bysyg
    {
-      dekygyloj function start() : void;
+      function start() : void;
 
-      dekygyloj function reset() : void;
+      function reset() : void;
 
-      dekygyloj function get deruhidy() : Hugyqufyq;
+      function get deruhidy() : Hugyqufyq;
 
-      dekygyloj function get davifuju() : Vulavu;
+      function get davifuju() : Vulavu;
 
-      dekygyloj function get lastly() : Vulavu;
+      function get lastly() : Vulavu;
 
-      dekygyloj function get cotiwipif() : Boolean;
+      function get cotiwipif() : Boolean;
 
-      dekygyloj function get rowasu() : Boolean;
+      function get rowasu() : Boolean;
 
-      dekygyloj function get jalilezo() : Boolean;
+      function get jalilezo() : Boolean;
 
-      dekygyloj function get error() : String;
+      function get error() : String;
    }
 
 }

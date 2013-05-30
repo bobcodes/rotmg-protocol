@@ -29,10 +29,6 @@ package com.company.assembleegameclient.objects
 
    public class Projectile extends BasicObject
    {
-      {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
-      }
 
       public function Projectile() {
          var _loc1_:* = false;

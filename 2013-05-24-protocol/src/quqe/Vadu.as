@@ -1,6 +1,7 @@
 package quqe
 {
    import __AS3__.vec.Vector;
+   import aaa.rotmg.net.IncomingOnlyNetworkMessage;
    import flash.utils.IDataInput;
 
 

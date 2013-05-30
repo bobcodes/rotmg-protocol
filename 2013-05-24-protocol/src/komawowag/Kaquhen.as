@@ -4,7 +4,7 @@ package komawowag
 
    public interface Kaquhen
    {
-      fubywovo function extend(param1:Net) : void;
+      function extend(param1:Net) : void;
    }
 
 }

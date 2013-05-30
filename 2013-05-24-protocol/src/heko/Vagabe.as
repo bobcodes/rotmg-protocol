@@ -6,9 +6,9 @@ package heko
 
    public interface Vagabe
    {
-      zonetur function cetovuzy() : TextField;
+      function cetovuzy() : TextField;
 
-      zonetur function nezori() : Nagumy;
+      function nezori() : Nagumy;
    }
 
 }

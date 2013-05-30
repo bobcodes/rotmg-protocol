@@ -7,17 +7,17 @@ package valatom
 
    public interface Bobibu extends IEventDispatcher
    {
-      rynab function get rebizozub() : Vector.<DisplayObjectContainer>;
+      function get rebizozub() : Vector.<DisplayObjectContainer>;
 
-      rynab function neje(param1:DisplayObjectContainer) : void;
+      function neje(param1:DisplayObjectContainer) : void;
 
-      rynab function mego(param1:DisplayObjectContainer) : void;
+      function mego(param1:DisplayObjectContainer) : void;
 
-      rynab function dehy(param1:Nageqyned) : void;
+      function dehy(param1:Nageqyned) : void;
 
-      rynab function woc(param1:Nageqyned) : void;
+      function woc(param1:Nageqyned) : void;
 
-      rynab function ruqydebem() : void;
+      function ruqydebem() : void;
    }
 
 }

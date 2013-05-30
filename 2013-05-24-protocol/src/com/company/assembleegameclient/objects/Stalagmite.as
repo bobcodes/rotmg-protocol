@@ -7,10 +7,6 @@ package com.company.assembleegameclient.objects
 
    public class Stalagmite extends GameObject
    {
-      {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
-      }
 
       public function Stalagmite(param1:XML) {
          var _loc5_:* = true;

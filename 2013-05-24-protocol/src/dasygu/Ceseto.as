@@ -5,15 +5,15 @@ package dasygu
 
    public interface Ceseto
    {
-      kilyqyv function get nakijide() : Vector.<Class>;
+       function get nakijide() : Vector.<Class>;
 
-      kilyqyv function get gajycih() : Vector.<Class>;
+       function get gajycih() : Vector.<Class>;
 
-      kilyqyv function get hehijakyz() : String;
+       function get hehijakyz() : String;
 
-      kilyqyv function get pak() : Vector.<Class>;
+       function get pak() : Vector.<Class>;
 
-      kilyqyv function matches(param1:*) : Boolean;
+       function matches(param1:*) : Boolean;
    }
 
 }

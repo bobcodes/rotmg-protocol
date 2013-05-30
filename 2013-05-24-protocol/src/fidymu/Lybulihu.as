@@ -5,9 +5,9 @@ package fidymu
 
    public interface Lybulihu extends IEventDispatcher
    {
-      rubyfukiro function disable() : void;
+       function disable() : void;
 
-      rubyfukiro function isEnabled() : Boolean;
+       function isEnabled() : Boolean;
    }
 
 }

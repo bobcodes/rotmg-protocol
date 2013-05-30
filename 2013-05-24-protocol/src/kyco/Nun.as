@@ -2,7 +2,7 @@ package kyco
 {
    import flash.events.EventDispatcher;
    import flash.utils.Dictionary;
-   import _-1Wk.SsInternal;
+   //import _-1Wk.SsInternal;
    import flash.system.ApplicationDomain;
    import veb.Qiroru;
    import cyqef.Naseqigos;

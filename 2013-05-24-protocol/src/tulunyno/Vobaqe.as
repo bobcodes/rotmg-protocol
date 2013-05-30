@@ -70,8 +70,9 @@ package tulunyno
       }
 
       public function dispatch(... rest) : void {
-         var _loc6_:* = false;
-         var _loc7_:* = true;
+		  // TODO: VERIFY THIS IS NOT BROKEN
+         var _loc5_:Sutoqowa = null;
+		 var _loc4_:Number = 0;
          var _loc2_:int = this.jedu.length;
          var _loc3_:int = rest.length;
          if(_loc3_<_loc2_)

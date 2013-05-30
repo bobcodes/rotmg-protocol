@@ -10,7 +10,7 @@ package mx.core
          return;
       }
 
-      wukewymon.adobe.tupa  static const VERSION:String = "4.6.0.23201";
+      public static const VERSION:String = "4.6.0.23201";
    }
 
 }

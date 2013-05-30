@@ -6,7 +6,7 @@ package com.company.assembleegameclient.objects
 
    public interface Putafyhil
    {
-      wadymyt function nokociqoc(param1:GameSprite) : Panel;
+      function nokociqoc(param1:GameSprite) : Panel;
    }
 
 }

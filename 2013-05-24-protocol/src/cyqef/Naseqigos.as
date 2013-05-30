@@ -5,13 +5,13 @@ package cyqef
 
    public interface Naseqigos
    {
-      godygek function dofumab(param1:Object) : Class;
+      function dofumab(param1:Object) : Class;
 
-      godygek function dofeze(param1:*, param2:Boolean=false) : String;
+      function dofeze(param1:*, param2:Boolean=false) : String;
 
-      godygek function hukug(param1:Class, param2:Class) : Boolean;
+      function hukug(param1:Class, param2:Class) : Boolean;
 
-      godygek function timefuh(param1:Class) : Wubelet;
+      function timefuh(param1:Class) : Wubelet;
    }
 
 }

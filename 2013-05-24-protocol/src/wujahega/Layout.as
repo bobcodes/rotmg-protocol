@@ -6,11 +6,11 @@ package wujahega
 
    public interface Layout
    {
-      fyteme function ciwysu() : int;
+       function ciwysu() : int;
 
-      fyteme function gynivy(param1:int) : void;
+       function gynivy(param1:int) : void;
 
-      fyteme function layout(param1:Vector.<DisplayObject>, param2:int=0) : void;
+       function layout(param1:Vector.<DisplayObject>, param2:int=0) : void;
    }
 
 }

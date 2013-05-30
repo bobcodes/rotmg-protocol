@@ -4,7 +4,7 @@ package cucowury
 
    public interface Fym
    {
-      vod function dyb() : Boolean;
+      void function dyb() : Boolean;
    }
 
 }

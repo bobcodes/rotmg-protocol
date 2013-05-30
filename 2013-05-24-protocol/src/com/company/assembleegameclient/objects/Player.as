@@ -51,10 +51,6 @@ package com.company.assembleegameclient.objects
 
    public class Player extends Character
    {
-      {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
-      }
 
       public function Player(param1:XML) {
          var _loc3_:* = true;

@@ -51,14 +51,8 @@ package com.company.assembleegameclient.objects
 
    public class GameObject extends BasicObject
    {
-      {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
-      }
 
       public function GameObject(param1:XML) {
-         var _loc6_:* = false;
-         var _loc7_:* = true;
          var _loc4_:* = 0;
          this.props_=ObjectLibrary.taqobilug;
          this.myracufam=new Point();

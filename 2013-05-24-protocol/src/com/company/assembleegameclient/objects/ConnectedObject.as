@@ -14,10 +14,6 @@ package com.company.assembleegameclient.objects
 
    public class ConnectedObject extends GameObject
    {
-      {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
-      }
 
       public function ConnectedObject(param1:XML) {
          var _loc2_:* = false;

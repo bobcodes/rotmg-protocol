@@ -4,7 +4,7 @@ package komawowag
 
    public interface Tom
    {
-      jolec function approve() : Boolean;
+      function approve() : Boolean;
    }
 
 }

@@ -6,11 +6,11 @@ package wyrovu
 
    public interface Pomuk
    {
-      dirym function draw(param1:Wypyj, param2:int) : Boolean;
+      function draw(param1:Wypyj, param2:int) : Boolean;
 
-      dirym function dispose() : void;
+      function dispose() : void;
 
-      dirym function fag() : GameObject;
+      function fag() : GameObject;
    }
 
 }

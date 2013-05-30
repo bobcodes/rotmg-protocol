@@ -3,23 +3,23 @@ package aaa.rotmg.config
 
    public interface GoogleAppConfig extends Fym
    {
-      cyb function getBuildDisplayLabel() : String;
+      function getBuildDisplayLabel() : String;
 
-      cyb function getRotmgAppUrl(param1:Boolean=false) : String;
+      function getRotmgAppUrl(param1:Boolean=false) : String;
 
-      cyb function getGoogleAccountNumber() : String;
+      function getGoogleAccountNumber() : String;
 
-      cyb function dokoza() : Boolean;
+      function dokoza() : Boolean;
 
-      cyb function biqadepo() : Boolean;
+      function biqadepo() : Boolean;
 
-      cyb function sonyh() : Boolean;
+      function sonyh() : Boolean;
 
-      cyb function vilelym() : Boolean;
+      function vilelym() : Boolean;
 
-      cyb function riz() : Boolean;
+      function riz() : Boolean;
 
-      cyb function cuk() : Boolean;
+      function cuk() : Boolean;
    }
 
 }

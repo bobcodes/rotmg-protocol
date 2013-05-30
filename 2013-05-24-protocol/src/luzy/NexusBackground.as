@@ -15,10 +15,6 @@ package luzy
 
    public class NexusBackground extends Background
    {
-      {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
-      }
 
       public function NexusBackground() {
          var _loc1_:* = false;

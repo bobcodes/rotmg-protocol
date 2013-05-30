@@ -6,13 +6,13 @@ package nasokuqa
 
    public interface Myky
    {
-      tafuj function lyqapu() : Boolean;
+       function lyqapu() : Boolean;
 
-      tafuj function nutawic() : Boolean;
+       function nutawic() : Boolean;
 
-      tafuj function cuwuqe(param1:Offer) : Zirewe;
+       function cuwuqe(param1:Offer) : Zirewe;
 
-      tafuj function tejotez() : String;
+       function tejotez() : String;
    }
 
 }

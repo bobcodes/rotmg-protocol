@@ -4,14 +4,8 @@ package komawowag
 
    public class Lagyqig extends Object
    {
-      {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
-      }
 
       public function Lagyqig() {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
          super();
          return;
       }

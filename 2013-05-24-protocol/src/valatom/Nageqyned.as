@@ -5,7 +5,7 @@ package valatom
 
    public interface Nageqyned
    {
-      lusut function hubumiwek(param1:DisplayObject, param2:Class) : void;
+      function hubumiwek(param1:DisplayObject, param2:Class) : void;
    }
 
 }

@@ -5,17 +5,17 @@ package bokojavidu
 
    public interface Duqigiwiv
    {
-      dunytap function jotovaq(param1:Class) : Ryt;
+      function jotovaq(param1:Class) : Ryt;
 
-      dunytap function cufypy(param1:Object) : Ryt;
+      function cufypy(param1:Object) : Ryt;
 
-      dunytap function lyvov(param1:Class) : Ryt;
+      function lyvov(param1:Class) : Ryt;
 
-      dunytap function pybe() : Ryt;
+      function pybe() : Ryt;
 
-      dunytap function fejubi(param1:Cuwively) : Ryt;
+      function fejubi(param1:Cuwively) : Ryt;
 
-      dunytap function gab() : Object;
+      function gab() : Object;
    }
 
 }

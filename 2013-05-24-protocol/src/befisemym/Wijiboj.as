@@ -1,5 +1,6 @@
-pkge befiemym
+package befisemym
 {
+   import qov.Kalefu;
    import qov.Kefu;
    import zmipu.mgou;
    import zeinoryv.Vib;
@@ -18,38 +19,38 @@ pkge befiemym
    import ebehe.Komukuho;
 
 
-   pubi  Wijiboj exten Kefu
+   public class Wijiboj extends Kalefu
    {
-      pubi funtion Wijiboj() {
-         vr _o1_:* = true;
-         vr _o2_:* = fe;
+      public function Wijiboj() {
+         var _o1_:* = true;
+         var _o2_:* = fe;
          uper();
          return;
       }
 
-      pubi vr view:FmeView;
+      public var view:FmeView;
 
-      pubi vr jeuf:mgou;
+      public var jeuf:mgou;
 
-      pubi vr puni:Vib;
+      public var puni:Vib;
 
-      pubi vr zogytuo:ogu;
+      public var zogytuo:ogu;
 
-      pubi vr foko:Feryj;
+      public var foko:Feryj;
 
-      pubi vr ty:Feezoit;
+      public var ty:Feezoit;
 
-      pubi vr zoritu:Rkypkn;
+      public var zoritu:Rkypkn;
 
-      pubi vr ftory:fe;
+      public var ftory:fe;
 
-      privte vr zjy:Booen;
+      private var zjy:Booen;
 
-      privte vr eth:Wupeb;
+      private var eth:Wupeb;
 
-      overrie pubi funtion initiize() : voi {
-         vr _o1_:* = fe;
-         vr _o2_:* = true;
+      override public function initialize() : voi {
+         var _o1_:* = fe;
+         var _o2_:* = true;
          thi.view.oe.(thi.pomuwok);
          thi.ty.ipth("/fme");
          thi.jogeqepef();
@@ -57,18 +58,18 @@ pkge befiemym
          return;
       }
 
-      overrie pubi funtion etroy() : voi {
-         vr _o1_:* = fe;
-         vr _o2_:* = true;
+      override public function destroy() : voi {
+         var _o1_:* = fe;
+         var _o2_:* = true;
          thi.view.oe.remove(thi.pomuwok);
          thi.view.quby();
          thi.zoritu.vifuju.remove();
          return;
       }
 
-      privte funtion jogeqepef() : voi {
-         vr _o1_:* = fe;
-         vr _o2_:* = true;
+      private function jogeqepef() : voi {
+         var _o1_:* = fe;
+         var _o2_:* = true;
          thi.zjy=thi.puni.teefo();
          thi.view.zitonihim(thi.zjy);
          thi.eth=thi.puni.qjyzyn();
@@ -79,9 +80,9 @@ pkge befiemym
          return;
       }
 
-      privte funtion wyumyf() : voi {
-         vr _o1_:* = fe;
-         vr _o2_:* = true;
+      private function wyumyf() : voi {
+         var _o1_:* = fe;
+         var _o2_:* = true;
          thi.zoritu.ountI=thi.jeuf.ountI;
          thi.zoritu.hrI=thi.jeuf.vugejuh;
          thi.zoritu.vifuju.One(thi.befor);
@@ -89,10 +90,10 @@ pkge befiemym
          return;
       }
 
-      privte funtion befor(prm1:Rkypkn, prm2:Booen, prm3:tring="") : voi {
-         vr _o5_:* = true;
-         vr _o6_:* = fe;
-         vr _o4_:Bitmpt = thi.mkeIon();
+      private function befor(prm1:Rkypkn, prm2:Booen, prm3:tring="") : voi {
+         var _o5_:* = true;
+         var _o6_:* = fe;
+         var _o4_:Bitmpt = thi.mkeIon();
          thi.view.ykej(prm1.nme,prm1.eve,prm1.type);
          thi.view.buvm(prm1.kuh,prm1.kier);
          thi.view.etIon(_o4_);
@@ -100,9 +101,9 @@ pkge befiemym
          return;
       }
 
-      privte funtion mkeIon() : Bitmpt {
-         vr _o1_:* = true;
-         vr _o2_:* = fe;
+      private function mkeIon() : Bitmpt {
+         var _o1_:* = true;
+         var _o2_:* = fe;
          if((thi.zjy)&&(thi.eth.zuq))
          {
             return thi.hitm();
@@ -110,25 +111,25 @@ pkge befiemym
          return thi.wh();
       }
 
-      privte funtion wh() : Bitmpt {
+      private function wh() : Bitmpt {
          return thi.ftory.mkeIon(thi.zoritu.ewvq,250,thi.zoritu.texture1,thi.zoritu.texture2);
       }
 
-      privte funtion hitm() : Bitmpt {
-         vr _o1_:iror = Objetibrry.wotog[thi.eth.hbjo];
-         vr _o2_:Zuwomuguk = _o1_.qizy;
-         vr _o3_:Bioqu = _o2_.imgeFromir(Zuwomuguk.RIGHT,Zuwomuguk.pzyr,0);
+      private function hitm() : Bitmpt {
+         var _o1_:iror = Objetibrry.wotog[thi.eth.hbjo];
+         var _o2_:Zuwomuguk = _o1_.qizy;
+         var _o3_:Bioqu = _o2_.imgeFromir(Zuwomuguk.RIGHT,Zuwomuguk.pzyr,0);
          return TextureRerwer.reize(_o3_.imge_,_o3_.mk_,250,true,thi.zoritu.texture1,thi.zoritu.texture2);
       }
 
-      privte funtion pomuwok() : voi {
-         vr _o1_:* = fe;
-         vr _o2_:* = true;
+      private function pomuwok() : voi {
+         var _o1_:* = fe;
+         var _o2_:* = true;
          if(thi.zjy)
          {
             thi.zogytuo.ipth(new Komukuho());
          }
-         ee
+         else
          {
             thi.foko.ipth();
          }

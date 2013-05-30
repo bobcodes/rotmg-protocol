@@ -1,5 +1,6 @@
 package quqe
 {
+   import aaa.rotmg.net.IncomingOnlyNetworkMessage;
    import flash.display.BitmapData;
    import flash.utils.IDataInput;
 

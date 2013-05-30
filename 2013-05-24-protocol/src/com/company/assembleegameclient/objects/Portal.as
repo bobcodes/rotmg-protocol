@@ -14,10 +14,6 @@ package com.company.assembleegameclient.objects
 
    public class Portal extends GameObject implements Putafyhil
    {
-      {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
-      }
 
       public function Portal(param1:XML) {
          var _loc2_:* = false;

@@ -6,9 +6,9 @@ package geben
 
    public interface Wejy
    {
-      ligeq function map(param1:String, param2:Class=null) : Fon;
+      function map(param1:String, param2:Class=null) : Fon;
 
-      ligeq function gukin(param1:String, param2:Class=null) : Zykitu;
+      function gukin(param1:String, param2:Class=null) : Zykitu;
    }
 
 }

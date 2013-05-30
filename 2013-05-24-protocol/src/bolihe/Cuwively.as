@@ -6,9 +6,9 @@ package bolihe
 
    public interface Cuwively
    {
-      jeru function apply(param1:Class, param2:Nun, param3:Dictionary) : Object;
+      function apply(param1:Class, param2:Nun, param3:Dictionary) : Object;
 
-      jeru function destroy() : void;
+      function destroy() : void;
    }
 
 }
