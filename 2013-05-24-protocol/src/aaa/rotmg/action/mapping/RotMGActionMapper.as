@@ -188,10 +188,6 @@ package aaa.rotmg.action.mapping
 
    public class RotMGActionMapper extends RotMGActionMapperAbstract
    {
-      {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
-      }
 
       public function RotMGActionMapper(gameSprite:Nukomesih, param2:Server, whereToSendPlayer:int, needsToCreateNewCharParam:Boolean, charId:int, keyTime:int, key:ByteArray, param8:String) {
          var _loc9_:* = false;
@@ -219,7 +215,7 @@ package aaa.rotmg.action.mapping
          this.model=this.cemohoqal.getInstance(Nihuvi);
          gs_=gameSprite;
          server_=param2;
-         gameId_=whereToSendPlayer;
+         _whereToSendPlayer=whereToSendPlayer;
          needsToCreateNewChar=needsToCreateNewCharParam;
          charId_=charId;
          keyTime_=keyTime;
@@ -1060,17 +1056,20 @@ package aaa.rotmg.action.mapping
          this.ryladiduq();
          var _loc2_:HelloNetworkMessage = this.govizupas.runozak(HELLO) as HelloNetworkMessage;
          _loc2_.buildVersion_=UserConfig.BUILD_VERSION;
-         _loc2_.gameId_=gameId_;
+         _loc2_._whereToSendPlayer=_whereToSendPlayer;
          _loc2_.guid_=this.qopy(account.getUserId());
-         _loc2_.password_=this.qopy(account.vef());
-         _loc2_.secret_=this.qopy(account.ducerubug());
+         _loc2_.password_=this.qopy(account.password());
+         _loc2_.secret_=this.qopy(account.platformDependantSecret());
          _loc2_.keyTime_=keyTime_;
          _loc2_.key_.length=0;
          _loc2_.sofabe=sofabe==null?"":sofabe; // possibly empty
-         _loc2_.vukyluz=account.qujipoj(); // ExternalInterface.call("rotmg.UrlLib.getParam","entrypt");
-         _loc2_.accountType=account.getAccountType();
+         _loc2_.rotmgUrlLibParamEntryPoint = account.getRotmgUrlLibParamEntryPoint(); // ExternalInterface.call("rotmg.UrlLib.getParam","entrypt");
+		                                     // according to firebug console:
+											 // >>> rotmg.UrlLib.getParam("entrypt");
+											 // ""
+         _loc2_.gameNet=account.getGameNet();
          _loc2_.metulocy=account.zyz(); // empty for rotmg account
-         _loc2_.bicydyn=account.bicydyn(); // rotmg
+         _loc2_.getPlayPlatform=account.getPlayPlatform(); // rotmg
          _loc2_.kofimupo=account.rowyr(); // possibly empty
          _rotmgNetworkHandler.sendMessage(_loc2_);
          return;

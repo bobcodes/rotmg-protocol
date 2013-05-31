@@ -67,13 +67,13 @@ package aaa.rotmg.account
          return 
             {
                guid:this.getUserId(),
-               secret:this.ducerubug(),
+               secret:this.platformDependantSecret(),
                signedRequest:this.signedRequest
             }
          ;
       }
 
-      public function qujipoj() : String {
+      public function getRotmgUrlLibParamEntryPoint() : String {
          var _loc1_:* = false;
          var _loc2_:* = true;
          return (this.homofu)||"";
@@ -89,7 +89,7 @@ package aaa.rotmg.account
          return this.userSession["kabam_naid"];
       }
 
-      public function getAccountType() : String {
+      public function getGameNet() : String {
          return ACCOUNT_TYPE;
       }
 
@@ -121,17 +121,17 @@ package aaa.rotmg.account
          return true;
       }
 
-      public function bicydyn() : String {
+      public function getPlayPlatform() : String {
          return fyz;
       }
 
-      public function ducerubug() : String {
+      public function platformDependantSecret() : String {
          var _loc1_:* = false;
          var _loc2_:* = true;
          return (this.password)||"";
       }
 
-      public function vef() : String {
+      public function password() : String {
          return "";
       }
 

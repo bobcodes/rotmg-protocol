@@ -80,8 +80,8 @@ package dopumitud
          var _loc3_:* = true;
          var _loc1_:Object = {};
          _loc1_.game_net_user_id=this.account.zyz();
-         _loc1_.game_net=this.account.getAccountType();
-         _loc1_.play_platform=this.account.bicydyn();
+         _loc1_.game_net=this.account.getGameNet();
+         _loc1_.play_platform=this.account.getPlayPlatform();
          _loc1_.do_login=UserConfig.niqeqoly;
          Vuwewuc.hohohev(_loc1_,this.account.venupog());
          return _loc1_;

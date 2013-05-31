@@ -20,7 +20,7 @@ package aaa.rotmg.action
 
       public var buildVersion_:String;
 
-      public var gameId_:int = 0;
+      public var _whereToSendPlayer:int = 0;
 
       public var guid_:String;
 
@@ -34,13 +34,13 @@ package aaa.rotmg.action
 
       public var sofabe:String;
 
-      public var vukyluz:String = "";
+      public var rotmgUrlLibParamEntryPoint:String = "";
 
-      public var accountType:String = "";
+      public var gameNet:String = "";
 
       public var metulocy:String = "";
 
-      public var bicydyn:String = "";
+      public var getPlayPlatform:String = "";
 
       public var kofimupo:String = "";
 
@@ -48,7 +48,7 @@ package aaa.rotmg.action
          var _loc2_:* = true;
          var _loc3_:* = false;
          param1.writeUTF(this.buildVersion_);
-         param1.writeInt(this.gameId_);
+         param1.writeInt(this._whereToSendPlayer);
          param1.writeUTF(this.guid_);
          param1.writeUTF(this.password_);
          param1.writeUTF(this.secret_);
@@ -57,10 +57,10 @@ package aaa.rotmg.action
          param1.writeBytes(this.key_);
          param1.writeInt(this.sofabe.length);
          param1.writeUTFBytes(this.sofabe);
-         param1.writeUTF(this.vukyluz);
-         param1.writeUTF(this.accountType);
+         param1.writeUTF(this.rotmgUrlLibParamEntryPoint);
+         param1.writeUTF(this.gameNet);
          param1.writeUTF(this.metulocy);
-         param1.writeUTF(this.bicydyn);
+         param1.writeUTF(this.getPlayPlatform);
          param1.writeUTF(this.kofimupo);
          return;
       }

@@ -97,7 +97,7 @@ package lijite
       private function lezo(param1:Nyzena) : Boolean {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         var _loc2_:String = this.account.getAccountType();
+         var _loc2_:String = this.account.getGameNet();
          return !(param1.jycutozyt.indexOf(_loc2_)==-1);
       }
    }

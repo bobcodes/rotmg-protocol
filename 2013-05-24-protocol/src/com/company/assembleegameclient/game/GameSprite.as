@@ -184,8 +184,8 @@ package com.company.assembleegameclient.game
          var _loc3_:Object = 
             {
                game_net_user_id:_loc2_.zyz(),
-               game_net:_loc2_.getAccountType(),
-               play_platform:_loc2_.bicydyn()
+               game_net:_loc2_.getGameNet(),
+               play_platform:_loc2_.getPlayPlatform()
             }
          ;
          Vuwewuc.hohohev(_loc3_,_loc2_.venupog());

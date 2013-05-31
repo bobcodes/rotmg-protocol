@@ -49,11 +49,11 @@ package aaa.rotmg.account
          return this.userId=(this.userId)||"";
       }
 
-      public function vef() : String {
+      public function password() : String {
          return "";
       }
 
-      public function ducerubug() : String {
+      public function platformDependantSecret() : String {
          var _loc2_:* = true;
          var _loc3_:* = false;
          return this.password=(this.password)||"";
@@ -64,7 +64,7 @@ package aaa.rotmg.account
          var _loc3_:* = true;
          var _loc1_:Object = {};
          _loc1_.guid=this.getUserId();
-         _loc1_.secret=this.ducerubug();
+         _loc1_.secret=this.platformDependantSecret();
          _loc1_.steamid=this.zefy.berygo();
          return _loc1_;
       }
@@ -72,7 +72,7 @@ package aaa.rotmg.account
       public function bugi() : Boolean {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         return !(this.ducerubug()=="");
+         return !(this.platformDependantSecret()=="");
       }
 
       public function toqonary() : Boolean {
@@ -83,11 +83,11 @@ package aaa.rotmg.account
          return this.zefy.berygo();
       }
 
-      public function getAccountType() : String {
+      public function getGameNet() : String {
          return ACCOUNT_TYPE;
       }
 
-      public function bicydyn() : String {
+      public function getPlayPlatform() : String {
          return "steam";
       }
 
@@ -102,7 +102,7 @@ package aaa.rotmg.account
          return "/steamworks";
       }
 
-      public function qujipoj() : String {
+      public function getRotmgUrlLibParamEntryPoint() : String {
          return "steamworks";
       }
 

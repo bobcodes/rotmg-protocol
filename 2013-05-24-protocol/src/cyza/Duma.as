@@ -40,7 +40,7 @@ package cyza
          _loc1_.guid=this.account.getUserId();
          _loc1_.newGUID=this.data.username;
          _loc1_.newPassword=this.data.password;
-         _loc1_.entrytag=this.account.qujipoj();
+         _loc1_.entrytag=this.account.getRotmgUrlLibParamEntryPoint();
          _loc1_.isAgeVerified=1;
          return _loc1_;
       }

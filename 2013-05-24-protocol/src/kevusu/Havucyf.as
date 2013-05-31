@@ -53,7 +53,7 @@ package kevusu
          var _loc1_:Object = 
             {
                signedRequest:this.kabam.signedRequest,
-               entrytag:this.account.qujipoj()
+               entrytag:this.account.getRotmgUrlLibParamEntryPoint()
             }
          ;
          this.client.fug(2);

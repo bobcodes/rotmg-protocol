@@ -46,11 +46,11 @@ package aaa.rotmg.account
          return this.userId;
       }
 
-      public function vef() : String {
+      public function password() : String {
          return "";
       }
 
-      public function ducerubug() : String {
+      public function platformDependantSecret() : String {
          var _loc1_:* = false;
          var _loc2_:* = true;
          return (this.password)||"";
@@ -60,7 +60,7 @@ package aaa.rotmg.account
          return 
             {
                guid:this.getUserId(),
-               secret:this.ducerubug()
+               secret:this.platformDependantSecret()
             }
          ;
       }
@@ -68,18 +68,18 @@ package aaa.rotmg.account
       public function bugi() : Boolean {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         return !(this.ducerubug()=="");
+         return !(this.platformDependantSecret()=="");
       }
 
       public function zyz() : String {
          return this.zefy.getUserId();
       }
 
-      public function getAccountType() : String {
+      public function getGameNet() : String {
          return ACCOUNT_TYPE;
       }
 
-      public function bicydyn() : String {
+      public function getPlayPlatform() : String {
          return "kongregate";
       }
 
@@ -94,7 +94,7 @@ package aaa.rotmg.account
          return "/kongregate";
       }
 
-      public function qujipoj() : String {
+      public function getRotmgUrlLibParamEntryPoint() : String {
          return "kongregate";
       }
 

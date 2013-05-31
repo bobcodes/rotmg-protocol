@@ -51,9 +51,9 @@ package ruwysepyd
          var _loc3_:* = false;
          var _loc4_:* = true;
          var _loc1_:Jyhyk = null;
-         switch(this.account.getAccountType())
+         switch(this.account.getGameNet())
          {
-            case RotmgAccount.ACCOUNT_TYPE:
+            case RotmgAccount.GAME_NET:
                _loc1_=new Few();
                break;
             case KabamAccount.ACCOUNT_TYPE:

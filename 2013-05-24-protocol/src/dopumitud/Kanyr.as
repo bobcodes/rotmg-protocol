@@ -67,8 +67,8 @@ package dopumitud
          var _loc1_:Object = this.account.venupog();
          _loc1_.time=this.model.byryqapu;
          _loc1_.game_net_user_id=this.account.zyz();
-         _loc1_.game_net=this.account.getAccountType();
-         _loc1_.play_platform=this.account.bicydyn();
+         _loc1_.game_net=this.account.getGameNet();
+         _loc1_.play_platform=this.account.getPlayPlatform();
          return _loc1_;
       }
 

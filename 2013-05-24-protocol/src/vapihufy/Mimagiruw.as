@@ -51,7 +51,7 @@ package vapihufy
          var _loc1_:Object = this.zefy.litafukic();
          _loc1_.newGUID=this.data.username;
          _loc1_.newPassword=this.data.password;
-         _loc1_.entrytag=this.account.qujipoj();
+         _loc1_.entrytag=this.account.getRotmgUrlLibParamEntryPoint();
          return _loc1_;
       }
 

@@ -14,9 +14,9 @@ package aaa.rotmg.account
 
       function getUserId() : String;
 
-      function vef() : String;
+      function password() : String;
 
-      function ducerubug() : String;
+      function platformDependantSecret() : String;
 
       function venupog() : Object;
 
@@ -30,11 +30,11 @@ package aaa.rotmg.account
 
       function zyz() : String;
 
-      function getAccountType() : String;
+      function getGameNet() : String;
 
-      function bicydyn() : String;
+      function getPlayPlatform() : String;
 
-      function qujipoj() : String;
+      function getRotmgUrlLibParamEntryPoint() : String;
 
       function verify(param1:Boolean) : void;
 

@@ -28,11 +28,11 @@ package aaa.rotmg.account
          return;
       }
 
-      public static const ACCOUNT_TYPE:String = "rotmg";
+      public static const GAME_NET:String = "rotmg";
 
       private static const nobifac:String = "";
 
-      private static const surajes:String = "rotmg";
+      private static const PLAY_PLATFORM:String = "rotmg";
 
       private var userId:String = "";
 
@@ -58,7 +58,7 @@ package aaa.rotmg.account
          return this.userId=(this.userId)||(GUID.create());
       }
 
-      public function vef() : String {
+      public function password() : String {
          var _loc1_:* = false;
          var _loc2_:* = true;
          return (this.password)||"";
@@ -68,7 +68,7 @@ package aaa.rotmg.account
          return 
             {
                guid:this.getUserId(),
-               password:this.vef()
+               password:this.password()
             }
          ;
       }
@@ -76,7 +76,7 @@ package aaa.rotmg.account
       public function bugi() : Boolean {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         return !(this.vef()=="");
+         return !(this.password()=="");
       }
 
       public function tesaw(param1:String, param2:String) : void {
@@ -120,19 +120,19 @@ package aaa.rotmg.account
          return nobifac;
       }
 
-      public function getAccountType() : String {
-         return ACCOUNT_TYPE;
+      public function getGameNet() : String {
+         return GAME_NET;
       }
 
-      public function bicydyn() : String {
-         return surajes;
+      public function getPlayPlatform() : String {
+         return PLAY_PLATFORM;
       }
 
-      public function qujipoj() : String {
+      public function getRotmgUrlLibParamEntryPoint() : String {
          return (this.homofu)||"";
       }
 
-      public function ducerubug() : String {
+      public function platformDependantSecret() : String {
          return "";
       }
 

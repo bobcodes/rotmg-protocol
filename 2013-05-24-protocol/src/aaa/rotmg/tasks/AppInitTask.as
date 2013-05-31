@@ -29,7 +29,7 @@ package aaa.rotmg.tasks
          var _loc2_:* = true;
          this.client.fug(2);
          this.client.complete.addOnce(this.onComplete);
-         this.client.sendRequest("/app/init",{game_net:this.account.getAccountType()});
+         this.client.sendRequest("/app/init",{game_net:this.account.getGameNet()});
          return;
       }
 
