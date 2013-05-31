@@ -2,7 +2,7 @@ package nafa
 {
    import __AS3__.vec.Vector;
    import com.company.assembleegameclient.objects.ObjectLibrary;
-   import com.company.util.Dapiby;
+   import com.company.util.Rc4HexStringDecoder;
 
 
    class Tyfecizoc extends Kumip
@@ -20,7 +20,7 @@ package nafa
          {
             _loc2_.push(_loc1_);
          }
-         _loc2_.sort(Dapiby.hum);
+         _loc2_.sort(Rc4HexStringDecoder.hum);
          for each (_loc1_ in _loc2_)
          {
             _loc3_=ObjectLibrary.tumu[_loc1_];

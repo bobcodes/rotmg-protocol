@@ -3,26 +3,22 @@ package com.company.util
    import flash.utils.ByteArray;
 
 
-   public class Dapiby extends Object
+   public class Rc4HexStringDecoder extends Object
    {
-      public function Dapiby() {
-         var _loc1_:* = true;
-         var _loc2_:* = false;
+      public function Rc4HexStringDecoder() {
          super();
          return;
       }
 
-      public static function dahicamo(param1:String) : ByteArray {
-         var _loc4_:* = false;
-         var _loc5_:* = true;
-         var _loc2_:ByteArray = new ByteArray();
-         var _loc3_:* = 0;
-         while(_loc3_<param1.length)
+      public static function decodeHexStringToRC4(param1:String) : ByteArray {
+         var bytes:ByteArray = new ByteArray();
+         var counter:* = 0;
+         while(counter<param1.length)
          {
-            _loc2_.writeByte(parseInt(param1.substr(_loc3_,2),16));
-            _loc3_=_loc3_+2;
+            bytes.writeByte(parseInt(param1.substr(counter,2),16));
+            counter=counter+2;
          }
-         return _loc2_;
+         return bytes;
       }
 
       public static function hum(param1:String, param2:String) : Number {
