@@ -1037,15 +1037,13 @@ package aaa.rotmg.action.mapping
          return;
       }
 
-      private function qopy(param1:String) : String {
-         var _loc5_:* = true;
-         var _loc6_:* = false;
-         var _loc2_:RSAKey = PEM.readRSAPublicKey(UserConfig.rotmgPEM);
-         var _loc3_:ByteArray = new ByteArray();
-         _loc3_.writeUTFBytes(param1);
-         var _loc4_:ByteArray = new ByteArray();
-         _loc2_.encrypt(_loc3_,_loc4_,_loc3_.length);
-         return Base64.encodeByteArray(_loc4_);
+      private function encryptWithPublicKey(param1:String) : String {
+         var rsaPublicKey:RSAKey = PEM.readRSAPublicKey(UserConfig.rotmgPEM);
+         var bytesToEncrypt:ByteArray = new ByteArray();
+         bytesToEncrypt.writeUTFBytes(param1);
+         var encryptedBytes:ByteArray = new ByteArray();
+         rsaPublicKey.encrypt(bytesToEncrypt,encryptedBytes,bytesToEncrypt.length);
+         return Base64.encodeByteArray(encryptedBytes);
       }
 
       private function onNetworkHandlerConnected() : void {
@@ -1054,24 +1052,24 @@ package aaa.rotmg.action.mapping
          var account:Account = Giq.kid().getInstance(Account);
          this.fyve.dispatch(Depagy.make(UserConfig.pynezad,I18nKeys.lidubi));
          this.ryladiduq();
-         var _loc2_:HelloNetworkMessage = this.govizupas.runozak(HELLO) as HelloNetworkMessage;
-         _loc2_.buildVersion_=UserConfig.BUILD_VERSION;
-         _loc2_._whereToSendPlayer=_whereToSendPlayer;
-         _loc2_.guid_=this.qopy(account.getUserId());
-         _loc2_.password_=this.qopy(account.password());
-         _loc2_.secret_=this.qopy(account.platformDependantSecret());
-         _loc2_.keyTime_=keyTime_;
-         _loc2_.key_.length=0;
-         _loc2_.sofabe=sofabe==null?"":sofabe; // possibly empty
-         _loc2_.rotmgUrlLibParamEntryPoint = account.getRotmgUrlLibParamEntryPoint(); // ExternalInterface.call("rotmg.UrlLib.getParam","entrypt");
+         var hello:HelloNetworkMessage = this.govizupas.runozak(HELLO) as HelloNetworkMessage;
+         hello.buildVersion_=UserConfig.BUILD_VERSION;
+         hello._whereToSendPlayer=_whereToSendPlayer;
+         hello.guid_=this.encryptWithPublicKey(account.getUserId());
+         hello.password_=this.encryptWithPublicKey(account.password());
+         hello.secret_=this.encryptWithPublicKey(account.platformDependantSecret());
+         hello.keyTime_=keyTime_;
+         hello.key_.length=0;
+         hello.sofabe=sofabe==null?"":sofabe; // possibly empty
+         hello.rotmgUrlLibParamEntryPoint = account.getRotmgUrlLibParamEntryPoint(); // ExternalInterface.call("rotmg.UrlLib.getParam","entrypt");
 		                                     // according to firebug console:
 											 // >>> rotmg.UrlLib.getParam("entrypt");
 											 // ""
-         _loc2_.gameNet=account.getGameNet();
-         _loc2_.metulocy=account.zyz(); // empty for rotmg account
-         _loc2_.getPlayPlatform=account.getPlayPlatform(); // rotmg
-         _loc2_.kofimupo=account.rowyr(); // possibly empty
-         _rotmgNetworkHandler.sendMessage(_loc2_);
+         hello.gameNet=account.getGameNet();
+         hello.metulocy=account.zyz(); // empty for rotmg account
+         hello.getPlayPlatform=account.getPlayPlatform(); // rotmg
+         hello.kofimupo=account.rowyr(); // possibly empty
+         _rotmgNetworkHandler.sendMessage(hello);
          return;
       }
 
