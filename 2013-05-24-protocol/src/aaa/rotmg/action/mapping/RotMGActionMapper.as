@@ -108,7 +108,7 @@ package aaa.rotmg.action.mapping
    import quqe.Sejavuviv;
    import com.hurlant.crypto.symmetric.ICipher;
    import com.hurlant.crypto.Crypto;
-   import com.company.util.Dapiby;
+   import com.company.util.Rc4HexStringDecoder;
    import fulaw.Jimi;
    import com.company.assembleegameclient.objects.Projectile;
    import com.company.assembleegameclient.objects.GameObject;
@@ -545,8 +545,8 @@ package aaa.rotmg.action.mapping
          var _loc2_:ICipher = null;
          if(UserConfig.cit)
          {
-            _loc1_=Crypto.getCipher("rc4",Dapiby.dahicamo(UserConfig.OutGoingSecretKey));
-            _loc2_=Crypto.getCipher("rc4",Dapiby.dahicamo(UserConfig.InComingSecretKey));
+            _loc1_=Crypto.getCipher("rc4",Rc4HexStringDecoder.decodeHexStringToRC4(UserConfig.OutGoingSecretKey));
+            _loc2_=Crypto.getCipher("rc4",Rc4HexStringDecoder.decodeHexStringToRC4(UserConfig.InComingSecretKey));
             _rotmgNetworkHandler.setOutgoingCipher(_loc1_);
             _rotmgNetworkHandler.setIncomingCipher(_loc2_);
          }
