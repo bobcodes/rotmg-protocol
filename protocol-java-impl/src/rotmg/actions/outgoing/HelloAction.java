@@ -43,9 +43,9 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.openssl.PEMReader;
 import org.bouncycastle.util.encoders.Base64;
 
+import rotmg.account.UserConfig;
 import rotmg.actions.OutgoingAction;
-import rotmg.config.UserConfig;
-import rotmg.net.RotmgNetworkHandler;
+import rotmg.net.RotmgParameters;
 
 import com.google.common.base.Charsets;
 
@@ -54,7 +54,7 @@ public class HelloAction implements OutgoingAction {
     /**
      * 2013-06-01 build version upgraded to 13.4
      */
-    private final String buildVersion = "13.3";
+    private final String buildVersion = RotmgParameters.BUILD_VERSION;
     private final int whereToSendPlayer = -2;
     private final String userId = UserConfig.USERNAME;
     private final String password = UserConfig.PASSWORD;
@@ -132,7 +132,7 @@ public class HelloAction implements OutgoingAction {
       }
      */
     private String encryptWithPublicKey(String thingToEncrypt) throws IOException {
-        try (Reader reader = new StringReader(RotmgNetworkHandler.ROTMG_PUBLIC_KEY);
+        try (Reader reader = new StringReader(RotmgParameters.ROTMG_PUBLIC_KEY);
                 PEMReader pemReader = new PEMReader(reader))
         {
             Security.addProvider(new BouncyCastleProvider());

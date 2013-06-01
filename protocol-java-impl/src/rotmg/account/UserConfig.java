@@ -21,50 +21,30 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
-package rotmg.actions.outgoing;
+package rotmg.account;
 
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-
-import rotmg.account.UserConfig;
-import rotmg.actions.OutgoingAction;
-
-public class LoadAction implements OutgoingAction {
+/**
+ * TODO: fill this in with user information
+ * TODO: when multiple user configs are need, migrate to a user object 
+ * 
+ * @author bobcodes
+ */
+public class UserConfig {
 
     /**
-     * TODO: pass this in dynamically
+     * Visit http://realmofthemadgod.appspot.com/ to determine this
+     * 
+     * If you do not plan on using a guest account, keep this null;
      */
-    private final int charId = UserConfig.CHAR_ID;
+    public static String GUEST_GUID = "<guid>";
+    
+    public static String USERNAME = "<username>";
+    
+    public static String PASSWORD = "<pw>";
     
     /**
-       public var charId_:int;
-
-      override public function writeToOutput(param1:IDataOutput) : void {
-         param1.writeInt(this.charId_);
-         return;
-      }
+     * Determined from https://realmofthemadgod.appspot.com/char/list
+     * use FireFox's HttpFox to sniff this HTTP request
      */
-    @Override
-    public byte[] toBytes() throws IOException {
-        try (   ByteArrayOutputStream bout = new ByteArrayOutputStream();
-                DataOutputStream dout = new DataOutputStream(bout)) {
-            dout.writeInt(charId);
-            return bout.toByteArray();   
-        }
-    }
-
-    /**
-      public static const LOAD:int = 45;
-     */
-    @Override
-    public int getMessageId() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @Override
-    public String toString() {
-        return "LoadAction [charId=" + charId + "]";
-    }
+    public static int CHAR_ID = 1;
 }

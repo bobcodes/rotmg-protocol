@@ -53,15 +53,6 @@ import rotmg.actions.outgoing.LoadAction;
 
 public class RotmgNetworkHandler implements NetworkHandler, Closeable {
 
-    private static int PORT = 2050;
-    private static final String outgoingSecretKey = "311f80691451c71b09a13a2a6e";
-    private static final String incomingSecretKey = "72c5583cafb6818995cbd74b80";
-    
-    /**
-     * Public key for encrypting passwords
-     */
-    public static final String ROTMG_PUBLIC_KEY = "-----BEGIN PUBLIC KEY-----\n"+"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDEmgEmQcgLd0mvWqL6AKmhzj"+"JfZoAmZC0PUmG8K9CB1Ml68P00S3eU+TSL5aG8Mg3Tipvs02gC2veC10knRi7r"+"EsUwL8+h22EsjnpKZ/7K5YV9cefryTMnS0x4QGZbSkdPz/rLh0uGwk8Zu0cEKb"+"xQyvd3+pSmqZ5/ZQGaFjm9TQIDAQAB\n"+"-----END PUBLIC KEY-----";
-
     private final RotmgServer _server;
     private final Socket _socket;
     private final BufferedInputStream _bin;
@@ -72,7 +63,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
     
     public RotmgNetworkHandler(RotmgServer server) throws IOException {
         _server = server;
-        _socket = new Socket(_server.getHost(), PORT);
+        _socket = new Socket(_server.getHost(), RotmgParameters.PORT);
         _bin = new BufferedInputStream(_socket.getInputStream());
         _din = new DataInputStream(_bin);
         _bout = new BufferedOutputStream(_socket.getOutputStream());
@@ -171,7 +162,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
     private byte[] decrypt(byte[] bytes) throws IOException {
         try {
             Cipher rc4 = Cipher.getInstance("RC4");
-            SecretKeySpec rc4Key = new SecretKeySpec(getBytesFromKey(incomingSecretKey), "RC4");
+            SecretKeySpec rc4Key = new SecretKeySpec(getBytesFromKey(RotmgParameters.INCOMING_KEY), "RC4");
             rc4.init(Cipher.DECRYPT_MODE, rc4Key);
             return rc4.doFinal(bytes);
         } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | IllegalBlockSizeException | BadPaddingException e) {
@@ -253,7 +244,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         try {
             Cipher rc4 = Cipher.getInstance("RC4");
             //SecretKeySpec rc4Key = new SecretKeySpec(outgoingSecretKey.getBytes("ASCII"), "RC4");
-            SecretKeySpec rc4Key = new SecretKeySpec(getBytesFromKey(outgoingSecretKey), "RC4");
+            SecretKeySpec rc4Key = new SecretKeySpec(getBytesFromKey(RotmgParameters.OUTGOING_KEY), "RC4");
             rc4.init(Cipher.ENCRYPT_MODE, rc4Key);
             return rc4.doFinal(bytes);
         } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | IllegalBlockSizeException | BadPaddingException e) {

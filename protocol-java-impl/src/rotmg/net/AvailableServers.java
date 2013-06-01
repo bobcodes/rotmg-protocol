@@ -39,7 +39,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import rotmg.config.UserConfig;
+import rotmg.account.UserConfig;
 
 /**
  * <Chars nextCharId="1" maxNumChars="1">
