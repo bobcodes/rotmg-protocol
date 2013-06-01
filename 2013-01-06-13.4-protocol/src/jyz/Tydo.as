@@ -1,0 +1,75 @@
+package jyz
+{
+[CLASS1442]   import __AS3__.vec.Vector;
+   import flash.utils.IDataInput;
+   import com.company.assembleegameclient.util.Deqipe;
+   import flash.utils.IDataOutput;
+
+
+   public class Tydo extends Object
+   {
+      public function Tydo() {
+         var _loc1_:* = true;
+         var _loc2_:* = false;
+         this.pos_=new Tyji();
+         this.jibolu=new Vector.<StatData>();
+         super();
+         return;
+      }
+
+      public var objectId_:int;
+
+      public var pos_:Tyji;
+
+      public var jibolu:Vector.<StatData>;
+
+      public function parseFromInput(param1:IDataInput) : void {
+         var _loc4_:* = true;
+         var _loc5_:* = false;
+         var _loc3_:* = 0;
+         this.objectId_=param1.readInt();
+         this.pos_.parseFromInput(param1);
+         var _loc2_:int = param1.readShort();
+         _loc3_=_loc2_;
+         while(_loc3_<this.jibolu.length)
+         {
+            Deqipe.hasa(this.jibolu[_loc3_]);
+            _loc3_++;
+         }
+         this.jibolu.length=Math.min(_loc2_,this.jibolu.length);
+         while(this.jibolu.length<_loc2_)
+         {
+            this.jibolu.push(Deqipe.wesijah(StatData) as StatData);
+         }
+         _loc3_=0;
+         while(_loc3_<_loc2_)
+         {
+            this.jibolu[_loc3_].parseFromInput(param1);
+            _loc3_++;
+         }
+         return;
+      }
+
+      public function writeToOutput(param1:IDataOutput) : void {
+         var _loc3_:* = false;
+         var _loc4_:* = true;
+         param1.writeInt(this.objectId_);
+         this.pos_.writeToOutput(param1);
+         param1.writeShort(this.jibolu.length);
+         var _loc2_:* = 0;
+         while(_loc2_<this.jibolu.length)
+         {
+            this.jibolu[_loc2_].writeToOutput(param1);
+            _loc2_++;
+         }
+         return;
+      }
+
+      public function toString() : String {
+         var _loc1_:* = true;
+         var _loc2_:* = false;
+         return "objectId_: "+this.objectId_+" pos_: "+this.pos_+" stats_: "+this.jibolu;
+      }
+   }
+[/CLASS]
+}

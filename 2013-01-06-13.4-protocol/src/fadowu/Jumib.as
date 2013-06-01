@@ -1,0 +1,37 @@
+package fadowu
+{
+[CLASS1428]   import __AS3__.vec.Vector;
+   import flash.utils.IDataOutput;
+
+
+   public class Jumib extends Jelo
+   {
+      public function Jumib(param1:uint, param2:Function) {
+         var _loc3_:* = false;
+         var _loc4_:* = true;
+         this.offer_=new Vector.<Boolean>();
+         super(param1,param2);
+         return;
+      }
+
+      public var offer_:Vector.<Boolean>;
+
+      override public function writeToOutput(param1:IDataOutput) : void {
+         var _loc3_:* = false;
+         var _loc4_:* = true;
+         param1.writeShort(this.offer_.length);
+         var _loc2_:* = 0;
+         while(_loc2_<this.offer_.length)
+         {
+            param1.writeBoolean(this.offer_[_loc2_]);
+            _loc2_++;
+         }
+         return;
+      }
+
+      override public function toString() : String {
+         return formatToString("CHANGETRADE","offer_");
+      }
+   }
+[/CLASS]
+}
