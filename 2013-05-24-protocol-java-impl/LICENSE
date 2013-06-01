@@ -1,7 +1,6 @@
-/*
 The MIT License (MIT)
 
-Copyright (c) 2013 bobcodes
+Copyright (c) <year> <copyright holders>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,18 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
- */
-package rotmg.actions;
-
-import java.io.IOException;
-
-public interface OutgoingAction {
-
-    /**
-     * Records all information EXCEPT For the type. The NetworkHandler is responsible
-     * for writing the type information.
-     */
-    public byte[] toBytes() throws IOException ;
-    
-    public int getMessageId() ;
-}
