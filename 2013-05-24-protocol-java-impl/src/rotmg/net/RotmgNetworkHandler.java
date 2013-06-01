@@ -49,6 +49,7 @@ import rotmg.actions.IncomingAction;
 import rotmg.actions.IncomingActionBroadcaster;
 import rotmg.actions.OutgoingAction;
 import rotmg.actions.outgoing.HelloAction;
+import rotmg.actions.outgoing.LoadAction;
 
 public class RotmgNetworkHandler implements NetworkHandler, Closeable {
 
@@ -93,9 +94,12 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
     
     public void run() throws IOException {
         sendHello();
+        sendLoad();
         while(true) {
             IncomingAction ia = parse();
-            IncomingActionBroadcaster.get().broadcast(ia);
+            if(ia != null) {
+                IncomingActionBroadcaster.get().broadcast(ia);
+            }
         }
     }
     
@@ -120,6 +124,10 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
      */
     private void sendHello() throws IOException {
         sendToNetwork(new HelloAction());
+    }
+    
+    private void sendLoad() throws IOException {
+        sendToNetwork(new LoadAction());
     }
     
     /**
@@ -191,9 +199,6 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
             while(counter < key.length()) {
                 // read the hex encoded string two hexadecimal digits at a time
                 // 16 * 16 = 256 = 2^8 = 1 byte!
-                System.out.println(key);
-                System.out.println(key.substring(counter, counter+2));
-                System.out.println(Integer.parseInt(key.substring(counter,  counter+2), 16));
                 bout.write(Integer.parseInt(key.substring(counter, counter+2), 16));
                 counter += 2; // consumed two hexadecimal characters
             }
@@ -237,10 +242,11 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         _dout.write(encryptedBytes);
         
         if(outgoing instanceof HelloAction) {
-            System.out.println("wrote\t " + outgoing.getMessageId() + "\tHelloAction");
+            System.out.println("wrote\t" + outgoing.getMessageId() + "\tHelloAction");
         } else {
             System.out.println("wrote\t" + outgoing.getMessageId() + "\t" + outgoing.toString());
         }
+        _dout.flush();
     }
     
     private byte[] encrypt(byte[] bytes) throws IOException {

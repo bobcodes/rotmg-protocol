@@ -1,13 +1,11 @@
-package sonepyc
+package aaa.rotmg.action
 {
    import flash.utils.IDataOutput;
 
 
-   public class Lyrafe extends OutgoingOnlyNetworkMessage
+   public class LoadMessage extends OutgoingOnlyNetworkMessage
    {
-      public function Lyrafe(param1:uint, param2:Function) {
-         var _loc3_:* = false;
-         var _loc4_:* = true;
+      public function LoadMessage(param1:uint, param2:Function) {
          super(param1,param2);
          return;
       }
@@ -15,8 +13,6 @@ package sonepyc
       public var charId_:int;
 
       override public function writeToOutput(param1:IDataOutput) : void {
-         var _loc2_:* = true;
-         var _loc3_:* = false;
          param1.writeInt(this.charId_);
          return;
       }

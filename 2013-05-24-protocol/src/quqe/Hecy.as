@@ -5,14 +5,8 @@ package quqe
 
    public class Hecy extends IncomingOnlyNetworkMessage
    {
-      {
-         var _loc1_:* = false;
-         var _loc2_:* = true;
-      }
 
       public function Hecy(param1:uint, param2:Function) {
-         var _loc3_:* = true;
-         var _loc4_:* = false;
          super(param1,param2);
          return;
       }
@@ -28,8 +22,6 @@ package quqe
       public var errorDescription_:String;
 
       override public function parseFromInput(param1:IDataInput) : void {
-         var _loc2_:* = false;
-         var _loc3_:* = true;
          this.errorId_=param1.readInt();
          this.errorDescription_=param1.readUTF();
          return;

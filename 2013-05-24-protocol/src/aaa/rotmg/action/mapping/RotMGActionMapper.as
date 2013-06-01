@@ -37,7 +37,7 @@ package aaa.rotmg.action.mapping
    import aaa.rotmg.action.HelloNetworkMessage;
    import sonepyc.Gojuw;
    import sonepyc.Woh;
-   import sonepyc.Lyrafe;
+   import aaa.rotmg.action.LoadMessage;
    import sonepyc.Lobywo;
    import sonepyc.Teleport;
    import sonepyc.Citu;
@@ -342,7 +342,7 @@ package aaa.rotmg.action.mapping
          _loc1_.map(HELLO).rafakone(HelloNetworkMessage);
          _loc1_.map(INVDROP).rafakone(Gojuw);
          _loc1_.map(PONG).rafakone(Woh);
-         _loc1_.map(LOAD).rafakone(Lyrafe);
+         _loc1_.map(LOAD).rafakone(LoadMessage);
          _loc1_.map(SETCONDITION).rafakone(Lobywo);
          _loc1_.map(TELEPORT).rafakone(Teleport);
          _loc1_.map(USEPORTAL).rafakone(Citu);
@@ -589,7 +589,7 @@ package aaa.rotmg.action.mapping
       private function load() : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         var _loc1_:Lyrafe = this.govizupas.runozak(LOAD) as Lyrafe;
+         var _loc1_:LoadMessage = this.govizupas.runozak(LOAD) as LoadMessage;
          _loc1_.charId_=charId_;
          _rotmgNetworkHandler.sendMessage(_loc1_);
          return;

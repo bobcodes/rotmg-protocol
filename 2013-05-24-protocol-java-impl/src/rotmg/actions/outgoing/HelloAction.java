@@ -51,6 +51,9 @@ import com.google.common.base.Charsets;
 
 public class HelloAction implements OutgoingAction {
 
+    /**
+     * 2013-06-01 build version upgraded to 13.4
+     */
     private final String buildVersion = "13.3";
     private final int whereToSendPlayer = -2;
     private final String userId = UserConfig.USERNAME;
