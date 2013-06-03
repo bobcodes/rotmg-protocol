@@ -1,6 +1,6 @@
 package com.company.assembleegameclient.game
 {
-[CLASS147]   import mywyvuryw.Kekijuwo;
+[CLASS147]   import mywyvuryw.MapInfoMsg;
    import jutesesel.Qibigagal;
    import fucyquzu.Kipoqik;
    import fucyquzu.Meto;
@@ -74,7 +74,7 @@ package com.company.assembleegameclient.game
          return;
       }
 
-      public static function wumulodah(param1:Kekijuwo) : void {
+      public static function wumulodah(param1:MapInfoMsg) : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
          var _loc2_:Kipoqik = Qibigagal.husuha().getInstance(Kipoqik);
@@ -142,7 +142,7 @@ package com.company.assembleegameclient.game
          return;
       }
 
-      override public function applyMapInfo(param1:Kekijuwo) : void {
+      override public function applyMapInfo(param1:MapInfoMsg) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
          map.setProps(param1.width_,param1.height_,param1.name_,param1.background_,param1.allowPlayerTeleport_,param1.showDisplays_);

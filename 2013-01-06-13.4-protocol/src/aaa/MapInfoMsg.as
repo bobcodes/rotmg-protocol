@@ -1,14 +1,12 @@
-package mywyvuryw
+package aaa
 {
-[CLASS868]   import __AS3__.vec.Vector;
+   import __AS3__.vec.Vector;
    import flash.utils.IDataInput;
 
 
-   public class Kekijuwo extends Daqu
+   public class MapInfoMsg extends Daqu
    {
-      public function Kekijuwo(param1:uint, param2:Function) {
-         var _loc3_:* = false;
-         var _loc4_:* = true;
+      public function MapInfoMsg(param1:uint, param2:Function) {
          this.clientXML_=new Vector.<String>();
          this.extraXML_=new Vector.<String>();
          super(param1,param2);
@@ -38,16 +36,12 @@ package mywyvuryw
       public var extraXML_:Vector.<String>;
 
       override public function parseFromInput(param1:IDataInput) : void {
-         var _loc2_:* = false;
-         var _loc3_:* = true;
          this.nat(param1);
          this.lahero(param1);
          return;
       }
 
       private function nat(param1:IDataInput) : void {
-         var _loc2_:* = true;
-         var _loc3_:* = false;
          this.width_=param1.readInt();
          this.height_=param1.readInt();
          this.name_=param1.readUTF();
@@ -61,28 +55,26 @@ package mywyvuryw
       }
 
       private function lahero(param1:IDataInput) : void {
-         var _loc5_:* = false;
-         var _loc6_:* = true;
-         var _loc2_:* = 0;
-         var _loc3_:* = 0;
-         var _loc4_:* = 0;
-         _loc2_=param1.readShort();
+         var numOfStrings:* = 0;
+         var currentStringNum:* = 0;
+         var numOfStringBytes:* = 0;
+         numOfStrings=param1.readShort();
          this.clientXML_.length=0;
-         _loc3_=0;
-         while(_loc3_<_loc2_)
+         currentStringNum=0;
+         while(currentStringNum<numOfStrings)
          {
-            _loc4_=param1.readInt();
-            this.clientXML_.push(param1.readUTFBytes(_loc4_));
-            _loc3_++;
+            numOfStringBytes=param1.readInt();
+            this.clientXML_.push(param1.readUTFBytes(numOfStringBytes));
+            currentStringNum++;
          }
-         _loc2_=param1.readShort();
+         numOfStrings=param1.readShort();
          this.extraXML_.length=0;
-         _loc3_=0;
-         while(_loc3_<_loc2_)
+         currentStringNum=0;
+         while(currentStringNum<numOfStrings)
          {
-            _loc4_=param1.readInt();
-            this.extraXML_.push(param1.readUTFBytes(_loc4_));
-            _loc3_++;
+            numOfStringBytes=param1.readInt();
+            this.extraXML_.push(param1.readUTFBytes(numOfStringBytes));
+            currentStringNum++;
          }
          return;
       }

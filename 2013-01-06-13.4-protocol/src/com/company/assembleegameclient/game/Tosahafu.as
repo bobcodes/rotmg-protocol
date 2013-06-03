@@ -9,7 +9,7 @@ package com.company.assembleegameclient.game
    import com.company.assembleegameclient.map.Fot;
    import aaa.ActionMapperAbstract;
    import com.company.assembleegameclient.objects.GameObject;
-   import mywyvuryw.Kekijuwo;
+   import mywyvuryw.MapInfoMsg;
 
 
    public class Tosahafu extends Sprite
@@ -53,7 +53,7 @@ package com.company.assembleegameclient.game
          return;
       }
 
-      public function applyMapInfo(param1:Kekijuwo) : void {
+      public function applyMapInfo(param1:MapInfoMsg) : void {
          return;
       }
 

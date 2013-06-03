@@ -27,6 +27,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import rotmg.actions.incoming.FailureAction;
+import rotmg.actions.incoming.MapInfoAction;
 import rotmg.actions.incoming.ReconnectAction;
 
 public class Actions {
@@ -34,7 +35,8 @@ public class Actions {
     public static final List<IncomingAction> INCOMING_ACTIONS =
             Arrays.asList(
                     new ReconnectAction(),
-                    new FailureAction()
+                    new FailureAction(),
+                    new MapInfoAction()
                     );
     
 }

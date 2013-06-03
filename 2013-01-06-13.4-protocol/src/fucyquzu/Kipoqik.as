@@ -1,7 +1,7 @@
 package fucyquzu
 {
 [CLASS238]   import tinava.Dab;
-   import mywyvuryw.Kekijuwo;
+   import mywyvuryw.MapInfoMsg;
 
 
    public class Kipoqik extends Dab
@@ -9,7 +9,7 @@ package fucyquzu
       public function Kipoqik() {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         super(Kekijuwo);
+         super(MapInfoMsg);
          return;
       }
    }

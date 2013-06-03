@@ -87,8 +87,8 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         sendHello();
         Thread.sleep(500);
         sendLoad();
-        Thread.sleep(500);
         while(true) {
+            Thread.sleep(500);
             IncomingAction ia = parse();
             if(ia != null) {
                 IncomingActionBroadcaster.get().broadcast(ia);
@@ -157,7 +157,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         if(iaParser != null) {
             ia = iaParser.fromBytes(bytes);
         }
-        System.out.println(msgId + " " + payloadSize + " " + ia);
+        System.out.println("got\t" + msgId + " " + payloadSize + " " + ia);
         return ia;
     }
     

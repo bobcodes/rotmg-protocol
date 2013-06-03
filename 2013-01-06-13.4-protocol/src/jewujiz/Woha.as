@@ -4,7 +4,7 @@ package jewujiz
    import fucyquzu.Kipoqik;
    import fucyquzu.Meto;
    import lymotyp.Sufit;
-   import mywyvuryw.Kekijuwo;
+   import mywyvuryw.MapInfoMsg;
 
 
    public class Woha extends Zovisis
@@ -33,7 +33,7 @@ package jewujiz
          return;
       }
 
-      private function dycy(param1:Kekijuwo) : void {
+      private function dycy(param1:MapInfoMsg) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
          this.view.jiga(param1.momebujot,param1.dem);

@@ -78,7 +78,7 @@ package aaa
    import mywyvuryw.Vutuh;
    import mywyvuryw.Nuvap;
    import mywyvuryw.Jamuk;
-   import mywyvuryw.Kekijuwo;
+   import mywyvuryw.MapInfoMsg;
    import mywyvuryw.Pic;
    import mywyvuryw.Duqyzunap;
    import mywyvuryw.Kigylytod;
@@ -393,7 +393,7 @@ package aaa
          _loc1_.map(INVRESULT).kiho(Vutuh).mawomohuv(this.qoseheny);
          _loc1_.map(RECONNECT).kiho(Nuvap).mawomohuv(this.dabaf);
          _loc1_.map(PING).kiho(Jamuk).mawomohuv(this.gyr);
-         _loc1_.map(MAPINFO).kiho(Kekijuwo).mawomohuv(this.bijyg);
+         _loc1_.map(MAPINFO).kiho(MapInfoMsg).mawomohuv(this.bijyg);
          _loc1_.map(PIC).kiho(Pic).mawomohuv(this.pysutelo);
          _loc1_.map(DEATH).kiho(Kejubuveh).mawomohuv(this.duty);
          _loc1_.map(BUYRESULT).kiho(Duqyzunap).mawomohuv(this.sinyfin);
@@ -1944,7 +1944,7 @@ package aaa
          return;
       }
 
-      private function bijyg(param1:Kekijuwo) : void {
+      private function bijyg(param1:MapInfoMsg) : void {
          var _loc6_:* = false;
          var _loc7_:* = true;
          var _loc2_:String = null;
