@@ -31,7 +31,7 @@ public class MapInfoAction implements IncomingAction {
     private final String name;
     private final String momebujot;
     private final int dem;
-    private final long fp_;
+    private final long seedForRandom;
     private final int background;
     private final boolean allowPlayerToTeleport;
     private final boolean showDisplays;
@@ -43,14 +43,14 @@ public class MapInfoAction implements IncomingAction {
     }
     
     public MapInfoAction(int width, int height, String name, String momebujot,
-            int dem, long fp_, int background, boolean allowPlayerToTeleport,
+            int dem, long seedForRandom, int background, boolean allowPlayerToTeleport,
             boolean showDisplays, List<String> clientXML, List<String> extraXML) {
         this.width = width;
         this.height = height;
         this.name = name;
         this.momebujot = momebujot;
         this.dem = dem;
-        this.fp_ = fp_;
+        this.seedForRandom = seedForRandom;
         this.background = background;
         this.allowPlayerToTeleport = allowPlayerToTeleport;
         this.showDisplays = showDisplays;
@@ -79,7 +79,7 @@ public class MapInfoAction implements IncomingAction {
     }
 
     public long getFp_() {
-        return fp_;
+        return seedForRandom;
     }
 
     public int getBackground() {
@@ -196,7 +196,7 @@ public class MapInfoAction implements IncomingAction {
     public String toString() {
         return "MapInfoAction [width=" + width + ", height=" + height
                 + ", name=" + name + ", momebujot=" + momebujot + ", dem="
-                + dem + ", fp_=" + fp_ + ", background=" + background
+                + dem + ", seedForRandom=" + seedForRandom + ", background=" + background
                 + ", allowPlayerToTeleport=" + allowPlayerToTeleport
                 + ", showDisplays=" + showDisplays + ", clientXML=" + clientXML
                 + ", extraXML=" + extraXML + "]";

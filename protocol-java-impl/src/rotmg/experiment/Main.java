@@ -23,11 +23,14 @@ THE SOFTWARE.
  */
 package rotmg.experiment;
 
+import java.io.IOException;
 import java.util.SortedMap;
 
 import rotmg.actions.IncomingActionBroadcaster;
 import rotmg.actions.IncomingActionListener;
+import rotmg.actions.incoming.MapInfoAction;
 import rotmg.actions.incoming.ReconnectAction;
+import rotmg.actions.outgoing.LoadAction;
 import rotmg.net.AvailableServers;
 import rotmg.net.RotmgNetworkHandler;
 import rotmg.net.RotmgServer;
@@ -43,10 +46,43 @@ public class Main {
         System.out.println(eunorth2);
         
         try (RotmgNetworkHandler nwHandler = new RotmgNetworkHandler(eunorth2)) {
-            IncomingActionBroadcaster.get().subscribe(ReconnectAction.class, new IncomingActionListener<ReconnectAction>() {
+            /**
+             *       private function bijyg(param1:MapInfoMsg) : void {
+                     var _loc6_:* = false;
+                     var _loc7_:* = true;
+                     var _loc2_:String = null;
+                     var _loc3_:String = null;
+                     for each (_loc2_ in param1.clientXML_)
+                     {
+                        this.lahero(_loc2_);
+                     }
+                     for each (_loc3_ in param1.extraXML_)
+                     {
+                        this.lahero(_loc3_);
+                     }
+                     vepat.dispatch();
+                     this.closeDialogs.dispatch();
+                     gs_.applyMapInfo(param1);
+                     this.byqu=new Random(param1.fp_);
+                     if(kasyda)
+                     {
+                        this.create();
+                     }
+                     else
+                     {
+                        this.load();
+                     }
+                     return;
+                  }
+             */
+            IncomingActionBroadcaster.get().subscribe(MapInfoAction.class, new IncomingActionListener<MapInfoAction>() {
                 @Override
-                public void receive(ReconnectAction action) {
-                    System.out.println(action);
+                public void receive(MapInfoAction action) {
+                    try {
+                        nwHandler.sendToNetwork(new LoadAction());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             });
             nwHandler.run();

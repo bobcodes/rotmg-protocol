@@ -24,6 +24,7 @@ THE SOFTWARE.
 package rotmg.actions;
 
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -45,6 +46,7 @@ public enum IncomingActionBroadcaster {
         List<IncomingActionListener<? extends IncomingAction>> listeners = subscriptionMap.get(classToSubscribeTo);
         if(listeners == null) {
             listeners = new ArrayList<>();
+            subscriptionMap.put(classToSubscribeTo, listeners);
         }
         listeners.add(listener);
     }
@@ -52,16 +54,19 @@ public enum IncomingActionBroadcaster {
     public void broadcast(IncomingAction action) {
         List<IncomingActionListener<? extends IncomingAction>> listeners = subscriptionMap.get(action.getClass());
         if(listeners == null) {
+            System.out.println("no subscribers for: " + action);
             return;
         }
         
         for(IncomingActionListener<? extends IncomingAction> listener : listeners) {
             try {
-                listener.getClass().getMethod("receive", action.getClass()).invoke(listener, action);
+                Method method = listener.getClass().getMethod("receive", action.getClass());
+                method.setAccessible(true);
+                method.invoke(listener, action);
             } catch (IllegalAccessException | IllegalArgumentException
                     | InvocationTargetException | NoSuchMethodException
                     | SecurityException e) {
-                throw new IllegalStateException("not the caller's fault. the person who coded this method wrote a bug.");
+                throw new IllegalStateException("not the caller's fault. the person who coded this method wrote a bug.", e);
             }
         }
     }
