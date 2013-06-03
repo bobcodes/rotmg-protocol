@@ -5,7 +5,7 @@ package tuzopite
    import haqakel.Mykob;
    import setuv.Tufyz;
    import totuhare.Zufi;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Zet extends Command

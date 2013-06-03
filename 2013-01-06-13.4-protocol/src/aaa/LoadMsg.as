@@ -1,11 +1,11 @@
-package fadowu
+package aaa
 {
-[CLASS1430]   import flash.utils.IDataOutput;
+    import flash.utils.IDataOutput;
 
 
-   public class Numoha extends Jelo
+   public class LoadMsg extends Jelo
    {
-      public function Numoha(param1:uint, param2:Function) {
+      public function LoadMsg(param1:uint, param2:Function) {
          var _loc3_:* = true;
          var _loc4_:* = false;
          super(param1,param2);
@@ -25,5 +25,5 @@ package fadowu
          return formatToString("LOAD","charId_");
       }
    }
-[/CLASS]
+
 }

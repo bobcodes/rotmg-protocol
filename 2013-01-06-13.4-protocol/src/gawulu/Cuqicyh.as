@@ -8,7 +8,7 @@ package gawulu
    import flash.net.URLRequest;
    import flash.media.SoundTransform;
    import flash.media.SoundChannel;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import flash.events.Event;
 
 

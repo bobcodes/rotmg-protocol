@@ -6,7 +6,7 @@ package gawulu
    import natus.Hewoda;
    import flash.net.URLRequest;
    import flash.media.SoundTransform;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.googleanalytics.GA;
 
 

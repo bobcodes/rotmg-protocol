@@ -6,7 +6,7 @@ package copeno
    import pigeguwo.Jazyv;
    import com.company.assembleegameclient.objects.GameObject;
    import pigeguwo.QuestToolTip;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import pigeguwo.Qyto;
    import com.company.assembleegameclient.map.Quest;
    import com.company.assembleegameclient.map.Fot;

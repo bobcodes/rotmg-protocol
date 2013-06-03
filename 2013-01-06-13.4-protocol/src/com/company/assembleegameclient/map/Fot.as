@@ -5,7 +5,7 @@ package com.company.assembleegameclient.map
    import flash.geom.PerspectiveProjection;
    import flash.geom.Matrix3D;
    import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import __AS3__.vec.Vector;
    import com.company.assembleegameclient.util.Wijawo;
    import com.company.util.Trig;

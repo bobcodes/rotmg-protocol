@@ -1,6 +1,6 @@
 package setuv
 {
-[CLASS1651]   import com.company.assembleegameclient.parameters.Parameters;
+[CLASS1651]   import aaa.Parameters;
    import cycygaj.Options;
 
 

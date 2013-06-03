@@ -10,7 +10,7 @@ package zufazene
    import com.company.util.MoreColorUtil;
    import flash.events.MouseEvent;
    import com.company.util.Sojef;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import totuhare.Zufi;
    import haqakel.Kefyfa;
    import dutes.Zevazogo;

@@ -5,7 +5,7 @@ package jezi
    import qiwyz.Bozakehy;
    import dylaqezo.Vusun;
    import bikyvym.Voduzak;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.util.Vokekizac;
    import com.company.assembleegameclient.appengine.Lelas;
 

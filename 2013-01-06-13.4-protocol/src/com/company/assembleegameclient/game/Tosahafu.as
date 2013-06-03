@@ -7,7 +7,7 @@ package com.company.assembleegameclient.game
    import dylaqezo.Vusun;
    import tidi.Vepel;
    import com.company.assembleegameclient.map.Fot;
-   import sanijijiz.Cilym;
+   import aaa.ActionMapperAbstract;
    import com.company.assembleegameclient.objects.GameObject;
    import mywyvuryw.Kekijuwo;
 
@@ -43,7 +43,7 @@ package com.company.assembleegameclient.game
 
       public var camera_:Fot;
 
-      public var gsc_:Cilym;
+      public var gsc_:ActionMapperAbstract;
 
       public function initialize() : void {
          return;

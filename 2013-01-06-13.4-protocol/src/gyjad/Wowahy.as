@@ -79,7 +79,7 @@ package gyjad
       protected function fabemus() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.viqelo.map(Account).dib(Jibaw);
+         this.viqelo.map(Account).dib(RotmgAccount);
          this.viqelo.map(Wewizy).dib(Cek);
          return;
       }

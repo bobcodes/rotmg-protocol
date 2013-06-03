@@ -6,7 +6,7 @@ package decivuv
    import kirofyny.Hehuf;
    import rysuho.Doj;
    import sakaja.Laq;
-   import gyjad.Jibaw;
+   import aaa.RotmgAccount;
    import zeva.Few;
    import behe.Wugito;
    import leselo.Cetyqysy;
@@ -56,7 +56,7 @@ package decivuv
       private function gafelo() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         if(this.account is Jibaw||this.account is Few)
+         if(this.account is RotmgAccount||this.account is Few)
          {
             this.lyhog.dispatch(new Wugito());
          }

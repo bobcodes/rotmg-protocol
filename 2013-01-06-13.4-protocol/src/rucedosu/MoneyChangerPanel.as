@@ -5,7 +5,7 @@ package rucedosu
    import flash.events.Event;
    import flash.events.KeyboardEvent;
    import flash.events.MouseEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.game.GameSprite;
    import haqakel.Kefyfa;
 

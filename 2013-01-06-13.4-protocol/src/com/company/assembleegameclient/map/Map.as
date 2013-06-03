@@ -11,7 +11,7 @@ package com.company.assembleegameclient.map
    import flash.utils.Dictionary;
    import flash.display.IGraphicsData;
    import flash.geom.Rectangle;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import flash.display.Graphics;
    import com.company.assembleegameclient.util.ConditionEffect;
    import flash.filters.BlurFilter;

@@ -3,7 +3,7 @@ package hine
 [CLASS1137]   import flash.geom.Matrix;
    import flash.text.TextField;
    import flash.text.TextFormat;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import pudev.Sinobyf;
    import setuv.Tufyz;
    import haqakel.Cuku;

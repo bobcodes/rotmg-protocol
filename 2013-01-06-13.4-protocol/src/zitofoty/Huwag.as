@@ -6,7 +6,7 @@ package zitofoty
    import jehihe.Kelycihi;
    import jehihe.Homynep;
    import zeva.Few;
-   import gyjad.Jibaw;
+   import aaa.RotmgAccount;
 
 
    public class Huwag extends Object
@@ -40,7 +40,7 @@ package zitofoty
       private function mylav() : Boolean {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         return (this.account is Few||this.account is Jibaw)&&this.data["UseExternalPayments"]==null||(Boolean(int(this.data["UseExternalPayments"])));
+         return (this.account is Few||this.account is RotmgAccount)&&this.data["UseExternalPayments"]==null||(Boolean(int(this.data["UseExternalPayments"])));
       }
    }
 [/CLASS]

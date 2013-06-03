@@ -10,7 +10,7 @@ package jehivytu
    import hiraj.Nafy;
    import com.company.assembleegameclient.appengine.SavedCharacter;
    import jezi.Pyruleq;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import syfuqycy.Zutus;
    import syfuqycy.Rewytoquk;
 

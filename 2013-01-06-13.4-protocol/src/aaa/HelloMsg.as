@@ -1,12 +1,12 @@
-package fadowu
+package aaa
 {
-[CLASS1509]   import flash.utils.ByteArray;
+ import flash.utils.ByteArray;
    import flash.utils.IDataOutput;
 
 
-   public class Zyfej extends Jelo
+   public class HelloMsg extends Jelo
    {
-      public function Zyfej(param1:uint, param2:Function) {
+      public function HelloMsg(param1:uint, param2:Function) {
          var _loc3_:* = true;
          var _loc4_:* = false;
          this.buildVersion_=new String();
@@ -70,5 +70,5 @@ package fadowu
          return formatToString("HELLO","buildVersion_","gameId_","guid_","password_","secret_");
       }
    }
-[/CLASS]
+
 }

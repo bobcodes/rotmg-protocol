@@ -3,7 +3,7 @@ package tuzopite
 [CLASS1128]   import vinirudel.Wukyva;
    import tusidywuq.Selamehu;
    import setuv.Vityvu;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import haqakel.Kefyfa;
 
 

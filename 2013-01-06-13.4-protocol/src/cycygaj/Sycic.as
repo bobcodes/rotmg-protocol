@@ -1,6 +1,6 @@
 package cycygaj
 {
-[CLASS1623]   import com.company.assembleegameclient.parameters.Parameters;
+[CLASS1623]   import aaa.Parameters;
    import flash.events.Event;
    import __AS3__.vec.Vector;
    import totuhare.Qebar;

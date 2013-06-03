@@ -5,7 +5,7 @@ package teq
    import leselo.Account;
    import com.company.assembleegameclient.util.offer.Offer;
    import helepebas.Zedypina;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.util.offer.Offers;
    import com.company.assembleegameclient.util.Ruzizi;
    import flash.net.navigateToURL;

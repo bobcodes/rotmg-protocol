@@ -8,7 +8,7 @@ package tidi
    import zufazene.Tosisahin;
    import com.company.assembleegameclient.objects.Loqedobiq;
    import com.company.googleanalytics.GA;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import cycygaj.Options;
    import com.company.assembleegameclient.objects.Player;
 

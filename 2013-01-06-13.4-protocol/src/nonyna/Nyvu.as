@@ -7,7 +7,7 @@ package nonyna
    import com.company.assembleegameclient.game.Tosahafu;
    import jodahije.Zadeped;
    import jezi.Pyruleq;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Nyvu extends Zovisis

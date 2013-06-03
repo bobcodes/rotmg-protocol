@@ -59,8 +59,7 @@ public class LoadAction implements OutgoingAction {
      */
     @Override
     public int getMessageId() {
-        // TODO Auto-generated method stub
-        return 0;
+        return 45;
     }
 
     @Override

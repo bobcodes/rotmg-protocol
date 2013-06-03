@@ -8,7 +8,7 @@ package warude
    import flash.events.Event;
    import flash.events.MouseEvent;
    import flash.events.KeyboardEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.objects.ObjectLibrary;
    import com.company.googleanalytics.GA;
    import com.company.assembleegameclient.tutorial.doneAction;

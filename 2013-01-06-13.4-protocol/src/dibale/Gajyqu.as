@@ -6,7 +6,7 @@ package dibale
    import flash.net.Socket;
    import zun.Vij;
    import zun.Fyqyna;
-   import lafol.Vidales;
+   import aaa.NetworkHandler;
 
 
    public class Gajyqu extends Object implements Tihoc
@@ -29,7 +29,7 @@ package dibale
          this.viqelo.map(Socket);
          this.viqelo.map(Vij).zoru(this.ryj);
          this.viqelo.map(Fyqyna).zoru(this.ryj);
-         this.viqelo.map(Vidales).fajuna();
+         this.viqelo.map(NetworkHandler).fajuna();
          return;
       }
    }

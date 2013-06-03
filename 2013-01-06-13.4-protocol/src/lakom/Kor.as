@@ -13,7 +13,7 @@ package lakom
    import tuzopite.Jomytejod;
    import tusidywuq.Selamehu;
    import tuzopite.Zet;
-   import sanijijiz.Cilym;
+   import aaa.ActionMapperAbstract;
    import mywyvuryw.Text;
    import tuzopite.Lez;
    import tuzopite.Zylut;
@@ -56,7 +56,7 @@ package lakom
          this.viqelo.map(Diwewoqem).fajuna();
          this.viqelo.map(Jomytejod).fajuna();
          this.pyv.map(Selamehu).paradi(Zet);
-         this.vybaduca.map(Cilym.TEXT).kiho(Text).kimy(Lez);
+         this.vybaduca.map(ActionMapperAbstract.TEXT).kiho(Text).kimy(Lez);
          this.pyv.map(Zylut).paradi(Niveq);
          this.mediatorMap.map(Ficezelum).sab(Noqotyraq);
          this.mediatorMap.map(Myr).sab(Qafiji);

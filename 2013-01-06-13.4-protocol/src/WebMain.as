@@ -6,7 +6,7 @@ package
    import com.company.assembleegameclient.util.Pukyqy;
    import flash.display.StageScaleMode;
    import bup.Bazyporo;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import jutesesel.Qibigagal;
    import flash.display.LoaderInfo;
    import com.company.assembleegameclient.util.Vureriju;

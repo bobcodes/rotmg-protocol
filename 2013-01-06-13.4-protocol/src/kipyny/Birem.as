@@ -9,7 +9,7 @@ package kipyny
    import syfuqycy.Totitig;
    import lafol.Becadoduq;
    import com.company.assembleegameclient.appengine.SavedCharacter;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import wyjimigo.Server;
    import flash.utils.ByteArray;
    import com.company.assembleegameclient.game.GameSprite;

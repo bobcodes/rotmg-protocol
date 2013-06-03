@@ -1,24 +1,24 @@
-package sanijijiz
+package aaa
 {
 [CLASS864]   import tinava.Dab;
    import com.company.assembleegameclient.game.Tosahafu;
    import wyjimigo.Server;
    import flash.utils.ByteArray;
-   import lafol.Vidales;
+   import aaa.NetworkHandler;
    import com.company.assembleegameclient.objects.GameObject;
    import __AS3__.vec.Vector;
    import com.company.assembleegameclient.objects.Projectile;
    import com.company.assembleegameclient.objects.Player;
 
 
-   public class Cilym extends Object
+   public class ActionMapperAbstract extends Object
    {
       {
          var _loc1_:* = false;
          var _loc2_:* = true;
       }
 
-      public function Cilym() {
+      public function ActionMapperAbstract() {
          var _loc1_:* = true;
          var _loc2_:* = false;
          super();
@@ -183,7 +183,7 @@ package sanijijiz
 
       public static const gazebujuw:int = 87;
 
-      public static var toryfuq:Cilym;
+      public static var toryfuq:ActionMapperAbstract;
 
       public var vepat:Dab;
 
@@ -207,7 +207,7 @@ package sanijijiz
 
       public var jitterWatcher_:JitterWatcher;
 
-      public var vyza:Vidales;
+      public var vyza:NetworkHandler;
 
       public var outstandingBuy_:Lypygosu = null;
 

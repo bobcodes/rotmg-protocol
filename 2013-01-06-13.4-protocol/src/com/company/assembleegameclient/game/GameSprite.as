@@ -24,7 +24,7 @@ package com.company.assembleegameclient.game
    import qiwyz.Bozakehy;
    import leselo.Account;
    import com.company.util.Vokekizac;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import vehesaj.Vadico;
    import behe.Cydepyk;
    import golac.PackageButton;
@@ -47,7 +47,7 @@ package com.company.assembleegameclient.game
    import flash.utils.ByteArray;
    import dylaqezo.Vusun;
    import flash.display.Sprite;
-   import sanijijiz.Qetyhafyz;
+   import aaa.ActionMapperImpl;
 
 
    public class GameSprite extends Tosahafu
@@ -66,7 +66,7 @@ package com.company.assembleegameclient.game
          this.model=param7;
          map=new Map(this);
          addChild(map);
-         gsc_=new Qetyhafyz(this,param1,param2,param3,param4,param5,param6,param8);
+         gsc_=new ActionMapperImpl(this,param1,param2,param3,param4,param5,param6,param8);
          mui_=new Vypatozi(this);
          this.risu=new Chat();
          addChild(this.risu);

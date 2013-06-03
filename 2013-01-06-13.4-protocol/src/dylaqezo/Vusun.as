@@ -4,7 +4,7 @@ package dylaqezo
    import com.company.assembleegameclient.appengine.Lelas;
    import leselo.Account;
    import bumyj.Hacuvozep;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.appengine.SavedCharacter;
    import __AS3__.vec.Vector;
    import com.company.assembleegameclient.appengine.Ladiz;

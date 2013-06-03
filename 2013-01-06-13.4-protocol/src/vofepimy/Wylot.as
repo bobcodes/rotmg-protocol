@@ -8,7 +8,7 @@ package vofepimy
    import rysuho.Gyry;
    import bikyvym.Voduzak;
    import flash.utils.Timer;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.util.Vokekizac;
    import flash.events.TimerEvent;
 

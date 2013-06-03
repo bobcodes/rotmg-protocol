@@ -11,7 +11,7 @@ package com.company.assembleegameclient.objects
    import flash.utils.getTimer;
    import haqakel.Kefyfa;
    import setuv.Vityvu;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import wiwojaz.Hymefit;
    import totuhare.Zufi;
    import gawulu.Cuqicyh;

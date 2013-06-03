@@ -13,7 +13,7 @@ package rymuhuduh
    import com.company.assembleegameclient.util.Kevozavow;
    import com.company.assembleegameclient.map.Map;
    import jego.Ludiporos;
-   import sanijijiz.Cilym;
+   import aaa.ActionMapperAbstract;
    import kuzycyw.Mygisyqoc;
    import guvakipe.Decybuvy;
 
@@ -91,7 +91,7 @@ package rymuhuduh
          var _loc3_:* = Kevozavow.pojeni(param1,Humy,Map,Ludiporos);
          if(_loc3_ is Map)
          {
-            Cilym.toryfuq.invDrop(_loc2_,Guc.zef(this.view.objectType),this.view.objectType);
+            ActionMapperAbstract.toryfuq.invDrop(_loc2_,Guc.zef(this.view.objectType),this.view.objectType);
          }
          else
          {
@@ -100,7 +100,7 @@ package rymuhuduh
                _loc4_=_loc3_ as Humy;
                if(_loc4_.mymezit()==Mygisyqoc.kenyh&&!(_loc4_.kotifi.owner==_loc2_))
                {
-                  Cilym.toryfuq.invSwapPotion(_loc2_,_loc2_,Guc.zef(this.view.objectType),this.view.objectType,_loc4_.kotifi.owner,_loc4_.nym,Mygisyqoc.kenyh);
+                  ActionMapperAbstract.toryfuq.invSwapPotion(_loc2_,_loc2_,Guc.zef(this.view.objectType),this.view.objectType,_loc4_.kotifi.owner,_loc4_.nym,Mygisyqoc.kenyh);
                }
             }
          }

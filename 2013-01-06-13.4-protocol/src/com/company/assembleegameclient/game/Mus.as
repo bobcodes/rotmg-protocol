@@ -4,7 +4,7 @@ package com.company.assembleegameclient.game
    import flash.events.MouseEvent;
    import flash.events.KeyboardEvent;
    import setuv.Vityvu;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import jutesesel.Qibigagal;
 
 

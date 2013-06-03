@@ -3,12 +3,12 @@ package bocak
 [CLASS289]   import tysenyzy.Command;
    import qypupet.Nosiref;
    import zun.Fyqyna;
-   import lafol.Vidales;
+   import aaa.NetworkHandler;
    import leselo.Account;
    import kirofyny.Hehuf;
    import sanijijiz.Fyhigu;
    import qypupet.Hatozaq;
-   import sanijijiz.Cilym;
+   import aaa.ActionMapperAbstract;
    import qypupet.Vuke;
    import qypupet.Ruze;
    import sojul.Viropisos;
@@ -34,7 +34,7 @@ package bocak
 
       public var vivohasu:Fyqyna;
 
-      public var server:Vidales;
+      public var server:NetworkHandler;
 
       public var account:Account;
 
@@ -50,14 +50,14 @@ package bocak
             {
                this.rek(kotywo);
             }
-            _loc1_=this.vivohasu.suqyz(Cilym.gypavur) as Fyhigu;
+            _loc1_=this.vivohasu.suqyz(ActionMapperAbstract.gypavur) as Fyhigu;
             _loc1_.fuje=1;
             _loc1_.objectId=Hatozaq(this.wakutehe).tebafenun;
             _loc1_.qota=Hatozaq(this.wakutehe).qota;
          }
          if(this.wakutehe is Vuke)
          {
-            _loc1_=this.vivohasu.suqyz(Cilym.gypavur) as Fyhigu;
+            _loc1_=this.vivohasu.suqyz(ActionMapperAbstract.gypavur) as Fyhigu;
             _loc1_.fuje=2;
             _loc1_.tejy=Vuke(this.wakutehe).kifukiraw;
             _loc1_.jadi=Vuke(this.wakutehe).jadi;
@@ -65,7 +65,7 @@ package bocak
          }
          if(this.wakutehe is Ruze)
          {
-            _loc1_=this.vivohasu.suqyz(Cilym.gypavur) as Fyhigu;
+            _loc1_=this.vivohasu.suqyz(ActionMapperAbstract.gypavur) as Fyhigu;
             _loc1_.fuje=3;
             _loc1_.tejy=Ruze(this.wakutehe).gasuvawo;
             _loc1_.tol=Ruze(this.wakutehe).hazil;

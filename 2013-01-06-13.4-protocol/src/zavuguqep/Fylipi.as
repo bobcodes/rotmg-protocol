@@ -16,7 +16,7 @@ package zavuguqep
    import jego.Ludiporos;
    import com.company.assembleegameclient.util.Kevozavow;
    import com.company.assembleegameclient.map.Map;
-   import sanijijiz.Cilym;
+   import aaa.ActionMapperAbstract;
    import kuzycyw.Mygisyqoc;
    import com.company.assembleegameclient.objects.OneWayContainer;
    import com.company.assembleegameclient.objects.Container;
@@ -25,7 +25,7 @@ package zavuguqep
    import daloraf.Fiboqumag;
    import ferozosyf.Pele;
    import ferozosyf.Licuboter;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.objects.GameObject;
    import com.company.assembleegameclient.objects.Player;
 
@@ -116,7 +116,7 @@ package zavuguqep
                   _loc6_=_loc2_.kotifi.curPlayer.nextAvailableInventorySlot();
                   if(_loc6_!=-1)
                   {
-                     Cilym.toryfuq.invSwap(this.view.curPlayer,_loc2_.kotifi.owner,_loc2_.nym,_loc2_.cawiluz.itemId,this.view.curPlayer,_loc6_,Mygisyqoc.kenyh);
+                     ActionMapperAbstract.toryfuq.invSwap(this.view.curPlayer,_loc2_.kotifi.owner,_loc2_.nym,_loc2_.cawiluz.itemId,this.view.curPlayer,_loc6_,Mygisyqoc.kenyh);
                      _loc2_.setItem(Mygisyqoc.kenyh);
                      _loc2_.mipi(this.view.curPlayer);
                   }
@@ -176,11 +176,11 @@ package zavuguqep
       private function sugih(param1:Humy) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(!Cilym.toryfuq||!this.view.vaq||!param1||this.tutel.ciwuta(param1.mymezit()).vico<=this.fysufapav.palaliz.map.player_.getPotionCount(param1.mymezit()))
+         if(!ActionMapperAbstract.toryfuq||!this.view.vaq||!param1||this.tutel.ciwuta(param1.mymezit()).vico<=this.fysufapav.palaliz.map.player_.getPotionCount(param1.mymezit()))
          {
             return;
          }
-         Cilym.toryfuq.invSwapPotion(this.view.curPlayer,this.view.owner,param1.nym,param1.cawiluz.itemId,this.view.curPlayer,Guc.zef(param1.mymezit()),Mygisyqoc.kenyh);
+         ActionMapperAbstract.toryfuq.invSwapPotion(this.view.curPlayer,this.view.owner,param1.nym,param1.cawiluz.itemId,this.view.curPlayer,Guc.zef(param1.mymezit()),Mygisyqoc.kenyh);
          param1.setItem(Mygisyqoc.kenyh);
          param1.mipi(this.view.curPlayer);
          return;
@@ -239,12 +239,12 @@ package zavuguqep
                }
                else
                {
-                  Cilym.toryfuq.invDrop(this.view.owner,param1.nym,param1.mymezit());
+                  ActionMapperAbstract.toryfuq.invDrop(this.view.owner,param1.nym,param1.mymezit());
                }
             }
             else
             {
-               Cilym.toryfuq.invDrop(this.view.owner,param1.nym,param1.mymezit());
+               ActionMapperAbstract.toryfuq.invDrop(this.view.owner,param1.nym,param1.mymezit());
             }
          }
          param1.setItem(-1);
@@ -254,11 +254,11 @@ package zavuguqep
       private function kus(param1:Fiboqumag, param2:Fiboqumag) : Boolean {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         if(!Cilym.toryfuq||!this.view.vaq||!param1||!param2)
+         if(!ActionMapperAbstract.toryfuq||!this.view.vaq||!param1||!param2)
          {
             return false;
          }
-         Cilym.toryfuq.invSwap(this.view.curPlayer,this.view.owner,param1.nym,param1.cawiluz.itemId,param2.kotifi.owner,param2.nym,param2.cawiluz.itemId);
+         ActionMapperAbstract.toryfuq.invSwap(this.view.curPlayer,this.view.owner,param1.nym,param1.cawiluz.itemId,param2.kotifi.owner,param2.nym,param2.cawiluz.itemId);
          var _loc3_:int = param1.mymezit();
          param1.setItem(param2.mymezit());
          param2.setItem(_loc3_);
@@ -270,11 +270,11 @@ package zavuguqep
       private function tody(param1:Fiboqumag, param2:Container, param3:int) : void {
          var _loc4_:* = false;
          var _loc5_:* = true;
-         if(!Cilym.toryfuq||!this.view.vaq||!param1||!param2)
+         if(!ActionMapperAbstract.toryfuq||!this.view.vaq||!param1||!param2)
          {
             return;
          }
-         Cilym.toryfuq.invSwap(this.view.curPlayer,this.view.owner,param1.nym,param1.cawiluz.itemId,param2,param3,-1);
+         ActionMapperAbstract.toryfuq.invSwap(this.view.curPlayer,this.view.owner,param1.nym,param1.cawiluz.itemId,param2,param3,-1);
          param1.setItem(Mygisyqoc.kenyh);
          return;
       }
@@ -285,7 +285,7 @@ package zavuguqep
          var _loc2_:Humy = param1.tile;
          if(_loc2_.kotifi is Pele||_loc2_.kotifi is Licuboter)
          {
-            Cilym.toryfuq.useItem_new(_loc2_.kotifi.owner,_loc2_.nym);
+            ActionMapperAbstract.toryfuq.useItem_new(_loc2_.kotifi.owner,_loc2_.nym);
          }
          return;
       }
@@ -303,7 +303,7 @@ package zavuguqep
                _loc3_=_loc2_.kotifi.curPlayer.swapInventoryIndex(this.kena.bykapise);
                if(_loc3_!=-1)
                {
-                  Cilym.toryfuq.invSwap(this.view.curPlayer,_loc2_.kotifi.owner,_loc2_.nym,_loc2_.cawiluz.itemId,this.view.curPlayer,_loc3_,Mygisyqoc.kenyh);
+                  ActionMapperAbstract.toryfuq.invSwap(this.view.curPlayer,_loc2_.kotifi.owner,_loc2_.nym,_loc2_.cawiluz.itemId,this.view.curPlayer,_loc3_,Mygisyqoc.kenyh);
                   _loc2_.setItem(Mygisyqoc.kenyh);
                   _loc2_.mipi(this.view.curPlayer);
                }
@@ -347,7 +347,7 @@ package zavuguqep
          var _loc2_:int = this.view.curPlayer.nextAvailableInventorySlot();
          if(_loc2_!=-1)
          {
-            Cilym.toryfuq.invSwap(this.view.curPlayer,this.view.owner,param1.nym,param1.cawiluz.itemId,this.view.curPlayer,_loc2_,Mygisyqoc.kenyh);
+            ActionMapperAbstract.toryfuq.invSwap(this.view.curPlayer,this.view.owner,param1.nym,param1.cawiluz.itemId,this.view.curPlayer,_loc2_,Mygisyqoc.kenyh);
          }
          return;
       }
@@ -360,11 +360,11 @@ package zavuguqep
          var _loc4_:int = this.view.curPlayer.nextAvailableInventorySlot();
          if(_loc4_!=-1)
          {
-            Cilym.toryfuq.invSwap(_loc3_,this.view.owner,param1.nym,param1.cawiluz.itemId,this.view.curPlayer,_loc4_,Mygisyqoc.kenyh);
+            ActionMapperAbstract.toryfuq.invSwap(_loc3_,this.view.owner,param1.nym,param1.cawiluz.itemId,this.view.curPlayer,_loc4_,Mygisyqoc.kenyh);
          }
          else
          {
-            Cilym.toryfuq.useItem_new(_loc2_,param1.nym);
+            ActionMapperAbstract.toryfuq.useItem_new(_loc2_,param1.nym);
          }
          return;
       }
@@ -377,11 +377,11 @@ package zavuguqep
          var _loc4_:int = ObjectLibrary.pafynur(param1.mymezit(),_loc3_);
          if(_loc4_!=-1)
          {
-            Cilym.toryfuq.invSwap(_loc3_,_loc2_,param1.nym,param1.mymezit(),_loc3_,_loc4_,_loc3_.wasidu[_loc4_]);
+            ActionMapperAbstract.toryfuq.invSwap(_loc3_,_loc2_,param1.nym,param1.mymezit(),_loc3_,_loc4_,_loc3_.wasidu[_loc4_]);
          }
          else
          {
-            Cilym.toryfuq.useItem_new(_loc2_,param1.nym);
+            ActionMapperAbstract.toryfuq.useItem_new(_loc2_,param1.nym);
          }
          return;
       }

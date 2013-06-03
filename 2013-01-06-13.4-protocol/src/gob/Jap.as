@@ -1,7 +1,7 @@
 package gob
 {
 [CLASS199]   import natus.Hewoda;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Jap extends Object implements Hewoda

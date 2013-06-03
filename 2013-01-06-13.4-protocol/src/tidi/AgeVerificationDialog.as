@@ -6,7 +6,7 @@ package tidi
    import tinava.Dab;
    import flash.text.TextFieldAutoSize;
    import flash.filters.DropShadowFilter;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import totuhare.Zufi;
    import haqakel.Kefyfa;
    import flash.events.Event;

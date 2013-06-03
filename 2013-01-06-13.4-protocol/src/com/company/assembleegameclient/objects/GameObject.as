@@ -40,7 +40,7 @@ package com.company.assembleegameclient.objects
    import com.company.assembleegameclient.util.TextureRedrawer;
    import flash.utils.getTimer;
    import flash.geom.ColorTransform;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import flash.display.GraphicsGradientFill;
    import flash.display.GradientType;
    import flash.utils.getQualifiedClassName;

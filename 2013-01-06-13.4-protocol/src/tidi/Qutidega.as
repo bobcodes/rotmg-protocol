@@ -15,7 +15,7 @@ package tidi
    import jet.Varusici;
    import jezi.Pyruleq;
    import com.company.util.Runahivuw;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import qilarag.Gufaw;
    import com.company.assembleegameclient.appengine.SavedCharacter;
    import guvakipe.Nedasefyg;

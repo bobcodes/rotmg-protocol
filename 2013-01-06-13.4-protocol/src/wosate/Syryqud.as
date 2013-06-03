@@ -23,7 +23,7 @@ package wosate
    import com.company.assembleegameclient.objects.Portal;
    import com.company.assembleegameclient.objects.GuildHallPortal;
    import com.company.util.Gor;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Syryqud extends Walalu

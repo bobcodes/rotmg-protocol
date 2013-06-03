@@ -1,20 +1,20 @@
 package gyjad
 {
-[CLASS683]   import leselo.Account;
+    import leselo.Account;
    import com.company.assembleegameclient.util.GUID;
    import flash.net.SharedObject;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import flash.external.ExternalInterface;
 
 
-   public class Jibaw extends Object implements Account
+   public class RotmgAccount extends Object implements Account
    {
       {
          var _loc1_:* = true;
          var _loc2_:* = false;
       }
 
-      public function Jibaw() {
+      public function RotmgAccount() {
          var _loc2_:* = false;
          var _loc3_:* = true;
          super();

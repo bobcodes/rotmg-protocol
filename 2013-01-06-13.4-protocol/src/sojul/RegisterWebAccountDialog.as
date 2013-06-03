@@ -6,7 +6,7 @@ package sojul
    import nonyna.Rutugumen;
    import flash.events.MouseEvent;
    import haqakel.Kefyfa;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import totuhare.Zufi;
    import kyhawibyc.Fapu;
    import com.company.util.Vutem;

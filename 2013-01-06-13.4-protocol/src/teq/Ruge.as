@@ -4,7 +4,7 @@ package teq
    import vofepimy.Hucu;
    import leselo.Cetyqysy;
    import helepebas.Zedypina;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.util.Ruzizi;
    import flash.net.navigateToURL;
    import flash.net.URLRequest;

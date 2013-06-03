@@ -1,7 +1,7 @@
 package com.company.assembleegameclient.util
 {
 [CLASS43]   import gawulu.Kolymivyv;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import gawulu.Jel;
    import com.company.util.AssetLibrary;
    import kabam.rotmg.assets.Ceny;

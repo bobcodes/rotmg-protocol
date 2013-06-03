@@ -7,7 +7,7 @@ package hine
    import tuzopite.Lyzepemif;
    import natus.Hewoda;
    import setuv.Vityvu;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Qafiji extends Zovisis

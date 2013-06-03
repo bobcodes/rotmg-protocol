@@ -9,7 +9,7 @@ package qycopu
    import totuhare.Zufi;
    import haqakel.Kefyfa;
    import flash.events.KeyboardEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.game.GameSprite;
    import zehus.Kelapu;
    import flash.events.MouseEvent;

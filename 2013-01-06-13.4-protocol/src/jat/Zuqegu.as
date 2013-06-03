@@ -4,7 +4,7 @@ package jat
    import kirofyny.Tiqimav;
    import flash.events.Event;
    import com.company.googleanalytics.GA;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import jutesesel.Qibigagal;
    import haqakel.Kefyfa;
    import cejyva.Dialog;

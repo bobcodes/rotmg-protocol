@@ -1,7 +1,7 @@
 package vinirudel
 {
 [CLASS469]   import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Wukyva extends Object

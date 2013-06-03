@@ -1,7 +1,7 @@
 package gob
 {
 [CLASS200]   import natus.Hewoda;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Cafiw extends Object implements Hewoda

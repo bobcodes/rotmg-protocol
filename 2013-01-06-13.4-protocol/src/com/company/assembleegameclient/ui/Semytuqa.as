@@ -10,7 +10,7 @@ package com.company.assembleegameclient.ui
    import com.company.util.MoreColorUtil;
    import com.company.assembleegameclient.objects.ObjectLibrary;
    import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import flash.filters.DropShadowFilter;
 
 

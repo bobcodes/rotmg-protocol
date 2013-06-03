@@ -3,7 +3,7 @@ package curywoc
 [CLASS130]   import wyjimigo.Tykum;
    import wyjimigo.Server;
    import __AS3__.vec.Vector;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Wahele extends Object implements Tykum

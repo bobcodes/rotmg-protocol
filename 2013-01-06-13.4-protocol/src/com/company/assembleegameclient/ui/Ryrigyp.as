@@ -2,7 +2,7 @@ package com.company.assembleegameclient.ui
 {
 [CLASS1038]   import flash.display.Sprite;
    import flash.display.Bitmap;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.util.AssetLibrary;
    import flash.display.BitmapData;
    import flash.events.MouseEvent;

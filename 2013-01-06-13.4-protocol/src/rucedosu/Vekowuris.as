@@ -7,7 +7,7 @@ package rucedosu
    import com.company.assembleegameclient.game.GameSprite;
    import tinava.Dab;
    import flash.events.MouseEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import flash.filters.DropShadowFilter;
    import totuhare.Javo;
    import com.company.util.AssetLibrary;

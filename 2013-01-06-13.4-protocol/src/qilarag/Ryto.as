@@ -3,7 +3,7 @@ package qilarag
 [CLASS1107]   import flash.display.Sprite;
    import __AS3__.vec.Vector;
    import flash.events.MouseEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import wyjimigo.Server;
 
 

@@ -6,7 +6,7 @@ package cycygaj
    import totuhare.Qebar;
    import totuhare.Zufi;
    import totuhare.Javo;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.game.GameSprite;
    import qilarag.Boqurot;
    import flash.events.MouseEvent;

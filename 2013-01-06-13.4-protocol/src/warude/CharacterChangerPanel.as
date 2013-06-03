@@ -3,7 +3,7 @@ package warude
 [CLASS1674]   import flash.events.MouseEvent;
    import flash.events.Event;
    import flash.events.KeyboardEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.game.GameSprite;
    import haqakel.Kefyfa;
 

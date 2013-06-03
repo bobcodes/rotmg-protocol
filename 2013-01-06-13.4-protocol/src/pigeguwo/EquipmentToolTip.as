@@ -18,7 +18,7 @@ package pigeguwo
    import zohom.Jenag;
    import totuhare.Qebar;
    import com.company.util.Sojef;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class EquipmentToolTip extends Jazyv

@@ -1,6 +1,6 @@
-package sanijijiz
+package aaa
 {
-[CLASS876]   import zun.Fyqyna;
+  import zun.Fyqyna;
    import com.company.assembleegameclient.objects.Player;
    import com.company.util.Random;
    import tusidywuq.Kehih;
@@ -25,7 +25,7 @@ package sanijijiz
    import qypupet.Tuhyfutos;
    import com.company.assembleegameclient.game.Tosahafu;
    import setuv.Vityvu;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import haqakel.Kefyfa;
    import zun.Vij;
    import fadowu.Create;
@@ -35,10 +35,10 @@ package sanijijiz
    import lafol.Zufadazi;
    import fadowu.Jusefuk;
    import fadowu.Hebumofy;
-   import fadowu.Zyfej;
+   import fadowu.HelloMsg;
    import fadowu.Peq;
    import fadowu.Nowiq;
-   import fadowu.Numoha;
+   import aaa.LoadMsg;
    import fadowu.Luwimy;
    import fadowu.Teleport;
    import fadowu.Hitepuka;
@@ -184,17 +184,17 @@ package sanijijiz
    import cejyva.Dialog;
    import flash.events.Event;
    import fucyquzu.Wode;
-   import lafol.Vidales;
+   import aaa.NetworkHandler;
 
 
-   public class Qetyhafyz extends Cilym
+   public class ActionMapperImpl extends ActionMapperAbstract
    {
       {
          var _loc1_:* = true;
          var _loc2_:* = false;
       }
 
-      public function Qetyhafyz(param1:Tosahafu, param2:Server, param3:int, param4:Boolean, param5:int, param6:int, param7:ByteArray, param8:String) {
+      public function ActionMapperImpl(param1:Tosahafu, param2:Server, param3:int, param4:Boolean, param5:int, param6:int, param7:ByteArray, param8:String) {
          var _loc9_:* = false;
          var _loc10_:* = true;
          super();
@@ -216,7 +216,7 @@ package sanijijiz
          this.labej=this.viqelo.getInstance(Vuvuv);
          this.rohiker=this.viqelo.getInstance(Fevirofow);
          this.qoh=this.viqelo.getInstance(Supuvygac);
-         vyza=this.viqelo.getInstance(Vidales);
+         vyza=this.viqelo.getInstance(NetworkHandler);
          this.vivohasu=this.viqelo.getInstance(Fyqyna);
          this.model=this.viqelo.getInstance(Civ);
          gs_=param1;
@@ -349,10 +349,10 @@ package sanijijiz
          _loc1_.map(hyzalyfa).kiho(Zufadazi);
          _loc1_.map(INVSWAP).kiho(Jusefuk);
          _loc1_.map(USEITEM).kiho(Hebumofy);
-         _loc1_.map(HELLO).kiho(Zyfej);
+         _loc1_.map(HELLO).kiho(HelloMsg);
          _loc1_.map(INVDROP).kiho(Peq);
          _loc1_.map(PONG).kiho(Nowiq);
-         _loc1_.map(LOAD).kiho(Numoha);
+         _loc1_.map(LOAD).kiho(LoadMsg);
          _loc1_.map(SETCONDITION).kiho(Luwimy);
          _loc1_.map(TELEPORT).kiho(Teleport);
          _loc1_.map(USEPORTAL).kiho(Hitepuka);
@@ -601,7 +601,7 @@ package sanijijiz
       private function load() : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         var _loc1_:Numoha = this.vivohasu.suqyz(LOAD) as Numoha;
+         var _loc1_:LoadMsg = this.vivohasu.suqyz(LOAD) as LoadMsg;
          _loc1_.charId_=charId_;
          vyza.sendMessage(_loc1_);
          return;
@@ -1071,7 +1071,7 @@ package sanijijiz
          var _loc1_:Account = Qibigagal.husuha().getInstance(Account);
          this.rivu.dispatch(Vityvu.make(Parameters.pyha,Kefyfa.tijosuw));
          this.bywajug();
-         var _loc2_:Zyfej = this.vivohasu.suqyz(HELLO) as Zyfej;
+         var _loc2_:HelloMsg = this.vivohasu.suqyz(HELLO) as HelloMsg;
          _loc2_.buildVersion_=Parameters.jodaga;
          _loc2_.gameId_=gameId_;
          _loc2_.guid_=this.mykyf(_loc1_.getUserId());
@@ -2273,5 +2273,5 @@ package sanijijiz
          return vyza.isConnected();
       }
    }
-[/CLASS]
+
 }

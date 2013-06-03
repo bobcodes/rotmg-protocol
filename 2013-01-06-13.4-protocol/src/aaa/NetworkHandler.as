@@ -1,6 +1,6 @@
-package lafol
+package aaa
 {
-[CLASS321]   import zun.Fyqyna;
+   import zun.Fyqyna;
    import flash.net.Socket;
    import tinava.Dab;
    import flash.utils.Timer;
@@ -13,14 +13,14 @@ package lafol
    import flash.events.TimerEvent;
 
 
-   public class Vidales extends Object
+   public class NetworkHandler extends Object
    {
       {
          var _loc1_:* = false;
          var _loc2_:* = true;
       }
 
-      public function Vidales() {
+      public function NetworkHandler() {
          var _loc1_:* = true;
          var _loc2_:* = false;
          this.bufitot=this.pon;
@@ -63,14 +63,14 @@ package lafol
 
       private var port:int;
 
-      public function setOutgoingCipher(param1:ICipher) : Vidales {
+      public function setOutgoingCipher(param1:ICipher) : NetworkHandler {
          var _loc2_:* = false;
          var _loc3_:* = true;
          this.saqibug=param1;
          return this;
       }
 
-      public function setIncomingCipher(param1:ICipher) : Vidales {
+      public function setIncomingCipher(param1:ICipher) : NetworkHandler {
          var _loc2_:* = true;
          var _loc3_:* = false;
          this.jufeqo=param1;
@@ -151,7 +151,7 @@ package lafol
          return;
       }
 
-      private function nenatab() : void {
+      private function writeBufferedMsgs() : void {
          var _loc4_:* = true;
          var _loc5_:* = false;
          var _loc1_:Zufadazi = this.bufitot.next;
@@ -182,7 +182,7 @@ package lafol
       private function qotite(param1:Event) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         this.nenatab();
+         this.writeBufferedMsgs();
          this.connected.dispatch();
          return;
       }
@@ -305,5 +305,5 @@ package lafol
          return this.vijehy.connected;
       }
    }
-[/CLASS]
+
 }

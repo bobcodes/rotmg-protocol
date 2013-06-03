@@ -10,7 +10,7 @@ package rucedosu
    import flash.filters.DropShadowFilter;
    import gicuzum.Caty;
    import haqakel.Kefyfa;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.util.Currency;
    import totuhare.Zufi;
    import com.company.assembleegameclient.ui.Cid;

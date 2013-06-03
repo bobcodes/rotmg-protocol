@@ -8,7 +8,7 @@ package warude
    import flash.events.Event;
    import flash.events.KeyboardEvent;
    import flash.events.MouseEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.game.Tosahafu;
    import com.company.assembleegameclient.objects.Player;
    import flash.text.TextFieldAutoSize;

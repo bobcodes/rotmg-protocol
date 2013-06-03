@@ -5,7 +5,7 @@ package curywoc
    import __AS3__.vec.Vector;
    import wyjimigo.Server;
    import wyjimigo.Tabyr;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Dasujyte extends Object implements Tykum

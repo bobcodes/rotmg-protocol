@@ -4,7 +4,7 @@ package vehesaj
    import sybyzowo.Budogy;
    import tusidywuq.Selamehu;
    import setuv.Vityvu;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Huhidoruv extends Zovisis

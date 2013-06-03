@@ -14,7 +14,7 @@ package warude
    import totuhare.Zufi;
    import haqakel.Kefyfa;
    import com.company.assembleegameclient.ui.Cid;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.util.Currency;
 
 

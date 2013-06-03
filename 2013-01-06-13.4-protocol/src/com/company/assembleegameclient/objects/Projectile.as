@@ -5,7 +5,7 @@ package com.company.assembleegameclient.objects
    import com.company.assembleegameclient.engine3d.Gyvafo;
    import com.company.util.Trig;
    import com.company.assembleegameclient.map.Map;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.map.Square;
    import com.company.assembleegameclient.util.Deqipe;
    import flash.geom.Point;

@@ -7,7 +7,7 @@ package tidi
    import dutes.Zevazogo;
    import dutes.Soz;
    import sojul.Jekoje;
-   import gyjad.Jibaw;
+   import aaa.RotmgAccount;
    import zegacymo.Raleke;
    import fefiw.KabamAccountInfoView;
    import tizozowof.KongregateAccountInfoView;
@@ -53,7 +53,7 @@ package tidi
          var _loc1_:Jekoje = null;
          switch(null)
          {
-            case Jibaw.kiza:
+            case RotmgAccount.kiza:
                _loc1_=new Raleke();
                break;
             case Few.kiza:

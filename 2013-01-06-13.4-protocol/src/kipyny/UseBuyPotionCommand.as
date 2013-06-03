@@ -4,10 +4,10 @@ package kipyny
    import guvakipe.Guc;
    import vinirudel.Wukyva;
    import bikyvym.Voduzak;
-   import sanijijiz.Cilym;
+   import aaa.ActionMapperAbstract;
    import com.company.assembleegameclient.objects.Player;
    import vinirudel.Zufu;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import gawulu.Cuqicyh;
    import flash.utils.getTimer;
    import kuzycyw.Vofamoba;
@@ -18,7 +18,7 @@ package kipyny
       public function UseBuyPotionCommand() {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.mozyc=Cilym.toryfuq;
+         this.mozyc=ActionMapperAbstract.toryfuq;
          super();
          return;
       }
@@ -31,7 +31,7 @@ package kipyny
 
       public var wop:Voduzak;
 
-      private var mozyc:Cilym;
+      private var mozyc:ActionMapperAbstract;
 
       private var player:Player;
 

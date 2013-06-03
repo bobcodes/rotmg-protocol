@@ -1,6 +1,6 @@
-package com.company.assembleegameclient.parameters
+package aaa
 {
-[CLASS46]   import flash.display.DisplayObject;
+ import flash.display.DisplayObject;
    import flash.net.SharedObject;
    import flash.utils.Dictionary;
    import com.company.util.Sojef;
@@ -275,5 +275,4 @@ package com.company.assembleegameclient.parameters
          return;
       }
    }
-[/CLASS]
 }

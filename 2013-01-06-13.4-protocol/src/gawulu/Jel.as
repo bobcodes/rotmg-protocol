@@ -1,7 +1,7 @@
 package gawulu
 {
 [CLASS581]   import flash.media.SoundTransform;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.googleanalytics.GA;
 
 

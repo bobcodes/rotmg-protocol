@@ -1,7 +1,7 @@
 package gob
 {
 [CLASS197]   import natus.Hewoda;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Cilikiva extends Object implements Hewoda

@@ -7,7 +7,7 @@ package com.company.assembleegameclient.appengine
    import com.company.assembleegameclient.util.TextureRedrawer;
    import com.company.util.Dyzonoto;
    import flash.geom.ColorTransform;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import qypupet.Vuravipyg;
    import com.company.assembleegameclient.objects.ObjectLibrary;
    import jutesesel.Qibigagal;

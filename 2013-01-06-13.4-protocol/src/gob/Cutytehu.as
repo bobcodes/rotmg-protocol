@@ -1,7 +1,7 @@
 package gob
 {
 [CLASS196]   import natus.Hewoda;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Cutytehu extends Object implements Hewoda

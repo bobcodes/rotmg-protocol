@@ -16,7 +16,7 @@ package jahoze
    import wociwa.Qukyjywo;
    import wociwa.Roharymuw;
    import wociwa.Gevet;
-   import sanijijiz.Cilym;
+   import aaa.ActionMapperAbstract;
    import fadowu.Fotigy;
    import wociwa.Natabagi;
 
@@ -48,7 +48,7 @@ package jahoze
          this.pyv.map(Racalozef).paradi(Lyvykejev);
          this.pyv.map(Samejutac).paradi(Qukyjywo);
          this.pyv.map(Roharymuw).paradi(Gevet);
-         this.vybaduca.map(Cilym.RESKIN).kiho(Fotigy).kimy(Natabagi);
+         this.vybaduca.map(ActionMapperAbstract.RESKIN).kiho(Fotigy).kimy(Natabagi);
          this.context.sutu.kan(this.van);
          return;
       }

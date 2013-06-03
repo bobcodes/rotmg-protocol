@@ -2,8 +2,8 @@ package wociwa
 {
 [CLASS1312]   import tehakab.Copaqufiv;
    import zun.Fyqyna;
-   import lafol.Vidales;
-   import sanijijiz.Cilym;
+   import aaa.NetworkHandler;
+   import aaa.ActionMapperAbstract;
    import fadowu.Fotigy;
 
 
@@ -20,12 +20,12 @@ package wociwa
 
       public var vivohasu:Fyqyna;
 
-      public var server:Vidales;
+      public var server:NetworkHandler;
 
       public function execute() : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         var _loc1_:Fotigy = this.vivohasu.suqyz(Cilym.RESKIN) as Fotigy;
+         var _loc1_:Fotigy = this.vivohasu.suqyz(ActionMapperAbstract.RESKIN) as Fotigy;
          _loc1_.skinID=this.skin.id;
          this.server.sendMessage(_loc1_);
          return;

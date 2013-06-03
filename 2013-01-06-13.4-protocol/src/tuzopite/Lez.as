@@ -7,7 +7,7 @@ package tuzopite
    import koqeko.Kevut;
    import setuv.Mocor;
    import mywyvuryw.Text;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import setuv.Vityvu;
    import totuhare.Zufi;
    import guvakipe.Rakawidu;

@@ -1,7 +1,7 @@
 package sygy
 {
 [CLASS704]   import leselo.Account;
-   import gyjad.Jibaw;
+   import aaa.RotmgAccount;
 
 
    public class Hywakywym extends Object
@@ -21,7 +21,7 @@ package sygy
          var _loc3_:* = true;
          var _loc4_:* = false;
          var _loc2_:XML = null;
-         var _loc1_:Jibaw = this.account as Jibaw;
+         var _loc1_:RotmgAccount = this.account as RotmgAccount;
          if(this.tuboj.hasOwnProperty("KabamPaymentInfo"))
          {
             _loc2_=XML(this.tuboj.KabamPaymentInfo);

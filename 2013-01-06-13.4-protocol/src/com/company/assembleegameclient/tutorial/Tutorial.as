@@ -12,7 +12,7 @@ package com.company.assembleegameclient.tutorial
    import com.company.util.PointUtil;
    import flash.display.Graphics;
    import kabam.rotmg.assets.Pyt;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Tutorial extends Sprite

@@ -25,7 +25,7 @@ package com.company.assembleegameclient.game
    import com.company.assembleegameclient.objects.GameObject;
    import com.company.assembleegameclient.map.Square;
    import com.company.util.Sojef;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import guvakipe.Decybuvy;
    import cycygaj.Options;
    import flash.system.Capabilities;
@@ -33,7 +33,7 @@ package com.company.assembleegameclient.game
    import com.company.assembleegameclient.util.TextureRedrawer;
    import setuv.Vityvu;
    import kuzycyw.Cymydef;
-   import sanijijiz.Cilym;
+   import aaa.ActionMapperAbstract;
    import jutesesel.Qibigagal;
    import pogefeqeh.Wahovy;
    import natus.Hewoda;
@@ -571,7 +571,7 @@ package com.company.assembleegameclient.game
          {
             param1=param1+Cymydef.sasusa;
          }
-         Cilym.toryfuq.useItem_new(this.gs_.map.player_,param1);
+         ActionMapperAbstract.toryfuq.useItem_new(this.gs_.map.player_,param1);
          return;
       }
 

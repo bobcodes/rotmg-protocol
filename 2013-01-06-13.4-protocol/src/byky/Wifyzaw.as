@@ -3,7 +3,7 @@ package byky
 [CLASS127]   import wyjimigo.Tykum;
    import __AS3__.vec.Vector;
    import wyjimigo.Server;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Wifyzaw extends Object

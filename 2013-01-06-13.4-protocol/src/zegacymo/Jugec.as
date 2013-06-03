@@ -8,7 +8,7 @@ package zegacymo
    import haqakel.Kefyfa;
    import totuhare.Zufi;
    import flash.events.TextEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import flash.filters.DropShadowFilter;
    import zehus.Kelapu;
    import flash.events.MouseEvent;

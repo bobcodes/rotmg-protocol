@@ -2,7 +2,7 @@ package cycygaj
 {
 [CLASS1622]   import com.company.util.MoreColorUtil;
    import flash.geom.ColorTransform;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import flash.events.Event;
 
 

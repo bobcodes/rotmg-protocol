@@ -1,6 +1,6 @@
 package guvakipe
 {
-[CLASS530]   import com.company.assembleegameclient.parameters.Parameters;
+[CLASS530]   import aaa.Parameters;
 
 
    public class Jymyqene extends Object

@@ -3,7 +3,7 @@ package curywoc
 [CLASS131]   import wyjimigo.Tykum;
    import wyjimigo.Server;
    import __AS3__.vec.Vector;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
 
 
    public class Dabadaza extends Object implements Tykum

@@ -4,7 +4,7 @@ package dec
    import dylaqezo.Vusun;
    import wyjimigo.Server;
    import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import flash.events.Event;
    import jodahije.Puvyveh;
    import jodahije.Pukuduly;

@@ -11,7 +11,7 @@ package sojul
    import com.company.assembleegameclient.ui.Cid;
    import flash.events.MouseEvent;
    import __AS3__.vec.Vector;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.util.Ruzizi;
    import flash.display.Shape;
    import com.company.assembleegameclient.util.offer.Offer;

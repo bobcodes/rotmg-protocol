@@ -7,7 +7,7 @@ package com.company.assembleegameclient.util
    import flash.display.BitmapData;
    import com.company.assembleegameclient.map.Square;
    import flash.utils.ByteArray;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.Parameters;
    import com.company.assembleegameclient.map.Lakum;
    import com.company.assembleegameclient.map.Map;
    import com.company.util.AssetLibrary;
