@@ -309,7 +309,7 @@ package aaa
       private function cusisysa() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         vyza.connected.remove(this.tysiromi);
+         vyza.connected.remove(this.sendHello);
          vyza.closed.remove(this.zykekulucy);
          vyza.error.remove(this.woneb);
          return;
@@ -332,7 +332,7 @@ package aaa
       public function femiquwi() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         vyza.connected.add(this.tysiromi);
+         vyza.connected.add(this.sendHello);
          vyza.closed.add(this.zykekulucy);
          vyza.error.add(this.woneb);
          return;
@@ -1065,7 +1065,7 @@ package aaa
          return Base64.encodeByteArray(_loc4_);
       }
 
-      private function tysiromi() : void {
+      private function sendHello() : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
          var _loc1_:Account = Qibigagal.husuha().getInstance(Account);

@@ -83,9 +83,11 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         IOUtils.closeQuietly(_socket);
     }
     
-    public void run() throws IOException {
+    public void run() throws IOException, InterruptedException {
         sendHello();
+        Thread.sleep(500);
         sendLoad();
+        Thread.sleep(500);
         while(true) {
             IncomingAction ia = parse();
             if(ia != null) {
@@ -228,7 +230,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
     public void sendToNetwork(OutgoingAction outgoing) throws IOException {
         byte[] stuffToWrite = outgoing.toBytes();
         byte[] encryptedBytes = encrypt(stuffToWrite);
-        _dout.writeInt(encryptedBytes.length);
+        _dout.writeInt(encryptedBytes.length+5);
         _dout.writeByte(outgoing.getMessageId());
         _dout.write(encryptedBytes);
         
