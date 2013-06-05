@@ -21,19 +21,35 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
-package rotmg.actions;
+package rotmg.experiment;
 
-import java.io.IOException;
+import java.io.File;
 
-public interface OutgoingAction {
+import rotmg.net.RotmgNetworkHandler;
+import rotmg.net.layer.WiresharkLogNetworkLayer;
 
-    /**
-     * Records all information EXCEPT For the type. The NetworkHandler is responsible
-     * for writing the type information.
-     */
-    public byte[] toBytes() throws IOException ;
+public class ReadLoggedBytesMain {
+
+    private static final File toServerLogs = new File("protocol-example" + File.separator + "2013-06-04-to-server.binary");
+    private static final File fromServerLogs = new File("protocol-example" + File.separator + "2013-06-04-from-server.binary");
     
-    //public OutgoingAction fromBytes(byte[] bytes) throws IOException ;
+    public static void main(String[] args) throws Exception {
+        
+        System.out.println("===========FROM SERVER==================");
+        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(fromServerLogs))) {
+            nw.run();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        
+        System.out.println("===========TO SERVER====================");
+        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(toServerLogs))) {
+            nw.run();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+    }
     
-    public int getMessageId() ;
 }

@@ -49,6 +49,25 @@ import rotmg.net.RotmgParameters;
 
 import com.google.common.base.Charsets;
 
+/**
+ *   var _loc2_:HelloNetworkMessage = this.govizupas.runozak(HELLO) as HelloNetworkMessage;
+     _loc2_.buildVersion_=UserConfig.BUILD_VERSION;
+     _loc2_._whereToSendPlayer=_whereToSendPlayer;
+     _loc2_.guid_=this.qopy(account.getUserId());
+     _loc2_.password_=this.qopy(account.password());
+     _loc2_.secret_=this.qopy(account.platformDependantSecret());
+     _loc2_.keyTime_=keyTime_;
+     _loc2_.key_.length=0;
+     _loc2_.sofabe=sofabe==null?"":sofabe; // possibly empty
+     _loc2_.vukyluz = account.qujipoj(); // ExternalInterface.call("rotmg.UrlLib.getParam","entrypt");
+                                         // according to firebug console:
+                                         // >>> rotmg.UrlLib.getParam("entrypt");
+                                         // ""
+     _loc2_.accountType=account.getGameNet();
+     _loc2_.metulocy=account.zyz(); // empty for rotmg account
+     _loc2_.getPlayPlatform=account.getPlayPlatform(); // rotmg
+     _loc2_.kofimupo=account.rowyr(); // possibly empty
+ */
 public class HelloAction implements OutgoingAction {
 
     /**

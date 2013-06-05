@@ -30,10 +30,12 @@ import rotmg.actions.IncomingActionBroadcaster;
 import rotmg.actions.IncomingActionListener;
 import rotmg.actions.incoming.MapInfoAction;
 import rotmg.actions.incoming.ReconnectAction;
+import rotmg.actions.outgoing.HelloAction;
 import rotmg.actions.outgoing.LoadAction;
 import rotmg.net.AvailableServers;
 import rotmg.net.RotmgNetworkHandler;
 import rotmg.net.RotmgServer;
+import rotmg.net.layer.TcpNetworkLayer;
 
 public class Main {
 
@@ -45,7 +47,7 @@ public class Main {
 	    RotmgServer eunorth2 = availableServers.get("EUNorth2");
         System.out.println(eunorth2);
         
-        try (RotmgNetworkHandler nwHandler = new RotmgNetworkHandler(eunorth2)) {
+        try (RotmgNetworkHandler nwHandler = new RotmgNetworkHandler(new TcpNetworkLayer(eunorth2))) {
             /**
              *       private function bijyg(param1:MapInfoMsg) : void {
                      var _loc6_:* = false;
@@ -85,6 +87,7 @@ public class Main {
                     }
                 }
             });
+            nwHandler.sendToNetwork(new HelloAction());
             nwHandler.run();
         }
     }

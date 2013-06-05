@@ -143,8 +143,6 @@ package com.company.assembleegameclient.game
       }
 
       override public function applyMapInfo(param1:MapInfoMsg) : void {
-         var _loc2_:* = true;
-         var _loc3_:* = false;
          map.setProps(param1.width_,param1.height_,param1.name_,param1.background_,param1.allowPlayerTeleport_,param1.showDisplays_);
          wumulodah(param1);
          return;

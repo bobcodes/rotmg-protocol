@@ -21,19 +21,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
-package rotmg.actions;
+package rotmg.net.layer;
 
+import java.io.Closeable;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-public interface OutgoingAction {
+public interface NetworkLayer extends Closeable {
 
-    /**
-     * Records all information EXCEPT For the type. The NetworkHandler is responsible
-     * for writing the type information.
-     */
-    public byte[] toBytes() throws IOException ;
+    public InputStream getInputStream() throws IOException ;
     
-    //public OutgoingAction fromBytes(byte[] bytes) throws IOException ;
+    public OutputStream getOutputStream() throws IOException ;
     
-    public int getMessageId() ;
 }

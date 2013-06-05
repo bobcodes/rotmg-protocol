@@ -21,19 +21,42 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
-package rotmg.actions;
+package rotmg.net.layer;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
 
-public interface OutgoingAction {
+import org.apache.commons.io.IOUtils;
 
-    /**
-     * Records all information EXCEPT For the type. The NetworkHandler is responsible
-     * for writing the type information.
-     */
-    public byte[] toBytes() throws IOException ;
+import rotmg.net.RotmgParameters;
+import rotmg.net.RotmgServer;
+
+public class TcpNetworkLayer implements NetworkLayer {
+
+    private final RotmgServer _server;
+    private final Socket _socket;
+
+    public TcpNetworkLayer(RotmgServer server) throws IOException {
+        _server = server;
+        _socket = new Socket(_server.getHost(), RotmgParameters.PORT);
+    }
+
+    @Override
+    public void close() throws IOException {
+        IOUtils.closeQuietly(_socket);
+    }
+
+    @Override
+    public InputStream getInputStream() throws IOException {
+        return _socket.getInputStream();
+    }
+
+    @Override
+    public OutputStream getOutputStream() throws IOException {
+        return _socket.getOutputStream();
+    }
     
-    //public OutgoingAction fromBytes(byte[] bytes) throws IOException ;
     
-    public int getMessageId() ;
 }

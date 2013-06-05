@@ -21,19 +21,46 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
-package rotmg.actions;
+package rotmg.net.layer;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
-public interface OutgoingAction {
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.output.NullOutputStream;
 
-    /**
-     * Records all information EXCEPT For the type. The NetworkHandler is responsible
-     * for writing the type information.
-     */
-    public byte[] toBytes() throws IOException ;
+public class WiresharkLogNetworkLayer implements NetworkLayer {
+
+    private final FileInputStream _fin;
+    private final BufferedInputStream _bin;
+    private final OutputStream _out = new NullOutputStream();
     
-    //public OutgoingAction fromBytes(byte[] bytes) throws IOException ;
+    public WiresharkLogNetworkLayer(File wireSharkLog) throws FileNotFoundException {
+        _fin = new FileInputStream(wireSharkLog);
+        _bin = new BufferedInputStream(_fin);
+    }
     
-    public int getMessageId() ;
+    @Override
+    public void close() throws IOException {
+        IOUtils.closeQuietly(_bin);
+        IOUtils.closeQuietly(_fin);
+        IOUtils.closeQuietly(_out);
+    }
+
+    @Override
+    public InputStream getInputStream() throws IOException {
+        return _bin;
+    }
+
+    @Override
+    public OutputStream getOutputStream() throws IOException {
+        return _out;
+    }
+
+    
 }

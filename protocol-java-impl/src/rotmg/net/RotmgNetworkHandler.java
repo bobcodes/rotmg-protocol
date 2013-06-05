@@ -34,6 +34,7 @@ import java.net.Socket;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import javax.crypto.BadPaddingException;
@@ -49,28 +50,31 @@ import rotmg.actions.IncomingAction;
 import rotmg.actions.IncomingActionBroadcaster;
 import rotmg.actions.OutgoingAction;
 import rotmg.actions.outgoing.HelloAction;
-import rotmg.actions.outgoing.LoadAction;
+import rotmg.net.layer.NetworkLayer;
 
 public class RotmgNetworkHandler implements NetworkHandler, Closeable {
 
-    private final RotmgServer _server;
-    private final Socket _socket;
+    private final NetworkLayer _nwLayer;
     private final BufferedInputStream _bin;
     private final DataInputStream _din;
     private final BufferedOutputStream _bout;
     private final DataOutputStream _dout;
     private final Map<Integer, IncomingAction> _incomingActionMapper;
+    private final Map<Integer, OutgoingAction> _outgoingActionMapper;
     
-    public RotmgNetworkHandler(RotmgServer server) throws IOException {
-        _server = server;
-        _socket = new Socket(_server.getHost(), RotmgParameters.PORT);
-        _bin = new BufferedInputStream(_socket.getInputStream());
+    public RotmgNetworkHandler(NetworkLayer nwlayer) throws IOException {
+        _nwLayer = nwlayer;
+        _bin = new BufferedInputStream(_nwLayer.getInputStream());
         _din = new DataInputStream(_bin);
-        _bout = new BufferedOutputStream(_socket.getOutputStream());
+        _bout = new BufferedOutputStream(_nwLayer.getOutputStream());
         _dout = new DataOutputStream(_bout);
-        _incomingActionMapper = new HashMap<Integer, IncomingAction>();
+        _incomingActionMapper = new HashMap<>();
         for(IncomingAction ia : Actions.INCOMING_ACTIONS) {
             _incomingActionMapper.put(ia.getMessageId(), ia);
+        }
+        _outgoingActionMapper = new HashMap<>();
+        for (OutgoingAction oa : Actions.OUTGOING_ACTIONS) {
+            _outgoingActionMapper.put(oa.getMessageId(), oa);
         }
     }
 
@@ -80,47 +84,32 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         IOUtils.closeQuietly(_bin);
         IOUtils.closeQuietly(_dout);
         IOUtils.closeQuietly(_bout);
-        IOUtils.closeQuietly(_socket);
+        IOUtils.closeQuietly(_nwLayer);
     }
     
     public void run() throws IOException, InterruptedException {
-        sendHello();
-        Thread.sleep(500);
-        sendLoad();
         while(true) {
             Thread.sleep(500);
-            IncomingAction ia = parse();
-            if(ia != null) {
-                IncomingActionBroadcaster.get().broadcast(ia);
+            
+            int payloadSize = _din.readInt();
+            int msgId = _din.readUnsignedByte();
+            if(_incomingActionMapper.containsKey(msgId)) {
+                IncomingAction ia = parseIncomingAction(payloadSize, msgId);
+                if(ia != null) {
+                    IncomingActionBroadcaster.get().broadcast(ia);
+                }
+            } else if(_outgoingActionMapper.containsKey(msgId)) {
+                parseOutgoingAction(payloadSize, msgId);
+            } else {
+                System.out.println("got unknown \tNO CLASS\t" + msgId + "\t" + payloadSize);
             }
         }
     }
     
-    /**
-     *   var _loc2_:HelloNetworkMessage = this.govizupas.runozak(HELLO) as HelloNetworkMessage;
-         _loc2_.buildVersion_=UserConfig.BUILD_VERSION;
-         _loc2_._whereToSendPlayer=_whereToSendPlayer;
-         _loc2_.guid_=this.qopy(account.getUserId());
-         _loc2_.password_=this.qopy(account.password());
-         _loc2_.secret_=this.qopy(account.platformDependantSecret());
-         _loc2_.keyTime_=keyTime_;
-         _loc2_.key_.length=0;
-         _loc2_.sofabe=sofabe==null?"":sofabe; // possibly empty
-         _loc2_.vukyluz = account.qujipoj(); // ExternalInterface.call("rotmg.UrlLib.getParam","entrypt");
-                                             // according to firebug console:
-                                             // >>> rotmg.UrlLib.getParam("entrypt");
-                                             // ""
-         _loc2_.accountType=account.getGameNet();
-         _loc2_.metulocy=account.zyz(); // empty for rotmg account
-         _loc2_.getPlayPlatform=account.getPlayPlatform(); // rotmg
-         _loc2_.kofimupo=account.rowyr(); // possibly empty
-     */
-    private void sendHello() throws IOException {
-        sendToNetwork(new HelloAction());
-    }
-    
-    private void sendLoad() throws IOException {
-        sendToNetwork(new LoadAction());
+    private byte[] readBytes(int payloadSize) throws IOException {
+        byte [] bytes = new byte[payloadSize-5];
+        _din.read(bytes, 0, payloadSize-5);
+        return bytes;
     }
     
     /**
@@ -144,27 +133,30 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         this._incomingCipher.decrypt(data);
         message.parseFromInput(data);
      */
-    private IncomingAction parse() throws IOException {
-        int payloadSize = _din.readInt();
-        int msgId = _din.readUnsignedByte();
-        
-        byte [] bytes = new byte[payloadSize-5];
-        _din.read(bytes, 0, payloadSize-5);
-        bytes = decrypt(bytes);
+    private IncomingAction parseIncomingAction(int payloadSize, int msgId) throws IOException {
+        byte [] bytes = readBytes(payloadSize);
+        bytes = decrypt(bytes, RotmgParameters.INCOMING_KEY);
         
         IncomingAction iaParser = _incomingActionMapper.get(msgId);
-        IncomingAction ia = null;
-        if(iaParser != null) {
-            ia = iaParser.fromBytes(bytes);
-        }
-        System.out.println("got\t" + msgId + " " + payloadSize + " " + ia);
+        IncomingAction ia = iaParser.fromBytes(bytes);
+        System.out.println("got incoming\t" + iaParser.getClass().getName() + "\t" + msgId + "\t" + payloadSize + "\t" + ia);
         return ia;
     }
     
-    private byte[] decrypt(byte[] bytes) throws IOException {
+    private OutgoingAction parseOutgoingAction(int payloadSize, int msgId) throws IOException {
+        byte [] bytes = readBytes(payloadSize);
+        bytes = decrypt(bytes, RotmgParameters.OUTGOING_KEY);
+        
+        OutgoingAction oaParser = _outgoingActionMapper.get(msgId);
+        OutgoingAction oa = null;//oaParser.fromBytes(bytes);
+        System.out.println("got outgoing\t" + oaParser.getClass().getName() + "\t" + msgId + "\t" + payloadSize + "\t" + oa);
+        return oa;
+    }
+    
+    private byte[] decrypt(byte[] bytes, String key) throws IOException {
         try {
             Cipher rc4 = Cipher.getInstance("RC4");
-            SecretKeySpec rc4Key = new SecretKeySpec(getBytesFromKey(RotmgParameters.INCOMING_KEY), "RC4");
+            SecretKeySpec rc4Key = new SecretKeySpec(getBytesFromKey(key), "RC4");
             rc4.init(Cipher.DECRYPT_MODE, rc4Key);
             return rc4.doFinal(bytes);
         } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | IllegalBlockSizeException | BadPaddingException e) {

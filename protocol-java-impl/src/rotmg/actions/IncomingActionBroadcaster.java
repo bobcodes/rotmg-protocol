@@ -54,7 +54,6 @@ public enum IncomingActionBroadcaster {
     public void broadcast(IncomingAction action) {
         List<IncomingActionListener<? extends IncomingAction>> listeners = subscriptionMap.get(action.getClass());
         if(listeners == null) {
-            System.out.println("no subscribers for: " + action);
             return;
         }
         

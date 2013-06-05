@@ -51,4 +51,6 @@
 	   https://realmofthemadgod.appspot.com/char/list and
 	   http://realmofthemadgod.appspot.com/char/list
 	   contained a list of servers
-	h) 
+...
+
+see commit log for the rest of the story. i got lost in the enjoyment of deciphering the protocol
