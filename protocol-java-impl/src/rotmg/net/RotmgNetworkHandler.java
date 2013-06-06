@@ -30,11 +30,9 @@ import java.io.Closeable;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.Socket;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 import javax.crypto.BadPaddingException;
@@ -49,6 +47,7 @@ import rotmg.actions.Actions;
 import rotmg.actions.IncomingAction;
 import rotmg.actions.IncomingActionBroadcaster;
 import rotmg.actions.OutgoingAction;
+import rotmg.actions.outgoing.EmptyAction;
 import rotmg.actions.outgoing.HelloAction;
 import rotmg.net.layer.NetworkLayer;
 
@@ -93,6 +92,12 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
             
             int payloadSize = _din.readInt();
             int msgId = _din.readUnsignedByte();
+
+            if(payloadSize <= 5) {
+                System.out.println("got fake incoming action");
+                continue;
+            }
+            
             if(_incomingActionMapper.containsKey(msgId)) {
                 IncomingAction ia = parseIncomingAction(payloadSize, msgId);
                 if(ia != null) {
@@ -103,6 +108,8 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
             } else {
                 System.out.println("got unknown \tNO CLASS\t" + msgId + "\t" + payloadSize);
             }
+            
+            //sendToNetwork(new EmptyAction());
         }
     }
     
@@ -139,7 +146,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         
         IncomingAction iaParser = _incomingActionMapper.get(msgId);
         IncomingAction ia = iaParser.fromBytes(bytes);
-        System.out.println("got incoming\t" + iaParser.getClass().getName() + "\t" + msgId + "\t" + payloadSize + "\t" + ia);
+        System.out.println("got incoming\t" + iaParser.getClass().getSimpleName() + "\t" + msgId + "\t" + payloadSize + "\t" + ia);
         return ia;
     }
     
@@ -148,8 +155,8 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         bytes = decrypt(bytes, RotmgParameters.OUTGOING_KEY);
         
         OutgoingAction oaParser = _outgoingActionMapper.get(msgId);
-        OutgoingAction oa = null;//oaParser.fromBytes(bytes);
-        System.out.println("got outgoing\t" + oaParser.getClass().getName() + "\t" + msgId + "\t" + payloadSize + "\t" + oa);
+        OutgoingAction oa = oaParser.fromBytes(bytes);
+        System.out.println("got outgoing\t" + oaParser.getClass().getSimpleName() + "\t" + msgId + "\t" + payloadSize + "\t" + oa);
         return oa;
     }
     
@@ -226,11 +233,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         _dout.writeByte(outgoing.getMessageId());
         _dout.write(encryptedBytes);
         
-        if(outgoing instanceof HelloAction) {
-            System.out.println("wrote\t" + outgoing.getMessageId() + "\tHelloAction");
-        } else {
-            System.out.println("wrote\t" + outgoing.getMessageId() + "\t" + outgoing.toString());
-        }
+        System.out.println("wrote\t" + outgoing.getMessageId() + "\t" + outgoing.toString());
         _dout.flush();
     }
     

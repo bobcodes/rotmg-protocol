@@ -23,7 +23,9 @@ THE SOFTWARE.
  */
 package rotmg.actions.outgoing;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
@@ -35,8 +37,18 @@ public class LoadAction implements OutgoingAction {
     /**
      * TODO: pass this in dynamically
      */
-    private final int charId = UserConfig.CHAR_ID;
+    private final int charId;
     
+    public LoadAction() {
+        this(UserConfig.CHAR_ID);
+    }
+    
+    public LoadAction(int charId) {
+        this.charId = charId;
+    }
+
+
+
     /**
        public var charId_:int;
 
@@ -51,6 +63,16 @@ public class LoadAction implements OutgoingAction {
                 DataOutputStream dout = new DataOutputStream(bout)) {
             dout.writeInt(charId);
             return bout.toByteArray();   
+        }
+    }
+
+    @Override
+    public OutgoingAction fromBytes(byte[] bytes) throws IOException {
+        try (ByteArrayInputStream bin = new ByteArrayInputStream(bytes);
+                DataInputStream din = new DataInputStream(bin)){
+            
+            int charId = din.readInt();
+            return new LoadAction(charId);
         }
     }
 

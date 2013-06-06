@@ -33,7 +33,7 @@ public interface OutgoingAction {
      */
     public byte[] toBytes() throws IOException ;
     
-    //public OutgoingAction fromBytes(byte[] bytes) throws IOException ;
+    public OutgoingAction fromBytes(byte[] bytes) throws IOException ;
     
     public int getMessageId() ;
 }

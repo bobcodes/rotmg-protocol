@@ -23,7 +23,9 @@ THE SOFTWARE.
  */
 package rotmg.actions.outgoing;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.Reader;
@@ -73,22 +75,64 @@ public class HelloAction implements OutgoingAction {
     /**
      * 2013-06-01 build version upgraded to 13.4
      */
-    private final String buildVersion = RotmgParameters.BUILD_VERSION;
-    private final int whereToSendPlayer = -2;
-    private final String userId = UserConfig.USERNAME;
-    private final String password = UserConfig.PASSWORD;
-    private final String platformDependantSecret = "";
-    private final int keyTime = -1;
-    private final byte[] key = {};
-    private final String somethingThatsEmpty1 = "";
-    private final String rotmgUrlLibParamEntryPoint ="";
-    private final String gameNet = "rotmg";
-    private final String somethingThatsEmpty2 = "";
-    private final String playPlatform = "rotmg";
-    private final String somethingThatsEmpty3 = "";
+    private final String buildVersion;
+    private final int whereToSendPlayer;
+    private final String userId;
+    private final String password;
+    private final String platformDependantSecret;
+    private final int keyTime;
+    private final byte[] key;
+    private final String somethingThatsEmpty1;
+    private final String rotmgUrlLibParamEntryPoint;
+    private final String gameNet;
+    private final String somethingThatsEmpty2;
+    private final String playPlatform;
+    private final String somethingThatsEmpty3;
     
+    public HelloAction() {
+        this(
+                RotmgParameters.BUILD_VERSION,
+                -2, // whereToSendPlayer
+                UserConfig.USERNAME,
+                UserConfig.PASSWORD,
+                "", //platformDependantSecret
+                -1, //keyTime
+                new byte[]{}, // key
+                "", //somethingThatsEmpty1
+                "", //rotmgUrlLibParamEntryPoint
+                "rotmg", //gameNet
+                "", //somethingThatsEmpty2
+                "rotmg", //playPlatform
+                "" //somethingThatsEmpty3
+                );
+    }
+    
+    
+    
+    public HelloAction(String buildVersion, int whereToSendPlayer,
+            String userId, String password, String platformDependantSecret,
+            int keyTime, byte[] key, String somethingThatsEmpty1,
+            String rotmgUrlLibParamEntryPoint, String gameNet,
+            String somethingThatsEmpty2, String playPlatform,
+            String somethingThatsEmpty3) {
+        super();
+        this.buildVersion = buildVersion;
+        this.whereToSendPlayer = whereToSendPlayer;
+        this.userId = userId;
+        this.password = password;
+        this.platformDependantSecret = platformDependantSecret;
+        this.keyTime = keyTime;
+        this.key = key;
+        this.somethingThatsEmpty1 = somethingThatsEmpty1;
+        this.rotmgUrlLibParamEntryPoint = rotmgUrlLibParamEntryPoint;
+        this.gameNet = gameNet;
+        this.somethingThatsEmpty2 = somethingThatsEmpty2;
+        this.playPlatform = playPlatform;
+        this.somethingThatsEmpty3 = somethingThatsEmpty3;
+    }
 
-    
+
+
     /**
       public static const SEND_TO_TUTORIAL:int = -1;
       public static const SEND_TO_NEXUS:int = -2;
@@ -139,6 +183,48 @@ public class HelloAction implements OutgoingAction {
             return bout.toByteArray();
         }
     }
+
+    @Override
+    public OutgoingAction fromBytes(byte[] bytes) throws IOException {
+        try (ByteArrayInputStream bin = new ByteArrayInputStream(bytes);
+                DataInputStream din = new DataInputStream(bin)){
+            
+            String buildVersion = din.readUTF();
+            int whereToSendPlayer = din.readInt();
+            String username = null; din.readUTF();
+            String password = null; din.readUTF();
+            String secret = null; din.readUTF();
+            int keyTime = din.readInt();
+            int keyLength = din.readUnsignedShort();
+            byte[] key = new byte[keyLength];
+            din.read(bytes, 0, keyLength);
+            int emptyString1Len = din.readInt();
+            byte[] emptyString1Bytes = new byte[emptyString1Len];
+            din.read(emptyString1Bytes, 0, emptyString1Len);
+            String somethingThatsEmpty1 = new String(emptyString1Bytes, Charsets.UTF_8);
+            String rotmgUrlLibParamEntryPoint = din.readUTF();
+            String gameNet = din.readUTF();
+            String somethingThatsEmpty2 = din.readUTF();
+            String playPlatform = din.readUTF();
+            String somethingThatsEmpty3 = din.readUTF();
+        
+            return new HelloAction(
+                    buildVersion,
+                    whereToSendPlayer,
+                    username,
+                    password,
+                    secret,
+                    keyTime,
+                    key,
+                    somethingThatsEmpty1,
+                    rotmgUrlLibParamEntryPoint,
+                    gameNet,
+                    somethingThatsEmpty2,
+                    playPlatform,
+                    somethingThatsEmpty3
+                    );
+        }
+    }
     
     /**
      *   private function encryptWithPublicKey(param1:String) : String {
@@ -148,7 +234,6 @@ public class HelloAction implements OutgoingAction {
          var encryptedBytes:ByteArray = new ByteArray();
          rsaPublicKey.encrypt(bytesToEncrypt,encryptedBytes,bytesToEncrypt.length);
          return Base64.encodeByteArray(encryptedBytes);
-      }
      */
     private String encryptWithPublicKey(String thingToEncrypt) throws IOException {
         try (Reader reader = new StringReader(RotmgParameters.ROTMG_PUBLIC_KEY);
@@ -180,9 +265,10 @@ public class HelloAction implements OutgoingAction {
     @Override
     public String toString() {
         return "HelloAction [buildVersion=" + buildVersion
-                + ", whereToSendPlayer=" + whereToSendPlayer + ", userId="
-                + userId + ", password=" + password
-                + ", platformDependantSecret=" + platformDependantSecret
+                + ", whereToSendPlayer=" + whereToSendPlayer
+                //+ ", userId="
+                //+ userId + ", password=" + password
+                //+ ", platformDependantSecret=" + platformDependantSecret
                 + ", keyTime=" + keyTime + ", key=" + Arrays.toString(key)
                 + ", somethingThatsEmpty1=" + somethingThatsEmpty1
                 + ", rotmgUrlLibParamEntryPoint=" + rotmgUrlLibParamEntryPoint
