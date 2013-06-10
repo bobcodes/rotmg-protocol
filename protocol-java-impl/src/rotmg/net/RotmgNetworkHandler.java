@@ -30,6 +30,7 @@ import java.io.Closeable;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
@@ -42,6 +43,8 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.commons.io.IOUtils;
+
+import com.google.common.base.Charsets;
 
 import rotmg.actions.Actions;
 import rotmg.actions.IncomingAction;
@@ -107,9 +110,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
             } else if(_outgoingActionMapper.containsKey(msgId)) {
                 parseOutgoingAction(payloadSize, msgId, bytes);
             } else {
-                System.out.println("got unknown \tNO CLASS\t" + msgId + "\t" + payloadSize
-                        + "\t" + decrypt(bytes, RotmgParameters.INCOMING_KEY)
-                        + "\t" + decrypt(bytes, RotmgParameters.OUTGOING_KEY));
+                System.out.println("got unknown \tNO CLASS\t" + msgId + "\t" + payloadSize);
             }
             
             //sendToNetwork(new EmptyAction());

@@ -36,28 +36,28 @@ public class ReadLoggedBytesMain {
     
     public static void main(String[] args) throws Exception {
         
-        System.out.println("===========FROM SERVER==================");
-        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(fromServerLogs))) {
-            nw.run();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-        
-        
-        System.out.println("===========TO SERVER====================");
-        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(toServerLogs))) {
-            nw.run();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-        
-        
-//        System.out.println("===========BOTH====================");
-//        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(bothLogs))) {
+//        System.out.println("===========FROM SERVER==================");
+//        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(fromServerLogs))) {
 //            nw.run();
 //        } catch(Exception e) {
 //            e.printStackTrace();
 //        }
+//        
+//        
+//        System.out.println("===========TO SERVER====================");
+//        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(toServerLogs))) {
+//            nw.run();
+//        } catch(Exception e) {
+//            e.printStackTrace();
+//        }
+        
+        
+        System.out.println("===========BOTH====================");
+        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(bothLogs))) {
+            nw.run();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
         
     }
     

@@ -56,6 +56,8 @@ public class LoadAction implements OutgoingAction {
          param1.writeInt(this.charId_);
          return;
       }
+      
+      got outgoing  LoadAction  45  9   LoadAction [charId=-723486936]
      */
     @Override
     public byte[] toBytes() throws IOException {
