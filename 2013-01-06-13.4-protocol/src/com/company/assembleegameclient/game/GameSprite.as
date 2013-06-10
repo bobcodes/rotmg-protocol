@@ -57,7 +57,7 @@ package com.company.assembleegameclient.game
          var _loc2_:* = false;
       }
 
-      public function GameSprite(param1:Server, param2:int, param3:Boolean, param4:int, param5:int, param6:ByteArray, param7:Vusun, param8:String) {
+      public function GameSprite(param1:Server, param2:int, param3:Boolean, charId:int, param5:int, param6:ByteArray, param7:Vusun, param8:String) {
          var _loc9_:* = true;
          var _loc10_:* = false;
          this.zavycy=new Dab();
@@ -66,7 +66,7 @@ package com.company.assembleegameclient.game
          this.model=param7;
          map=new Map(this);
          addChild(map);
-         gsc_=new ActionMapperImpl(this,param1,param2,param3,param4,param5,param6,param8);
+         gsc_=new ActionMapperImpl(this,param1,param2,param3,charId,param5,param6,param8);
          mui_=new Vypatozi(this);
          this.risu=new Chat();
          addChild(this.risu);

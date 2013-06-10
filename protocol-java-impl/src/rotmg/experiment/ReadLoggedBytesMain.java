@@ -52,12 +52,12 @@ public class ReadLoggedBytesMain {
         }
         
         
-        System.out.println("===========BOTH====================");
-        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(bothLogs))) {
-            nw.run();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+//        System.out.println("===========BOTH====================");
+//        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(bothLogs))) {
+//            nw.run();
+//        } catch(Exception e) {
+//            e.printStackTrace();
+//        }
         
     }
     

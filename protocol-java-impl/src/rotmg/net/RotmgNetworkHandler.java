@@ -93,20 +93,23 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
             int payloadSize = _din.readInt();
             int msgId = _din.readUnsignedByte();
 
-            if(payloadSize <= 5) {
+            if(payloadSize < 5) {
                 System.out.println("got fake incoming action");
                 continue;
             }
             
+            byte[] bytes = readBytes(payloadSize);
             if(_incomingActionMapper.containsKey(msgId)) {
-                IncomingAction ia = parseIncomingAction(payloadSize, msgId);
+                IncomingAction ia = parseIncomingAction(payloadSize, msgId, bytes);
                 if(ia != null) {
                     IncomingActionBroadcaster.get().broadcast(ia);
                 }
             } else if(_outgoingActionMapper.containsKey(msgId)) {
-                parseOutgoingAction(payloadSize, msgId);
+                parseOutgoingAction(payloadSize, msgId, bytes);
             } else {
-                System.out.println("got unknown \tNO CLASS\t" + msgId + "\t" + payloadSize);
+                System.out.println("got unknown \tNO CLASS\t" + msgId + "\t" + payloadSize
+                        + "\t" + decrypt(bytes, RotmgParameters.INCOMING_KEY)
+                        + "\t" + decrypt(bytes, RotmgParameters.OUTGOING_KEY));
             }
             
             //sendToNetwork(new EmptyAction());
@@ -140,8 +143,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         this._incomingCipher.decrypt(data);
         message.parseFromInput(data);
      */
-    private IncomingAction parseIncomingAction(int payloadSize, int msgId) throws IOException {
-        byte [] bytes = readBytes(payloadSize);
+    private IncomingAction parseIncomingAction(int payloadSize, int msgId, byte [] bytes) throws IOException {
         bytes = decrypt(bytes, RotmgParameters.INCOMING_KEY);
         
         IncomingAction iaParser = _incomingActionMapper.get(msgId);
@@ -150,8 +152,7 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         return ia;
     }
     
-    private OutgoingAction parseOutgoingAction(int payloadSize, int msgId) throws IOException {
-        byte [] bytes = readBytes(payloadSize);
+    private OutgoingAction parseOutgoingAction(int payloadSize, int msgId, byte [] bytes) throws IOException {
         bytes = decrypt(bytes, RotmgParameters.OUTGOING_KEY);
         
         OutgoingAction oaParser = _outgoingActionMapper.get(msgId);
