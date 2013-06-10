@@ -23,7 +23,6 @@ THE SOFTWARE.
  */
 package rotmg.actions.incoming;
 
-import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.util.Arrays;
@@ -116,9 +115,7 @@ public class ReconnectAction implements IncomingAction {
       }
      */
     @Override
-    public IncomingAction fromBytes(byte[] bytes) throws IOException {
-        DataInputStream din = new DataInputStream(new ByteArrayInputStream(bytes));
-        
+    public IncomingAction fromBytes(DataInputStream din) throws IOException {
         String name = din.readUTF();
         String host = din.readUTF();
         int port = din.readInt();

@@ -23,6 +23,8 @@ THE SOFTWARE.
  */
 package rotmg.actions;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 
 public interface OutgoingAction {
@@ -31,9 +33,9 @@ public interface OutgoingAction {
      * Records all information EXCEPT For the type. The NetworkHandler is responsible
      * for writing the type information.
      */
-    public byte[] toBytes() throws IOException ;
+    public void toBytes(DataOutputStream dout) throws IOException ;
     
-    public OutgoingAction fromBytes(byte[] bytes) throws IOException ;
+    public OutgoingAction fromBytes(DataInputStream din) throws IOException ;
     
     public int getMessageId() ;
 }

@@ -23,8 +23,6 @@ THE SOFTWARE.
  */
 package rotmg.actions.outgoing;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -159,71 +157,60 @@ public class HelloAction implements OutgoingAction {
          param1.writeUTF(this.kofimupo);                    // ""
      */
     @Override
-    public byte[] toBytes() throws IOException {
-        try (
-                ByteArrayOutputStream bout = new ByteArrayOutputStream();
-                DataOutputStream dout = new DataOutputStream(bout)) {
-            
-            dout.writeUTF(buildVersion);
-            dout.writeInt(whereToSendPlayer);
-            dout.writeUTF(encryptWithPublicKey(userId));                       // user name
-            dout.writeUTF(encryptWithPublicKey(password));                   // user pw
-            dout.writeUTF(encryptWithPublicKey(platformDependantSecret));                     // ""
-            dout.writeInt(keyTime);                    // initially -1
-            dout.writeShort(key.length);               // initially 0
-            dout.write(key);                      // {}
-            dout.writeInt(somethingThatsEmpty1.length());               // 0
-            dout.write(somethingThatsEmpty1.getBytes(Charsets.UTF_8));                 // ""
-            dout.writeUTF(rotmgUrlLibParamEntryPoint);  // ""
-            dout.writeUTF(gameNet);                     // rotmg
-            dout.writeUTF(somethingThatsEmpty2);                    // ""
-            dout.writeUTF(playPlatform);             // rotmg
-            dout.writeUTF(somethingThatsEmpty3);                    // ""
-            
-            return bout.toByteArray();
-        }
+    public void toBytes(DataOutputStream dout) throws IOException {
+        dout.writeUTF(buildVersion);
+        dout.writeInt(whereToSendPlayer);
+        dout.writeUTF(encryptWithPublicKey(userId));                       // user name
+        dout.writeUTF(encryptWithPublicKey(password));                   // user pw
+        dout.writeUTF(encryptWithPublicKey(platformDependantSecret));                     // ""
+        dout.writeInt(keyTime);                    // initially -1
+        dout.writeShort(key.length);               // initially 0
+        dout.write(key);                      // {}
+        dout.writeInt(somethingThatsEmpty1.length());               // 0
+        dout.write(somethingThatsEmpty1.getBytes(Charsets.UTF_8));                 // ""
+        dout.writeUTF(rotmgUrlLibParamEntryPoint);  // ""
+        dout.writeUTF(gameNet);                     // rotmg
+        dout.writeUTF(somethingThatsEmpty2);                    // ""
+        dout.writeUTF(playPlatform);             // rotmg
+        dout.writeUTF(somethingThatsEmpty3);                    // ""
     }
 
     @Override
-    public OutgoingAction fromBytes(byte[] bytes) throws IOException {
-        try (ByteArrayInputStream bin = new ByteArrayInputStream(bytes);
-                DataInputStream din = new DataInputStream(bin)){
-            
-            String buildVersion = din.readUTF();
-            int whereToSendPlayer = din.readInt();
-            String username = null; din.readUTF();
-            String password = null; din.readUTF();
-            String secret = null; din.readUTF();
-            int keyTime = din.readInt();
-            int keyLength = din.readUnsignedShort();
-            byte[] key = new byte[keyLength];
-            din.read(bytes, 0, keyLength);
-            int emptyString1Len = din.readInt();
-            byte[] emptyString1Bytes = new byte[emptyString1Len];
-            din.read(emptyString1Bytes, 0, emptyString1Len);
-            String somethingThatsEmpty1 = new String(emptyString1Bytes, Charsets.UTF_8);
-            String rotmgUrlLibParamEntryPoint = din.readUTF();
-            String gameNet = din.readUTF();
-            String somethingThatsEmpty2 = din.readUTF();
-            String playPlatform = din.readUTF();
-            String somethingThatsEmpty3 = din.readUTF();
-        
-            return new HelloAction(
-                    buildVersion,
-                    whereToSendPlayer,
-                    username,
-                    password,
-                    secret,
-                    keyTime,
-                    key,
-                    somethingThatsEmpty1,
-                    rotmgUrlLibParamEntryPoint,
-                    gameNet,
-                    somethingThatsEmpty2,
-                    playPlatform,
-                    somethingThatsEmpty3
-                    );
-        }
+    public OutgoingAction fromBytes(DataInputStream din) throws IOException {
+        String buildVersion = din.readUTF();
+        int whereToSendPlayer = din.readInt();
+        String username = null; din.readUTF();
+        String password = null; din.readUTF();
+        String secret = null; din.readUTF();
+        int keyTime = din.readInt();
+        int keyLength = din.readUnsignedShort();
+        byte[] key = new byte[keyLength];
+        din.read(key, 0, keyLength);
+        int emptyString1Len = din.readInt();
+        byte[] emptyString1Bytes = new byte[emptyString1Len];
+        din.read(emptyString1Bytes, 0, emptyString1Len);
+        String somethingThatsEmpty1 = new String(emptyString1Bytes, Charsets.UTF_8);
+        String rotmgUrlLibParamEntryPoint = din.readUTF();
+        String gameNet = din.readUTF();
+        String somethingThatsEmpty2 = din.readUTF();
+        String playPlatform = din.readUTF();
+        String somethingThatsEmpty3 = din.readUTF();
+    
+        return new HelloAction(
+                buildVersion,
+                whereToSendPlayer,
+                username,
+                password,
+                secret,
+                keyTime,
+                key,
+                somethingThatsEmpty1,
+                rotmgUrlLibParamEntryPoint,
+                gameNet,
+                somethingThatsEmpty2,
+                playPlatform,
+                somethingThatsEmpty3
+                );
     }
     
     /**

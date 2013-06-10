@@ -1,5 +1,7 @@
 package rotmg.actions.outgoing;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 
 import rotmg.actions.OutgoingAction;
@@ -7,12 +9,11 @@ import rotmg.actions.OutgoingAction;
 public class EmptyAction implements OutgoingAction {
 
     @Override
-    public byte[] toBytes() throws IOException {
-        return new byte[0];
+    public void toBytes(DataOutputStream dout) throws IOException {
     }
 
     @Override
-    public OutgoingAction fromBytes(byte[] bytes) throws IOException {
+    public OutgoingAction fromBytes(DataInputStream din) throws IOException {
         return new EmptyAction();
     }
 

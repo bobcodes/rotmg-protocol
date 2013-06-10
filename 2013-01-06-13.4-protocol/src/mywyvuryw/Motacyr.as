@@ -6,8 +6,6 @@ package mywyvuryw
    public class Motacyr extends Daqu
    {
       public function Motacyr(param1:uint, param2:Function) {
-         var _loc3_:* = false;
-         var _loc4_:* = true;
          super(param1,param2);
          return;
       }

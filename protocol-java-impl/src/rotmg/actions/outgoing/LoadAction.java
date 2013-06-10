@@ -23,8 +23,6 @@ THE SOFTWARE.
  */
 package rotmg.actions.outgoing;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -60,22 +58,14 @@ public class LoadAction implements OutgoingAction {
       got outgoing  LoadAction  45  9   LoadAction [charId=-723486936]
      */
     @Override
-    public byte[] toBytes() throws IOException {
-        try (   ByteArrayOutputStream bout = new ByteArrayOutputStream();
-                DataOutputStream dout = new DataOutputStream(bout)) {
-            dout.writeInt(charId);
-            return bout.toByteArray();   
-        }
+    public void toBytes(DataOutputStream dout) throws IOException {
+        dout.writeInt(charId); 
     }
 
     @Override
-    public OutgoingAction fromBytes(byte[] bytes) throws IOException {
-        try (ByteArrayInputStream bin = new ByteArrayInputStream(bytes);
-                DataInputStream din = new DataInputStream(bin)){
-            
-            int charId = din.readInt();
-            return new LoadAction(charId);
-        }
+    public OutgoingAction fromBytes(DataInputStream din) throws IOException {
+        int charId = din.readInt();
+        return new LoadAction(charId);
     }
 
     /**

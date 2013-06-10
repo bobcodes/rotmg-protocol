@@ -23,7 +23,6 @@ THE SOFTWARE.
  */
 package rotmg.actions.incoming;
 
-import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 
@@ -63,13 +62,10 @@ public class FailureAction implements IncomingAction {
       }
      */
     @Override
-    public IncomingAction fromBytes(byte[] bytes) throws IOException {
-        try (   ByteArrayInputStream bin = new ByteArrayInputStream(bytes);
-                DataInputStream din = new DataInputStream(bin)) {
-            int errorId = din.readInt();
-            String errorDesc = din.readUTF();
-            return new FailureAction(errorId, errorDesc);
-        }
+    public IncomingAction fromBytes(DataInputStream din) throws IOException {
+        int errorId = din.readInt();
+        String errorDesc = din.readUTF();
+        return new FailureAction(errorId, errorDesc);
     }
 
     @Override

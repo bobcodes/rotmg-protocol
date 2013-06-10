@@ -23,6 +23,7 @@ THE SOFTWARE.
  */
 package rotmg.actions;
 
+import java.io.DataInputStream;
 import java.io.IOException;
 
 /**
@@ -33,7 +34,7 @@ import java.io.IOException;
  */
 public interface IncomingAction {
     
-    public IncomingAction fromBytes(byte [] bytes) throws IOException ;
+    public IncomingAction fromBytes(DataInputStream din) throws IOException ;
     
     public int getMessageId() ;
 }

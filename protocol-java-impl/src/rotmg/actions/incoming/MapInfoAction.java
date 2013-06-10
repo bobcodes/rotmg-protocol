@@ -1,14 +1,13 @@
 package rotmg.actions.incoming;
 
-import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.google.common.base.Charsets;
-
 import rotmg.actions.IncomingAction;
+
+import com.google.common.base.Charsets;
 
 public class MapInfoAction implements IncomingAction {
 
@@ -137,26 +136,22 @@ public class MapInfoAction implements IncomingAction {
          }
      */
     @Override
-    public IncomingAction fromBytes(byte[] bytes) throws IOException {
-        try (   ByteArrayInputStream bin = new ByteArrayInputStream(bytes);
-                DataInputStream din = new DataInputStream(bin)) {
-        
-            int width=din.readInt();
-            int height=din.readInt();
-            String name=din.readUTF();
-            String momebujot=din.readUTF();
-            long fp=din.readInt();
-            fp=fp & 0xffffffffL; // convert from signed int, to unsigned
-            int background_=din.readInt();
-            int dem=din.readInt();
-            boolean allowPlayerTeleport=din.readBoolean();
-            boolean showDisplays=din.readBoolean();
+    public IncomingAction fromBytes(DataInputStream din) throws IOException {
+        int width=din.readInt();
+        int height=din.readInt();
+        String name=din.readUTF();
+        String momebujot=din.readUTF();
+        long fp=din.readInt();
+        fp=fp & 0xffffffffL; // convert from signed int, to unsigned
+        int background_=din.readInt();
+        int dem=din.readInt();
+        boolean allowPlayerTeleport=din.readBoolean();
+        boolean showDisplays=din.readBoolean();
 
-            List<String> clientXML = parseStringList(din);
-            List<String> extraXML = parseStringList(din);
-            
-            return new MapInfoAction(width, height, name, momebujot, dem, fp, background_, allowPlayerTeleport, showDisplays, clientXML, extraXML);
-        }
+        List<String> clientXML = parseStringList(din);
+        List<String> extraXML = parseStringList(din);
+        
+        return new MapInfoAction(width, height, name, momebujot, dem, fp, background_, allowPlayerTeleport, showDisplays, clientXML, extraXML);
     }
 
     /**

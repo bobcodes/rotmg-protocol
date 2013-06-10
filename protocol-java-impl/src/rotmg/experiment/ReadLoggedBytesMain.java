@@ -43,8 +43,6 @@ public class ReadLoggedBytesMain {
 //            e.printStackTrace();
 //        }
 //        
-//        // -723486936  
-//        // -723486936
 //        System.out.println("===========TO SERVER====================");
 //        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(toServerLogs))) {
 //            nw.run();

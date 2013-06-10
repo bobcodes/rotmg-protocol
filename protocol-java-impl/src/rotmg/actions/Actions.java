@@ -26,6 +26,7 @@ package rotmg.actions;
 import java.util.Arrays;
 import java.util.List;
 
+import rotmg.actions.incoming.CreateSuccessAction;
 import rotmg.actions.incoming.FailureAction;
 import rotmg.actions.incoming.MapInfoAction;
 import rotmg.actions.incoming.ReconnectAction;
@@ -39,7 +40,8 @@ public class Actions {
             Arrays.asList(
                     new ReconnectAction(),
                     new FailureAction(),
-                    new MapInfoAction()
+                    new MapInfoAction(),
+                    new CreateSuccessAction()
                     );
     
     public static final List<OutgoingAction> OUTGOING_ACTIONS =

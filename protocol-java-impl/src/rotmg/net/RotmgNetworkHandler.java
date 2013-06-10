@@ -25,34 +25,23 @@ package rotmg.net;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.commons.httpclient.util.Base64;
 import org.apache.commons.io.IOUtils;
-
-import com.google.common.base.Charsets;
 
 import rotmg.actions.Actions;
 import rotmg.actions.IncomingAction;
 import rotmg.actions.IncomingActionBroadcaster;
 import rotmg.actions.OutgoingAction;
-import rotmg.actions.outgoing.EmptyAction;
-import rotmg.actions.outgoing.HelloAction;
 import rotmg.net.layer.NetworkLayer;
 
 public class RotmgNetworkHandler implements NetworkHandler, Closeable {
@@ -147,20 +136,26 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
      */
     private IncomingAction parseIncomingAction(int payloadSize, int msgId, byte [] bytes) throws IOException {
         bytes = decrypt(bytes, RotmgParameters.INCOMING_KEY);
-        
-        IncomingAction iaParser = _incomingActionMapper.get(msgId);
-        IncomingAction ia = iaParser.fromBytes(bytes);
-        System.out.println("got incoming\t" + iaParser.getClass().getSimpleName() + "\t" + msgId + "\t" + payloadSize + "\t" + ia);
-        return ia;
+        try (ByteArrayInputStream bin = new ByteArrayInputStream(bytes);
+             DataInputStream din = new DataInputStream(bin))
+        {
+            IncomingAction iaParser = _incomingActionMapper.get(msgId);
+            IncomingAction ia = iaParser.fromBytes(din);
+            System.out.println("got incoming\t" + iaParser.getClass().getSimpleName() + "\t" + msgId + "\t" + payloadSize + "\t" + ia);
+            return ia;
+        }
     }
     
     private OutgoingAction parseOutgoingAction(int payloadSize, int msgId, byte [] bytes) throws IOException {
         bytes = decrypt(bytes, RotmgParameters.OUTGOING_KEY);
-        
-        OutgoingAction oaParser = _outgoingActionMapper.get(msgId);
-        OutgoingAction oa = oaParser.fromBytes(bytes);
-        System.out.println("got outgoing\t" + oaParser.getClass().getSimpleName() + "\t" + msgId + "\t" + payloadSize + "\t" + oa);
-        return oa;
+        try (ByteArrayInputStream bin = new ByteArrayInputStream(bytes);
+             DataInputStream din = new DataInputStream(bin))
+        {
+            OutgoingAction oaParser = _outgoingActionMapper.get(msgId);
+            OutgoingAction oa = oaParser.fromBytes(din);
+            System.out.println("got outgoing\t" + oaParser.getClass().getSimpleName() + "\t" + msgId + "\t" + payloadSize + "\t" + oa);
+            return oa;
+        }
     }
     
     private byte[] decrypt(byte[] bytes, Cipher key) throws IOException {
@@ -196,14 +191,19 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
      */
     @Override
     public void sendToNetwork(OutgoingAction outgoing) throws IOException {
-        byte[] stuffToWrite = outgoing.toBytes();
-        byte[] encryptedBytes = encrypt(stuffToWrite);
-        _dout.writeInt(encryptedBytes.length+5);
-        _dout.writeByte(outgoing.getMessageId());
-        _dout.write(encryptedBytes);
-        
-        System.out.println("wrote\t" + outgoing.getMessageId() + "\t" + outgoing.toString());
-        _dout.flush();
+        try (ByteArrayOutputStream bout = new ByteArrayOutputStream();
+                DataOutputStream dout = new DataOutputStream(bout))
+        { 
+            outgoing.toBytes(dout);
+            dout.flush();
+            byte[] encryptedBytes = encrypt(bout.toByteArray());
+            _dout.writeInt(encryptedBytes.length+5);
+            _dout.writeByte(outgoing.getMessageId());
+            _dout.write(encryptedBytes);
+            
+            System.out.println("wrote\t" + outgoing.getMessageId() + "\t" + outgoing.toString());
+            _dout.flush();
+        }
     }
     
     private byte[] encrypt(byte[] bytes) {
