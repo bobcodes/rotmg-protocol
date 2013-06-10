@@ -42,6 +42,7 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
+import org.apache.commons.httpclient.util.Base64;
 import org.apache.commons.io.IOUtils;
 
 import com.google.common.base.Charsets;
@@ -162,44 +163,10 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         return oa;
     }
     
-    private byte[] decrypt(byte[] bytes, String key) throws IOException {
-        try {
-            Cipher rc4 = Cipher.getInstance("RC4");
-            SecretKeySpec rc4Key = new SecretKeySpec(getBytesFromKey(key), "RC4");
-            rc4.init(Cipher.DECRYPT_MODE, rc4Key);
-            return rc4.doFinal(bytes);
-        } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | IllegalBlockSizeException | BadPaddingException e) {
-            throw new IOException(e);
-        }
+    private byte[] decrypt(byte[] bytes, Cipher key) throws IOException {
+        return key.update(bytes);
     }
 
-    /**
-     * public static function decodeHexStringToRC4(param1:String) : ByteArray {
-         var bytes:ByteArray = new ByteArray();
-         var counter:* = 0;
-         while(counter<param1.length)
-         {
-            bytes.writeByte(parseInt(param1.substr(counter,2),16));
-            counter=counter+2;
-         }
-         return bytes;
-      }
-     * @param key
-     * @throws IOException 
-     */
-    private byte[] getBytesFromKey(String key) throws IOException {
-        try (ByteArrayOutputStream bout = new ByteArrayOutputStream()) {
-            int counter = 0;
-            while(counter < key.length()) {
-                // read the hex encoded string two hexadecimal digits at a time
-                // 16 * 16 = 256 = 2^8 = 1 byte!
-                bout.write(Integer.parseInt(key.substring(counter, counter+2), 16));
-                counter += 2; // consumed two hexadecimal characters
-            }
-            
-            return bout.toByteArray();
-        }
-    }
     
     /**
          private function writePendingMessages() : void {
@@ -239,16 +206,8 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
         _dout.flush();
     }
     
-    private byte[] encrypt(byte[] bytes) throws IOException {
-        try {
-            Cipher rc4 = Cipher.getInstance("RC4");
-            //SecretKeySpec rc4Key = new SecretKeySpec(outgoingSecretKey.getBytes("ASCII"), "RC4");
-            SecretKeySpec rc4Key = new SecretKeySpec(getBytesFromKey(RotmgParameters.OUTGOING_KEY), "RC4");
-            rc4.init(Cipher.ENCRYPT_MODE, rc4Key);
-            return rc4.doFinal(bytes);
-        } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | IllegalBlockSizeException | BadPaddingException e) {
-            throw new IOException(e);
-        }
+    private byte[] encrypt(byte[] bytes) {
+        return RotmgParameters.OUTGOING_KEY.update(bytes);
     }
 
 }
