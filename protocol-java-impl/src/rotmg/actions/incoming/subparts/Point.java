@@ -21,61 +21,43 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
-package rotmg.actions.incoming;
+package rotmg.actions.incoming.subparts;
 
 import java.io.DataInputStream;
 import java.io.IOException;
 
-import rotmg.actions.IncomingAction;
+public class Point {
 
-public class CreateSuccessAction implements IncomingAction {
     /**
-     * public var objectId_:int;
-     * public var charId_:int;
+      public var x_:Number;
+      public var y_:Number;
      */
-    private final int objectId;
-    private final int charId;
+    private final float x;
+    private final float y;
     
-    public CreateSuccessAction() {
-        this(-1,-1);
+    public Point(float x, float y) {
+        this.x = x;
+        this.y = y;
     }
     
-    public CreateSuccessAction(int objectId, int charId) {
-        super();
-        this.objectId = objectId;
-        this.charId = charId;
+    public float getX() {
+        return x;
+    }
+    
+    public float getY() {
+        return y;
     }
 
-    public int getObjectId() {
-        return objectId;
+    public static Point fromBytes(DataInputStream din) throws IOException {
+        float x = din.readFloat();
+        float y = din.readFloat();
+        return new Point(x,y);
     }
-
-    public int getCharId() {
-        return charId;
-    }
-
-    /**
-     * this.objectId_=param1.readInt();
-     * this.charId_=param1.readInt();
-     */
-    @Override
-    public IncomingAction fromBytes(DataInputStream din) throws IOException {
-        int objectId = din.readInt();
-        int charId = din.readInt();
-        return new CreateSuccessAction(objectId, charId);
-    }
-
-    /**
-     * public static const CREATE_SUCCESS:int = 31;
-     */
-    @Override
-    public int getMessageId() {
-        return 31;
-    }
-
+    
     @Override
     public String toString() {
-        return "CreateSuccessAction [objectId=" + objectId + ", charId="
-                + charId + "]";
+        return "Point [x=" + x + ", y=" + y + "]";
     }
+    
+    
 }

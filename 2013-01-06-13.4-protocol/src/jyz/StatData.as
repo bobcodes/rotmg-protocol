@@ -250,7 +250,7 @@ package jyz
       public function bepub() : Boolean {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         switch(null)
+         switch(pocujotaz)
          {
             case tepawytej:
             case kugol:

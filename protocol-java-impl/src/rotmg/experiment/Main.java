@@ -29,7 +29,6 @@ import java.util.SortedMap;
 import rotmg.actions.IncomingActionBroadcaster;
 import rotmg.actions.IncomingActionListener;
 import rotmg.actions.incoming.MapInfoAction;
-import rotmg.actions.incoming.ReconnectAction;
 import rotmg.actions.outgoing.HelloAction;
 import rotmg.actions.outgoing.LoadAction;
 import rotmg.net.AvailableServers;

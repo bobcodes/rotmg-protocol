@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import rotmg.actions.IncomingAction;
+import rotmg.util.BitsAndBytes;
 
 import com.google.common.base.Charsets;
 
@@ -141,8 +142,7 @@ public class MapInfoAction implements IncomingAction {
         int height=din.readInt();
         String name=din.readUTF();
         String momebujot=din.readUTF();
-        long fp=din.readInt();
-        fp=fp & 0xffffffffL; // convert from signed int, to unsigned
+        long fp = BitsAndBytes.readUnsignedInt(din);
         int background_=din.readInt();
         int dem=din.readInt();
         boolean allowPlayerTeleport=din.readBoolean();

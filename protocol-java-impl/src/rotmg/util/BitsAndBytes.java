@@ -21,36 +21,21 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
-package rotmg.actions;
+package rotmg.util;
 
-import java.util.Arrays;
-import java.util.List;
+import java.io.DataInputStream;
+import java.io.IOException;
 
-import rotmg.actions.incoming.CreateSuccessAction;
-import rotmg.actions.incoming.FailureAction;
-import rotmg.actions.incoming.MapInfoAction;
-import rotmg.actions.incoming.ReconnectAction;
-import rotmg.actions.incoming.UpdateAction;
-import rotmg.actions.outgoing.EmptyAction;
-import rotmg.actions.outgoing.HelloAction;
-import rotmg.actions.outgoing.LoadAction;
+public class BitsAndBytes {
 
-public class Actions {
-
-    public static final List<IncomingAction> INCOMING_ACTIONS =
-            Arrays.asList(
-                    new ReconnectAction(),
-                    new FailureAction(),
-                    new MapInfoAction(),
-                    new CreateSuccessAction(),
-                    new UpdateAction()
-                    );
+    public static long readUnsignedInt(DataInputStream din) throws IOException {
+        long fp=din.readInt();
+        fp=fp & 0xffffffffL; // convert from signed int, to unsigned
+        return fp;
+    }
     
-    public static final List<OutgoingAction> OUTGOING_ACTIONS =
-            Arrays.asList(
-                    new HelloAction(),
-                    new LoadAction(),
-                    new EmptyAction()
-                    );
-            
+    private BitsAndBytes() {
+        
+    }
+    
 }

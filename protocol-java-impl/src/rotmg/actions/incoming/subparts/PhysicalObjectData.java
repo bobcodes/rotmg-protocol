@@ -21,61 +21,56 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
-package rotmg.actions.incoming;
+package rotmg.actions.incoming.subparts;
 
 import java.io.DataInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-import rotmg.actions.IncomingAction;
-
-public class CreateSuccessAction implements IncomingAction {
+public class PhysicalObjectData {
+    
     /**
-     * public var objectId_:int;
-     * public var charId_:int;
+      public var objectId_:int;
+      public var pos_:Point;
+      public var jibolu:Vector.<StatData>;
      */
+    
     private final int objectId;
-    private final int charId;
-    
-    public CreateSuccessAction() {
-        this(-1,-1);
-    }
-    
-    public CreateSuccessAction(int objectId, int charId) {
-        super();
+    private final Point position;
+    private final List<StatData> stats;
+    public PhysicalObjectData(int objectId, Point position, List<StatData> stats) {
         this.objectId = objectId;
-        this.charId = charId;
+        this.position = position;
+        this.stats = stats;
     }
-
+    
     public int getObjectId() {
         return objectId;
     }
-
-    public int getCharId() {
-        return charId;
+    public Point getPosition() {
+        return position;
+    }
+    public List<StatData> getStats() {
+        return stats;
     }
 
-    /**
-     * this.objectId_=param1.readInt();
-     * this.charId_=param1.readInt();
-     */
-    @Override
-    public IncomingAction fromBytes(DataInputStream din) throws IOException {
+    public static PhysicalObjectData fromBytes(DataInputStream din) throws IOException {
         int objectId = din.readInt();
-        int charId = din.readInt();
-        return new CreateSuccessAction(objectId, charId);
+        Point position = Point.fromBytes(din);
+        int statsSize = din.readShort();
+        List<StatData> stats = new ArrayList<>(statsSize);
+        for(int i = 0; i < statsSize; i++) {
+            stats.add(StatData.fromBytes(din));
+        }
+        return new PhysicalObjectData(objectId, position, stats);
     }
-
-    /**
-     * public static const CREATE_SUCCESS:int = 31;
-     */
-    @Override
-    public int getMessageId() {
-        return 31;
-    }
-
+    
     @Override
     public String toString() {
-        return "CreateSuccessAction [objectId=" + objectId + ", charId="
-                + charId + "]";
+        return "PhysicalObjectData [objectId=" + objectId + ", position="
+                + position + ", stats=" + stats + "]";
     }
+    
+    
 }

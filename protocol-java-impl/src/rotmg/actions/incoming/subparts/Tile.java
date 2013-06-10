@@ -21,61 +21,62 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
-package rotmg.actions.incoming;
+package rotmg.actions.incoming.subparts;
 
 import java.io.DataInputStream;
 import java.io.IOException;
 
-import rotmg.actions.IncomingAction;
+public class Tile {
 
-public class CreateSuccessAction implements IncomingAction {
-    /**
-     * public var objectId_:int;
-     * public var charId_:int;
+    /** 
+      public var x_:int;
+      public var y_:int;
+      public var type_:uint;
      */
-    private final int objectId;
-    private final int charId;
+    private final int x;
+    private final int y;
+    private final int type;
     
-    public CreateSuccessAction() {
-        this(-1,-1);
-    }
     
-    public CreateSuccessAction(int objectId, int charId) {
+    
+    public Tile(int x, int y, int type) {
         super();
-        this.objectId = objectId;
-        this.charId = charId;
+        this.x = x;
+        this.y = y;
+        this.type = type;
     }
 
-    public int getObjectId() {
-        return objectId;
+    
+
+    public int getX() {
+        return x;
     }
 
-    public int getCharId() {
-        return charId;
+
+
+    public int getY() {
+        return y;
+    }
+
+    public int getType() {
+        return type;
     }
 
     /**
-     * this.objectId_=param1.readInt();
-     * this.charId_=param1.readInt();
+         this.x_=param1.readShort();
+         this.y_=param1.readShort();
+         this.type_=param1.readShort();
+     * @throws IOException 
      */
-    @Override
-    public IncomingAction fromBytes(DataInputStream din) throws IOException {
-        int objectId = din.readInt();
-        int charId = din.readInt();
-        return new CreateSuccessAction(objectId, charId);
-    }
-
-    /**
-     * public static const CREATE_SUCCESS:int = 31;
-     */
-    @Override
-    public int getMessageId() {
-        return 31;
+    public static Tile fromBytes(DataInputStream din) throws IOException {
+        return new Tile(
+                din.readShort(),  // x
+                din.readShort(),  // y
+                din.readShort()); // type
     }
 
     @Override
     public String toString() {
-        return "CreateSuccessAction [objectId=" + objectId + ", charId="
-                + charId + "]";
+        return "Tile [x=" + x + ", y=" + y + ", type=" + type + "]";
     }
 }

@@ -21,61 +21,47 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
-package rotmg.actions.incoming;
+package rotmg.actions.incoming.subparts;
 
 import java.io.DataInputStream;
 import java.io.IOException;
 
 import rotmg.actions.IncomingAction;
 
-public class CreateSuccessAction implements IncomingAction {
+public class PhysicalObject {
+
     /**
-     * public var objectId_:int;
-     * public var charId_:int;
+      public var objectType_:int;
+      public var bil:PhysicalObjectData;
      */
-    private final int objectId;
-    private final int charId;
     
-    public CreateSuccessAction() {
-        this(-1,-1);
-    }
-    
-    public CreateSuccessAction(int objectId, int charId) {
+    private final int objectType;
+    private final PhysicalObjectData data;
+    public PhysicalObject(int objectType, PhysicalObjectData data) {
         super();
-        this.objectId = objectId;
-        this.charId = charId;
+        this.objectType = objectType;
+        this.data = data;
     }
-
-    public int getObjectId() {
-        return objectId;
+    
+    public int getObjectType() {
+        return objectType;
     }
-
-    public int getCharId() {
-        return charId;
+    public PhysicalObjectData getData() {
+        return data;
     }
-
-    /**
-     * this.objectId_=param1.readInt();
-     * this.charId_=param1.readInt();
-     */
-    @Override
-    public IncomingAction fromBytes(DataInputStream din) throws IOException {
-        int objectId = din.readInt();
-        int charId = din.readInt();
-        return new CreateSuccessAction(objectId, charId);
+    
+    public static PhysicalObject fromBytes(DataInputStream din) throws IOException {
+        int objectType = din.readShort();
+        PhysicalObjectData data = PhysicalObjectData.fromBytes(din);
+        return new PhysicalObject(objectType, data);
     }
-
-    /**
-     * public static const CREATE_SUCCESS:int = 31;
-     */
-    @Override
-    public int getMessageId() {
-        return 31;
-    }
-
+    
     @Override
     public String toString() {
-        return "CreateSuccessAction [objectId=" + objectId + ", charId="
-                + charId + "]";
+        return "PhysicalObject [objectType=" + objectType + ", data=" + data
+                + "]";
     }
+    
+    
+    
 }
