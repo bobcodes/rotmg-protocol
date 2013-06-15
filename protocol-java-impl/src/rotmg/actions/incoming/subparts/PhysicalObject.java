@@ -26,8 +26,6 @@ package rotmg.actions.incoming.subparts;
 import java.io.DataInputStream;
 import java.io.IOException;
 
-import rotmg.actions.IncomingAction;
-
 public class PhysicalObject {
 
     /**

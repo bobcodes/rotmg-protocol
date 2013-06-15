@@ -92,15 +92,19 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
             }
             
             byte[] bytes = readBytes(payloadSize);
-            if(_incomingActionMapper.containsKey(msgId)) {
-                IncomingAction ia = parseIncomingAction(payloadSize, msgId, bytes);
-                if(ia != null) {
-                    IncomingActionBroadcaster.get().broadcast(ia);
+            try {
+                if(_incomingActionMapper.containsKey(msgId)) {
+                    IncomingAction ia = parseIncomingAction(payloadSize, msgId, bytes);
+                    if(ia != null) {
+                        IncomingActionBroadcaster.get().broadcast(ia);
+                    }
+                } else if(_outgoingActionMapper.containsKey(msgId)) {
+                    parseOutgoingAction(payloadSize, msgId, bytes);
+                } else {
+                    System.out.println("got unknown \tNO CLASS\t" + msgId + "\t" + payloadSize);
                 }
-            } else if(_outgoingActionMapper.containsKey(msgId)) {
-                parseOutgoingAction(payloadSize, msgId, bytes);
-            } else {
-                System.out.println("got unknown \tNO CLASS\t" + msgId + "\t" + payloadSize);
+            } catch(IOException e) {
+                System.out.println("failed to parse\t" + msgId);
             }
             
             //sendToNetwork(new EmptyAction());

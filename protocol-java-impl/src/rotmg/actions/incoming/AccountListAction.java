@@ -28,6 +28,7 @@ import java.io.IOException;
 import java.util.List;
 
 import rotmg.actions.IncomingAction;
+import rotmg.util.BitsAndBytes;
 
 public class AccountListAction implements IncomingAction {
 
@@ -54,14 +55,17 @@ public class AccountListAction implements IncomingAction {
 
     @Override
     public IncomingAction fromBytes(DataInputStream din) throws IOException {
-        // TODO Auto-generated method stub
-        return null;
+        int accountListId = din.readInt();
+        List<Integer> accountIds = BitsAndBytes.readIntList(din);
+        return new AccountListAction(accountListId, accountIds);
     }
 
+    /**
+     * public static const ACCOUNTLIST:int = 46;
+     */
     @Override
     public int getMessageId() {
-        // TODO Auto-generated method stub
-        return 0;
+        return 46;
     }
 
 }

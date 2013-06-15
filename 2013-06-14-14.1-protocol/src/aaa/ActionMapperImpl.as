@@ -1,4 +1,4 @@
-package ducojoryn
+package aaa
 {
    import zugevygam.Byty;
    import com.company.assembleegameclient.objects.Player;
@@ -194,14 +194,14 @@ package ducojoryn
    import aaa.NetworkHandler;
 
 
-   public class Wyrify extends ActionMapperAbstract
+   public class ActionMapperImpl extends ActionMapperAbstract
    {
       {
          var _loc1_:* = false;
          var _loc2_:* = true;
       }
 
-      public function Wyrify(param1:Pajemiz, param2:Server, param3:int, param4:Boolean, param5:int, param6:int, param7:ByteArray, param8:String, param9:Boolean) {
+      public function ActionMapperImpl(param1:Pajemiz, param2:Server, param3:int, param4:Boolean, param5:int, param6:int, param7:ByteArray, param8:String, param9:Boolean) {
          var _loc10_:* = true;
          var _loc11_:* = false;
          super();

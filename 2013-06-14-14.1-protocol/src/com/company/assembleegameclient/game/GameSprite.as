@@ -50,7 +50,7 @@ package com.company.assembleegameclient.game
    import flash.utils.ByteArray;
    import lemugo.Wokycuku;
    import flash.display.Sprite;
-   import ducojoryn.Wyrify;
+   import aaa.ActionMapperImpl;
 
 
    public class GameSprite extends Pajemiz
@@ -69,7 +69,7 @@ package com.company.assembleegameclient.game
          this.model=param7;
          map=new Map(this);
          addChild(map);
-         gsc_=new Wyrify(this,param1,param2,param3,param4,param5,param6,param8,param9);
+         gsc_=new ActionMapperImpl(this,param1,param2,param3,param4,param5,param6,param8,param9);
          mui_=new Tewezezu(this);
          this.lawufuw=new Chat();
          addChild(this.lawufuw);

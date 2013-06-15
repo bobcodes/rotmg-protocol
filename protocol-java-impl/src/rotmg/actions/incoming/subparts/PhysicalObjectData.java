@@ -59,9 +59,10 @@ public class PhysicalObjectData {
         int objectId = din.readInt();
         Point position = Point.fromBytes(din);
         int statsSize = din.readShort();
-        List<StatData> stats = new ArrayList<>(statsSize);
+        List<StatData> stats = new ArrayList<>();
         for(int i = 0; i < statsSize; i++) {
-            stats.add(StatData.fromBytes(din));
+            StatData sd = StatData.fromBytes(din);
+            stats.add(sd);
         }
         return new PhysicalObjectData(objectId, position, stats);
     }

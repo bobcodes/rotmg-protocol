@@ -69,15 +69,17 @@ public class UpdateAction implements IncomingAction {
     @Override
     public IncomingAction fromBytes(DataInputStream din) throws IOException {
         int tilesSize = din.readShort();
-        List<Tile> tiles = new ArrayList<Tile>(tilesSize);
+        List<Tile> tiles = new ArrayList<Tile>();
         for (int i = 0; i < tilesSize; i++) {
             tiles.add(Tile.fromBytes(din));
         }
         
         int physicalObjectsSize = din.readShort();
-        List<PhysicalObject> physicalObjects = new ArrayList<PhysicalObject>(physicalObjectsSize);
+        List<PhysicalObject> physicalObjects = new ArrayList<PhysicalObject>();
         for (int i = 0; i < physicalObjectsSize; i++) {
-            physicalObjects.add(PhysicalObject.fromBytes(din));
+            PhysicalObject po = PhysicalObject.fromBytes(din);
+            System.out.println(po);
+            physicalObjects.add(po);
         }
         
         List<Integer> drops = BitsAndBytes.readIntList(din);
