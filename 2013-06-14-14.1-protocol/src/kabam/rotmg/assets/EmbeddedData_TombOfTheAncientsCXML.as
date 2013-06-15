@@ -1,0 +1,16 @@
+package kabam.rotmg.assets
+{
+   import mx.core.ByteArrayAsset;
+
+
+   public class EmbeddedData_TombOfTheAncientsCXML extends ByteArrayAsset
+   {
+      public function EmbeddedData_TombOfTheAncientsCXML() {
+         var _loc1_:* = false;
+         var _loc2_:* = true;
+         super();
+         return;
+      }
+   }
+
+}
