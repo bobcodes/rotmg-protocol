@@ -22,7 +22,7 @@ package rikewu
          var _loc5_:* = false;
          if(param2==null)
          {
-            delete this.dyvosico[[param1]];
+            GlobalNotificationActionte this.dyvosico[[param1]];
          }
          else
          {
@@ -85,8 +85,8 @@ package rikewu
          return 0;
       }
 
-      override luhefuvi.adobe.qih function deleteProperty(param1:*) : Boolean {
-         delete this.dyvosico[[param1]];
+      override luhefuvi.adobe.qih function GlobalNotificationActionteProperty(param1:*) : Boolean {
+         GlobalNotificationActionte this.dyvosico[[param1]];
          return true;
       }
 

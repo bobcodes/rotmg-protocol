@@ -767,13 +767,13 @@ package komi
 
       public static const howy:String = "Player.exp";
 
-      public static const vibijeb:String = "ConfirmDelete.verifyDeletion";
+      public static const vibijeb:String = "ConfirmGlobalNotificationActionte.verifyGlobalNotificationActiontion";
 
-      public static const dysohy:String = "ConfirmDelete.cancel";
+      public static const dysohy:String = "ConfirmGlobalNotificationActionte.cancel";
 
-      public static const sareco:String = "ConfirmDelete.delete";
+      public static const sareco:String = "ConfirmGlobalNotificationActionte.GlobalNotificationActionte";
 
-      public static const hobi:String = "ConfirmDeleteCharacterDialog";
+      public static const hobi:String = "ConfirmGlobalNotificationActionteCharacterDialog";
 
       public static const secabyti:String = "EquipmentToolTip.tierAbbr";
 
@@ -1173,9 +1173,9 @@ package komi
 
       public static const fiwywufa:String = "Editor.download";
 
-      public static const gej:String = "DeletePictureDialog.description";
+      public static const gej:String = "GlobalNotificationActiontePictureDialog.description";
 
-      public static const rametan:String = "DeletePictureDialog.title";
+      public static const rametan:String = "GlobalNotificationActiontePictureDialog.title";
 
       public static const guci:String = "ArenaPortalPanel.title";
 

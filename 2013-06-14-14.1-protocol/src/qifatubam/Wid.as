@@ -65,12 +65,12 @@ package qifatubam
          {
             if(this.mup[_loc2_]==param1)
             {
-               delete this.mup[[_loc2_]];
+               GlobalNotificationActionte this.mup[[_loc2_]];
             }
          }
          if(this.hywidi[param1])
          {
-            delete this.hywidi[[param1]];
+            GlobalNotificationActionte this.hywidi[[param1]];
             this._count--;
          }
          return;
@@ -96,7 +96,7 @@ package qifatubam
             if(!_loc2_[_loc4_])
             {
                _loc1_.push(_loc4_);
-               delete this.hywidi[[_loc4_]];
+               GlobalNotificationActionte this.hywidi[[_loc4_]];
                this._count--;
             }
          }

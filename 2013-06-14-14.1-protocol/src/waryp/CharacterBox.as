@@ -89,7 +89,7 @@ package waryp
          return;
       }
 
-      public static const DELETE_CHAR:String = "DELETE_CHAR";
+      public static const GlobalNotificationActionTE_CHAR:String = "GlobalNotificationActionTE_CHAR";
 
       public static const ENTER_NAME:String = "ENTER_NAME";
 

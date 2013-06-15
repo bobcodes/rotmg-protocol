@@ -241,7 +241,7 @@ package qifatubam
          }
          if(param2==null)
          {
-            delete this.gujehekaj[[param1]];
+            GlobalNotificationActionte this.gujehekaj[[param1]];
          }
          else
          {

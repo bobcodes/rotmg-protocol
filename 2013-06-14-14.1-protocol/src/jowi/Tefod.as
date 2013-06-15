@@ -5,7 +5,7 @@ package jowi
    import vyso.Sehorof;
    import teticurym.Sewopacyn;
    import dipy.Vubu;
-   import vuhek.ConfirmDeleteCharacterDialog;
+   import vuhek.ConfirmGlobalNotificationActionteCharacterDialog;
    import vuhek.Vogaje;
    import jiric.Kyjaf;
    import jiric.Fasihyga;
@@ -30,7 +30,7 @@ package jowi
          var _loc1_:* = true;
          var _loc2_:* = false;
          this.difas.map(Vubu);
-         this.mediatorMap.map(ConfirmDeleteCharacterDialog).lokiduf(Vogaje);
+         this.mediatorMap.map(ConfirmGlobalNotificationActionteCharacterDialog).lokiduf(Vogaje);
          this.pomih.map(Kyjaf).sakytyf(Fasihyga);
          return;
       }

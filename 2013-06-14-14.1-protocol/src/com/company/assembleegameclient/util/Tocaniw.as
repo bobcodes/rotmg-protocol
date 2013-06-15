@@ -66,7 +66,7 @@ package com.company.assembleegameclient.util
       public static function dump(param1:*) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         delete wediku[[param1]];
+         GlobalNotificationActionte wediku[[param1]];
          return;
       }
 

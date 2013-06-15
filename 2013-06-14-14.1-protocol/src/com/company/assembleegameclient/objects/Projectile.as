@@ -63,7 +63,7 @@ package com.company.assembleegameclient.objects
       public static function bepi(param1:int, param2:uint) : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         delete lado[[param2<<24|param1]];
+         GlobalNotificationActionte lado[[param2<<24|param1]];
          return;
       }
 

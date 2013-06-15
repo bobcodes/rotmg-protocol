@@ -25,6 +25,10 @@ package rotmg.util;
 
 import java.io.DataInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.common.base.Charsets;
 
 public class BitsAndBytes {
 
@@ -32,6 +36,51 @@ public class BitsAndBytes {
         long fp=din.readInt();
         fp=fp & 0xffffffffL; // convert from signed int, to unsigned
         return fp;
+    }
+    
+    public static List<Integer> readIntList(DataInputStream din) throws IOException {
+        int size = din.readInt();
+        
+        List<Integer> list = new ArrayList<>();
+        for(int i = 0; i < size; i++) {
+            list.add(din.readInt());
+        }
+        
+        return list;
+    }
+    
+    public static byte[] readShortByteArray(DataInputStream din) throws IOException {
+        int numOfBytes = din.readShort();
+        byte[] bytes = new byte[numOfBytes];
+        din.read(bytes, 0, numOfBytes);
+        return bytes;
+    }
+    
+    public static byte[] readByteArray(DataInputStream din) throws IOException {
+        int numOfBytes = din.readInt();
+        byte[] bytes = new byte[numOfBytes];
+        din.read(bytes, 0, numOfBytes);
+        return bytes;
+    }
+    
+    /**
+     * reads a string list where it is encoded with
+     * [number of strings:int]
+     * [byte size:int][UTF-8:bytes]
+     * [byte size:int][UTF-8:bytes]
+     * [byte size:int][UTF-8:bytes]
+     * etc
+     */
+    public static List<String> readIntPrefixedStringList(DataInputStream din) throws IOException {
+        List<String> stringList = new ArrayList<>();
+        
+        int numOfStrings = din.readShort();
+        for(int i = 0; i < numOfStrings; i++) {
+            byte[] stringBytes = readByteArray(din);
+            stringList.add(new String(stringBytes, Charsets.UTF_8));
+        }
+        
+        return stringList;
     }
     
     private BitsAndBytes() {

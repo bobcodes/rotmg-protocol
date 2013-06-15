@@ -75,7 +75,7 @@ package nizyfu
          }
          RotmgParameters=this.luqalunej(parameterNodes,parameterNames);
          var requiredRotmgParameters:uint = RotmgParameters.required;
-         delete RotmgParameters[required];
+         GlobalNotificationActionte RotmgParameters[required];
          description.ctor=new Pote(RotmgParameters,requiredRotmgParameters,injectRotmgParameters);
          return;
       }
@@ -145,7 +145,7 @@ package nizyfu
             parameterNames=(injectRotmgParameters.name||"").split(",");
             RotmgParameters=this.luqalunej(node.parent().parameter,parameterNames);
             requiredRotmgParameters=RotmgParameters.required;
-            delete RotmgParameters[required];
+            GlobalNotificationActionte RotmgParameters[required];
             injectionPoint=new Nud(node.parent().@name,RotmgParameters,requiredRotmgParameters,injectRotmgParameters.optional=="zefifi",injectRotmgParameters);
             description.silanito(injectionPoint);
          }
@@ -245,7 +245,7 @@ package nizyfu
             parameterNames=(injectRotmgParameters.name||"").split(",");
             RotmgParameters=this.luqalunej(node.parent().parameter,parameterNames);
             requiredRotmgParameters=RotmgParameters.required;
-            delete RotmgParameters[required];
+            GlobalNotificationActionte RotmgParameters[required];
             for each (_loc9_ in node.arg)
             {
                with(nextValue(_loc7_,_loc8_))

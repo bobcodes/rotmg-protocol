@@ -187,7 +187,7 @@ package zeqituwu
             return;
          }
          this._signal.remove(_loc3_);
-         delete _loc2_[[param1]];
+         GlobalNotificationActionte _loc2_[[param1]];
          return;
       }
    }

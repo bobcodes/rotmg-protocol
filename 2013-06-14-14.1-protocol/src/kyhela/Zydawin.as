@@ -18,7 +18,7 @@ package kyhela
    import jediwip.Vofezuzy;
    import flash.filters.DropShadowFilter;
    import flash.text.TextFieldAutoSize;
-   import com.company.rotmg.graphics.DeleteXGraphic;
+   import com.company.rotmg.graphics.GlobalNotificationActionteXGraphic;
 
 
    class Zydawin extends Sprite
@@ -94,7 +94,7 @@ package kyhela
          }
          if(GuildUtil.tumujel(param6,param3))
          {
-            this.dynu=new DeleteXGraphic();
+            this.dynu=new GlobalNotificationActionteXGraphic();
             this.sor(this.dynu);
             this.dynu.addEventListener(MouseEvent.CLICK,this.viluc);
             this.dynu.x=730;

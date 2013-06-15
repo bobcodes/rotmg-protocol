@@ -12,7 +12,7 @@ package com.company.assembleegameclient.screens.charrects
    import jediwip.Kybidu;
    import komi.Vibemod;
    import com.company.assembleegameclient.util.Cinihel;
-   import com.company.rotmg.graphics.DeleteXGraphic;
+   import com.company.rotmg.graphics.GlobalNotificationActionteXGraphic;
    import narosucam.Hoqak;
 
 
@@ -37,7 +37,7 @@ package com.company.assembleegameclient.screens.charrects
          super.overColor=8355711;
          super.init();
          this.makeTagline();
-         this.makeDeleteButton();
+         this.makeGlobalNotificationActionteButton();
          this.addEventListeners();
          return;
       }
@@ -46,7 +46,7 @@ package com.company.assembleegameclient.screens.charrects
 
       public const selected:Qanyduk = new Qanyduk();
 
-      public const deleteCharacter:Qanyduk = new Qanyduk();
+      public const GlobalNotificationActionteCharacter:Qanyduk = new Qanyduk();
 
       public const showToolTip:Qanyduk = new Qanyduk(Sprite);
 
@@ -62,14 +62,14 @@ package com.company.assembleegameclient.screens.charrects
 
       private var charType:Dywygave;
 
-      private var deleteButton:Sprite;
+      private var GlobalNotificationActionteButton:Sprite;
 
       private var icon:DisplayObject;
 
       private function addEventListeners() : void {
          addEventListener(Event.REMOVED_FROM_STAGE,this.onRemovedFromStage);
          selectContainer.addEventListener(MouseEvent.CLICK,this.onSelect);
-         this.deleteButton.addEventListener(MouseEvent.CLICK,this.onDelete);
+         this.GlobalNotificationActionteButton.addEventListener(MouseEvent.CLICK,this.onGlobalNotificationActionte);
          return;
       }
 
@@ -78,8 +78,8 @@ package com.company.assembleegameclient.screens.charrects
          return;
       }
 
-      private function onDelete(param1:MouseEvent) : void {
-         this.deleteCharacter.dispatch(this.char);
+      private function onGlobalNotificationActionte(param1:MouseEvent) : void {
+         this.GlobalNotificationActionteCharacter.dispatch(this.char);
          return;
       }
 
@@ -109,12 +109,12 @@ package com.company.assembleegameclient.screens.charrects
          return Cinihel.nextStarFame(this.charStats==null?0:this.charStats.lysatul(),this.char.fame());
       }
 
-      private function makeDeleteButton() : void {
-         this.deleteButton=new DeleteXGraphic();
-         this.deleteButton.addEventListener(MouseEvent.MOUSE_DOWN,this.onDeleteDown);
-         this.deleteButton.x=WIDTH-40;
-         this.deleteButton.y=(HEIGHT-this.deleteButton.height)*0.5;
-         addChild(this.deleteButton);
+      private function makeGlobalNotificationActionteButton() : void {
+         this.GlobalNotificationActionteButton=new GlobalNotificationActionteXGraphic();
+         this.GlobalNotificationActionteButton.addEventListener(MouseEvent.MOUSE_DOWN,this.onGlobalNotificationActionteDown);
+         this.GlobalNotificationActionteButton.x=WIDTH-40;
+         this.GlobalNotificationActionteButton.y=(HEIGHT-this.GlobalNotificationActionteButton.height)*0.5;
+         addChild(this.GlobalNotificationActionteButton);
          return;
       }
 
@@ -143,7 +143,7 @@ package com.company.assembleegameclient.screens.charrects
          return;
       }
 
-      private function onDeleteDown(param1:MouseEvent) : void {
+      private function onGlobalNotificationActionteDown(param1:MouseEvent) : void {
          param1.stopImmediatePropagation();
          dispatchEvent(new Hoqak(this.char));
          return;

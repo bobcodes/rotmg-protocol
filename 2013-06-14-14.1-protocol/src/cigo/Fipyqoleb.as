@@ -100,7 +100,7 @@ package cigo
          var _loc6_:* = true;
          var _loc7_:* = false;
          var _loc3_:Docekar = null;
-         delete this._bindingByContainer[[param1.container]];
+         GlobalNotificationActionte this._bindingByContainer[[param1.container]];
          var _loc2_:int = this._bindings.indexOf(param1);
          this._bindings.splice(_loc2_,1);
          param1.removeEventListener(Tyweraqe.peceby,this.vydemy);

@@ -3,12 +3,12 @@ package vuhek
    import vysob.Dialog;
 
 
-   public class DeletingCharacterView extends Dialog
+   public class GlobalNotificationActiontingCharacterView extends Dialog
    {
-      public function DeletingCharacterView() {
+      public function GlobalNotificationActiontingCharacterView() {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         super(null,"DeletingCharacterView.text",null,null,"/deletingChar");
+         super(null,"GlobalNotificationActiontingCharacterView.text",null,null,"/GlobalNotificationActiontingChar");
          return;
       }
    }

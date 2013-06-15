@@ -32,7 +32,7 @@ package com.company.assembleegameclient.util
 
       public static const husu:uint = 1;
 
-      public static const dele:uint = 2;
+      public static const GlobalNotificationAction:uint = 2;
 
       public static const pusosu:uint = 3;
 
@@ -90,7 +90,7 @@ package com.company.assembleegameclient.util
 
       public static const cajowo:uint = 1<<husu-1;
 
-      public static const miryb:uint = 1<<dele-1;
+      public static const miryb:uint = 1<<GlobalNotificationAction-1;
 
       public static const haruvod:uint = 1<<pusosu-1;
 

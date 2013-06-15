@@ -2,13 +2,11 @@ package rotmg.actions.incoming;
 
 import java.io.DataInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import rotmg.actions.IncomingAction;
 import rotmg.util.BitsAndBytes;
 
-import com.google.common.base.Charsets;
 
 public class MapInfoAction implements IncomingAction {
 
@@ -148,38 +146,10 @@ public class MapInfoAction implements IncomingAction {
         boolean allowPlayerTeleport=din.readBoolean();
         boolean showDisplays=din.readBoolean();
 
-        List<String> clientXML = parseStringList(din);
-        List<String> extraXML = parseStringList(din);
+        List<String> clientXML = BitsAndBytes.readIntPrefixedStringList(din);
+        List<String> extraXML = BitsAndBytes.readIntPrefixedStringList(din);
         
         return new MapInfoAction(width, height, name, momebujot, dem, fp, background_, allowPlayerTeleport, showDisplays, clientXML, extraXML);
-    }
-
-    /**
-         var numOfStrings:* = 0;
-         var currentStringNum:* = 0;
-         var numOfStringBytes:* = 0;
-         numOfStrings=param1.readShort();
-         this.clientXML_.length=0;
-         currentStringNum=0;
-         while(currentStringNum<numOfStrings)
-         {
-            numOfStringBytes=param1.readInt();
-            this.clientXML_.push(param1.readUTFBytes(numOfStringBytes));
-            currentStringNum++;
-         }
-     */
-    private List<String> parseStringList(DataInputStream din) throws IOException {
-        List<String> stringList = new ArrayList<>();
-        
-        int numOfStrings = din.readShort();
-        for(int i = 0; i < numOfStrings; i++) {
-            int numOfStringBytes = din.readInt();
-            byte[] stringBytes = new byte[numOfStringBytes];
-            din.read(stringBytes, 0, numOfStringBytes);
-            stringList.add(new String(stringBytes, Charsets.UTF_8));
-        }
-        
-        return stringList;
     }
 
     @Override

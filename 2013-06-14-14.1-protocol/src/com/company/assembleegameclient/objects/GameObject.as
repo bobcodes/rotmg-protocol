@@ -803,7 +803,7 @@ package com.company.assembleegameclient.objects
                   {
                      case ConditionEffect.loqe:
                         break;
-                     case ConditionEffect.dele:
+                     case ConditionEffect.GlobalNotificationAction:
                      case ConditionEffect.pusosu:
                      case ConditionEffect.pokuko:
                      case ConditionEffect.tikofut:

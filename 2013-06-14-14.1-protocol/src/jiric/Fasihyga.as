@@ -7,7 +7,7 @@ package jiric
    import pomujukir.Bemivu;
    import gycu.Begotyl;
    import gycu.Levoje;
-   import vuhek.DeletingCharacterView;
+   import vuhek.GlobalNotificationActiontingCharacterView;
    import gycu.Befa;
    import gycu.Cyqe;
    import waryp.CharacterSelectionAndNewsScreen;
@@ -36,7 +36,7 @@ package jiric
          var _loc2_:* = true;
          var _loc3_:* = false;
          var _loc1_:Begotyl = new Begotyl();
-         _loc1_.add(new Levoje(this.ridecy,new DeletingCharacterView()));
+         _loc1_.add(new Levoje(this.ridecy,new GlobalNotificationActiontingCharacterView()));
          _loc1_.add(new Befa(this.zop,this.jime(),this.hoti()));
          this.bilizaw.add(_loc1_);
          _loc1_.start();
@@ -53,7 +53,7 @@ package jiric
       }
 
       private function hoti() : Cyqe {
-         return new Levoje(this.ridecy,"Unable to delete character");
+         return new Levoje(this.ridecy,"Unable to GlobalNotificationActionte character");
       }
    }
 

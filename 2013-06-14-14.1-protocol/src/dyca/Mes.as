@@ -109,8 +109,8 @@ package dyca
             else
             {
                _loc4_.bilas().destroy();
-               delete this.zenupi[[_loc3_]];
-               delete this.lylug[[_loc3_]];
+               GlobalNotificationActionte this.zenupi[[_loc3_]];
+               GlobalNotificationActionte this.lylug[[_loc3_]];
                return;
             }
          }
@@ -348,7 +348,7 @@ package dyca
             _loc4_=new Dice(this,param1,param2,param3);
             this.zenupi[param3]=_loc4_;
             _loc5_=_loc4_.cyje();
-            delete this.duca[[param3]];
+            GlobalNotificationActionte this.duca[[param3]];
             _loc4_.joju(_loc5_);
             return _loc4_;
          }

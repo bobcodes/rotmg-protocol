@@ -219,7 +219,7 @@ package miqefol
             if(_loc2_==null||!_loc2_[_loc6_])
             {
                this.romyhibu[_loc6_].close();
-               delete this.romyhibu[[_loc6_]];
+               GlobalNotificationActionte this.romyhibu[[_loc6_]];
             }
          }
          if(_loc3_!=null)
@@ -290,7 +290,7 @@ package miqefol
                if(_loc2_)
                {
                   _loc2_.close();
-                  delete this.romyhibu[[param1.name]];
+                  GlobalNotificationActionte this.romyhibu[[param1.name]];
                }
             }
          }

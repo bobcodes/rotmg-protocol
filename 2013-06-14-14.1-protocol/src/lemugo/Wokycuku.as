@@ -133,7 +133,7 @@ package lemugo
          return this.fegiwesyn.zana(param1);
       }
 
-      public function deleteCharacter(param1:int) : void {
+      public function GlobalNotificationActionteCharacter(param1:int) : void {
          var _loc6_:* = false;
          var _loc7_:* = true;
          var _loc2_:SavedCharacter = this.fegiwesyn.zana(param1);

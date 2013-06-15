@@ -191,7 +191,7 @@ package qifatubam
             {
                this.cefar.splice(_loc4_,1);
             }
-            delete this.qehowy[[param1]];
+            GlobalNotificationActionte this.qehowy[[param1]];
          }
          return;
       }

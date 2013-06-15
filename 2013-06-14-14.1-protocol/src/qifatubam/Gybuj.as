@@ -34,7 +34,7 @@ package qifatubam
          }
          if(param2==null)
          {
-            delete this.byfe[[param1.key]];
+            GlobalNotificationActionte this.byfe[[param1.key]];
          }
          else
          {

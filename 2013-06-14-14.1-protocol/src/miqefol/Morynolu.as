@@ -284,7 +284,7 @@ package miqefol
             if(!_loc22_)
             {
                _loc10_=true;
-               delete this.cohed[[_loc12_]];
+               GlobalNotificationActionte this.cohed[[_loc12_]];
             }
          }
          if((param2)&&((_loc10_)||(this.vite)))

@@ -148,7 +148,7 @@ package qifatubam
                }
                _loc2_=_loc2_.next;
             }
-            delete this.hile[[param1]];
+            GlobalNotificationActionte this.hile[[param1]];
          }
          else
          {

@@ -29,7 +29,7 @@ package buryq
          if(param4)
          {
             _loc6_=param4.swapValues;
-            delete param4[swapValues];
+            GlobalNotificationActionte param4[swapValues];
          }
          this.copy(param4,this);
          this.vaf(param3);
@@ -198,12 +198,12 @@ package buryq
          this.cusor=param1;
          if(this.cusor)
          {
-            delete soge[[this]];
+            GlobalNotificationActionte soge[[this]];
             if(this.target is IEventDispatcher)
             {
                this.target.removeEventListener("_",this.luzej);
             }
-            delete fod[[this]];
+            GlobalNotificationActionte fod[[this]];
          }
          else
          {
@@ -380,9 +380,9 @@ package buryq
       public function qavaq(param1:String) : Boolean {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         delete this.jun[[param1]];
-         delete this.bedaqa[[param1]];
-         delete this.ravinasin[[param1]];
+         GlobalNotificationActionte this.jun[[param1]];
+         GlobalNotificationActionte this.bedaqa[[param1]];
+         GlobalNotificationActionte this.ravinasin[[param1]];
          return true;
       }
 
@@ -537,7 +537,7 @@ package buryq
          {
             if((param3)&&param1[_loc4_]==null)
             {
-               delete param2[[_loc4_]];
+               GlobalNotificationActionte param2[[_loc4_]];
             }
             else
             {
@@ -593,7 +593,7 @@ package buryq
          return;
       }
 
-      override luhefuvi.adobe.qih function deleteProperty(param1:*) : Boolean {
+      override luhefuvi.adobe.qih function GlobalNotificationActionteProperty(param1:*) : Boolean {
          this.tween.qavaq(param1);
          return true;
       }

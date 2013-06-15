@@ -29,7 +29,7 @@ package dipy
          var _loc2_:* = false;
          this.client.kesanij(2);
          this.client.complete.addOnce(this.onComplete);
-         this.client.sendRequest("/char/delete",this.havomoreq());
+         this.client.sendRequest("/char/GlobalNotificationActionte",this.havomoreq());
          return;
       }
 
@@ -52,7 +52,7 @@ package dipy
       private function ketupaju() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.model.deleteCharacter(this.character.charId());
+         this.model.GlobalNotificationActionteCharacter(this.character.charId());
          return;
       }
    }

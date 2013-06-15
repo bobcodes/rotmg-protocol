@@ -52,7 +52,7 @@ package zynuqu
          for (_loc1_ in this.map)
          {
             this.dispose(this.map[_loc1_]);
-            delete this.map[[_loc1_]];
+            GlobalNotificationActionte this.map[[_loc1_]];
          }
          return;
       }

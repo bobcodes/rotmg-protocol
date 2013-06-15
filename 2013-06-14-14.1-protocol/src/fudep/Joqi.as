@@ -59,7 +59,7 @@ package fudep
       public static function qoqev(param1:Joqi) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         delete viguli[[param1.id]];
+         GlobalNotificationActionte viguli[[param1.id]];
          param1.onDestroyed();
          return;
       }

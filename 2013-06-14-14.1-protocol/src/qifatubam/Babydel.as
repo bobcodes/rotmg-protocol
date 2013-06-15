@@ -119,7 +119,7 @@ package qifatubam
             {
                if(this.baqigora[_loc3_]===null)
                {
-                  delete this.baqigora[[_loc3_]];
+                  GlobalNotificationActionte this.baqigora[[_loc3_]];
                }
                _loc3_=_loc3_-50;
             }

@@ -1,11 +1,11 @@
-package wipivyv
+package aaa
 {
    import flash.utils.IDataInput;
 
 
-   public class Dele extends Tezypama
+   public class GlobalNotificationAction extends Tezypama
    {
-      public function Dele(param1:uint, param2:Function) {
+      public function GlobalNotificationAction(param1:uint, param2:Function) {
          var _loc3_:* = false;
          var _loc4_:* = true;
          super(param1,param2);

@@ -550,7 +550,7 @@ package noniq
       private function suqica(param1:int, param2:int) : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         delete this.zycelad[[param1+param2*luqecacaq]];
+         GlobalNotificationActionte this.zycelad[[param1+param2*luqecacaq]];
          return;
       }
 

@@ -46,7 +46,7 @@ package wenono
          var value:Qanyduk = param1;
          onTextChanged=new function():void
          {
-            delete rumyco[[value]];
+            GlobalNotificationActionte rumyco[[value]];
             nakylugo();
             return;
          };

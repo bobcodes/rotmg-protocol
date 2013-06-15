@@ -26,8 +26,10 @@ package rotmg.actions;
 import java.util.Arrays;
 import java.util.List;
 
+import rotmg.actions.incoming.AccountListAction;
 import rotmg.actions.incoming.CreateSuccessAction;
 import rotmg.actions.incoming.FailureAction;
+import rotmg.actions.incoming.GlobalNotificationAction;
 import rotmg.actions.incoming.MapInfoAction;
 import rotmg.actions.incoming.ReconnectAction;
 import rotmg.actions.incoming.UpdateAction;
@@ -43,7 +45,9 @@ public class Actions {
                     new FailureAction(),
                     new MapInfoAction(),
                     new CreateSuccessAction(),
-                    new UpdateAction()
+                    new UpdateAction(),
+                    new GlobalNotificationAction(),
+                    new AccountListAction()
                     );
     
     public static final List<OutgoingAction> OUTGOING_ACTIONS =

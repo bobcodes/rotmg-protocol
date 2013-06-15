@@ -244,7 +244,7 @@ package qifatubam
          var _loc13_:String = null;
          var _loc14_:ExeValue = null;
          var _loc15_:ExeValue = null;
-         var _loc2_:RegExp = new RegExp("\\s*(((\\|\\||\\&\\&|[+|\\-|*|\\/|\\%|\\||\\&|\\^]|\\=\\=?|\\!\\=|\\>\\>?\\>?|\\<\\<?)\\=?)|=|\\~|\\sis\\s|typeof|delete\\s)\\s*","g");
+         var _loc2_:RegExp = new RegExp("\\s*(((\\|\\||\\&\\&|[+|\\-|*|\\/|\\%|\\||\\&|\\^]|\\=\\=?|\\!\\=|\\>\\>?\\>?|\\<\\<?)\\=?)|=|\\~|\\sis\\s|typeof|GlobalNotificationActionte\\s)\\s*","g");
          var _loc3_:Object = _loc2_.exec(param1);
          var _loc4_:Array = [];
          if(_loc3_==null)
@@ -632,8 +632,8 @@ package qifatubam
                return param1.value is param3.value;
             case "typeof":
                return typeof param3.value;
-            case "delete":
-               delete param3.obj[[param3.prop]];
+            case "GlobalNotificationActionte":
+               GlobalNotificationActionte param3.obj[[param3.prop]];
                return true;
             case "==":
                return param1.value==param3.value;

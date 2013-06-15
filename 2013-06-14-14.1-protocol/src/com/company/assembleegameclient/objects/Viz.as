@@ -3,7 +3,7 @@ package com.company.assembleegameclient.objects
    import com.company.assembleegameclient.map.Map;
    import flash.utils.Dictionary;
    import com.company.util.PointUtil;
-   import wipivyv.Qikiledi;
+   import aaa.AccountListAction;
 
 
    public class Viz extends Object
@@ -101,14 +101,14 @@ package com.company.assembleegameclient.objects
       public function supocuser(param1:Player) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         delete this.starred_[[param1.accountId_]];
+         GlobalNotificationActionte this.starred_[[param1.accountId_]];
          param1.starred_=false;
          this.lastUpdate_=int.MIN_VALUE;
          this.map_.gs_.gsc_.editAccountList(0,false,param1.objectId_);
          return;
       }
 
-      public function setStars(param1:Qikiledi) : void {
+      public function setStars(param1:AccountListAction) : void {
          var _loc4_:* = true;
          var _loc5_:* = false;
          var _loc3_:* = 0;
@@ -135,14 +135,14 @@ package com.company.assembleegameclient.objects
       public function taseje(param1:Player) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         delete this.hehah[[param1.accountId_]];
+         GlobalNotificationActionte this.hehah[[param1.accountId_]];
          param1.hehah=false;
          this.lastUpdate_=int.MIN_VALUE;
          this.map_.gs_.gsc_.editAccountList(1,false,param1.objectId_);
          return;
       }
 
-      public function setIgnores(param1:Qikiledi) : void {
+      public function setIgnores(param1:AccountListAction) : void {
          var _loc4_:* = false;
          var _loc5_:* = true;
          var _loc3_:* = 0;

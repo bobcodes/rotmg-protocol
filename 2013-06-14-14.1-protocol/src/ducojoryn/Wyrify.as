@@ -75,7 +75,7 @@ package ducojoryn
    import wipivyv.Damage;
    import wipivyv.Update;
    import wipivyv.Juco;
-   import wipivyv.Dele;
+   import aaa.GlobalNotificationAction;
    import wipivyv.Buliwafa;
    import wipivyv.Bana;
    import wipivyv.Tum;
@@ -86,7 +86,7 @@ package ducojoryn
    import wipivyv.Pic;
    import wipivyv.Dumaly;
    import wipivyv.Qibunom;
-   import wipivyv.Qikiledi;
+   import aaa.AccountListAction;
    import wipivyv.Lij;
    import wipivyv.Peqyru;
    import wipivyv.Pacusenyt;
@@ -402,7 +402,7 @@ package ducojoryn
          _loc1_.map(DAMAGE).titikokad(Damage).puk(this.tybu);
          _loc1_.map(UPDATE).titikokad(Update).puk(this.zebemak);
          _loc1_.map(NOTIFICATION).titikokad(Juco).puk(this.welahy);
-         _loc1_.map(GLOBAL_NOTIFICATION).titikokad(Dele).puk(this.bicabiz);
+         _loc1_.map(GLOBAL_NOTIFICATION).titikokad(GlobalNotificationAction).puk(this.bicabiz);
          _loc1_.map(fekydygo).titikokad(Buliwafa).puk(this.pogiq);
          _loc1_.map(vuzir).titikokad(Bana).puk(this.rinafefi);
          _loc1_.map(GOTO).titikokad(Tum).puk(this.zebojuzof);
@@ -414,7 +414,7 @@ package ducojoryn
          _loc1_.map(DEATH).titikokad(Memysoh).puk(this.leziwuq);
          _loc1_.map(BUYRESULT).titikokad(Dumaly).puk(this.zugyhuv);
          _loc1_.map(AOE).titikokad(Qibunom).puk(this.vuvyfig);
-         _loc1_.map(ACCOUNTLIST).titikokad(Qikiledi).puk(this.bamulyrod);
+         _loc1_.map(ACCOUNTLIST).titikokad(AccountListAction).puk(this.bamulyrod);
          _loc1_.map(QUESTOBJID).titikokad(Lij).puk(this.wuham);
          _loc1_.map(NAMERESULT).titikokad(Peqyru).puk(this.gire);
          _loc1_.map(fyg).titikokad(Pacusenyt).puk(this.wowoweqop);
@@ -1349,7 +1349,7 @@ package ducojoryn
          return;
       }
 
-      private function bicabiz(param1:Dele) : void {
+      private function bicabiz(param1:GlobalNotificationAction) : void {
          var _loc3_:* = false;
          var _loc4_:* = true;
          switch(null)
@@ -2036,7 +2036,7 @@ package ducojoryn
          return;
       }
 
-      private function bamulyrod(param1:Qikiledi) : void {
+      private function bamulyrod(param1:AccountListAction) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
          if(param1.accountListId_==0)

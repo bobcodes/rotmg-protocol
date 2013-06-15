@@ -85,7 +85,7 @@ package com.hurlant.math
          while(_loc2_<this.a.length)
          {
             this.a[_loc2_]=_loc1_.nextByte();
-            delete this.a[[_loc2_]];
+            GlobalNotificationActionte this.a[[_loc2_]];
             _loc2_++;
          }
          this.a=null;

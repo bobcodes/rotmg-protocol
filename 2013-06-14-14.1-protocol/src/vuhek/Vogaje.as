@@ -16,11 +16,11 @@ package vuhek
          return;
       }
 
-      public var view:ConfirmDeleteCharacterDialog;
+      public var view:ConfirmGlobalNotificationActionteCharacterDialog;
 
       public var model:Wygoqu;
 
-      public var deleteCharacter:Kyjaf;
+      public var GlobalNotificationActionteCharacter:Kyjaf;
 
       public var closeDialogs:Lebovas;
 
@@ -29,7 +29,7 @@ package vuhek
       override public function initialize() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.view.deleteCharacter.add(this.qevu);
+         this.view.GlobalNotificationActionteCharacter.add(this.qevu);
          this.view.cancel.add(this.gimenakal);
          this.character=this.model.gype();
          this.view.kenadyb(this.character.name(),this.character.kygyba());
@@ -39,7 +39,7 @@ package vuhek
       override public function destroy() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.view.deleteCharacter.remove(this.qevu);
+         this.view.GlobalNotificationActionteCharacter.remove(this.qevu);
          this.view.cancel.remove(this.gimenakal);
          return;
       }
@@ -47,7 +47,7 @@ package vuhek
       private function qevu() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.deleteCharacter.dispatch(this.character);
+         this.GlobalNotificationActionteCharacter.dispatch(this.character);
          return;
       }
 

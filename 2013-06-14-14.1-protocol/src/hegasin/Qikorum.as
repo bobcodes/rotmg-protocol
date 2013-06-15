@@ -32,7 +32,7 @@ package hegasin
          var _loc3_:* = false;
          var _loc4_:* = true;
          var _loc2_:Gaz = this.zenupi[param1];
-         delete this.zenupi[[param1]];
+         GlobalNotificationActionte this.zenupi[[param1]];
          return;
       }
 
@@ -43,7 +43,7 @@ package hegasin
          for each (_loc1_ in this.zenupi)
          {
             this.kiz.wozohyk(_loc1_);
-            delete this.zenupi[[_loc1_.commandClass]];
+            GlobalNotificationActionte this.zenupi[[_loc1_.commandClass]];
          }
          return;
       }

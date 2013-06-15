@@ -184,7 +184,7 @@ package qifatubam
             }
             else
             {
-               delete this.qib[[id]];
+               GlobalNotificationActionte this.qib[[id]];
             }
          }
          catch(err:Error)

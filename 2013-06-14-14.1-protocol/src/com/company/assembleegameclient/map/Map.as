@@ -298,7 +298,7 @@ package com.company.assembleegameclient.map
             }
          }
          _loc3_.removeFromMap();
-         delete _loc2_[[param1]];
+         GlobalNotificationActionte _loc2_[[param1]];
          return;
       }
 

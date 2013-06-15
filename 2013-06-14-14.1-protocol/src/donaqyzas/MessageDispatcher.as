@@ -48,7 +48,7 @@ package donaqyzas
             _loc3_.splice(_loc4_,1);
             if(_loc3_.length==0)
             {
-               delete this._handlers[[param1]];
+               GlobalNotificationActionte this._handlers[[param1]];
             }
          }
          return;

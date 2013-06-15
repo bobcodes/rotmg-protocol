@@ -175,7 +175,7 @@ package loradaby
             }
             else
             {
-               delete RotmgParameters.data_[[_loc3_.wavaqon]];
+               GlobalNotificationActionte RotmgParameters.data_[[_loc3_.wavaqon]];
             }
             _loc2_++;
          }

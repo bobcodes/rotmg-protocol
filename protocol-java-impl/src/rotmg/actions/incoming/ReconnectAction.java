@@ -28,6 +28,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 import rotmg.actions.IncomingAction;
+import rotmg.util.BitsAndBytes;
 
 /**
  *    public var name_:String;
@@ -121,9 +122,7 @@ public class ReconnectAction implements IncomingAction {
         int port = din.readInt();
         int gameId = din.readInt();
         int keyTime = din.readInt();
-        int keySize = din.readShort();
-        byte [] key = new byte[keySize];
-        din.read(key, 0, keySize);
+        byte [] key = BitsAndBytes.readShortByteArray(din);
         
         return new ReconnectAction(name, host, port, gameId, keyTime, key);
     }

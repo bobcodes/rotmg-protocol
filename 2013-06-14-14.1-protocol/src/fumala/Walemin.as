@@ -75,7 +75,7 @@ package fumala
          var _loc2_:Dyqa = this.wequdyhu[param1];
          if(_loc2_)
          {
-            delete this.wequdyhu[[param1]];
+            GlobalNotificationActionte this.wequdyhu[[param1]];
             this.sehok.splice(this.sehok.indexOf(_loc2_),1);
          }
          return;
@@ -106,7 +106,7 @@ package fumala
          this.sehok.length=0;
          for (_loc1_ in this.wequdyhu)
          {
-            delete this.wequdyhu[[_loc1_]];
+            GlobalNotificationActionte this.wequdyhu[[_loc1_]];
          }
          return;
       }

@@ -240,7 +240,7 @@ package miqefol
             param1=param1.replace(new RegExp("[^\\w]*","g"),"");
             if(param2==null)
             {
-               delete this.sykacu[[param1]];
+               GlobalNotificationActionte this.sykacu[[param1]];
             }
             else
             {

@@ -330,7 +330,7 @@ package com.google.analytics.core
          if(!isVolatile())
          {
             _SO.data.utma=null;
-            delete _SO.data[utma];
+            GlobalNotificationActionte _SO.data[utma];
          }
          return;
       }
@@ -345,7 +345,7 @@ package com.google.analytics.core
          if(!isVolatile())
          {
             _SO.data.utmb=null;
-            delete _SO.data[utmb];
+            GlobalNotificationActionte _SO.data[utmb];
          }
          return;
       }
@@ -428,7 +428,7 @@ package com.google.analytics.core
             }
             if(_SO.data.utmc)
             {
-               delete _SO.data[utmc];
+               GlobalNotificationActionte _SO.data[utmc];
                saveSO=true;
             }
             if(_SO.data.utmk)
@@ -504,7 +504,7 @@ package com.google.analytics.core
          if(!isVolatile())
          {
             _SO.data.utmz=null;
-            delete _SO.data[utmz];
+            GlobalNotificationActionte _SO.data[utmz];
          }
          return;
       }
@@ -518,7 +518,7 @@ package com.google.analytics.core
          if(!isVolatile())
          {
             _SO.data.utmv=null;
-            delete _SO.data[utmv];
+            GlobalNotificationActionte _SO.data[utmv];
          }
          return;
       }

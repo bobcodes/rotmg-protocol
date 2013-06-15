@@ -41,7 +41,7 @@ package dabepizyb
          var _loc3_:* = true;
          var _loc4_:* = false;
          var _loc2_:Vapuz = this.zenupi[param1];
-         delete this.zenupi[[param1]];
+         GlobalNotificationActionte this.zenupi[[param1]];
          this._handler.wozohyk(_loc2_);
          return;
       }
@@ -52,7 +52,7 @@ package dabepizyb
          var _loc1_:Vapuz = null;
          for each (_loc1_ in this.zenupi)
          {
-            delete this.zenupi[[_loc1_.lezybyg]];
+            GlobalNotificationActionte this.zenupi[[_loc1_.lezybyg]];
             this._handler.wozohyk(_loc1_);
          }
          return;

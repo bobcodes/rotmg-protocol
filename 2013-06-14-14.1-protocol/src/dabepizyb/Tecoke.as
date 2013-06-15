@@ -73,7 +73,7 @@ package dabepizyb
                dispatchEvent(new Luvuteb(Luvuteb.zagyhyhi,_loc2_[_loc3_],param1,_loc3_ as Vapuz,this));
             }
          }
-         delete this.bebyqaqe[[param1]];
+         GlobalNotificationActionte this.bebyqaqe[[param1]];
          return;
       }
 

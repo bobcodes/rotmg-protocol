@@ -25,10 +25,10 @@ package hirupuhel
          return this.rilige.zana(param1);
       }
 
-      public function deleteCharacter(param1:int) : void {
+      public function GlobalNotificationActionteCharacter(param1:int) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         this.rilige.deleteCharacter(param1);
+         this.rilige.GlobalNotificationActionteCharacter(param1);
          if(this.selected.charId()==param1)
          {
             this.selected=null;

@@ -80,7 +80,7 @@ package com.hurlant.crypto.symmetric
          while(_loc2_<this.k.length)
          {
             this.k[_loc2_]=_loc1_.nextByte();
-            delete this.k[[_loc2_]];
+            GlobalNotificationActionte this.k[[_loc2_]];
             _loc2_++;
          }
          this.k=null;

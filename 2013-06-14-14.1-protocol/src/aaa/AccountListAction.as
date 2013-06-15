@@ -1,12 +1,12 @@
-package wipivyv
+package aaa
 {
    import __AS3__.vec.Vector;
    import flash.utils.IDataInput;
 
 
-   public class Qikiledi extends Tezypama
+   public class AccountListAction extends Tezypama
    {
-      public function Qikiledi(param1:uint, param2:Function) {
+      public function AccountListAction(param1:uint, param2:Function) {
          var _loc3_:* = false;
          var _loc4_:* = true;
          this.accountIds_=new Vector.<int>();

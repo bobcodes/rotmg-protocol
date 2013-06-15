@@ -14,7 +14,7 @@ package wenono
    import poho.Dywygave;
    import suzen.Kodufanin;
    import wahyqise.Gecekat;
-   import vuhek.ConfirmDeleteCharacterDialog;
+   import vuhek.ConfirmGlobalNotificationActionteCharacterDialog;
 
 
    public class Gocisoqu extends Kyjefe
@@ -46,7 +46,7 @@ package wenono
          var _loc1_:* = false;
          var _loc2_:* = true;
          this.view.selected.add(this.tyhecete);
-         this.view.deleteCharacter.add(this.qevu);
+         this.view.GlobalNotificationActionteCharacter.add(this.qevu);
          this.view.showToolTip.add(this.rujimocet);
          this.view.hideTooltip.add(this.bywowyke);
          return;
@@ -72,7 +72,7 @@ package wenono
          this.view.hideTooltip.remove(this.bywowyke);
          this.view.showToolTip.remove(this.rujimocet);
          this.view.selected.remove(this.tyhecete);
-         this.view.deleteCharacter.remove(this.qevu);
+         this.view.GlobalNotificationActionteCharacter.remove(this.qevu);
          return;
       }
 
@@ -114,7 +114,7 @@ package wenono
          var _loc2_:* = true;
          var _loc3_:* = false;
          this.model.select(param1);
-         this.ridecy.dispatch(new ConfirmDeleteCharacterDialog());
+         this.ridecy.dispatch(new ConfirmGlobalNotificationActionteCharacterDialog());
          return;
       }
    }

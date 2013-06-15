@@ -31,6 +31,7 @@ import java.util.List;
 import rotmg.actions.IncomingAction;
 import rotmg.actions.incoming.subparts.PhysicalObject;
 import rotmg.actions.incoming.subparts.Tile;
+import rotmg.util.BitsAndBytes;
 
 public class UpdateAction implements IncomingAction {
 
@@ -79,11 +80,7 @@ public class UpdateAction implements IncomingAction {
             physicalObjects.add(PhysicalObject.fromBytes(din));
         }
         
-        int dropsSize = din.readShort();
-        List<Integer> drops = new ArrayList<Integer>(dropsSize);
-        for (int i = 0; i < dropsSize; i++) {
-            drops.add(din.readInt());
-        }
+        List<Integer> drops = BitsAndBytes.readIntList(din);
         
         return new UpdateAction(tiles, physicalObjects, drops);
     }

@@ -97,7 +97,7 @@ package dorepoji
          var _loc3_:* = false;
          var _loc4_:* = true;
          var _loc2_:SoundChannel = param1.target as SoundChannel;
-         delete radadagyt[[_loc2_]];
+         GlobalNotificationActionte radadagyt[[_loc2_]];
          return;
       }
 

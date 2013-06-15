@@ -9,7 +9,7 @@ package hirupuhel
 
       mejow function kupose(param1:int) : SavedCharacter;
 
-      mejow function deleteCharacter(param1:int) : void;
+      mejow function GlobalNotificationActionteCharacter(param1:int) : void;
 
       mejow function select(param1:SavedCharacter) : void;
 

@@ -97,7 +97,7 @@ package fysy
          {
             _loc2_=this.sybiwu[_loc1_];
             _loc2_.dispose();
-            delete this.sybiwu[[_loc1_]];
+            GlobalNotificationActionte this.sybiwu[[_loc1_]];
          }
          return;
       }

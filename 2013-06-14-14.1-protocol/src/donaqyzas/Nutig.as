@@ -24,7 +24,7 @@ package donaqyzas
       public function release(param1:Object) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         delete this.lohy[[param1]];
+         GlobalNotificationActionte this.lohy[[param1]];
          return;
       }
 
@@ -34,7 +34,7 @@ package donaqyzas
          var _loc1_:Object = null;
          for (_loc1_ in this.lohy)
          {
-            delete this.lohy[[_loc1_]];
+            GlobalNotificationActionte this.lohy[[_loc1_]];
          }
          return;
       }
