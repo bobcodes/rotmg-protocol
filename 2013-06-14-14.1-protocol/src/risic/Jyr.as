@@ -3,7 +3,7 @@ package risic
    import pugem.Account;
    import com.company.assembleegameclient.util.GUID;
    import flash.net.SharedObject;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.external.ExternalInterface;
 
 
@@ -102,9 +102,9 @@ package risic
          var _loc1_:* = true;
          var _loc2_:* = false;
          this.sapihaj(GUID.create(),null);
-         Parameters.jiqovezu=true;
-         Parameters.data_.charIdUseMap={};
-         Parameters.save();
+         RotmgParameters.jiqovezu=true;
+         RotmgParameters.data_.charIdUseMap={};
+         RotmgParameters.save();
          return;
       }
 

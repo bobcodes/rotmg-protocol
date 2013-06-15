@@ -1,7 +1,7 @@
 package dorepoji
 {
    import flash.media.SoundTransform;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.googleanalytics.GA;
 
 
@@ -19,7 +19,7 @@ package dorepoji
       public static function load() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         bugoqehi=new SoundTransform(Parameters.data_.playSFX?1:0);
+         bugoqehi=new SoundTransform(RotmgParameters.data_.playSFX?1:0);
          return;
       }
 
@@ -27,8 +27,8 @@ package dorepoji
          var _loc2_:* = true;
          var _loc3_:* = false;
          GA.global().trackEvent("sound",param1?"soundOn":"soundOff");
-         Parameters.data_.playSFX=param1;
-         Parameters.save();
+         RotmgParameters.data_.playSFX=param1;
+         RotmgParameters.save();
          Kadido.kumad();
          return;
       }

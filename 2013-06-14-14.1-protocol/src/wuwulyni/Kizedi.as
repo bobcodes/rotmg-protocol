@@ -35,7 +35,7 @@ package wuwulyni
       override protected function startTask() : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         var _loc1_:String = this.info.parameters.kongregate_api_path;
+         var _loc1_:String = this.info.RotmgParameters.kongregate_api_path;
          Security.allowDomain(_loc1_);
          this.qukacefi.ciqocu.addChild(this.ciqocu as DisplayObject);
          this.ciqocu.nelypef.addOnce(this.beretik);

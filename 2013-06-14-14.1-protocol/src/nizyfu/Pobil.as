@@ -53,8 +53,8 @@ package nizyfu
       private function mawebej(param1:Rekify, param2:Class) : void {
          var _loc9_:* = true;
          var _loc10_:* = false;
-         var injectParameters:Dictionary = null;
-         var parameters:Array = null;
+         var injectRotmgParameters:Dictionary = null;
+         var RotmgParameters:Array = null;
          var description:Rekify = param1;
          var type:Class = param2;
          var node:XML = this.fab.constructor[0];
@@ -66,17 +66,17 @@ package nizyfu
             }
             return;
          }
-         injectParameters=this.cebugeta(node.parent().metadata.arg);
-         var parameterNames:Array = (injectParameters.name||"").split(",");
+         injectRotmgParameters=this.cebugeta(node.parent().metadata.arg);
+         var parameterNames:Array = (injectRotmgParameters.name||"").split(",");
          var parameterNodes:XMLList = node.parameter;
          if(parameterNodes.(@type=="wepynyji").length()==parameterNodes.@type.length())
          {
             this.zusyju(node,type);
          }
-         parameters=this.luqalunej(parameterNodes,parameterNames);
-         var requiredParameters:uint = parameters.required;
-         delete parameters[required];
-         description.ctor=new Pote(parameters,requiredParameters,injectParameters);
+         RotmgParameters=this.luqalunej(parameterNodes,parameterNames);
+         var requiredRotmgParameters:uint = RotmgParameters.required;
+         delete RotmgParameters[required];
+         description.ctor=new Pote(RotmgParameters,requiredRotmgParameters,injectRotmgParameters);
          return;
       }
 
@@ -104,7 +104,7 @@ package nizyfu
          var [OFS18]node[/OFS]:XML[OFS18] = [/OFS][OFS15]null[/OFS];
          var [OFS24]mappingId[/OFS]:String[OFS24] = [/OFS][OFS22]null[/OFS];
          var [OFS30]propertyName[/OFS]:String[OFS30] = [/OFS][OFS28]null[/OFS];
-         var [OFS37]injectParameters[/OFS]:Dictionary[OFS37] = [/OFS][OFS34]null[/OFS];
+         var [OFS37]injectRotmgParameters[/OFS]:Dictionary[OFS37] = [/OFS][OFS34]null[/OFS];
          var [OFS45]injectionPoint[/OFS]:Qivysi[OFS45] = [/OFS][OFS41]null[/OFS];
          var [OFS50]description[/OFS]:Rekify[OFS50] = [/OFS][OFS49]param1[/OFS];
          for each (node in this.[OFS64]fab[/OFS].[OFS67]wepynyji[/OFS].([OFS103]name[/OFS][OFS103]([/OFS][OFS103])[/OFS][OFS110]==[/OFS][OFS107]"variable"[/OFS]||[OFS120]name[/OFS][OFS120]([/OFS][OFS120])[/OFS][OFS127]==[/OFS][OFS124]"accessor"[/OFS]).[OFS161]metadata[/OFS].([OFS193]@name[/OFS][OFS199]==[/OFS][OFS196]"Inject"[/OFS]))
@@ -122,8 +122,8 @@ package nizyfu
                }
                [OFS356]mappingId[/OFS][OFS356]=[/OFS][OFS255]node[/OFS].[OFS257]parent[/OFS][OFS257]([/OFS][OFS257])[/OFS].[OFS261]@type[/OFS][OFS267]+[/OFS][OFS264]"|"[/OFS][OFS354]+[/OFS][OFS343]_loc5_[/OFS].[OFS350]attribute[/OFS][OFS350]([/OFS][OFS347]"value"[/OFS][OFS350])[/OFS];
                [OFS372]propertyName[/OFS][OFS372]=[/OFS][OFS362]node[/OFS].[OFS364]parent[/OFS][OFS364]([/OFS][OFS364])[/OFS].[OFS368]@name[/OFS];
-               [OFS390]injectParameters[/OFS][OFS390]=[/OFS]this.[OFS384]cebugeta[/OFS][OFS384]([/OFS][OFS379]node[/OFS].[OFS381]arg[/OFS][OFS384])[/OFS];
-               [OFS427]injectionPoint[/OFS][OFS427]=[/OFS][OFS420]new [/OFS][OFS420]Qivysi[/OFS][OFS420]([/OFS][OFS399]mappingId[/OFS],[OFS403]propertyName[/OFS],[OFS407]injectParameters[/OFS].[OFS409]optional[/OFS][OFS415]==[/OFS][OFS412]"zefifi"[/OFS],[OFS418]injectParameters[/OFS][OFS420])[/OFS];
+               [OFS390]injectRotmgParameters[/OFS][OFS390]=[/OFS]this.[OFS384]cebugeta[/OFS][OFS384]([/OFS][OFS379]node[/OFS].[OFS381]arg[/OFS][OFS384])[/OFS];
+               [OFS427]injectionPoint[/OFS][OFS427]=[/OFS][OFS420]new [/OFS][OFS420]Qivysi[/OFS][OFS420]([/OFS][OFS399]mappingId[/OFS],[OFS403]propertyName[/OFS],[OFS407]injectRotmgParameters[/OFS].[OFS409]optional[/OFS][OFS415]==[/OFS][OFS412]"zefifi"[/OFS],[OFS418]injectRotmgParameters[/OFS][OFS420])[/OFS];
                [OFS431]description[/OFS].[OFS437]silanito[/OFS][OFS437]([/OFS][OFS435]injectionPoint[/OFS][OFS437])[/OFS];
             }
             [OFS452]return[/OFS];
@@ -133,20 +133,20 @@ package nizyfu
          var _loc10_:* = false;
          var _loc11_:* = true;
          var node:XML = null;
-         var injectParameters:Dictionary = null;
+         var injectRotmgParameters:Dictionary = null;
          var parameterNames:Array = null;
-         var parameters:Array = null;
-         var requiredParameters:uint = 0;
+         var RotmgParameters:Array = null;
+         var requiredRotmgParameters:uint = 0;
          var injectionPoint:Nud = null;
          var description:Rekify = param1;
          for each (node in this.fab.method.metadata.(@name=="Inject"))
          {
-            injectParameters=this.cebugeta(node.arg);
-            parameterNames=(injectParameters.name||"").split(",");
-            parameters=this.luqalunej(node.parent().parameter,parameterNames);
-            requiredParameters=parameters.required;
-            delete parameters[required];
-            injectionPoint=new Nud(node.parent().@name,parameters,requiredParameters,injectParameters.optional=="zefifi",injectParameters);
+            injectRotmgParameters=this.cebugeta(node.arg);
+            parameterNames=(injectRotmgParameters.name||"").split(",");
+            RotmgParameters=this.luqalunej(node.parent().parameter,parameterNames);
+            requiredRotmgParameters=RotmgParameters.required;
+            delete RotmgParameters[required];
+            injectionPoint=new Nud(node.parent().@name,RotmgParameters,requiredRotmgParameters,injectRotmgParameters.optional=="zefifi",injectRotmgParameters);
             description.silanito(injectionPoint);
          }
          return;
@@ -209,7 +209,7 @@ package nizyfu
             {
                if(!_loc10_)
                {
-                  throw new Sybe("Error in method definition of injectee \""+this.fab.@type+"Required parameters can\'t have type \"*\".");
+                  throw new Sybe("Error in method definition of injectee \""+this.fab.@type+"Required RotmgParameters can\'t have type \"*\".");
                }
                else
                {
@@ -231,21 +231,21 @@ package nizyfu
          var _loc11_:* = false;
          var _loc12_:* = true;
          var node:XML = null;
-         var injectParameters:Dictionary = null;
+         var injectRotmgParameters:Dictionary = null;
          var parameterNames:Array = null;
-         var parameters:Array = null;
-         var requiredParameters:uint = 0;
+         var RotmgParameters:Array = null;
+         var requiredRotmgParameters:uint = 0;
          var order:Number = NaN;
          var injectionPointType:Class = param1;
          var tag:String = param2;
          var injectionPoints:Array = [];
          for each (node in this.fab..metadata.(@name==tag))
          {
-            injectParameters=this.cebugeta(node.arg);
-            parameterNames=(injectParameters.name||"").split(",");
-            parameters=this.luqalunej(node.parent().parameter,parameterNames);
-            requiredParameters=parameters.required;
-            delete parameters[required];
+            injectRotmgParameters=this.cebugeta(node.arg);
+            parameterNames=(injectRotmgParameters.name||"").split(",");
+            RotmgParameters=this.luqalunej(node.parent().parameter,parameterNames);
+            requiredRotmgParameters=RotmgParameters.required;
+            delete RotmgParameters[required];
             for each (_loc9_ in node.arg)
             {
                with(nextValue(_loc7_,_loc8_))
@@ -258,7 +258,7 @@ package nizyfu
                }
             }
             order=parseInt(_loc6_.@value);
-            injectionPoints.push(new injectionPointType(node.parent().@name,parameters,requiredParameters,isNaN(order)?int.MAX_VALUE:order));
+            injectionPoints.push(new injectionPointType(node.parent().@name,RotmgParameters,requiredRotmgParameters,isNaN(order)?int.MAX_VALUE:order));
          }
          if(injectionPoints.length>0)
          {

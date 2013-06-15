@@ -17,7 +17,7 @@ package bud
          this.bapy=param2;
          this.kahi=param1;
          this.mogapyq=param3;
-         this.injectParameters=param4;
+         this.injectRotmgParameters=param4;
          return;
       }
 
@@ -41,7 +41,7 @@ package bud
          }
          else
          {
-            param1[this.bapy]=_loc4_.apply(param2,param3,injectParameters);
+            param1[this.bapy]=_loc4_.apply(param2,param3,injectRotmgParameters);
             return;
          }
       }

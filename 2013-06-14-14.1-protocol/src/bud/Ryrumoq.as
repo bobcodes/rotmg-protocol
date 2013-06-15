@@ -8,7 +8,7 @@ package bud
       public function Ryrumoq() {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         super([],0,injectParameters);
+         super([],0,injectRotmgParameters);
          return;
       }
 

@@ -1,24 +1,24 @@
-package ducojoryn
+package aaa
 {
    import mukyrosu.Qanyduk;
    import com.company.assembleegameclient.game.Pajemiz;
    import jovurora.Server;
    import flash.utils.ByteArray;
-   import dovuz.Vagogi;
+   import aaa.NetworkHandler;
    import com.company.assembleegameclient.objects.GameObject;
    import __AS3__.vec.Vector;
    import com.company.assembleegameclient.objects.Projectile;
    import com.company.assembleegameclient.objects.Player;
 
 
-   public class Zim extends Object
+   public class ActionMapperAbstract extends Object
    {
       {
          var _loc1_:* = false;
          var _loc2_:* = true;
       }
 
-      public function Zim() {
+      public function ActionMapperAbstract() {
          var _loc1_:* = false;
          var _loc2_:* = true;
          super();
@@ -191,7 +191,7 @@ package ducojoryn
 
       public static const dizubyb:int = 91;
 
-      public static var wisunoc:Zim;
+      public static var wisunoc:ActionMapperAbstract;
 
       public var mezyfyge:Qanyduk;
 
@@ -217,7 +217,7 @@ package ducojoryn
 
       public var jitterWatcher_:JitterWatcher;
 
-      public var vyquza:Vagogi;
+      public var vyquza:NetworkHandler;
 
       public var outstandingBuy_:Jugukade = null;
 

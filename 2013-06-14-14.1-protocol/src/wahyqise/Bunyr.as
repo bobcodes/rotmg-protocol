@@ -1,6 +1,6 @@
 package wahyqise
 {
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Bunyr extends Object
@@ -20,7 +20,7 @@ package wahyqise
          {
             return true;
          }
-         if(param1==Parameters.lugiboso||param1==Parameters.quc||param1==Parameters.kokapo||param1==Parameters.wyfa)
+         if(param1==RotmgParameters.lugiboso||param1==RotmgParameters.quc||param1==RotmgParameters.kokapo||param1==RotmgParameters.wyfa)
          {
             _loc2_=true;
          }

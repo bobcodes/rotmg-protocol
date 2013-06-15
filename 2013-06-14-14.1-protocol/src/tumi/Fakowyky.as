@@ -3,7 +3,7 @@ package tumi
    import micac.Ciqyl;
    import dicyl.Mukyhokot;
    import pumoc.Juc;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import komi.Vibemod;
 
 
@@ -27,7 +27,7 @@ package tumi
          var _loc2_:* = false;
          if(this.data=="/help")
          {
-            this.daju.dispatch(Juc.make(Parameters.quc,Vibemod.qamisybov));
+            this.daju.dispatch(Juc.make(RotmgParameters.quc,Vibemod.qamisybov));
          }
          else
          {

@@ -8,7 +8,7 @@ package tumi
    import pumoc.Gigo;
    import wipivyv.Text;
    import pumoc.Juc;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import jediwip.Kybidu;
    import wahyqise.Ziky;
    import com.company.assembleegameclient.objects.GameObject;
@@ -52,7 +52,7 @@ package tumi
          {
             if(param1.name_==this.model.player.name_)
             {
-               this.daju.dispatch(Juc.make(Parameters.kokapo,"This message has been flagged as spam."));
+               this.daju.dispatch(Juc.make(RotmgParameters.kokapo,"This message has been flagged as spam."));
             }
             return;
          }
@@ -85,7 +85,7 @@ package tumi
                }
             }
          }
-         if((this.account.zuqic())&&(!Parameters.data_["hidePlayerChat"]||(this.hab(param1.name_))))
+         if((this.account.zuqic())&&(!RotmgParameters.data_["hidePlayerChat"]||(this.hab(param1.name_))))
          {
             this.pagydajut(param1);
          }
@@ -212,7 +212,7 @@ package tumi
          {
             return this.colujoqo;
          }
-         if(param1.recipient_==Parameters.nylajyhy)
+         if(param1.recipient_==RotmgParameters.nylajyhy)
          {
             return this.gylykiv;
          }
@@ -226,7 +226,7 @@ package tumi
       private function nojyjeq(param1:Text) : Boolean {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         return (Parameters.data_.filterLanguage)&&param1.cleanText_.length>0&&!(param1.objectId_==this.model.player.objectId_);
+         return (RotmgParameters.data_.filterLanguage)&&param1.cleanText_.length>0&&!(param1.objectId_==this.model.player.objectId_);
       }
    }
 

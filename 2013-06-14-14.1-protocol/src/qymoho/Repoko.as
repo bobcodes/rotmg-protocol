@@ -13,7 +13,7 @@ package qymoho
    import com.company.assembleegameclient.util.Lylyto;
    import com.company.assembleegameclient.map.Map;
    import kyjunys.Qajul;
-   import ducojoryn.Zim;
+   import aaa.ActionMapperAbstract;
    import pilage.Tope;
    import wahyqise.Bedac;
 
@@ -91,7 +91,7 @@ package qymoho
          var _loc3_:* = Lylyto.porocif(param1,Kuk,Map,Qajul);
          if(_loc3_ is Map)
          {
-            Zim.wisunoc.invDrop(_loc2_,Tysyc.nyh(this.view.objectType),this.view.objectType);
+            ActionMapperAbstract.wisunoc.invDrop(_loc2_,Tysyc.nyh(this.view.objectType),this.view.objectType);
          }
          else
          {
@@ -100,7 +100,7 @@ package qymoho
                _loc4_=_loc3_ as Kuk;
                if(_loc4_.qavowykez()==Tope.puheqah&&!(_loc4_.dirisisy.owner==_loc2_))
                {
-                  Zim.wisunoc.invSwapPotion(_loc2_,_loc2_,Tysyc.nyh(this.view.objectType),this.view.objectType,_loc4_.dirisisy.owner,_loc4_.binaho,Tope.puheqah);
+                  ActionMapperAbstract.wisunoc.invSwapPotion(_loc2_,_loc2_,Tysyc.nyh(this.view.objectType),this.view.objectType,_loc4_.dirisisy.owner,_loc4_.binaho,Tope.puheqah);
                }
             }
          }

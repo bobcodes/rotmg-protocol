@@ -3,12 +3,12 @@ package jyhyzujyw
    import tytojonib.Command;
    import fanij.Juwycof;
    import zugevygam.Byty;
-   import dovuz.Vagogi;
+   import aaa.NetworkHandler;
    import pugem.Account;
    import cizagamym.Boquzojul;
    import ducojoryn.Tawe;
    import fanij.Qewi;
-   import ducojoryn.Zim;
+   import aaa.ActionMapperAbstract;
    import fanij.Dofo;
    import fanij.Zosycip;
    import sefylew.Fadyqe;
@@ -34,7 +34,7 @@ package jyhyzujyw
 
       public var bufaz:Byty;
 
-      public var server:Vagogi;
+      public var server:NetworkHandler;
 
       public var account:Account;
 
@@ -50,14 +50,14 @@ package jyhyzujyw
             {
                this.wimijigab(hery);
             }
-            _loc1_=this.bufaz.quseb(Zim.kucofofik) as Tawe;
+            _loc1_=this.bufaz.quseb(ActionMapperAbstract.kucofofik) as Tawe;
             _loc1_.sakiduby=1;
             _loc1_.objectId=Qewi(this.tutobasu).loqag;
             _loc1_.vyvy=Qewi(this.tutobasu).vyvy;
          }
          if(this.tutobasu is Dofo)
          {
-            _loc1_=this.bufaz.quseb(Zim.kucofofik) as Tawe;
+            _loc1_=this.bufaz.quseb(ActionMapperAbstract.kucofofik) as Tawe;
             _loc1_.sakiduby=2;
             _loc1_.ruvawoja=Dofo(this.tutobasu).segylotaz;
             _loc1_.fir=Dofo(this.tutobasu).fir;
@@ -65,7 +65,7 @@ package jyhyzujyw
          }
          if(this.tutobasu is Zosycip)
          {
-            _loc1_=this.bufaz.quseb(Zim.kucofofik) as Tawe;
+            _loc1_=this.bufaz.quseb(ActionMapperAbstract.kucofofik) as Tawe;
             _loc1_.sakiduby=3;
             _loc1_.ruvawoja=Zosycip(this.tutobasu).medup;
             _loc1_.quvy=Zosycip(this.tutobasu).nubazudun;

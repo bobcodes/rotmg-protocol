@@ -9,7 +9,7 @@ package pitahelel
    import jediwip.Kybidu;
    import komi.Vibemod;
    import flash.events.KeyboardEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.game.GameSprite;
    import qykifavol.Rulavowaz;
    import flash.events.MouseEvent;
@@ -73,7 +73,7 @@ package pitahelel
       private function tuv(param1:KeyboardEvent) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(param1.keyCode==Parameters.data_.interact&&stage.focus==null)
+         if(param1.keyCode==RotmgParameters.data_.interact&&stage.focus==null)
          {
             this.reskin.dispatch();
          }

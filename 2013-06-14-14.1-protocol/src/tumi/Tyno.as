@@ -5,7 +5,7 @@ package tumi
    import komi.Qog;
    import pumoc.Zesihag;
    import jediwip.Kybidu;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Tyno extends Command
@@ -53,7 +53,7 @@ package tumi
       private function sufupydata() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         if(this.qiwu.name==Parameters.wyfa||this.qiwu.name==Parameters.lugiboso||this.qiwu.name==Parameters.kokapo||this.qiwu.name==Parameters.quc||this.qiwu.name.charAt(0)=="#")
+         if(this.qiwu.name==RotmgParameters.wyfa||this.qiwu.name==RotmgParameters.lugiboso||this.qiwu.name==RotmgParameters.kokapo||this.qiwu.name==RotmgParameters.quc||this.qiwu.name.charAt(0)=="#")
          {
             this.balosu();
          }

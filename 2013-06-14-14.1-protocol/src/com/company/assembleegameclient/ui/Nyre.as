@@ -10,7 +10,7 @@ package com.company.assembleegameclient.ui
    import com.company.util.MoreColorUtil;
    import com.company.assembleegameclient.objects.ObjectLibrary;
    import com.company.assembleegameclient.objects.Player;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.filters.DropShadowFilter;
 
 
@@ -180,11 +180,11 @@ package com.company.assembleegameclient.ui
          }
          if(_loc1_.betyzyq)
          {
-            return Parameters.dumejik;
+            return RotmgParameters.dumejik;
          }
          if(_loc1_.dihap)
          {
-            return Parameters.vimytehy;
+            return RotmgParameters.vimytehy;
          }
          return this.color;
       }

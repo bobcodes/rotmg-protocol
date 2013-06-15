@@ -1,7 +1,7 @@
 package fuwured
 {
    import daqun.Qobeta;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Rocynav extends Object implements Qobeta
@@ -45,7 +45,7 @@ package fuwured
       public function vodupol() : String {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         var _loc1_:String = Parameters.hoci+"."+Parameters.vylyc;
+         var _loc1_:String = RotmgParameters.hoci+"."+RotmgParameters.vylyc;
          return this.dywez.replace("{IP}",this.qypeg).replace("{VERSION}",_loc1_);
       }
 

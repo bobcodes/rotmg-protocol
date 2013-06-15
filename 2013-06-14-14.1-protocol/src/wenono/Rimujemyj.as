@@ -15,7 +15,7 @@ package wenono
    import jufu.Jawojicyw;
    import suzen.Kodufanin;
    import com.company.util.Zycu;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import waryp.Letu;
    import com.company.assembleegameclient.appengine.SavedCharacter;
    import wahyqise.Gecekat;
@@ -111,14 +111,14 @@ package wenono
          var _loc4_:* = false;
          var _loc2_:Kodufanin = null;
          var _loc1_:String = Zycu.gij();
-         if(Parameters.data_.lastDailyAnalytics!=_loc1_)
+         if(RotmgParameters.data_.lastDailyAnalytics!=_loc1_)
          {
             _loc2_=new Kodufanin();
             _loc2_.category="joinDate";
-            _loc2_.hukepej=Parameters.data_.joinDate;
+            _loc2_.hukepej=RotmgParameters.data_.joinDate;
             this.taja.dispatch(_loc2_);
-            Parameters.data_.lastDailyAnalytics=_loc1_;
-            Parameters.save();
+            RotmgParameters.data_.lastDailyAnalytics=_loc1_;
+            RotmgParameters.save();
          }
          return;
       }

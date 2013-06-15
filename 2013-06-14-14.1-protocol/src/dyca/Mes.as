@@ -161,7 +161,7 @@ package dyca
          if(_loc5_)
          {
             _loc6_=this.lubeteryd.zyly(param1).ctor;
-            return _loc5_.apply(param3,this,_loc6_?_loc6_.injectParameters:null);
+            return _loc5_.apply(param3,this,_loc6_?_loc6_.injectRotmgParameters:null);
          }
          if(param2)
          {

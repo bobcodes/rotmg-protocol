@@ -8,7 +8,7 @@ package gabufo
    import komi.Vibemod;
    import jediwip.Kybidu;
    import flash.events.TextEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.filters.DropShadowFilter;
    import qykifavol.Rulavowaz;
    import flash.events.MouseEvent;
@@ -93,8 +93,8 @@ package gabufo
          var _loc3_:* = false;
          var _loc4_:* = true;
          this.fes=new Guzowoja();
-         var _loc1_:* = "<font color=\"#7777EE\"><a href=\""+Parameters.dyda+"\" target=\"_blank\">";
-         var _loc2_:* = "<font color=\"#7777EE\"><a href=\""+Parameters.dahyhuw+"\" target=\"_blank\">";
+         var _loc1_:* = "<font color=\"#7777EE\"><a href=\""+RotmgParameters.dyda+"\" target=\"_blank\">";
+         var _loc2_:* = "<font color=\"#7777EE\"><a href=\""+RotmgParameters.dahyhuw+"\" target=\"_blank\">";
          this.fes.setStringBuilder(new Kybidu().setParams(Vibemod.jakanyk,
             {
                tou:_loc1_,

@@ -27,7 +27,7 @@ package com.company.assembleegameclient.game
    import gokyc.Rud;
    import pugem.Account;
    import com.company.util.Bycaqa;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import zutudytod.Burijedot;
    import pufelih.Kumamy;
    import tilo.PackageButton;
@@ -210,9 +210,9 @@ package com.company.assembleegameclient.game
             }
          ;
          Bycaqa.timokujo(_loc3_,_loc2_.pedavitu());
-         if(!(map.name_=="Kitchen")&&!(map.name_=="Tutorial")&&!(map.name_=="Nexus Explanation")&&Parameters.data_.watchForTutorialExit==true)
+         if(!(map.name_=="Kitchen")&&!(map.name_=="Tutorial")&&!(map.name_=="Nexus Explanation")&&RotmgParameters.data_.watchForTutorialExit==true)
          {
-            Parameters.data_.watchForTutorialExit=false;
+            RotmgParameters.data_.watchForTutorialExit=false;
             this.suwyqi("rotmg.Marketing.track(\"tutorialComplete\")");
             _loc3_["fteStepCompleted"]=9900;
             _loc1_.sendRequest("/log/logFteStep",_loc3_);
@@ -224,9 +224,9 @@ package com.company.assembleegameclient.game
          }
          if(map.name_=="Tutorial")
          {
-            if(Parameters.data_.needsTutorial==true)
+            if(RotmgParameters.data_.needsTutorial==true)
             {
-               Parameters.data_.watchForTutorialExit=true;
+               RotmgParameters.data_.watchForTutorialExit=true;
                this.suwyqi("rotmg.Marketing.track(\"install\")");
                _loc3_["fteStepCompleted"]=100;
                _loc1_.sendRequest("/log/logFteStep",_loc3_);
@@ -235,12 +235,12 @@ package com.company.assembleegameclient.game
          }
          else
          {
-            if(!(map.name_=="Arena")&&!(map.name_=="Kitchen")&&!(map.name_=="Nexus Explanation")&&!(map.name_=="Vault Explanation")&&!(map.name_=="Guild Explanation")&&!this.evalIsNotInCombatMapArea()&&(Parameters.data_.showProtips))
+            if(!(map.name_=="Arena")&&!(map.name_=="Kitchen")&&!(map.name_=="Nexus Explanation")&&!(map.name_=="Vault Explanation")&&!(map.name_=="Guild Explanation")&&!this.evalIsNotInCombatMapArea()&&(RotmgParameters.data_.showProtips))
             {
                _loc4_=Duq.pamazo().getInstance(Qagyl);
             }
          }
-         Parameters.save();
+         RotmgParameters.save();
          jyruro();
          return;
       }

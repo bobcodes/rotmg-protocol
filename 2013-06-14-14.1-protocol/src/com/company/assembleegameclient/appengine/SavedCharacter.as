@@ -7,7 +7,7 @@ package com.company.assembleegameclient.appengine
    import com.company.assembleegameclient.util.TextureRedrawer;
    import com.company.util.Zurawi;
    import flash.geom.ColorTransform;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import fanij.Cun;
    import com.company.assembleegameclient.objects.ObjectLibrary;
    import sijizoh.Duq;
@@ -62,8 +62,8 @@ package com.company.assembleegameclient.appengine
       public static function sokaqobod(param1:SavedCharacter, param2:SavedCharacter) : Number {
          var _loc5_:* = true;
          var _loc6_:* = false;
-         var _loc3_:Number = Parameters.data_.charIdUseMap.hasOwnProperty(param1.charId())?Parameters.data_.charIdUseMap[param1.charId()]:0.0;
-         var _loc4_:Number = Parameters.data_.charIdUseMap.hasOwnProperty(param2.charId())?Parameters.data_.charIdUseMap[param2.charId()]:0.0;
+         var _loc3_:Number = RotmgParameters.data_.charIdUseMap.hasOwnProperty(param1.charId())?RotmgParameters.data_.charIdUseMap[param1.charId()]:0.0;
+         var _loc4_:Number = RotmgParameters.data_.charIdUseMap.hasOwnProperty(param2.charId())?RotmgParameters.data_.charIdUseMap[param2.charId()]:0.0;
          if(_loc3_!=_loc4_)
          {
             return _loc4_-_loc3_;

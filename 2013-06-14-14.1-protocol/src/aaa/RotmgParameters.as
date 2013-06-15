@@ -1,4 +1,4 @@
-package com.company.assembleegameclient.parameters
+package aaa
 {
    import flash.display.DisplayObject;
    import flash.net.SharedObject;
@@ -7,14 +7,14 @@ package com.company.assembleegameclient.parameters
    import com.company.util.Zycu;
 
 
-   public class Parameters extends Object
+   public class RotmgParameters extends Object
    {
       {
          var _loc1_:* = false;
          var _loc2_:* = true;
       }
 
-      public function Parameters() {
+      public function RotmgParameters() {
          var _loc1_:* = true;
          var _loc2_:* = false;
          super();

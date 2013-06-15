@@ -12,7 +12,7 @@ package com.company.assembleegameclient.tutorial
    import com.company.util.PointUtil;
    import flash.display.Graphics;
    import kabam.rotmg.assets.Bulamelu;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Tutorial extends Sprite
@@ -44,8 +44,8 @@ package com.company.assembleegameclient.tutorial
          _loc3_.beginFill(0,0.1);
          _loc3_.drawRect(0,0,800,600);
          _loc3_.endFill();
-         Parameters.data_.needsTutorial=false;
-         Parameters.save();
+         RotmgParameters.data_.needsTutorial=false;
+         RotmgParameters.save();
          addEventListener(Event.ADDED_TO_STAGE,this.onAddedToStage);
          addEventListener(Event.REMOVED_FROM_STAGE,this.onRemovedFromStage);
          return;

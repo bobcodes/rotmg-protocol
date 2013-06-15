@@ -4,7 +4,7 @@ package pufupav
    import com.company.assembleegameclient.objects.GameObject;
    import __AS3__.vec.Vector;
    import flash.display.BitmapData;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.geom.Point;
 
 
@@ -13,7 +13,7 @@ package pufupav
       public function Zuj(param1:uint, param2:int, param3:uint, param4:Point, param5:Point, param6:Number, param7:GameObject, param8:Vector.<BitmapData>) {
          var _loc9_:* = false;
          var _loc10_:* = true;
-         this.cameraAngle=Parameters.data_.cameraAngle;
+         this.cameraAngle=RotmgParameters.data_.cameraAngle;
          this.go=param7;
          this.hucosab=param6;
          this.mum=param8;
@@ -72,9 +72,9 @@ package pufupav
          toro=this.mum[this.vysina%this.qeny];
          this.byk=this.byk+this.dx_;
          this.rojobeki=this.rojobeki+this.dy_;
-         if(Parameters.data_.cameraAngle!=this.cameraAngle)
+         if(RotmgParameters.data_.cameraAngle!=this.cameraAngle)
          {
-            this.cameraAngle=Parameters.data_.cameraAngle;
+            this.cameraAngle=RotmgParameters.data_.cameraAngle;
             fity=-this.hucosab-this.cameraAngle;
          }
          moveTo(this.go.x_+this.wanaqovy+this.byk,this.go.y_+this.retyliteq+this.rojobeki);

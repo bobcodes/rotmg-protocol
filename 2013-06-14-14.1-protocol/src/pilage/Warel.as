@@ -56,7 +56,7 @@ package pilage
 
       public static const mopotewun:String = "Trap";
 
-      public static const pazimir:String = "StasisBlast";
+      public static const paActionMapperAbstractir:String = "StasisBlast";
 
       public static const robidyric:String = "Pet";
 

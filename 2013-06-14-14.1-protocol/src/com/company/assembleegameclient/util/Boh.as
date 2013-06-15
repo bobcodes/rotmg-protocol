@@ -7,7 +7,7 @@ package com.company.assembleegameclient.util
    import flash.display.BitmapData;
    import com.company.assembleegameclient.map.Square;
    import flash.utils.ByteArray;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.map.Qemujy;
    import com.company.assembleegameclient.map.Map;
    import com.company.util.AssetLibrary;
@@ -67,7 +67,7 @@ package com.company.assembleegameclient.util
          var _loc12_:* = true;
          var _loc3_:ByteArray = null;
          var _loc5_:BitmapData = null;
-         if(Parameters.qasekiw==0)
+         if(RotmgParameters.qasekiw==0)
          {
             return null;
          }
@@ -90,7 +90,7 @@ package com.company.assembleegameclient.util
          {
             return null;
          }
-         var _loc4_:Object = cache_[Parameters.qasekiw];
+         var _loc4_:Object = cache_[RotmgParameters.qasekiw];
          if(_loc4_.hasOwnProperty(_loc3_))
          {
             return _loc4_[_loc3_];

@@ -6,7 +6,7 @@ package sefylew
    import zekeqa.Devene;
    import flash.events.MouseEvent;
    import komi.Vibemod;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import jediwip.Kybidu;
    import cinyj.Vobewabij;
    import com.company.util.Jyjoburib;
@@ -56,7 +56,7 @@ package sefylew
          this.vyfodav=new Pedug(Vibemod.mogekyn,true);
          gozunigyl(this.vyfodav);
          this.checkbox=new Devene("",false);
-         var _loc1_:* = "<font color=\"#7777EE\"><a href=\""+Parameters.dyda+"\" target=\"_blank\">";
+         var _loc1_:* = "<font color=\"#7777EE\"><a href=\""+RotmgParameters.dyda+"\" target=\"_blank\">";
          var _loc2_:* = "</a></font>.";
          this.checkbox.qataqybyp(new Kybidu().setParams(Vibemod.ricokem,
             {

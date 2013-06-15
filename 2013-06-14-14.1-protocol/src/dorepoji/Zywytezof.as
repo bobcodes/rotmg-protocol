@@ -6,7 +6,7 @@ package dorepoji
    import daqun.Qobeta;
    import flash.net.URLRequest;
    import flash.media.SoundTransform;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.googleanalytics.GA;
 
 
@@ -35,7 +35,7 @@ package dorepoji
          var _loc2_:* = _loc1_.kegadag(true)+"/music/sorc.mp3";
          bar=new Sound();
          bar.load(new URLRequest(_loc2_));
-         taw=bar.play(0,int.MAX_VALUE,new SoundTransform(Parameters.data_.playMusic?0.3:0));
+         taw=bar.play(0,int.MAX_VALUE,new SoundTransform(RotmgParameters.data_.playMusic?0.3:0));
          return;
       }
 
@@ -43,9 +43,9 @@ package dorepoji
          var _loc2_:* = true;
          var _loc3_:* = false;
          GA.global().trackEvent("sound",param1?"musicOn":"musicOff");
-         Parameters.data_.playMusic=param1;
-         Parameters.save();
-         taw.soundTransform=new SoundTransform(Parameters.data_.playMusic?0.3:0);
+         RotmgParameters.data_.playMusic=param1;
+         RotmgParameters.save();
+         taw.soundTransform=new SoundTransform(RotmgParameters.data_.playMusic?0.3:0);
          return;
       }
    }

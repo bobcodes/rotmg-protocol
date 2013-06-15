@@ -8,7 +8,7 @@ package dorepoji
    import flash.net.URLRequest;
    import flash.media.SoundTransform;
    import flash.media.SoundChannel;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.events.Event;
 
 
@@ -85,7 +85,7 @@ package dorepoji
          var volume:Number = param2;
          var isFX:Boolean = param3;
          var sound:Sound = load(name);
-         actualVolume=(Parameters.data_.playSFX)&&(isFX)||(!isFX)&&(Parameters.data_.playPewPew)?volume:0;
+         actualVolume=(RotmgParameters.data_.playSFX)&&(isFX)||(!isFX)&&(RotmgParameters.data_.playPewPew)?volume:0;
          trans=new SoundTransform(actualVolume);
          channel=sound.play(0,0,trans);
          channel.addEventListener(Event.SOUND_COMPLETE,tacanab,false,0,true);
@@ -109,7 +109,7 @@ package dorepoji
          for each (_loc1_ in radadagyt)
          {
             _loc2_=_loc1_.soundTransform;
-            _loc2_.volume=Parameters.data_.playSFX?radadagyt[_loc1_]:0;
+            _loc2_.volume=RotmgParameters.data_.playSFX?radadagyt[_loc1_]:0;
             _loc1_.soundTransform=_loc2_;
          }
          return;

@@ -11,7 +11,7 @@ package com.company.assembleegameclient.objects
    import flash.utils.getTimer;
    import komi.Vibemod;
    import pumoc.Juc;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import sudiba.Fozinomu;
    import jediwip.Kybidu;
    import dorepoji.Kadido;
@@ -349,7 +349,7 @@ package com.company.assembleegameclient.objects
       }
 
       private function temak(param1:String, param2:Object=null) : Juc {
-         return Juc.make(Parameters.kokapo,param1,-1,-1,"",false,param2);
+         return Juc.make(RotmgParameters.kokapo,param1,-1,-1,"",false,param2);
       }
 
       public function zedo(param1:String) : void {
@@ -692,11 +692,11 @@ package com.company.assembleegameclient.objects
          }
          if(this.pewo!=null)
          {
-            _loc3_=Parameters.data_.cameraAngle;
+            _loc3_=RotmgParameters.data_.cameraAngle;
             if(this.naz!=0.0)
             {
-               _loc3_=_loc3_+param2*Parameters.ricaze*this.naz;
-               Parameters.data_.cameraAngle=_loc3_;
+               _loc3_=_loc3_+param2*RotmgParameters.ricaze*this.naz;
+               RotmgParameters.data_.cameraAngle=_loc3_;
             }
             if(!(this.pewo.x==0.0)||!(this.pewo.y==0.0))
             {
@@ -744,8 +744,8 @@ package com.company.assembleegameclient.objects
          var _loc1_:Square = map_.getSquare(x_,y_);
          if(_loc1_.props_.pycaciw)
          {
-            siqod=Math.min(siqod+1,Parameters.lezedumy);
-            this.wonyzob=0.1+(1-siqod/Parameters.lezedumy)*(_loc1_.props_.speed_-0.1);
+            siqod=Math.min(siqod+1,RotmgParameters.lezedumy);
+            this.wonyzob=0.1+(1-siqod/RotmgParameters.lezedumy)*(_loc1_.props_.speed_-0.1);
          }
          else
          {
@@ -770,11 +770,11 @@ package com.company.assembleegameclient.objects
          var _loc2_:* = true;
          if(this.betyzyq)
          {
-            return Parameters.dumejik;
+            return RotmgParameters.dumejik;
          }
          if(this.dihap)
          {
-            return Parameters.vimytehy;
+            return RotmgParameters.vimytehy;
          }
          return 16777215;
       }
@@ -799,9 +799,9 @@ package com.company.assembleegameclient.objects
             this.neqyse=new GraphicsSolidFill(2542335);
             this.luwomys=new GraphicsPath(Dyrejocu.capuz,new Vector.<Number>());
          }
-         if(this.breath_<=Parameters.vimebyh)
+         if(this.breath_<=RotmgParameters.vimebyh)
          {
-            _loc6_=(Parameters.vimebyh-this.breath_)/Parameters.vimebyh;
+            _loc6_=(RotmgParameters.vimebyh-this.breath_)/RotmgParameters.vimebyh;
             this.woditereh.color=MoreColorUtil.modib(5526612,16711680,Math.abs(Math.sin(param2/300))*_loc6_);
          }
          else
@@ -834,7 +834,7 @@ package com.company.assembleegameclient.objects
          super.draw(param1,param2,param3);
          if(this!=map_.player_)
          {
-            if(!Parameters.womo)
+            if(!RotmgParameters.womo)
             {
                tevacuzil(param1,param2);
             }
@@ -1106,7 +1106,7 @@ package com.company.assembleegameclient.objects
             if(_loc5_.Activate==Warel.SHOOT)
             {
                _loc9_=Math.atan2(param2,param1);
-               this.mikedocys(_loc8_,_loc4_,_loc5_,Parameters.data_.cameraAngle+_loc9_,false);
+               this.mikedocys(_loc8_,_loc4_,_loc5_,RotmgParameters.data_.cameraAngle+_loc9_,false);
             }
          }
          else
@@ -1118,7 +1118,7 @@ package com.company.assembleegameclient.objects
                if(_loc10_<=this.nydyry)
                {
                   _loc9_=Math.atan2(param2,param1);
-                  this.mikedocys(_loc8_,_loc4_,_loc5_,Parameters.data_.cameraAngle+_loc9_,false);
+                  this.mikedocys(_loc8_,_loc4_,_loc5_,RotmgParameters.data_.cameraAngle+_loc9_,false);
                }
             }
          }
@@ -1128,7 +1128,7 @@ package com.company.assembleegameclient.objects
       public function vot(param1:Number) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         this.shoot(Parameters.data_.cameraAngle+param1);
+         this.shoot(RotmgParameters.data_.cameraAngle+param1);
          return;
       }
 
@@ -1156,7 +1156,7 @@ package com.company.assembleegameclient.objects
          var _loc2_:int = zosig[0];
          if(_loc2_==-1)
          {
-            this.daju.dispatch(Juc.make(Parameters.kokapo,Vibemod.degubojek));
+            this.daju.dispatch(Juc.make(RotmgParameters.kokapo,Vibemod.degubojek));
             return;
          }
          var _loc3_:XML = ObjectLibrary.ziq[_loc2_];

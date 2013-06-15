@@ -9,7 +9,7 @@ package wenono
    import com.company.assembleegameclient.objects.Bijelywa;
    import pumoc.Gigo;
    import com.company.googleanalytics.GA;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import loradaby.Options;
    import com.company.assembleegameclient.objects.Player;
 
@@ -76,8 +76,8 @@ package wenono
          this.gagapas.halyviken();
          this.fer.qyhowo.gsc_.escape();
          GA.global().trackEvent("enterPortal","Nexus Button");
-         Parameters.data_.needsRandomRealm=false;
-         Parameters.save();
+         RotmgParameters.data_.needsRandomRealm=false;
+         RotmgParameters.save();
          return;
       }
 

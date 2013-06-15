@@ -4,7 +4,7 @@ package noniq
    import lemugo.Wokycuku;
    import jovurora.Server;
    import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.events.Event;
    import huv.Barisyz;
    import huv.Sebype;
@@ -42,7 +42,7 @@ package noniq
          var _loc2_:* = false;
          var _loc3_:* = true;
          removeChild(this.laciduk);
-         this.jesan=new GameSprite(this.server,Parameters.rowika,false,this.model.zycelady()[0].charId(),-1,null,this.model,param1.weviq,false);
+         this.jesan=new GameSprite(this.server,RotmgParameters.rowika,false,this.model.zycelady()[0].charId(),-1,null,this.model,param1.weviq,false);
          this.jesan.isEditor=true;
          this.jesan.addEventListener(Event.COMPLETE,this.lofijejor);
          this.jesan.addEventListener(Barisyz.RECONNECT,this.lofijejor);

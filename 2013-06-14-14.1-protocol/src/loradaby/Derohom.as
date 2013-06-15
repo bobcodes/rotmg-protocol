@@ -1,6 +1,6 @@
 package loradaby
 {
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.events.Event;
    import __AS3__.vec.Vector;
    import jediwip.Tunyhazo;
@@ -13,7 +13,7 @@ package loradaby
          var _loc8_:* = false;
          super(param1,param4,param5);
          this.callback_=param6;
-         this.gefowaco=new Vode(param2,param3,Parameters.data_[wavaqon]);
+         this.gefowaco=new Vode(param2,param3,RotmgParameters.data_[wavaqon]);
          this.gefowaco.addEventListener(Event.CHANGE,this.fuvare);
          addChild(this.gefowaco);
          return;
@@ -26,15 +26,15 @@ package loradaby
       override public function refresh() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.gefowaco.setValue(Parameters.data_[wavaqon]);
+         this.gefowaco.setValue(RotmgParameters.data_[wavaqon]);
          return;
       }
 
       private function fuvare(param1:Event) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         Parameters.data_[wavaqon]=this.gefowaco.value();
-         Parameters.save();
+         RotmgParameters.data_[wavaqon]=this.gefowaco.value();
+         RotmgParameters.save();
          if(this.callback_!=null)
          {
             this.callback_();

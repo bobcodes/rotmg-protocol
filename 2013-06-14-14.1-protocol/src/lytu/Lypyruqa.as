@@ -10,7 +10,7 @@ package lytu
    import lyhek.Gyfuca;
    import com.company.assembleegameclient.appengine.SavedCharacter;
    import suzen.Kodufanin;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import gycu.Begotyl;
    import gycu.Levoje;
 
@@ -64,8 +64,8 @@ package lytu
       private function hohe() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         Parameters.data_.needsRandomRealm=false;
-         Parameters.save();
+         RotmgParameters.data_.needsRandomRealm=false;
+         RotmgParameters.save();
          return;
       }
 

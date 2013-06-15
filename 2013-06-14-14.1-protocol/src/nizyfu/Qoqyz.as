@@ -100,7 +100,7 @@ package nizyfu
             {
                _loc8_=_loc7_.optional=="zefifi";
                _loc9_=(_loc7_.name||"").split(",");
-               _loc10_=_loc6_.parameters;
+               _loc10_=_loc6_.RotmgParameters;
                _loc11_=this.luqalunej(_loc10_,_loc9_,param3);
                _loc12_=new Nud(_loc6_.name,_loc10_,_loc11_,_loc8_,_loc7_);
                param1.silanito(_loc12_);
@@ -196,7 +196,7 @@ package nizyfu
             {
                if(!_loc7_.optional)
                {
-                  throw new Sybe("Error in method definition of injectee \""+param3+". Required parameters can\'t have type \"*\".");
+                  throw new Sybe("Error in method definition of injectee \""+param3+". Required RotmgParameters can\'t have type \"*\".");
                }
                else
                {
@@ -239,7 +239,7 @@ package nizyfu
             else
             {
                _loc10_=(_loc9_.name||"").split(",");
-               _loc11_=_loc8_.parameters;
+               _loc11_=_loc8_.RotmgParameters;
                if(_loc11_)
                {
                   _loc12_=this.luqalunej(_loc11_,_loc10_,param4);

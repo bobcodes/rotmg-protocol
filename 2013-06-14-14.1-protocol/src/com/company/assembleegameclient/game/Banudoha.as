@@ -4,7 +4,7 @@ package com.company.assembleegameclient.game
    import flash.events.MouseEvent;
    import flash.events.KeyboardEvent;
    import pumoc.Juc;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import sijizoh.Duq;
 
 
@@ -78,7 +78,7 @@ package com.company.assembleegameclient.game
          var _loc2_:* = true;
          var _loc3_:* = false;
          var _loc1_:Juc = new Juc();
-         _loc1_.name=Parameters.kokapo;
+         _loc1_.name=RotmgParameters.kokapo;
          _loc1_.text="You have been idle for "+woh+" minutes, you will be disconnected if you are idle for "+"more than "+wijoso+" minutes.";
          return _loc1_;
       }
@@ -87,7 +87,7 @@ package com.company.assembleegameclient.game
          var _loc2_:* = true;
          var _loc3_:* = false;
          var _loc1_:Juc = new Juc();
-         _loc1_.name=Parameters.kokapo;
+         _loc1_.name=RotmgParameters.kokapo;
          _loc1_.text="You have been idle for "+pokylydeg+" minutes, you will be disconnected if you are idle for "+"more than "+wijoso+" minutes.";
          return _loc1_;
       }
@@ -96,7 +96,7 @@ package com.company.assembleegameclient.game
          var _loc2_:* = false;
          var _loc3_:* = true;
          var _loc1_:Juc = new Juc();
-         _loc1_.name=Parameters.kokapo;
+         _loc1_.name=RotmgParameters.kokapo;
          _loc1_.text="You have been idle for "+wijoso+" minutes, disconnecting.";
          return _loc1_;
       }

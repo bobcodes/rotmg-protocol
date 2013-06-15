@@ -106,19 +106,19 @@ package tosugire
       private function heludu() : Boolean {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         return !(this.info.parameters.kongregate_api_path==null);
+         return !(this.info.RotmgParameters.kongregate_api_path==null);
       }
 
       private function qucasuw() : Boolean {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         return !(this.info.parameters.steam_api_path==null);
+         return !(this.info.RotmgParameters.steam_api_path==null);
       }
 
       private function fizesize() : Boolean {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         return !(this.info.parameters.kabam_signed_request==null);
+         return !(this.info.RotmgParameters.kabam_signed_request==null);
       }
 
       private function init() : void {

@@ -1,7 +1,7 @@
 package com.company.assembleegameclient.util
 {
    import dorepoji.Kos;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import dorepoji.Mobu;
    import com.company.util.AssetLibrary;
    import kabam.rotmg.assets.Zewiciciq;
@@ -39,7 +39,7 @@ package com.company.assembleegameclient.util
          this.qugovavibu();
          this.husur();
          this.sajiz();
-         Parameters.load();
+         RotmgParameters.load();
          this.wororad.load();
          Mobu.load();
          return;

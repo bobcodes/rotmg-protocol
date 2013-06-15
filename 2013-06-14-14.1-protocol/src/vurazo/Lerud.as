@@ -3,7 +3,7 @@ package vurazo
    import jovurora.Divoceve;
    import jovurora.Server;
    import __AS3__.vec.Vector;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Lerud extends Object implements Divoceve
@@ -12,7 +12,7 @@ package vurazo
          var _loc1_:* = true;
          var _loc2_:* = false;
          super();
-         this.localhost=new Server().setName("localhost").setPort(Parameters.dale);
+         this.localhost=new Server().setName("localhost").setPort(RotmgParameters.dale);
          return;
       }
 

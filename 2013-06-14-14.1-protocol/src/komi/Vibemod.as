@@ -339,7 +339,7 @@ package komi
 
       public static const vuhumocem:String = "MoneyFrame.payment";
 
-      public static const zim:String = "MoneyFrame.gold";
+      public static const ActionMapperAbstract:String = "MoneyFrame.gold";
 
       public static const mecaw:String = "MoneyFrame.buy";
 

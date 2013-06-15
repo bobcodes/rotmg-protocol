@@ -17,7 +17,7 @@ package bud
 
       public var last:Poq;
 
-      public var injectParameters:Dictionary;
+      public var injectRotmgParameters:Dictionary;
 
       public function applyInjection(param1:Object, param2:Class, param3:Mes) : void {
          return;

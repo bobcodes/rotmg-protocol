@@ -4,10 +4,10 @@ package sozyzajaw
    import wahyqise.Tysyc;
    import micac.Ciqyl;
    import hunavefeg.Depyrew;
-   import ducojoryn.Zim;
+   import aaa.ActionMapperAbstract;
    import com.company.assembleegameclient.objects.Player;
    import micac.Cake;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import dorepoji.Kadido;
    import flash.utils.getTimer;
    import pilage.Vysu;
@@ -18,7 +18,7 @@ package sozyzajaw
       public function UseBuyPotionCommand() {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.wuvetaz=Zim.wisunoc;
+         this.wuvetaz=ActionMapperAbstract.wisunoc;
          super();
          return;
       }
@@ -31,7 +31,7 @@ package sozyzajaw
 
       public var con:Depyrew;
 
-      private var wuvetaz:Zim;
+      private var wuvetaz:ActionMapperAbstract;
 
       private var player:Player;
 
@@ -63,7 +63,7 @@ package sozyzajaw
          var _loc3_:* = true;
          var _loc4_:* = false;
          var _loc1_:* = this.player.credits_>=this.jozicez.nimosuzod(this.player.getPotionCount(this.fipy));
-         var _loc2_:Boolean = (Parameters.data_.contextualPotionBuy)||this.tutobasu.source==Bedac.kabu;
+         var _loc2_:Boolean = (RotmgParameters.data_.contextualPotionBuy)||this.tutobasu.source==Bedac.kabu;
          return ((_loc1_)||(this.player.wulic(10)))&&(_loc2_);
       }
 

@@ -16,7 +16,7 @@ package furybyfib
    import kyjunys.Qajul;
    import com.company.assembleegameclient.util.Lylyto;
    import com.company.assembleegameclient.map.Map;
-   import ducojoryn.Zim;
+   import aaa.ActionMapperAbstract;
    import pilage.Tope;
    import com.company.assembleegameclient.objects.OneWayContainer;
    import com.company.assembleegameclient.objects.Container;
@@ -25,7 +25,7 @@ package furybyfib
    import loqaj.Lokaz;
    import copano.Jofedofuq;
    import copano.Gykafuzi;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.objects.GameObject;
    import com.company.assembleegameclient.objects.Player;
 
@@ -60,7 +60,7 @@ package furybyfib
          var _loc2_:* = true;
          this.view.addEventListener(Pamave.ITEM_MOVE,this.gyqoluzom);
          this.view.addEventListener(Pamave.ITEM_SHIFT_CLICK,this.fodopy);
-         this.view.addEventListener(Pamave.ITEM_DOUBLE_CLICK,this.zimahuk);
+         this.view.addEventListener(Pamave.ITEM_DOUBLE_CLICK,this.ActionMapperAbstractahuk);
          this.view.addEventListener(Pamave.ITEM_CTRL_CLICK,this.mubir);
          this.view.fykig.add(this.tokyji);
          return;
@@ -116,7 +116,7 @@ package furybyfib
                   _loc6_=_loc2_.dirisisy.curPlayer.nextAvailableInventorySlot();
                   if(_loc6_!=-1)
                   {
-                     Zim.wisunoc.invSwap(this.view.curPlayer,_loc2_.dirisisy.owner,_loc2_.binaho,_loc2_.soqugarol.itemId,this.view.curPlayer,_loc6_,Tope.puheqah);
+                     ActionMapperAbstract.wisunoc.invSwap(this.view.curPlayer,_loc2_.dirisisy.owner,_loc2_.binaho,_loc2_.soqugarol.itemId,this.view.curPlayer,_loc6_,Tope.puheqah);
                      _loc2_.setItem(Tope.puheqah);
                      _loc2_.wavuciwiz(this.view.curPlayer);
                   }
@@ -176,11 +176,11 @@ package furybyfib
       private function suhawy(param1:Kuk) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(!Zim.wisunoc||!this.view.dymyd||!param1||this.dugyno.hotyzycyc(param1.qavowykez()).fukuk<=this.fer.qyhowo.map.player_.getPotionCount(param1.qavowykez()))
+         if(!ActionMapperAbstract.wisunoc||!this.view.dymyd||!param1||this.dugyno.hotyzycyc(param1.qavowykez()).fukuk<=this.fer.qyhowo.map.player_.getPotionCount(param1.qavowykez()))
          {
             return;
          }
-         Zim.wisunoc.invSwapPotion(this.view.curPlayer,this.view.owner,param1.binaho,param1.soqugarol.itemId,this.view.curPlayer,Tysyc.nyh(param1.qavowykez()),Tope.puheqah);
+         ActionMapperAbstract.wisunoc.invSwapPotion(this.view.curPlayer,this.view.owner,param1.binaho,param1.soqugarol.itemId,this.view.curPlayer,Tysyc.nyh(param1.qavowykez()),Tope.puheqah);
          param1.setItem(Tope.puheqah);
          param1.wavuciwiz(this.view.curPlayer);
          return;
@@ -239,12 +239,12 @@ package furybyfib
                }
                else
                {
-                  Zim.wisunoc.invDrop(this.view.owner,param1.binaho,param1.qavowykez());
+                  ActionMapperAbstract.wisunoc.invDrop(this.view.owner,param1.binaho,param1.qavowykez());
                }
             }
             else
             {
-               Zim.wisunoc.invDrop(this.view.owner,param1.binaho,param1.qavowykez());
+               ActionMapperAbstract.wisunoc.invDrop(this.view.owner,param1.binaho,param1.qavowykez());
             }
          }
          param1.setItem(-1);
@@ -254,11 +254,11 @@ package furybyfib
       private function jotuky(param1:Lokaz, param2:Lokaz) : Boolean {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         if(!Zim.wisunoc||!this.view.dymyd||!param1||!param2)
+         if(!ActionMapperAbstract.wisunoc||!this.view.dymyd||!param1||!param2)
          {
             return false;
          }
-         Zim.wisunoc.invSwap(this.view.curPlayer,this.view.owner,param1.binaho,param1.soqugarol.itemId,param2.dirisisy.owner,param2.binaho,param2.soqugarol.itemId);
+         ActionMapperAbstract.wisunoc.invSwap(this.view.curPlayer,this.view.owner,param1.binaho,param1.soqugarol.itemId,param2.dirisisy.owner,param2.binaho,param2.soqugarol.itemId);
          var _loc3_:int = param1.qavowykez();
          param1.setItem(param2.qavowykez());
          param2.setItem(_loc3_);
@@ -270,11 +270,11 @@ package furybyfib
       private function kosu(param1:Lokaz, param2:Container, param3:int) : void {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         if(!Zim.wisunoc||!this.view.dymyd||!param1||!param2)
+         if(!ActionMapperAbstract.wisunoc||!this.view.dymyd||!param1||!param2)
          {
             return;
          }
-         Zim.wisunoc.invSwap(this.view.curPlayer,this.view.owner,param1.binaho,param1.soqugarol.itemId,param2,param3,-1);
+         ActionMapperAbstract.wisunoc.invSwap(this.view.curPlayer,this.view.owner,param1.binaho,param1.soqugarol.itemId,param2,param3,-1);
          param1.setItem(Tope.puheqah);
          return;
       }
@@ -285,7 +285,7 @@ package furybyfib
          var _loc2_:Kuk = param1.tile;
          if(_loc2_.dirisisy is Jofedofuq||_loc2_.dirisisy is Gykafuzi)
          {
-            Zim.wisunoc.useItem_new(_loc2_.dirisisy.owner,_loc2_.binaho);
+            ActionMapperAbstract.wisunoc.useItem_new(_loc2_.dirisisy.owner,_loc2_.binaho);
          }
          return;
       }
@@ -295,7 +295,7 @@ package furybyfib
          var _loc5_:* = false;
          var _loc2_:Kuk = null;
          var _loc3_:* = 0;
-         if(Parameters.data_.inventorySwap)
+         if(RotmgParameters.data_.inventorySwap)
          {
             _loc2_=param1.tile;
             if(_loc2_.dirisisy is Jofedofuq)
@@ -303,7 +303,7 @@ package furybyfib
                _loc3_=_loc2_.dirisisy.curPlayer.swapInventoryIndex(this.pyrikaky.kina);
                if(_loc3_!=-1)
                {
-                  Zim.wisunoc.invSwap(this.view.curPlayer,_loc2_.dirisisy.owner,_loc2_.binaho,_loc2_.soqugarol.itemId,this.view.curPlayer,_loc3_,Tope.puheqah);
+                  ActionMapperAbstract.wisunoc.invSwap(this.view.curPlayer,_loc2_.dirisisy.owner,_loc2_.binaho,_loc2_.soqugarol.itemId,this.view.curPlayer,_loc3_,Tope.puheqah);
                   _loc2_.setItem(Tope.puheqah);
                   _loc2_.wavuciwiz(this.view.curPlayer);
                }
@@ -312,7 +312,7 @@ package furybyfib
          return;
       }
 
-      private function zimahuk(param1:Pamave) : void {
+      private function ActionMapperAbstractahuk(param1:Pamave) : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
          var _loc2_:Kuk = param1.tile;
@@ -347,7 +347,7 @@ package furybyfib
          var _loc2_:int = this.view.curPlayer.nextAvailableInventorySlot();
          if(_loc2_!=-1)
          {
-            Zim.wisunoc.invSwap(this.view.curPlayer,this.view.owner,param1.binaho,param1.soqugarol.itemId,this.view.curPlayer,_loc2_,Tope.puheqah);
+            ActionMapperAbstract.wisunoc.invSwap(this.view.curPlayer,this.view.owner,param1.binaho,param1.soqugarol.itemId,this.view.curPlayer,_loc2_,Tope.puheqah);
          }
          return;
       }
@@ -360,11 +360,11 @@ package furybyfib
          var _loc4_:int = this.view.curPlayer.nextAvailableInventorySlot();
          if(_loc4_!=-1)
          {
-            Zim.wisunoc.invSwap(_loc3_,this.view.owner,param1.binaho,param1.soqugarol.itemId,this.view.curPlayer,_loc4_,Tope.puheqah);
+            ActionMapperAbstract.wisunoc.invSwap(_loc3_,this.view.owner,param1.binaho,param1.soqugarol.itemId,this.view.curPlayer,_loc4_,Tope.puheqah);
          }
          else
          {
-            Zim.wisunoc.useItem_new(_loc2_,param1.binaho);
+            ActionMapperAbstract.wisunoc.useItem_new(_loc2_,param1.binaho);
          }
          return;
       }
@@ -377,11 +377,11 @@ package furybyfib
          var _loc4_:int = ObjectLibrary.tuni(param1.qavowykez(),_loc3_);
          if(_loc4_!=-1)
          {
-            Zim.wisunoc.invSwap(_loc3_,_loc2_,param1.binaho,param1.qavowykez(),_loc3_,_loc4_,_loc3_.zosig[_loc4_]);
+            ActionMapperAbstract.wisunoc.invSwap(_loc3_,_loc2_,param1.binaho,param1.qavowykez(),_loc3_,_loc4_,_loc3_.zosig[_loc4_]);
          }
          else
          {
-            Zim.wisunoc.useItem_new(_loc2_,param1.binaho);
+            ActionMapperAbstract.wisunoc.useItem_new(_loc2_,param1.binaho);
          }
          return;
       }

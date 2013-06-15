@@ -39,7 +39,7 @@ package rulobefuq
       private function keholyvel() : Sotoqilon {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         var _loc1_:Object = LoaderInfo(this.root.stage.root.loaderInfo).parameters;
+         var _loc1_:Object = LoaderInfo(this.root.stage.root.loaderInfo).RotmgParameters;
          if(this.heludu(_loc1_))
          {
             return Sotoqilon.judotyt;

@@ -1,12 +1,12 @@
-package firo
+package aaa
 {
    import flash.utils.ByteArray;
    import flash.utils.IDataOutput;
 
 
-   public class Qemepuz extends Jicogu
+   public class HelloAction extends Jicogu
    {
-      public function Qemepuz(param1:uint, param2:Function) {
+      public function HelloAction(param1:uint, param2:Function) {
          var _loc3_:* = false;
          var _loc4_:* = true;
          this.buildVersion_=new String();

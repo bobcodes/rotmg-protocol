@@ -56,7 +56,7 @@ package mavew
 
       private var hash:Object;
 
-      public function zimopizu(param1:XML, param2:XML) : Wyceja {
+      public function ActionMapperAbstractopizu(param1:XML, param2:XML) : Wyceja {
          var _loc6_:* = true;
          var _loc7_:* = false;
          var _loc3_:int = int(param1.SlotType);

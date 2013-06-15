@@ -2,7 +2,7 @@ package loradaby
 {
    import com.company.util.MoreColorUtil;
    import flash.geom.ColorTransform;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.events.Event;
 
 
@@ -12,7 +12,7 @@ package loradaby
          var _loc5_:* = true;
          var _loc6_:* = false;
          super(param1,param2,param3);
-         this.feq=new KeyCodeBox(Parameters.data_[wavaqon]);
+         this.feq=new KeyCodeBox(RotmgParameters.data_[wavaqon]);
          this.feq.addEventListener(Event.CHANGE,this.fuvare);
          addChild(this.feq);
          this.sotymojor(param4);
@@ -36,15 +36,15 @@ package loradaby
       override public function refresh() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.feq.mafevopari(Parameters.data_[wavaqon]);
+         this.feq.mafevopari(RotmgParameters.data_[wavaqon]);
          return;
       }
 
       private function fuvare(param1:Event) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         Parameters.setKey(wavaqon,this.feq.value());
-         Parameters.save();
+         RotmgParameters.setKey(wavaqon,this.feq.value());
+         RotmgParameters.save();
          return;
       }
    }

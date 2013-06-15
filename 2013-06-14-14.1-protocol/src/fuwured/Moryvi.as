@@ -1,7 +1,7 @@
 package fuwured
 {
    import daqun.Qobeta;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Moryvi extends Object implements Qobeta
@@ -34,7 +34,7 @@ package fuwured
       }
 
       public function vodupol() : String {
-         return this.dywez.replace("{VERSION}",Parameters.hoci).replace("{MINOR}",Parameters.vylyc);
+         return this.dywez.replace("{VERSION}",RotmgParameters.hoci).replace("{MINOR}",RotmgParameters.vylyc);
       }
 
       public function cupyryl() : Boolean {

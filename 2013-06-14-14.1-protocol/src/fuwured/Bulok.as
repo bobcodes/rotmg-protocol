@@ -1,7 +1,7 @@
 package fuwured
 {
    import daqun.Qobeta;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Bulok extends Object implements Qobeta
@@ -36,7 +36,7 @@ package fuwured
       public function vodupol() : String {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         var _loc1_:String = Parameters.hoci+"."+Parameters.vylyc;
+         var _loc1_:String = RotmgParameters.hoci+"."+RotmgParameters.vylyc;
          return this.dywez.replace("{VERSION}",_loc1_);
       }
 

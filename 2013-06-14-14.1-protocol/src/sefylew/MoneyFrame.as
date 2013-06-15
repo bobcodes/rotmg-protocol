@@ -11,7 +11,7 @@ package sefylew
    import com.company.assembleegameclient.ui.Tivinu;
    import flash.events.MouseEvent;
    import __AS3__.vec.Vector;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.util.Tiguziro;
    import flash.display.Shape;
    import com.company.assembleegameclient.util.offer.Offer;
@@ -43,7 +43,7 @@ package sefylew
 
       private static const hyvy:String = Vibemod.vuhumocem;
 
-      private static const bucahiles:String = Vibemod.zim;
+      private static const bucahiles:String = Vibemod.ActionMapperAbstract;
 
       private static const nicizi:String = Vibemod.mecaw;
 
@@ -95,7 +95,7 @@ package sefylew
          var _loc3_:* = false;
          var _loc1_:Vector.<String> = this.jem();
          this.papu=new Siz(_loc1_);
-         this.papu.setSelected(Parameters.data_.paymentMethod);
+         this.papu.setSelected(RotmgParameters.data_.paymentMethod);
          return;
       }
 

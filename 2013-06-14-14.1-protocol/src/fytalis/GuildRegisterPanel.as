@@ -14,7 +14,7 @@ package fytalis
    import jediwip.Kybidu;
    import komi.Vibemod;
    import com.company.assembleegameclient.ui.Tivinu;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.util.Currency;
 
 
@@ -55,7 +55,7 @@ package fytalis
             this.gehivyky.setStringBuilder(new Kybidu().setParams(Vibemod.naq).setPrefix("<p align=\"center\">").setPostfix("</p>"));
             this.gehivyky.y=0;
             addChild(this.gehivyky);
-            _loc4_=new Telir(Vibemod.hefocolal,16,Parameters.wurysobu,Currency.FAME);
+            _loc4_=new Telir(Vibemod.hefocolal,16,RotmgParameters.wurysobu,Currency.FAME);
             _loc4_.addEventListener(MouseEvent.CLICK,this.dit);
             this.ryfoc.push(_loc4_.zesi);
             addChild(_loc4_);

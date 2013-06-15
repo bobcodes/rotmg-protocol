@@ -7,7 +7,7 @@ package com.company.assembleegameclient.game
    import lemugo.Wokycuku;
    import wenono.Tewefem;
    import com.company.assembleegameclient.map.Qawosiwi;
-   import ducojoryn.Zim;
+   import aaa.ActionMapperAbstract;
    import com.company.assembleegameclient.objects.GameObject;
    import wipivyv.Syvaf;
 
@@ -43,7 +43,7 @@ package com.company.assembleegameclient.game
 
       public var camera_:Qawosiwi;
 
-      public var gsc_:Zim;
+      public var gsc_:ActionMapperAbstract;
 
       public function initialize() : void {
          return;

@@ -8,7 +8,7 @@ package vilova
    import civino.Povaseh;
    import hunavefeg.Depyrew;
    import flash.utils.Timer;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.util.Bycaqa;
    import flash.events.TimerEvent;
 
@@ -51,7 +51,7 @@ package vilova
          this.con.info("GetUserDataTask start");
          this.zajiqefe=this.hifuvah();
          this.sendRequest();
-         Parameters.jiqovezu=false;
+         RotmgParameters.jiqovezu=false;
          return;
       }
 
@@ -84,7 +84,7 @@ package vilova
          _loc1_.game_net_user_id=this.account.tamy();
          _loc1_.game_net=this.account.cug();
          _loc1_.play_platform=this.account.rarofu();
-         _loc1_.do_login=Parameters.jiqovezu;
+         _loc1_.do_login=RotmgParameters.jiqovezu;
          Bycaqa.timokujo(_loc1_,this.account.pedavitu());
          return _loc1_;
       }

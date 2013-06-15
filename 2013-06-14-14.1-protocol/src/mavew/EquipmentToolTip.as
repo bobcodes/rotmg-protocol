@@ -18,7 +18,7 @@ package mavew
    import hivaw.Woserev;
    import jediwip.Tunyhazo;
    import com.company.util.Coluf;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class EquipmentToolTip extends Qyryl
@@ -522,7 +522,7 @@ package mavew
                         }
                      ,Taz.humuhujig(Taz.tejy),Taz.vepiq())}));
                      break;
-                  case Warel.pazimir:
+                  case Warel.paActionMapperAbstractir:
                      this.rydemujis.push(new Effect(Vibemod.joneqoq,{stasis:new AppendingLineBuilder().pushParams(Vibemod.mewafaw,{duration:_loc1_.@duration},Taz.humuhujig(Taz.tejy),Taz.vepiq())}));
                      break;
                   case Warel.sasime:
@@ -556,7 +556,7 @@ package mavew
                      _loc3_=int(_loc1_.@stat);
                      _loc4_=int(_loc1_.@amount);
                      _loc9_={};
-                     if(!(_loc3_==StatData.tibozimer)&&!(_loc3_==StatData.nabavaf))
+                     if(!(_loc3_==StatData.tiboActionMapperAbstracter)&&!(_loc3_==StatData.nabavaf))
                      {
                         _loc2_=Vibemod.masut;
                         _loc9_["statName"]=new Kybidu().setParams(StatData.lycaz(_loc3_));
@@ -790,7 +790,7 @@ package mavew
                {
                   unUsableClass:_loc5_,
                   usableClasses:this.qucyvari(),
-                  keyCode:Coluf.faj[Parameters.data_.useSpecial]
+                  keyCode:Coluf.faj[RotmgParameters.data_.useSpecial]
                }
             ,_loc3_,_loc4_);
          }
@@ -871,7 +871,7 @@ package mavew
          var _loc2_:* = true;
          if(this.curItemXML!=null)
          {
-            this.rat=this.gilij.zimopizu(this.kubiw,this.curItemXML);
+            this.rat=this.gilij.ActionMapperAbstractopizu(this.kubiw,this.curItemXML);
          }
          else
          {

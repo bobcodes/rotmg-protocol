@@ -6,7 +6,7 @@ package dopacuhemo
    import flash.net.Socket;
    import zugevygam.Hovogejyt;
    import zugevygam.Byty;
-   import dovuz.Vagogi;
+   import aaa.NetworkHandler;
 
 
    public class Hogivefu extends Object implements Vupyga
@@ -29,7 +29,7 @@ package dopacuhemo
          this.difas.map(Socket);
          this.difas.map(Hovogejyt).pylo(this.rydalyl);
          this.difas.map(Byty).pylo(this.rydalyl);
-         this.difas.map(Vagogi).fezy();
+         this.difas.map(NetworkHandler).fezy();
          return;
       }
    }

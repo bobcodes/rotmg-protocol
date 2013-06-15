@@ -1,7 +1,7 @@
 package micac
 {
    import com.company.assembleegameclient.game.GameSprite;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Ciqyl extends Object
@@ -24,7 +24,7 @@ package micac
       public function rykowibi() : String {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         return this.qyhowo.gsc_.gameId_==Parameters.myjedib?"OPTIONS_BUTTON":"NEXUS_BUTTON";
+         return this.qyhowo.gsc_.gameId_==RotmgParameters.myjedib?"OPTIONS_BUTTON":"NEXUS_BUTTON";
       }
    }
 

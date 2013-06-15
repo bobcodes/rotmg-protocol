@@ -10,7 +10,7 @@ package kofaz
    import flash.filters.DropShadowFilter;
    import bemav.Telir;
    import komi.Vibemod;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.util.Currency;
    import jediwip.Kybidu;
    import com.company.assembleegameclient.ui.Tivinu;
@@ -97,7 +97,7 @@ package kofaz
          this.gehivyky.setStringBuilder(this.wud(param1));
          this.gehivyky.y=0;
          addChild(this.gehivyky);
-         var _loc2_:Telir = new Telir(Vibemod.cyjuse,16,Parameters.juf,Currency.win);
+         var _loc2_:Telir = new Telir(Vibemod.cyjuse,16,RotmgParameters.juf,Currency.win);
          _loc2_.zesi.addOnce(this.cume);
          this.namaqaloj=_loc2_;
          addChild(this.namaqaloj);
@@ -180,7 +180,7 @@ package kofaz
       private function tuv(param1:KeyboardEvent) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(param1.keyCode==Parameters.data_.interact&&stage.focus==null)
+         if(param1.keyCode==RotmgParameters.data_.interact&&stage.focus==null)
          {
             this.muvu();
          }

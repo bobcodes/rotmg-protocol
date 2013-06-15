@@ -12,7 +12,7 @@ package dumavap
          super();
          if(!param1||!param2||!param3)
          {
-            throw ArgumentError("TypeFilter parameters can not be null");
+            throw ArgumentError("TypeFilter RotmgParameters can not be null");
          }
          else
          {

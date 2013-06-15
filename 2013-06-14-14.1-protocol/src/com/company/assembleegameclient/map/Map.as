@@ -11,7 +11,7 @@ package com.company.assembleegameclient.map
    import flash.utils.Dictionary;
    import flash.display.IGraphicsData;
    import flash.geom.Rectangle;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.display.Graphics;
    import com.company.assembleegameclient.util.ConditionEffect;
    import flash.filters.BlurFilter;
@@ -463,7 +463,7 @@ package com.company.assembleegameclient.map
             }
          }
          this.locehof.sortOn(fiqocubu,mofylajyf);
-         if(Parameters.data_.drawShadows)
+         if(RotmgParameters.data_.drawShadows)
          {
             for each (_loc14_ in this.locehof)
             {
@@ -487,9 +487,9 @@ package com.company.assembleegameclient.map
                _loc6_.harywekur(this.graphicsData_,param1,param2);
             }
          }
-         if(!(player_==null)&&player_.breath_>=0&&player_.breath_<Parameters.vimebyh)
+         if(!(player_==null)&&player_.breath_>=0&&player_.breath_<RotmgParameters.vimebyh)
          {
-            _loc20_=(Parameters.vimebyh-player_.breath_)/Parameters.vimebyh;
+            _loc20_=(RotmgParameters.vimebyh-player_.breath_)/RotmgParameters.vimebyh;
             _loc21_=Math.abs(Math.sin(param2/300))*0.75;
             qylucequ.alphaMultiplier=_loc20_*_loc21_;
             kyf.transform.colorTransform=qylucequ;
@@ -501,7 +501,7 @@ package com.company.assembleegameclient.map
          {
             kyf.visible=false;
          }
-         if(!(player_==null)&&!Parameters.womo)
+         if(!(player_==null)&&!RotmgParameters.womo)
          {
             dob.visible=true;
             dob.x=_loc3_.right-10;

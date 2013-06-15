@@ -5,7 +5,7 @@ package nytifawy
    import pugem.Account;
    import pumoc.Tejijuw;
    import tumi.Lukud;
-   import tumi.Zimydato;
+   import tumi.ActionMapperAbstractydato;
    import pumoc.Gigo;
    import micac.Ciqyl;
    import cizagamym.Boquzojul;
@@ -44,7 +44,7 @@ package nytifawy
 
       public var dopypim:Lukud;
 
-      public var racyg:Zimydato;
+      public var racyg:ActionMapperAbstractydato;
 
       public var gagapas:Gigo;
 

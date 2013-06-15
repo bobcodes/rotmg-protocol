@@ -83,7 +83,7 @@ package mulypagy
       }
 
       private function qilak() : Boolean {
-         var _loc1_:Object = this.loaderInfo.parameters;
+         var _loc1_:Object = this.loaderInfo.RotmgParameters;
          return _loc1_.deployment==penesyz;
       }
 

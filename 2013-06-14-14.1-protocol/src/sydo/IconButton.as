@@ -10,7 +10,7 @@ package sydo
    import com.company.util.MoreColorUtil;
    import flash.events.MouseEvent;
    import com.company.util.Coluf;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import jediwip.Kybidu;
    import komi.Vibemod;
    import pomujukir.Cirumy;
@@ -97,7 +97,7 @@ package sydo
          this.jywor(tehobur);
          if(this.toolTip_!=null)
          {
-            _loc2_=Coluf.faj[Parameters.data_[this.temog]];
+            _loc2_=Coluf.faj[RotmgParameters.data_[this.temog]];
             this.toolTip_.kenadyb(new Kybidu().setParams(Vibemod.fisacy,{hotkey:_loc2_}));
          }
          return;

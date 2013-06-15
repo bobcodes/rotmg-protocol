@@ -1,6 +1,6 @@
 package pumoc
 {
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import loradaby.Options;
 
 
@@ -26,27 +26,27 @@ package pumoc
       private var fowi:uint = 34;
 
       public function mofirabi() : int {
-         [OFS15]return [/OFS][OFS2]Parameters[/OFS].[OFS4]data_[/OFS][[OFS6]Options[/OFS].[OFS9]sazim[/OFS]];
+         [OFS15]return [/OFS][OFS2]RotmgParameters[/OFS].[OFS4]data_[/OFS][[OFS6]Options[/OFS].[OFS9]saActionMapperAbstract[/OFS]];
       }
 
       public function vokega() : int {
-         return Parameters.data_[Options.midolipy];
+         return RotmgParameters.data_[Options.midolipy];
       }
 
       public function hezi() : int {
-         return Parameters.data_[Options.hunobola];
+         return RotmgParameters.data_[Options.hunobola];
       }
 
       public function jejobiga() : int {
-         return Parameters.data_[Options.fyfunow];
+         return RotmgParameters.data_[Options.fyfunow];
       }
 
       public function dybolisu() : uint {
-         return Parameters.data_[Options.gugaloh];
+         return RotmgParameters.data_[Options.gugaloh];
       }
 
       public function wifu() : uint {
-         return Parameters.data_[Options.zyhipahuj];
+         return RotmgParameters.data_[Options.zyhipahuj];
       }
    }
 

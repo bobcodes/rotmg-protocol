@@ -5,7 +5,7 @@ package com.company.assembleegameclient.objects
    import com.company.assembleegameclient.engine3d.Vamydyf;
    import com.company.util.Trig;
    import com.company.assembleegameclient.map.Map;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.map.Square;
    import com.company.assembleegameclient.util.Tocaniw;
    import flash.geom.Point;
@@ -172,7 +172,7 @@ package com.company.assembleegameclient.objects
             _loc4_=param1.goDict_[this.ownerId_] as Player;
             if(!(_loc4_==null)&&_loc4_.siqod>0)
             {
-               z_=0.5-0.4*_loc4_.siqod/Parameters.lezedumy;
+               z_=0.5-0.4*_loc4_.siqod/RotmgParameters.lezedumy;
             }
          }
          return true;
@@ -434,14 +434,14 @@ package com.company.assembleegameclient.objects
          var _loc10_:* = false;
          var _loc6_:uint = 0;
          var _loc7_:uint = 0;
-         if(!Parameters.bonyge)
+         if(!RotmgParameters.bonyge)
          {
             return;
          }
          var _loc4_:BitmapData = this.texture_;
-         if(Parameters.pofalogud!=0)
+         if(RotmgParameters.pofalogud!=0)
          {
-            switch(Parameters.pofalogud)
+            switch(RotmgParameters.pofalogud)
             {
                case 1:
                   _loc6_=16777100;
@@ -491,7 +491,7 @@ package com.company.assembleegameclient.objects
       override public function drawShadow(param1:Vector.<IGraphicsData>, param2:Qawosiwi, param3:int) : void {
          var _loc7_:* = true;
          var _loc8_:* = false;
-         if(!Parameters.bonyge)
+         if(!RotmgParameters.bonyge)
          {
             return;
          }

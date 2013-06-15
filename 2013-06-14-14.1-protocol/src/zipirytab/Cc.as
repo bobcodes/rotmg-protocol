@@ -16,7 +16,7 @@ package zipirytab
          return;
       }
 
-      private static var vuzimesir:Console;
+      private static var vuActionMapperAbstractesir:Console;
 
       private static var _config:Winit;
 
@@ -33,19 +33,19 @@ package zipirytab
       public static function start(param1:DisplayObjectContainer, param2:String="") : void {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            if((param1)&&!vuzimesir.parent)
+            if((param1)&&!vuActionMapperAbstractesir.parent)
             {
-               param1.addChild(vuzimesir);
+               param1.addChild(vuActionMapperAbstractesir);
             }
          }
          else
          {
-            vuzimesir=new Console(param2,config);
+            vuActionMapperAbstractesir=new Console(param2,config);
             if(param1)
             {
-               param1.addChild(vuzimesir);
+               param1.addChild(vuActionMapperAbstractesir);
             }
          }
          return;
@@ -54,11 +54,11 @@ package zipirytab
       public static function pyna(param1:DisplayObject, param2:String="") : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            if((param1)&&(param1.stage)&&!(vuzimesir.parent==param1.stage))
+            if((param1)&&(param1.stage)&&!(vuActionMapperAbstractesir.parent==param1.stage))
             {
-               param1.stage.addChild(vuzimesir);
+               param1.stage.addChild(vuActionMapperAbstractesir);
             }
          }
          else
@@ -69,7 +69,7 @@ package zipirytab
             }
             else
             {
-               vuzimesir=new Console(param2,config);
+               vuActionMapperAbstractesir=new Console(param2,config);
                if(param1)
                {
                   param1.addEventListener(Event.ADDED_TO_STAGE,dapiteve);
@@ -82,9 +82,9 @@ package zipirytab
       public static function add(param1:*, param2:int=2, param3:Boolean=false) : void {
          var _loc4_:* = false;
          var _loc5_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.add(param1,param2,param3);
+            vuActionMapperAbstractesir.add(param1,param2,param3);
          }
          return;
       }
@@ -92,9 +92,9 @@ package zipirytab
       public static function ch(param1:*, param2:*, param3:int=2, param4:Boolean=false) : void {
          var _loc5_:* = false;
          var _loc6_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.ch(param1,param2,param3,param4);
+            vuActionMapperAbstractesir.ch(param1,param2,param3,param4);
          }
          return;
       }
@@ -102,9 +102,9 @@ package zipirytab
       public static function log(... rest) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.log.apply(null,rest);
+            vuActionMapperAbstractesir.log.apply(null,rest);
          }
          return;
       }
@@ -112,9 +112,9 @@ package zipirytab
       public static function info(... rest) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.info.apply(null,rest);
+            vuActionMapperAbstractesir.info.apply(null,rest);
          }
          return;
       }
@@ -122,9 +122,9 @@ package zipirytab
       public static function debug(... rest) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.debug.apply(null,rest);
+            vuActionMapperAbstractesir.debug.apply(null,rest);
          }
          return;
       }
@@ -132,9 +132,9 @@ package zipirytab
       public static function bec(... rest) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.bec.apply(null,rest);
+            vuActionMapperAbstractesir.bec.apply(null,rest);
          }
          return;
       }
@@ -142,9 +142,9 @@ package zipirytab
       public static function error(... rest) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.error.apply(null,rest);
+            vuActionMapperAbstractesir.error.apply(null,rest);
          }
          return;
       }
@@ -152,9 +152,9 @@ package zipirytab
       public static function lapyzet(... rest) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.lapyzet.apply(null,rest);
+            vuActionMapperAbstractesir.lapyzet.apply(null,rest);
          }
          return;
       }
@@ -162,9 +162,9 @@ package zipirytab
       public static function kabyve(param1:*, ... rest) : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.tekyw(param1,rest,Console.nunenuzi);
+            vuActionMapperAbstractesir.tekyw(param1,rest,Console.nunenuzi);
          }
          return;
       }
@@ -172,9 +172,9 @@ package zipirytab
       public static function qivefyz(param1:*, ... rest) : void {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.tekyw(param1,rest,Console.INFO);
+            vuActionMapperAbstractesir.tekyw(param1,rest,Console.INFO);
          }
          return;
       }
@@ -182,9 +182,9 @@ package zipirytab
       public static function lavaza(param1:*, ... rest) : void {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.tekyw(param1,rest,Console.DEBUG);
+            vuActionMapperAbstractesir.tekyw(param1,rest,Console.DEBUG);
          }
          return;
       }
@@ -192,9 +192,9 @@ package zipirytab
       public static function pyvefejyh(param1:*, ... rest) : void {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.tekyw(param1,rest,Console.WARN);
+            vuActionMapperAbstractesir.tekyw(param1,rest,Console.WARN);
          }
          return;
       }
@@ -202,9 +202,9 @@ package zipirytab
       public static function zabemy(param1:*, ... rest) : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.tekyw(param1,rest,Console.ERROR);
+            vuActionMapperAbstractesir.tekyw(param1,rest,Console.ERROR);
          }
          return;
       }
@@ -212,9 +212,9 @@ package zipirytab
       public static function valydacac(param1:*, ... rest) : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.tekyw(param1,rest,Console.FATAL);
+            vuActionMapperAbstractesir.tekyw(param1,rest,Console.FATAL);
          }
          return;
       }
@@ -222,9 +222,9 @@ package zipirytab
       public static function jirah(param1:*, param2:int=-1, param3:int=5) : void {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.jirah(param1,param2,param3);
+            vuActionMapperAbstractesir.jirah(param1,param2,param3);
          }
          return;
       }
@@ -232,9 +232,9 @@ package zipirytab
       public static function bad(param1:*, param2:*, param3:int=-1, param4:int=5) : void {
          var _loc5_:* = true;
          var _loc6_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.bad(param1,param2,param3,param4);
+            vuActionMapperAbstractesir.bad(param1,param2,param3,param4);
          }
          return;
       }
@@ -242,9 +242,9 @@ package zipirytab
       public static function inspect(param1:Object, param2:Boolean=true) : void {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.inspect(param1,param2);
+            vuActionMapperAbstractesir.inspect(param1,param2);
          }
          return;
       }
@@ -252,9 +252,9 @@ package zipirytab
       public static function tufyb(param1:*, param2:Object, param3:Boolean=true) : void {
          var _loc4_:* = false;
          var _loc5_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.tufyb(param1,param2,param3);
+            vuActionMapperAbstractesir.tufyb(param1,param2,param3);
          }
          return;
       }
@@ -262,9 +262,9 @@ package zipirytab
       public static function explode(param1:Object, param2:int=3) : void {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.explode(param1,param2);
+            vuActionMapperAbstractesir.explode(param1,param2);
          }
          return;
       }
@@ -272,9 +272,9 @@ package zipirytab
       public static function explodech(param1:*, param2:Object, param3:int=3) : void {
          var _loc4_:* = false;
          var _loc5_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.explodech(param1,param2,param3);
+            vuActionMapperAbstractesir.explodech(param1,param2,param3);
          }
          return;
       }
@@ -282,9 +282,9 @@ package zipirytab
       public static function hikogy(... rest) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.hikogy.apply(null,rest);
+            vuActionMapperAbstractesir.hikogy.apply(null,rest);
          }
          return;
       }
@@ -292,9 +292,9 @@ package zipirytab
       public static function zopuzym(param1:*, param2:int, ... rest) : void {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.zopuzym.apply(null,new Array(param1,param2).concat(rest));
+            vuActionMapperAbstractesir.zopuzym.apply(null,new Array(param1,param2).concat(rest));
          }
          return;
       }
@@ -302,9 +302,9 @@ package zipirytab
       public static function map(param1:DisplayObjectContainer, param2:uint=0) : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.map(param1,param2);
+            vuActionMapperAbstractesir.map(param1,param2);
          }
          return;
       }
@@ -312,9 +312,9 @@ package zipirytab
       public static function mapch(param1:*, param2:DisplayObjectContainer, param3:uint=0) : void {
          var _loc4_:* = false;
          var _loc5_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.mapch(param1,param2,param3);
+            vuActionMapperAbstractesir.mapch(param1,param2,param3);
          }
          return;
       }
@@ -322,9 +322,9 @@ package zipirytab
       public static function clear(param1:String=null) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.clear(param1);
+            vuActionMapperAbstractesir.clear(param1);
          }
          return;
       }
@@ -332,9 +332,9 @@ package zipirytab
       public static function gycysi(param1:Vim, param2:Function=null, param3:Array=null) : void {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.gycysi(param1,param2,param3);
+            vuActionMapperAbstractesir.gycysi(param1,param2,param3);
          }
          return;
       }
@@ -342,9 +342,9 @@ package zipirytab
       public static function ras(param1:String, param2:Function, param3:Array=null, param4:String=null) : void {
          var _loc5_:* = true;
          var _loc6_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.ras(param1,param2,param3,param4);
+            vuActionMapperAbstractesir.ras(param1,param2,param3,param4);
          }
          return;
       }
@@ -352,9 +352,9 @@ package zipirytab
       public static function laqe(param1:LoaderInfo) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.laqe(param1);
+            vuActionMapperAbstractesir.laqe(param1);
          }
          return;
       }
@@ -362,9 +362,9 @@ package zipirytab
       public static function gulotyfu(param1:String, param2:Object, param3:Boolean=false) : void {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.gulotyfu(param1,param2,param3);
+            vuActionMapperAbstractesir.gulotyfu(param1,param2,param3);
          }
          return;
       }
@@ -372,9 +372,9 @@ package zipirytab
       public static function qim(param1:String, param2:Function, param3:String="", param4:Boolean=true, param5:String=";") : void {
          var _loc6_:* = false;
          var _loc7_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.qim(param1,param2,param3,param4,param5);
+            vuActionMapperAbstractesir.qim(param1,param2,param3,param4,param5);
          }
          return;
       }
@@ -382,9 +382,9 @@ package zipirytab
       public static function fujaniqiv(param1:Object, param2:String=null) : String {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.fujaniqiv(param1,param2);
+            return vuActionMapperAbstractesir.fujaniqiv(param1,param2);
          }
          return null;
       }
@@ -392,9 +392,9 @@ package zipirytab
       public static function fysi(param1:String) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.fysi(param1);
+            vuActionMapperAbstractesir.fysi(param1);
          }
          return;
       }
@@ -402,9 +402,9 @@ package zipirytab
       public static function kuwelib(param1:String, param2:Object, param3:String, param4:Number=-1, param5:String=null, param6:Rectangle=null, param7:Boolean=false) : void {
          var _loc8_:* = true;
          var _loc9_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.kuwelib(param1,param2,param3,param4,param5,param6,param7);
+            vuActionMapperAbstractesir.kuwelib(param1,param2,param3,param4,param5,param6,param7);
          }
          return;
       }
@@ -412,9 +412,9 @@ package zipirytab
       public static function jeforusyp(param1:String, param2:Number=NaN, param3:Number=NaN) : void {
          var _loc4_:* = false;
          var _loc5_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.jeforusyp(param1,param2,param3);
+            vuActionMapperAbstractesir.jeforusyp(param1,param2,param3);
          }
          return;
       }
@@ -422,9 +422,9 @@ package zipirytab
       public static function removeGraph(param1:String, param2:Object=null, param3:String=null) : void {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.removeGraph(param1,param2,param3);
+            vuActionMapperAbstractesir.removeGraph(param1,param2,param3);
          }
          return;
       }
@@ -432,9 +432,9 @@ package zipirytab
       public static function setViewingChannels(... rest) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.setViewingChannels.apply(null,rest);
+            vuActionMapperAbstractesir.setViewingChannels.apply(null,rest);
          }
          return;
       }
@@ -442,9 +442,9 @@ package zipirytab
       public static function cazu(... rest) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.cazu.apply(null,rest);
+            vuActionMapperAbstractesir.cazu.apply(null,rest);
          }
          return;
       }
@@ -452,9 +452,9 @@ package zipirytab
       public static function set vizozyqaz(param1:uint) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.vizozyqaz=param1;
+            vuActionMapperAbstractesir.vizozyqaz=param1;
          }
          return;
       }
@@ -462,9 +462,9 @@ package zipirytab
       public static function get width() : Number {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.width;
+            return vuActionMapperAbstractesir.width;
          }
          return 0;
       }
@@ -472,9 +472,9 @@ package zipirytab
       public static function set width(param1:Number) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.width=param1;
+            vuActionMapperAbstractesir.width=param1;
          }
          return;
       }
@@ -482,9 +482,9 @@ package zipirytab
       public static function get height() : Number {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.height;
+            return vuActionMapperAbstractesir.height;
          }
          return 0;
       }
@@ -492,9 +492,9 @@ package zipirytab
       public static function set height(param1:Number) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.height=param1;
+            vuActionMapperAbstractesir.height=param1;
          }
          return;
       }
@@ -502,9 +502,9 @@ package zipirytab
       public static function get x() : Number {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.x;
+            return vuActionMapperAbstractesir.x;
          }
          return 0;
       }
@@ -512,9 +512,9 @@ package zipirytab
       public static function set x(param1:Number) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.x=param1;
+            vuActionMapperAbstractesir.x=param1;
          }
          return;
       }
@@ -522,9 +522,9 @@ package zipirytab
       public static function get y() : Number {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.y;
+            return vuActionMapperAbstractesir.y;
          }
          return 0;
       }
@@ -532,9 +532,9 @@ package zipirytab
       public static function set y(param1:Number) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.y=param1;
+            vuActionMapperAbstractesir.y=param1;
          }
          return;
       }
@@ -542,9 +542,9 @@ package zipirytab
       public static function get visible() : Boolean {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.visible;
+            return vuActionMapperAbstractesir.visible;
          }
          return false;
       }
@@ -552,9 +552,9 @@ package zipirytab
       public static function set visible(param1:Boolean) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.visible=param1;
+            vuActionMapperAbstractesir.visible=param1;
          }
          return;
       }
@@ -562,9 +562,9 @@ package zipirytab
       public static function get fpsMonitor() : Boolean {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.fpsMonitor;
+            return vuActionMapperAbstractesir.fpsMonitor;
          }
          return false;
       }
@@ -572,9 +572,9 @@ package zipirytab
       public static function set fpsMonitor(param1:Boolean) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.fpsMonitor=param1;
+            vuActionMapperAbstractesir.fpsMonitor=param1;
          }
          return;
       }
@@ -582,9 +582,9 @@ package zipirytab
       public static function get memoryMonitor() : Boolean {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.memoryMonitor;
+            return vuActionMapperAbstractesir.memoryMonitor;
          }
          return false;
       }
@@ -592,9 +592,9 @@ package zipirytab
       public static function set memoryMonitor(param1:Boolean) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.memoryMonitor=param1;
+            vuActionMapperAbstractesir.memoryMonitor=param1;
          }
          return;
       }
@@ -602,9 +602,9 @@ package zipirytab
       public static function get commandLine() : Boolean {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.commandLine;
+            return vuActionMapperAbstractesir.commandLine;
          }
          return false;
       }
@@ -612,9 +612,9 @@ package zipirytab
       public static function set commandLine(param1:Boolean) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.commandLine=param1;
+            vuActionMapperAbstractesir.commandLine=param1;
          }
          return;
       }
@@ -622,9 +622,9 @@ package zipirytab
       public static function get displayRoller() : Boolean {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.displayRoller;
+            return vuActionMapperAbstractesir.displayRoller;
          }
          return false;
       }
@@ -632,9 +632,9 @@ package zipirytab
       public static function set displayRoller(param1:Boolean) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.displayRoller=param1;
+            vuActionMapperAbstractesir.displayRoller=param1;
          }
          return;
       }
@@ -642,9 +642,9 @@ package zipirytab
       public static function setRollerCaptureKey(param1:String, param2:Boolean=false, param3:Boolean=false, param4:Boolean=false) : void {
          var _loc5_:* = true;
          var _loc6_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.setRollerCaptureKey(param1,param4,param2,param3);
+            vuActionMapperAbstractesir.setRollerCaptureKey(param1,param4,param2,param3);
          }
          return;
       }
@@ -652,9 +652,9 @@ package zipirytab
       public static function get remoting() : Boolean {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.remoting;
+            return vuActionMapperAbstractesir.remoting;
          }
          return false;
       }
@@ -662,9 +662,9 @@ package zipirytab
       public static function set remoting(param1:Boolean) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.remoting=param1;
+            vuActionMapperAbstractesir.remoting=param1;
          }
          return;
       }
@@ -672,9 +672,9 @@ package zipirytab
       public static function remotingSocket(param1:String, param2:int) : void {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            vuzimesir.remotingSocket(param1,param2);
+            vuActionMapperAbstractesir.remotingSocket(param1,param2);
          }
          return;
       }
@@ -682,13 +682,13 @@ package zipirytab
       public static function remove() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            if(vuzimesir.parent)
+            if(vuActionMapperAbstractesir.parent)
             {
-               vuzimesir.parent.removeChild(vuzimesir);
+               vuActionMapperAbstractesir.parent.removeChild(vuActionMapperAbstractesir);
             }
-            vuzimesir=null;
+            vuActionMapperAbstractesir=null;
          }
          return;
       }
@@ -696,15 +696,15 @@ package zipirytab
       public static function tuzynewet(param1:String="\r\n") : String {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(vuzimesir)
+         if(vuActionMapperAbstractesir)
          {
-            return vuzimesir.tuzynewet(param1);
+            return vuActionMapperAbstractesir.tuzynewet(param1);
          }
          return "";
       }
 
       public static function get wisunoc() : Console {
-         return vuzimesir;
+         return vuActionMapperAbstractesir;
       }
 
       private static function dapiteve(param1:Event) : void {
@@ -712,9 +712,9 @@ package zipirytab
          var _loc4_:* = false;
          var _loc2_:DisplayObjectContainer = param1.currentTarget as DisplayObjectContainer;
          _loc2_.removeEventListener(Event.ADDED_TO_STAGE,dapiteve);
-         if((vuzimesir)&&vuzimesir.parent==null)
+         if((vuActionMapperAbstractesir)&&vuActionMapperAbstractesir.parent==null)
          {
-            _loc2_.stage.addChild(vuzimesir);
+            _loc2_.stage.addChild(vuActionMapperAbstractesir);
          }
          return;
       }

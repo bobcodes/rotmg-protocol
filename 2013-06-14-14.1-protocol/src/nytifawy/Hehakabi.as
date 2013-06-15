@@ -3,7 +3,7 @@ package nytifawy
    import flash.geom.Matrix;
    import flash.text.TextField;
    import flash.text.TextFormat;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import hivysif.Pyzykyj;
    import pumoc.Zesihag;
    import komi.Donok;
@@ -35,15 +35,15 @@ package nytifawy
 
       private static const begatywy:Matrix = new Matrix();
 
-      private static const loh:String = Parameters.lugiboso;
+      private static const loh:String = RotmgParameters.lugiboso;
 
-      private static const baqyjim:String = Parameters.wyfa;
+      private static const baqyjim:String = RotmgParameters.wyfa;
 
-      private static const lohol:String = Parameters.quc;
+      private static const lohol:String = RotmgParameters.quc;
 
-      private static const ERROR:String = Parameters.kokapo;
+      private static const ERROR:String = RotmgParameters.kokapo;
 
-      private static const zuziluw:String = Parameters.nylajyhy;
+      private static const zuziluw:String = RotmgParameters.nylajyhy;
 
       private static const rutosowa:TextField = kadida();
 
@@ -291,7 +291,7 @@ package nytifawy
          var _loc6_:* = true;
          var _loc7_:* = false;
          var _loc3_:String = this.gap.zoqim();
-         var _loc4_:Boolean = Parameters.data_["forceChatQuality"];
+         var _loc4_:Boolean = RotmgParameters.data_["forceChatQuality"];
          var _loc5_:BitmapData = this.factory.make(param1,14,param2,true,begatywy,true);
          return _loc5_;
       }

@@ -6,7 +6,7 @@ package mybujib
    import mavew.Qyryl;
    import com.company.assembleegameclient.objects.GameObject;
    import mavew.QuestToolTip;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import mavew.Tomyn;
    import com.company.assembleegameclient.map.Quest;
    import com.company.assembleegameclient.map.Qawosiwi;
@@ -58,7 +58,7 @@ package mybujib
          {
             return new QuestToolTip(go_);
          }
-         if(Parameters.data_.showQuestPortraits)
+         if(RotmgParameters.data_.showQuestPortraits)
          {
             return new Tomyn(param1);
          }

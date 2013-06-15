@@ -5,7 +5,7 @@ package com.company.assembleegameclient.map
    import flash.geom.PerspectiveProjection;
    import flash.geom.Matrix3D;
    import com.company.assembleegameclient.objects.GameObject;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import __AS3__.vec.Vector;
    import com.company.assembleegameclient.util.Kev;
    import com.company.util.Trig;
@@ -95,10 +95,10 @@ package com.company.assembleegameclient.map
       public function configureCamera(param1:GameObject, param2:Boolean) : void {
          var _loc5_:* = false;
          var _loc6_:* = true;
-         var _loc3_:Rectangle = Parameters.data_.centerOnPlayer?rilifoj:tyliqowyz;
-         if(Parameters.womo)
+         var _loc3_:Rectangle = RotmgParameters.data_.centerOnPlayer?rilifoj:tyliqowyz;
+         if(RotmgParameters.womo)
          {
-            if(!Parameters.cipiso)
+            if(!RotmgParameters.cipiso)
             {
                _loc3_=diko;
             }
@@ -107,7 +107,7 @@ package com.company.assembleegameclient.map
                _loc3_=cole;
             }
          }
-         var _loc4_:Number = Parameters.data_.cameraAngle;
+         var _loc4_:Number = RotmgParameters.data_.cameraAngle;
          this.configure(param1.x_,param1.y_,12,_loc4_,_loc3_,false);
          this.syce=param2;
          return;

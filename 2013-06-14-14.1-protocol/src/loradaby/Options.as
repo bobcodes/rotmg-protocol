@@ -6,7 +6,7 @@ package loradaby
    import jediwip.Tunyhazo;
    import jediwip.Kybidu;
    import jediwip.Vofezuzy;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.game.GameSprite;
    import waryp.Nulejufyl;
    import flash.events.MouseEvent;
@@ -93,7 +93,7 @@ package loradaby
 
       public static const biripyq:int = 550;
 
-      public static const sazim:String = "chatCommand";
+      public static const saActionMapperAbstract:String = "chatCommand";
 
       public static const midolipy:String = "chat";
 
@@ -136,8 +136,8 @@ package loradaby
       private static function qacozovoma() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         Parameters.data_.cameraAngle=Parameters.data_.defaultCameraAngle;
-         Parameters.save();
+         RotmgParameters.data_.cameraAngle=RotmgParameters.data_.defaultCameraAngle;
+         RotmgParameters.save();
          return;
       }
 
@@ -175,12 +175,12 @@ package loradaby
             }
             else
             {
-               delete Parameters.data_[[_loc3_.wavaqon]];
+               delete RotmgParameters.data_[[_loc3_.wavaqon]];
             }
             _loc2_++;
          }
-         Parameters.fidid();
-         Parameters.save();
+         RotmgParameters.fidid();
+         RotmgParameters.save();
          this.refresh();
          return;
       }
@@ -247,8 +247,8 @@ package loradaby
          this.kozeta.y=biripyq;
          if(Capabilities.playerType=="Desktop")
          {
-            Parameters.data_.fullscreenMode=stage.displayState=="fullScreenInteractive";
-            Parameters.save();
+            RotmgParameters.data_.fullscreenMode=stage.displayState=="fullScreenInteractive";
+            RotmgParameters.save();
          }
          this.setSelected(this.poha[0]);
          stage.addEventListener(KeyboardEvent.KEY_DOWN,this.tuv,false,1);
@@ -269,11 +269,11 @@ package loradaby
          var _loc3_:* = true;
          if(Capabilities.playerType=="Desktop"&&param1.keyCode==Coluf.ESCAPE)
          {
-            Parameters.data_.fullscreenMode=false;
-            Parameters.save();
+            RotmgParameters.data_.fullscreenMode=false;
+            RotmgParameters.save();
             this.refresh();
          }
-         if(param1.keyCode==Parameters.data_.options)
+         if(param1.keyCode==RotmgParameters.data_.options)
          {
             this.close();
          }
@@ -317,8 +317,8 @@ package loradaby
          this.bunycu(new Cuqegeza("moveRight",Vibemod.zove,Vibemod.muva));
          this.bunycu(this.niti());
          this.bunycu(new Salilekuh());
-         this.bunycu(new Cuqegeza("rotateLeft",Vibemod.jeq,Vibemod.kozydyq,!Parameters.data_.allowRotation));
-         this.bunycu(new Cuqegeza("rotateRight",Vibemod.vytedar,Vibemod.rarymyjom,!Parameters.data_.allowRotation));
+         this.bunycu(new Cuqegeza("rotateLeft",Vibemod.jeq,Vibemod.kozydyq,!RotmgParameters.data_.allowRotation));
+         this.bunycu(new Cuqegeza("rotateRight",Vibemod.vytedar,Vibemod.rarymyjom,!RotmgParameters.data_.allowRotation));
          this.bunycu(new Cuqegeza("useSpecial",Vibemod.vukozo,Vibemod.hin));
          this.bunycu(new Cuqegeza("autofireToggle",Vibemod.guvyh,Vibemod.wyfabas));
          this.bunycu(new Cuqegeza("resetToDefaultCameraAngle",Vibemod.lepif,Vibemod.qyjyky));
@@ -350,7 +350,7 @@ package loradaby
             {
                if(_loc2_.wavaqon=="rotateLeft"||_loc2_.wavaqon=="rotateRight")
                {
-                  _loc2_.sotymojor(!Parameters.data_.allowRotation);
+                  _loc2_.sotymojor(!RotmgParameters.data_.allowRotation);
                }
             }
             _loc1_++;
@@ -411,7 +411,7 @@ package loradaby
          var _loc1_:* = true;
          var _loc2_:* = false;
          this.bunycu(new Cuqegeza(midolipy,Vibemod.pyryhuh,Vibemod.bubofyz));
-         this.bunycu(new Cuqegeza(sazim,Vibemod.wyvasodad,Vibemod.haqo));
+         this.bunycu(new Cuqegeza(saActionMapperAbstract,Vibemod.wyvasodad,Vibemod.haqo));
          this.bunycu(new Cuqegeza(hunobola,Vibemod.pyme,Vibemod.wizibot));
          this.bunycu(new Cuqegeza(fyfunow,Vibemod.kupyse,Vibemod.fot));
          this.bunycu(new Derohom("filterLanguage",loci(),[true,false],Vibemod.hedil,Vibemod.pyz,null));
@@ -453,7 +453,7 @@ package loradaby
       private function rezyvumoq() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         stage.displayState=Parameters.data_.fullscreenMode?"fullScreenInteractive":StageDisplayState.NORMAL;
+         stage.displayState=RotmgParameters.data_.fullscreenMode?"fullScreenInteractive":StageDisplayState.NORMAL;
          return;
       }
 
@@ -471,14 +471,14 @@ package loradaby
       private function toreco() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         Zywytezof.wyda(Parameters.data_.playMusic);
+         Zywytezof.wyda(RotmgParameters.data_.playMusic);
          return;
       }
 
       private function byceb() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         Mobu.qunyneviz(Parameters.data_.playSFX);
+         Mobu.qunyneviz(RotmgParameters.data_.playSFX);
          return;
       }
 

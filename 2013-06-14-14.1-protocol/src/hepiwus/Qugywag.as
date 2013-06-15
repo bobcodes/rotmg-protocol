@@ -23,7 +23,7 @@ package hepiwus
    import com.company.assembleegameclient.objects.Portal;
    import com.company.assembleegameclient.objects.GuildHallPortal;
    import com.company.util.Baticor;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Qugywag extends Sejano
@@ -458,7 +458,7 @@ package hepiwus
          this.sekunaza.identity();
          this.sekunaza.translate(-4,-5);
          this.sekunaza.scale(8/this.nadu.width,32/this.nadu.height);
-         this.sekunaza.rotate(Parameters.data_.cameraAngle);
+         this.sekunaza.rotate(RotmgParameters.data_.cameraAngle);
          this.sekunaza.translate(_loc13_,_loc14_);
          _loc7_.beginBitmapFill(this.nadu,this.sekunaza,false);
          _loc7_.drawRect(_loc13_-16,_loc14_-16,32,32);

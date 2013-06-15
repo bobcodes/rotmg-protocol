@@ -17,7 +17,7 @@ package mukyrosu
          {
             if(NIL)
             {
-               throw new ArgumentError("Parameters head and tail are null. Use the NIL element instead.");
+               throw new ArgumentError("RotmgParameters head and tail are null. Use the NIL element instead.");
             }
             else
             {

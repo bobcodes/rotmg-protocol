@@ -5,7 +5,7 @@ package suzen
    import gokyc.Rud;
    import lemugo.Wokycuku;
    import hunavefeg.Depyrew;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.util.Bycaqa;
    import com.company.assembleegameclient.appengine.Jys;
 
@@ -45,7 +45,7 @@ package suzen
          _loc1_.game_net_user_id=this.account.tamy();
          _loc1_.game_net=this.account.cug();
          _loc1_.play_platform=this.account.rarofu();
-         _loc1_.do_login=Parameters.jiqovezu;
+         _loc1_.do_login=RotmgParameters.jiqovezu;
          _loc1_.classType=this.classType;
          Bycaqa.timokujo(_loc1_,this.account.pedavitu());
          return _loc1_;

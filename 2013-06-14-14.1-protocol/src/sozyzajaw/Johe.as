@@ -9,7 +9,7 @@ package sozyzajaw
    import gycu.Feliro;
    import dovuz.Zonev;
    import com.company.assembleegameclient.appengine.SavedCharacter;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import jovurora.Server;
    import flash.utils.ByteArray;
    import com.company.assembleegameclient.game.GameSprite;
@@ -82,8 +82,8 @@ package sozyzajaw
       private function pukyp() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         Parameters.data_.charIdUseMap[this.data.charId]=new Date().getTime();
-         Parameters.save();
+         RotmgParameters.data_.charIdUseMap[this.data.charId]=new Date().getTime();
+         RotmgParameters.save();
          return;
       }
 
@@ -105,19 +105,19 @@ package sozyzajaw
          var _loc2_:* = false;
          var _loc3_:* = true;
          var _loc1_:* = 0;
-         if(Parameters.data_.needsTutorial)
+         if(RotmgParameters.data_.needsTutorial)
          {
-            _loc1_=Parameters.wajujy;
+            _loc1_=RotmgParameters.wajujy;
          }
          else
          {
-            if(Parameters.data_.needsRandomRealm)
+            if(RotmgParameters.data_.needsRandomRealm)
             {
-               _loc1_=Parameters.feli;
+               _loc1_=RotmgParameters.feli;
             }
             else
             {
-               _loc1_=Parameters.myjedib;
+               _loc1_=RotmgParameters.myjedib;
             }
          }
          return _loc1_;

@@ -1,26 +1,26 @@
-package dovuz
+package aaa
 {
-   import zugevygam.Byty;
-   import flash.net.Socket;
-   import mukyrosu.Qanyduk;
-   import flash.utils.Timer;
-   import flash.utils.ByteArray;
    import com.hurlant.crypto.symmetric.ICipher;
    import flash.events.Event;
-   import flash.events.ProgressEvent;
    import flash.events.IOErrorEvent;
+   import flash.events.ProgressEvent;
    import flash.events.SecurityErrorEvent;
    import flash.events.TimerEvent;
+   import flash.net.Socket;
+   import flash.utils.ByteArray;
+   import flash.utils.Timer;
+   import mukyrosu.Qanyduk;
+   import zugevygam.Byty;
 
 
-   public class Vagogi extends Object
+   public class NetworkHandler extends Object
    {
       {
          var _loc1_:* = false;
          var _loc2_:* = true;
       }
 
-      public function Vagogi() {
+      public function NetworkHandler() {
          var _loc1_:* = true;
          var _loc2_:* = false;
          this.ryvulavaj=this.cociki;
@@ -63,14 +63,14 @@ package dovuz
 
       private var port:int;
 
-      public function setOutgoingCipher(param1:ICipher) : Vagogi {
+      public function setOutgoingCipher(param1:ICipher) : NetworkHandler {
          var _loc2_:* = false;
          var _loc3_:* = true;
          this.natelataq=param1;
          return this;
       }
 
-      public function setIncomingCipher(param1:ICipher) : Vagogi {
+      public function setIncomingCipher(param1:ICipher) : NetworkHandler {
          var _loc2_:* = false;
          var _loc3_:* = true;
          this.gywegu=param1;

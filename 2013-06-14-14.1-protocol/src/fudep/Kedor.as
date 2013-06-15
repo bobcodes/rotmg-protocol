@@ -9,18 +9,18 @@ package fudep
          var _loc5_:* = false;
          super(param1);
          this.callback=param2;
-         this.parameters=rest;
+         this.RotmgParameters=rest;
          return;
       }
 
       public var callback:Function;
 
-      public var parameters:Array;
+      public var RotmgParameters:Array;
 
       override protected function run() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.callback.apply(this.parameters);
+         this.callback.apply(this.RotmgParameters);
          return;
       }
 
@@ -28,7 +28,7 @@ package fudep
          var _loc1_:* = true;
          var _loc2_:* = false;
          this.callback=null;
-         this.parameters=null;
+         this.RotmgParameters=null;
          return;
       }
    }

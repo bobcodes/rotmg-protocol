@@ -6,7 +6,7 @@ package wenono
    import mukyrosu.Qanyduk;
    import flash.text.TextFieldAutoSize;
    import flash.filters.DropShadowFilter;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import jediwip.Kybidu;
    import komi.Vibemod;
    import flash.events.Event;
@@ -84,8 +84,8 @@ package wenono
       private function kenadyb() : void {
          var _loc4_:* = false;
          var _loc5_:* = true;
-         var _loc1_:* = "<font color=\"#7777EE\"><a href=\""+Parameters.dyda+"\" target=\"_blank\">";
-         var _loc2_:* = "<font color=\"#7777EE\"><a href=\""+Parameters.dahyhuw+"\" target=\"_blank\">";
+         var _loc1_:* = "<font color=\"#7777EE\"><a href=\""+RotmgParameters.dyda+"\" target=\"_blank\">";
+         var _loc2_:* = "<font color=\"#7777EE\"><a href=\""+RotmgParameters.dahyhuw+"\" target=\"_blank\">";
          var _loc3_:* = "</a></font>";
          wybibe.setStringBuilder(new Kybidu().setParams("AgeVerificationDialog.text",
             {

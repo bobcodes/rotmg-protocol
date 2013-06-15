@@ -3,7 +3,7 @@ package fytalis
    import flash.events.MouseEvent;
    import flash.events.Event;
    import flash.events.KeyboardEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.game.GameSprite;
    import komi.Vibemod;
 
@@ -43,7 +43,7 @@ package fytalis
       private function tuv(param1:KeyboardEvent) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         if(param1.keyCode==Parameters.data_.interact&&stage.focus==null)
+         if(param1.keyCode==RotmgParameters.data_.interact&&stage.focus==null)
          {
             gs_.closed.dispatch();
          }

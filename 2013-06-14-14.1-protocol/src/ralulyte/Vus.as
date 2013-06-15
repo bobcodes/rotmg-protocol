@@ -3,7 +3,7 @@ package ralulyte
    import jovurora.Divoceve;
    import __AS3__.vec.Vector;
    import jovurora.Server;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Vus extends Object
@@ -40,7 +40,7 @@ package ralulyte
       }
 
       private function vudavyp(param1:XML) : Server {
-         return new Server().setName(param1.Name).setAddress(param1.DNS).setPort(Parameters.dale).setLatLong(Number(param1.Lat),Number(param1.Long)).setUsage(param1.Usage).setIsAdminOnly(param1.hasOwnProperty("AdminOnly"));
+         return new Server().setName(param1.Name).setAddress(param1.DNS).setPort(RotmgParameters.dale).setLatLong(Number(param1.Lat),Number(param1.Long)).setUsage(param1.Usage).setIsAdminOnly(param1.hasOwnProperty("AdminOnly"));
       }
    }
 

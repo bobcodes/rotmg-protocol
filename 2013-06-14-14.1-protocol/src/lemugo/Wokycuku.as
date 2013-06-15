@@ -4,7 +4,7 @@ package lemugo
    import com.company.assembleegameclient.appengine.Jys;
    import pugem.Account;
    import byredo.Monewys;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.appengine.SavedCharacter;
    import __AS3__.vec.Vector;
    import com.company.assembleegameclient.appengine.Zaz;
@@ -73,7 +73,7 @@ package lemugo
       public function muh() : Boolean {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         return (Parameters.data_.needsTutorial)&&this.fegiwesyn.nextCharId_==1;
+         return (RotmgParameters.data_.needsTutorial)&&this.fegiwesyn.nextCharId_==1;
       }
 
       public function dyqab() : int {

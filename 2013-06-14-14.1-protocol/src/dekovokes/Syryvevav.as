@@ -32,11 +32,11 @@ package dekovokes
          var _loc1_:* = false;
          var _loc2_:* = true;
          this.mediatorMap.map(WebMain).lokiduf(Vazofymab);
-         this.leruzimat();
+         this.leruActionMapperAbstractat();
          return;
       }
 
-      private function leruzimat() : void {
+      private function leruActionMapperAbstractat() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
          if(this.setup.kihomat())

@@ -21,7 +21,7 @@ package dasefezy
 
       public static const jemoni:int = 0;
 
-      public static const tibozimer:int = 1;
+      public static const tiboActionMapperAbstracter:int = 1;
 
       public static const kyg:int = 2;
 
@@ -212,7 +212,7 @@ package dasefezy
          {
             case jemoni:
                return Vibemod.kug;
-            case tibozimer:
+            case tiboActionMapperAbstracter:
                return Vibemod.nysirahec;
             case kyg:
                return Vibemod.gamipag;

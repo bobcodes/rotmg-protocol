@@ -3,7 +3,7 @@ package waryp
    import flash.display.Sprite;
    import __AS3__.vec.Vector;
    import flash.events.MouseEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import jovurora.Server;
 
 
@@ -27,7 +27,7 @@ package waryp
          for each (_loc4_ in param1)
          {
             _loc2_=new ServerBox(_loc4_);
-            if(_loc4_.name==Parameters.data_.preferredServer)
+            if(_loc4_.name==RotmgParameters.data_.preferredServer)
             {
                this.setSelected(_loc2_);
             }
@@ -48,8 +48,8 @@ package waryp
          var _loc4_:* = false;
          var _loc2_:ServerBox = param1.target as ServerBox;
          this.setSelected(_loc2_);
-         Parameters.data_.preferredServer=_loc2_.value_;
-         Parameters.save();
+         RotmgParameters.data_.preferredServer=_loc2_.value_;
+         RotmgParameters.save();
          return;
       }
 

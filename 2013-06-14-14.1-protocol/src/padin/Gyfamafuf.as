@@ -40,7 +40,7 @@ package padin
          this.con.debug("startTask");
          this.qukacefi.ciqocu.addChild(this.ciqocu as DisplayObject);
          this.ciqocu.nelypef.addOnce(this.requestSessionTicket);
-         this.ciqocu.load(this.info.parameters.steam_api_path);
+         this.ciqocu.load(this.info.RotmgParameters.steam_api_path);
          return;
       }
 

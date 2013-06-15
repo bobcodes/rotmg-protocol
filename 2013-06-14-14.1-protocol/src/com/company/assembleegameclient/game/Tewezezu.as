@@ -26,7 +26,7 @@ package com.company.assembleegameclient.game
    import com.company.assembleegameclient.objects.GameObject;
    import com.company.assembleegameclient.map.Square;
    import com.company.util.Coluf;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import wahyqise.Bedac;
    import loradaby.Options;
    import flash.system.Capabilities;
@@ -34,7 +34,7 @@ package com.company.assembleegameclient.game
    import com.company.assembleegameclient.util.TextureRedrawer;
    import pumoc.Juc;
    import pilage.Patale;
-   import ducojoryn.Zim;
+   import aaa.ActionMapperAbstract;
    import sijizoh.Duq;
    import dyca.Mes;
    import daqun.Qobeta;
@@ -327,43 +327,43 @@ package com.company.assembleegameclient.game
          var _loc3_:Player = this.gs_.map.player_;
          switch(param1.keyCode)
          {
-            case Parameters.data_.moveUp:
+            case RotmgParameters.data_.moveUp:
                doneAction(this.gs_,Tutorial.zygy);
                this.bahyb=true;
                break;
-            case Parameters.data_.moveDown:
+            case RotmgParameters.data_.moveDown:
                doneAction(this.gs_,Tutorial.sedo);
                this.tew=true;
                break;
-            case Parameters.data_.moveLeft:
+            case RotmgParameters.data_.moveLeft:
                doneAction(this.gs_,Tutorial.tulyhi);
                this.gydusojeg=true;
                break;
-            case Parameters.data_.moveRight:
+            case RotmgParameters.data_.moveRight:
                doneAction(this.gs_,Tutorial.nuf);
                this.betaji=true;
                break;
-            case Parameters.data_.rotateLeft:
-               if(!Parameters.data_.allowRotation)
+            case RotmgParameters.data_.rotateLeft:
+               if(!RotmgParameters.data_.allowRotation)
                {
                   break;
                }
                doneAction(this.gs_,Tutorial.sawag);
                this.cebo=true;
                break;
-            case Parameters.data_.rotateRight:
-               if(!Parameters.data_.allowRotation)
+            case RotmgParameters.data_.rotateRight:
+               if(!RotmgParameters.data_.allowRotation)
                {
                   break;
                }
                doneAction(this.gs_,Tutorial.qasana);
                this.pocuhidaw=true;
                break;
-            case Parameters.data_.resetToDefaultCameraAngle:
-               Parameters.data_.cameraAngle=Parameters.data_.defaultCameraAngle;
-               Parameters.save();
+            case RotmgParameters.data_.resetToDefaultCameraAngle:
+               RotmgParameters.data_.cameraAngle=RotmgParameters.data_.defaultCameraAngle;
+               RotmgParameters.save();
                break;
-            case Parameters.data_.useSpecial:
+            case RotmgParameters.data_.useSpecial:
                _loc4_=this.gs_.map.player_;
                if(_loc4_==null)
                {
@@ -378,86 +378,86 @@ package com.company.assembleegameclient.game
                   }
                }
                break;
-            case Parameters.data_.autofireToggle:
+            case RotmgParameters.data_.autofireToggle:
                this.gs_.map.player_.isShooting=this.gese=!this.gese;
                break;
-            case Parameters.data_.useInvSlot1:
+            case RotmgParameters.data_.useInvSlot1:
                this.useItem(4);
                break;
-            case Parameters.data_.useInvSlot2:
+            case RotmgParameters.data_.useInvSlot2:
                this.useItem(5);
                break;
-            case Parameters.data_.useInvSlot3:
+            case RotmgParameters.data_.useInvSlot3:
                this.useItem(6);
                break;
-            case Parameters.data_.useInvSlot4:
+            case RotmgParameters.data_.useInvSlot4:
                this.useItem(7);
                break;
-            case Parameters.data_.useInvSlot5:
+            case RotmgParameters.data_.useInvSlot5:
                this.useItem(8);
                break;
-            case Parameters.data_.useInvSlot6:
+            case RotmgParameters.data_.useInvSlot6:
                this.useItem(9);
                break;
-            case Parameters.data_.useInvSlot7:
+            case RotmgParameters.data_.useInvSlot7:
                this.useItem(10);
                break;
-            case Parameters.data_.useInvSlot8:
+            case RotmgParameters.data_.useInvSlot8:
                this.useItem(11);
                break;
-            case Parameters.data_.useHealthPotion:
+            case RotmgParameters.data_.useHealthPotion:
                if(this.dugyno.hotyzycyc(Tysyc.sanan).available)
                {
                   this.hicip.dispatch(new Bedac(Tysyc.sanan,Bedac.qivipuja));
                }
                break;
-            case Parameters.data_.useMagicPotion:
+            case RotmgParameters.data_.useMagicPotion:
                if(this.dugyno.hotyzycyc(Tysyc.lenem).available)
                {
                   this.hicip.dispatch(new Bedac(Tysyc.lenem,Bedac.qivipuja));
                }
                break;
-            case Parameters.data_.miniMapZoomOut:
+            case RotmgParameters.data_.miniMapZoomOut:
                this.zeqopy.dispatch(Boluzod.OUT);
                break;
-            case Parameters.data_.miniMapZoomIn:
+            case RotmgParameters.data_.miniMapZoomIn:
                this.zeqopy.dispatch(Boluzod.IN);
                break;
-            case Parameters.data_.togglePerformanceStats:
+            case RotmgParameters.data_.togglePerformanceStats:
                this.togglePerformanceStats();
                break;
-            case Parameters.data_.escapeToNexus:
-            case Parameters.data_.escapeToNexus2:
+            case RotmgParameters.data_.escapeToNexus:
+            case RotmgParameters.data_.escapeToNexus2:
                this.joqaqydo.dispatch();
                this.gs_.gsc_.escape();
-               Parameters.data_.needsRandomRealm=false;
-               Parameters.save();
+               RotmgParameters.data_.needsRandomRealm=false;
+               RotmgParameters.save();
                break;
-            case Parameters.data_.options:
+            case RotmgParameters.data_.options:
                this.clearInput();
                this.qukacefi.gam.addChild(new Options(this.gs_));
                break;
-            case Parameters.data_.toggleCentering:
-               Parameters.data_.centerOnPlayer=!Parameters.data_.centerOnPlayer;
-               Parameters.save();
+            case RotmgParameters.data_.toggleCentering:
+               RotmgParameters.data_.centerOnPlayer=!RotmgParameters.data_.centerOnPlayer;
+               RotmgParameters.save();
                break;
-            case Parameters.data_.toggleFullscreen:
+            case RotmgParameters.data_.toggleFullscreen:
                if(Capabilities.playerType=="Desktop")
                {
-                  Parameters.data_.fullscreenMode=!Parameters.data_.fullscreenMode;
-                  Parameters.save();
-                  _loc2_.displayState=Parameters.data_.fullscreenMode?"fullScreenInteractive":StageDisplayState.NORMAL;
+                  RotmgParameters.data_.fullscreenMode=!RotmgParameters.data_.fullscreenMode;
+                  RotmgParameters.save();
+                  _loc2_.displayState=RotmgParameters.data_.fullscreenMode?"fullScreenInteractive":StageDisplayState.NORMAL;
                }
                break;
-            case Parameters.data_.switchTabs:
+            case RotmgParameters.data_.switchTabs:
                this.zaroloka.dispatch();
                break;
-            case Parameters.data_.testOne:
+            case RotmgParameters.data_.testOne:
                break;
-            case Parameters.data_.testTwo:
+            case RotmgParameters.data_.testTwo:
                break;
          }
-         if(Parameters.regaj)
+         if(RotmgParameters.regaj)
          {
             switch(param1.keyCode)
             {
@@ -465,7 +465,7 @@ package com.company.assembleegameclient.game
                   this.garat();
                   break;
                case Coluf.F3:
-                  Parameters.cipiso=!Parameters.cipiso;
+                  RotmgParameters.cipiso=!RotmgParameters.cipiso;
                   break;
                case Coluf.F4:
                   this.gs_.map.mapOverlay_.visible=!this.gs_.map.mapOverlay_.visible;
@@ -479,8 +479,8 @@ package com.company.assembleegameclient.game
             {
                case Coluf.F6:
                   TextureRedrawer.clearCache();
-                  Parameters.pofalogud=(Parameters.pofalogud+1)%7;
-                  this.daju.dispatch(Juc.make(Parameters.kokapo,"Projectile Color Type: "+Parameters.pofalogud));
+                  RotmgParameters.pofalogud=(RotmgParameters.pofalogud+1)%7;
+                  this.daju.dispatch(Juc.make(RotmgParameters.kokapo,"Projectile Color Type: "+RotmgParameters.pofalogud));
                   break;
                case Coluf.F7:
                   for each (_loc6_ in this.gs_.map.squares_)
@@ -493,17 +493,17 @@ package com.company.assembleegameclient.game
                         _loc6_.faces_.length=0;
                      }
                   }
-                  Parameters.qasekiw=(Parameters.qasekiw+1)%2;
-                  this.daju.dispatch(Juc.make(Parameters.wyfa,"Blend type: "+Parameters.qasekiw));
+                  RotmgParameters.qasekiw=(RotmgParameters.qasekiw+1)%2;
+                  this.daju.dispatch(Juc.make(RotmgParameters.wyfa,"Blend type: "+RotmgParameters.qasekiw));
                   break;
                case Coluf.F8:
-                  Parameters.data_.surveyDate=0;
-                  Parameters.data_.needsSurvey=true;
-                  Parameters.data_.playTimeLeftTillSurvey=5;
-                  Parameters.data_.surveyGroup="testing";
+                  RotmgParameters.data_.surveyDate=0;
+                  RotmgParameters.data_.needsSurvey=true;
+                  RotmgParameters.data_.playTimeLeftTillSurvey=5;
+                  RotmgParameters.data_.surveyGroup="testing";
                   break;
                case Coluf.F9:
-                  Parameters.bonyge=!Parameters.bonyge;
+                  RotmgParameters.bonyge=!RotmgParameters.bonyge;
                   break;
             }
          }
@@ -516,25 +516,25 @@ package com.company.assembleegameclient.game
          var _loc4_:* = true;
          switch(null)
          {
-            case Parameters.data_.moveUp:
+            case RotmgParameters.data_.moveUp:
                this.bahyb=false;
                break;
-            case Parameters.data_.moveDown:
+            case RotmgParameters.data_.moveDown:
                this.tew=false;
                break;
-            case Parameters.data_.moveLeft:
+            case RotmgParameters.data_.moveLeft:
                this.gydusojeg=false;
                break;
-            case Parameters.data_.moveRight:
+            case RotmgParameters.data_.moveRight:
                this.betaji=false;
                break;
-            case Parameters.data_.rotateLeft:
+            case RotmgParameters.data_.rotateLeft:
                this.cebo=false;
                break;
-            case Parameters.data_.rotateRight:
+            case RotmgParameters.data_.rotateRight:
                this.pocuhidaw=false;
                break;
-            case Parameters.data_.useSpecial:
+            case RotmgParameters.data_.useSpecial:
                if(this.dene)
                {
                   this.dene=false;
@@ -571,7 +571,7 @@ package com.company.assembleegameclient.game
          {
             param1=param1+Patale.wiwydu;
          }
-         Zim.wisunoc.useItem_new(this.gs_.map.player_,param1);
+         ActionMapperAbstract.wisunoc.useItem_new(this.gs_.map.player_,param1);
          return;
       }
 
@@ -597,8 +597,8 @@ package com.company.assembleegameclient.game
       private function garat() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         Parameters.womo=!Parameters.womo;
-         if(Parameters.womo)
+         RotmgParameters.womo=!RotmgParameters.womo;
+         if(RotmgParameters.womo)
          {
             this.gs_.hudView.visible=false;
             this.kenuj.dispatch(false);

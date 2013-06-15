@@ -5,7 +5,7 @@ package cybehajij
    import pugem.Account;
    import com.company.assembleegameclient.util.offer.Offer;
    import kylelimib.Zazasinip;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.util.offer.Offers;
    import com.company.assembleegameclient.util.Tiguziro;
    import flash.net.navigateToURL;
@@ -32,8 +32,8 @@ package cybehajij
       override protected function startTask() : void {
          var _loc4_:* = true;
          var _loc5_:* = false;
-         Parameters.data_.paymentMethod=this.paymentMethod;
-         Parameters.save();
+         RotmgParameters.data_.paymentMethod=this.paymentMethod;
+         RotmgParameters.save();
          var _loc1_:Offers = this.gyk.puputazes;
          var _loc2_:Tiguziro = Tiguziro.muluq(this.paymentMethod);
          var _loc3_:String = _loc2_.rezocu(_loc1_.tok,_loc1_.exp,this.offer);

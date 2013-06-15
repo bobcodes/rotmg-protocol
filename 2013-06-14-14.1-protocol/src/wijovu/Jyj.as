@@ -24,7 +24,7 @@ package wijovu
       public var con:Depyrew;
 
       public function bawyquhi() : String {
-         return this.info.parameters.kabam_signed_request;
+         return this.info.RotmgParameters.kabam_signed_request;
       }
 
       public function muzemidyv() : Object {

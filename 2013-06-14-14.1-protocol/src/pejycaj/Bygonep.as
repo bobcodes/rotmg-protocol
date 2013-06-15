@@ -2,12 +2,12 @@ package pejycaj
 {
    import tytojonib.Kyjefe;
    import cizagamym.Lebovas;
-   import dovuz.Vagogi;
+   import aaa.NetworkHandler;
    import zugevygam.Byty;
    import micac.Ciqyl;
    import wohy.Segeqofi;
    import wahyqise.Tuco;
-   import ducojoryn.Zim;
+   import aaa.ActionMapperAbstract;
    import zukinigor.Lazapy;
 
 
@@ -24,7 +24,7 @@ package pejycaj
 
       public var closeDialogs:Lebovas;
 
-      public var gagoty:Vagogi;
+      public var gagoty:NetworkHandler;
 
       public var bufaz:Byty;
 
@@ -55,7 +55,7 @@ package pejycaj
          var _loc3_:* = false;
          var _loc4_:* = true;
          this.closeDialogs.dispatch();
-         var _loc2_:Lazapy = this.bufaz.quseb(Zim.ENTER_ARENA) as Lazapy;
+         var _loc2_:Lazapy = this.bufaz.quseb(ActionMapperAbstract.ENTER_ARENA) as Lazapy;
          _loc2_.currency=param1;
          this.gagoty.sendMessage(_loc2_);
          return;

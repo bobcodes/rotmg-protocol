@@ -3,11 +3,11 @@ package nytifawy
    import tytojonib.Kyjefe;
    import pumoc.Zesihag;
    import tumi.Lukud;
-   import tumi.Zimydato;
+   import tumi.ActionMapperAbstractydato;
    import tumi.Resan;
    import daqun.Qobeta;
    import pumoc.Juc;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Memyvu extends Kyjefe
@@ -25,7 +25,7 @@ package nytifawy
 
       public var dopypim:Lukud;
 
-      public var racyg:Zimydato;
+      public var racyg:ActionMapperAbstractydato;
 
       public var buhuhoj:Resan;
 
@@ -46,7 +46,7 @@ package nytifawy
          this.dopypim.add(this.huhu);
          this.racyg.add(this.kupocufar);
          this.buhuhoj.add(this.qecaru);
-         this.qecaru(Juc.make(Parameters.wyfa,this.johymi()));
+         this.qecaru(Juc.make(RotmgParameters.wyfa,this.johymi()));
          return;
       }
 

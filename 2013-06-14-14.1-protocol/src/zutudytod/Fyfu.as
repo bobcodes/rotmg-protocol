@@ -4,7 +4,7 @@ package zutudytod
    import hilonec.Tuwo;
    import dicyl.Mukyhokot;
    import pumoc.Juc;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Fyfu extends Kyjefe
@@ -37,7 +37,7 @@ package zutudytod
       private function quzyhyt() : void {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.daju.dispatch(Juc.make(Parameters.kokapo,"No players are eligible for teleporting"));
+         this.daju.dispatch(Juc.make(RotmgParameters.kokapo,"No players are eligible for teleporting"));
          return;
       }
    }

@@ -6,7 +6,7 @@ package
    import com.company.assembleegameclient.util.Wopacycu;
    import flash.display.StageScaleMode;
    import voledi.Wiho;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import sijizoh.Duq;
    import flash.display.LoaderInfo;
    import com.company.assembleegameclient.util.Cokinomu;
@@ -89,7 +89,7 @@ package
       private function hyhotoci() : void {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         Parameters.root=stage.root;
+         RotmgParameters.root=stage.root;
          return;
       }
 
@@ -110,8 +110,8 @@ package
          var _loc2_:* = false;
          if(Capabilities.playerType=="Desktop")
          {
-            Parameters.data_.fullscreenMode=false;
-            Parameters.save();
+            RotmgParameters.data_.fullscreenMode=false;
+            RotmgParameters.save();
          }
          return;
       }

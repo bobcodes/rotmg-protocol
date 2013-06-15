@@ -18,7 +18,7 @@ package kofaz
    import flash.events.Event;
    import flash.events.KeyboardEvent;
    import flash.events.MouseEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.objects.Player;
    import pomujukir.Cirumy;
    import pomujukir.Boqutujy;
@@ -100,7 +100,7 @@ package kofaz
 
       private var deveti:Telir;
 
-      private var mozim:Sprite;
+      private var moActionMapperAbstract:Sprite;
 
       private var vukecemen:Guzowoja;
 
@@ -150,7 +150,7 @@ package kofaz
       private function tuv(param1:KeyboardEvent) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(param1.keyCode==Parameters.data_.interact&&stage.focus==null)
+         if(param1.keyCode==RotmgParameters.data_.interact&&stage.focus==null)
          {
             this.worekijod.dispatch(this.gilyzygag);
          }
@@ -171,12 +171,12 @@ package kofaz
             {
                removeChild(this.deveti);
             }
-            if(this.mozim==null||!contains(this.mozim))
+            if(this.moActionMapperAbstract==null||!contains(this.moActionMapperAbstract))
             {
-               this.mozim=kesulo(_loc2_);
-               this.mozim.x=WIDTH/2-this.mozim.width/2;
-               this.mozim.y=HEIGHT-this.mozim.height/2-20;
-               addChild(this.mozim);
+               this.moActionMapperAbstract=kesulo(_loc2_);
+               this.moActionMapperAbstract.x=WIDTH/2-this.moActionMapperAbstract.width/2;
+               this.moActionMapperAbstract.y=HEIGHT-this.moActionMapperAbstract.height/2-20;
+               addChild(this.moActionMapperAbstract);
             }
          }
          else
@@ -205,9 +205,9 @@ package kofaz
                {
                   addChild(this.deveti);
                }
-               if(!(this.mozim==null)&&(contains(this.mozim)))
+               if(!(this.moActionMapperAbstract==null)&&(contains(this.moActionMapperAbstract)))
                {
-                  removeChild(this.mozim);
+                  removeChild(this.moActionMapperAbstract);
                }
             }
          }

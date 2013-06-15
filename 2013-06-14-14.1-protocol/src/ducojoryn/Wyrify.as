@@ -27,7 +27,7 @@ package ducojoryn
    import fanij.Namejaja;
    import com.company.assembleegameclient.game.Pajemiz;
    import pumoc.Juc;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import komi.Vibemod;
    import zugevygam.Hovogejyt;
    import firo.Create;
@@ -37,7 +37,7 @@ package ducojoryn
    import dovuz.Qamyro;
    import firo.Kihivy;
    import firo.Pul;
-   import firo.Qemepuz;
+   import aaa.HelloAction;
    import firo.Mihoje;
    import firo.Cavy;
    import firo.Seja;
@@ -191,10 +191,10 @@ package ducojoryn
    import vysob.Dialog;
    import flash.events.Event;
    import tezahusaq.Gehuwo;
-   import dovuz.Vagogi;
+   import aaa.NetworkHandler;
 
 
-   public class Wyrify extends Zim
+   public class Wyrify extends ActionMapperAbstract
    {
       {
          var _loc1_:* = false;
@@ -225,7 +225,7 @@ package ducojoryn
          this.zeqypavuj=this.difas.getInstance(Taboqid);
          this.tafyvudak=this.difas.getInstance(Jote);
          this.jopyza=this.difas.getInstance(Kyhy);
-         vyquza=this.difas.getInstance(Vagogi);
+         vyquza=this.difas.getInstance(NetworkHandler);
          this.bufaz=this.difas.getInstance(Byty);
          this.model=this.difas.getInstance(Tuco);
          gs_=param1;
@@ -335,7 +335,7 @@ package ducojoryn
          this.qodoromeb();
          this.pajafy();
          var _loc1_:Juc = new Juc();
-         _loc1_.name=Parameters.wyfa;
+         _loc1_.name=RotmgParameters.wyfa;
          _loc1_.text=Vibemod.wucatyjyt;
          _loc1_.tokens={serverName:server_.name};
          this.daju.dispatch(_loc1_);
@@ -363,7 +363,7 @@ package ducojoryn
          [OFS80]_loc1_[/OFS].[OFS84]map[/OFS][OFS84]([/OFS][OFS81]kom[/OFS][OFS84])[/OFS].[OFS91]titikokad[/OFS][OFS91]([/OFS][OFS88]Qamyro[/OFS][OFS91])[/OFS];
          [OFS95]_loc1_[/OFS].[OFS99]map[/OFS][OFS99]([/OFS][OFS96]INVSWAP[/OFS][OFS99])[/OFS].[OFS106]titikokad[/OFS][OFS106]([/OFS][OFS103]Kihivy[/OFS][OFS106])[/OFS];
          [OFS110]_loc1_[/OFS].[OFS114]map[/OFS][OFS114]([/OFS][OFS111]USEITEM[/OFS][OFS114])[/OFS].[OFS121]titikokad[/OFS][OFS121]([/OFS][OFS118]Pul[/OFS][OFS121])[/OFS];
-         [OFS125]_loc1_[/OFS].[OFS129]map[/OFS][OFS129]([/OFS][OFS126]HELLO[/OFS][OFS129])[/OFS].[OFS136]titikokad[/OFS][OFS136]([/OFS][OFS133]Qemepuz[/OFS][OFS136])[/OFS];
+         [OFS125]_loc1_[/OFS].[OFS129]map[/OFS][OFS129]([/OFS][OFS126]HELLO[/OFS][OFS129])[/OFS].[OFS136]titikokad[/OFS][OFS136]([/OFS][OFS133]HelloAction[/OFS][OFS136])[/OFS];
          [OFS140]_loc1_[/OFS].[OFS144]map[/OFS][OFS144]([/OFS][OFS141]INVDROP[/OFS][OFS144])[/OFS].[OFS151]titikokad[/OFS][OFS151]([/OFS][OFS148]Mihoje[/OFS][OFS151])[/OFS];
          [OFS155]_loc1_[/OFS].[OFS159]map[/OFS][OFS159]([/OFS][OFS156]PONG[/OFS][OFS159])[/OFS].[OFS166]titikokad[/OFS][OFS166]([/OFS][OFS163]Cavy[/OFS][OFS166])[/OFS];
          [OFS170]_loc1_[/OFS].[OFS174]map[/OFS][OFS174]([/OFS][OFS171]LOAD[/OFS][OFS174])[/OFS].[OFS181]titikokad[/OFS][OFS181]([/OFS][OFS178]Seja[/OFS][OFS181])[/OFS];
@@ -486,7 +486,7 @@ package ducojoryn
          this.kipeciboc.dispatch(param1.masyvypy);
          var _loc2_:String = param1.masyvypy>0?this.cybeco.vahunufi(param1.masyvypy).getName():"";
          var _loc3_:String = param1.masyvypy<0?Vibemod.wilibo:Vibemod.gotelizo;
-         this.daju.dispatch(Juc.make(Parameters.lugiboso,_loc3_,-1,-1,"",false,{petName:_loc2_}));
+         this.daju.dispatch(Juc.make(RotmgParameters.lugiboso,_loc3_,-1,-1,"",false,{petName:_loc2_}));
          return;
       }
 
@@ -571,10 +571,10 @@ package ducojoryn
          var _loc4_:* = false;
          var _loc1_:ICipher = null;
          var _loc2_:ICipher = null;
-         if(Parameters.gavofi)
+         if(RotmgParameters.gavofi)
          {
-            _loc1_=Crypto.getCipher("rc4",Tafoji.tequnyz(Parameters.RANDOM1));
-            _loc2_=Crypto.getCipher("rc4",Tafoji.tequnyz(Parameters.RANDOM2));
+            _loc1_=Crypto.getCipher("rc4",Tafoji.tequnyz(RotmgParameters.RANDOM1));
+            _loc2_=Crypto.getCipher("rc4",Tafoji.tequnyz(RotmgParameters.RANDOM2));
             vyquza.setOutgoingCipher(_loc1_);
             vyquza.setIncomingCipher(_loc2_);
          }
@@ -1079,7 +1079,7 @@ package ducojoryn
       private function rahazurug(param1:String) : String {
          var _loc5_:* = true;
          var _loc6_:* = false;
-         var _loc2_:RSAKey = PEM.readRSAPublicKey(Parameters.rijewepe);
+         var _loc2_:RSAKey = PEM.readRSAPublicKey(RotmgParameters.rijewepe);
          var _loc3_:ByteArray = new ByteArray();
          _loc3_.writeUTFBytes(param1);
          var _loc4_:ByteArray = new ByteArray();
@@ -1091,10 +1091,10 @@ package ducojoryn
          var _loc3_:* = false;
          var _loc4_:* = true;
          var _loc1_:Account = Duq.pamazo().getInstance(Account);
-         this.daju.dispatch(Juc.make(Parameters.wyfa,Vibemod.nujuviva));
+         this.daju.dispatch(Juc.make(RotmgParameters.wyfa,Vibemod.nujuviva));
          this.huhekeh();
-         var _loc2_:Qemepuz = this.bufaz.quseb(HELLO) as Qemepuz;
-         _loc2_.buildVersion_=Parameters.hoci;
+         var _loc2_:HelloAction = this.bufaz.quseb(HELLO) as HelloAction;
+         _loc2_.buildVersion_=RotmgParameters.hoci;
          _loc2_.gameId_=gameId_;
          _loc2_.guid_=this.rahazurug(_loc1_.getUserId());
          _loc2_.password_=this.rahazurug(_loc1_.pysecik());
@@ -1212,7 +1212,7 @@ package ducojoryn
       private function peqej(param1:Bowipuh) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(Parameters.data_.showTradePopup)
+         if(RotmgParameters.data_.showTradePopup)
          {
             gs_.hudView.interactPanel.setOverride(new TradeRequestPanel(gs_,param1.name_));
          }
@@ -1250,7 +1250,7 @@ package ducojoryn
          catch(e:Error)
          {
          }
-         this.daju.dispatch(Juc.make(Parameters.lugiboso,_loc2_,-1,-1,"",false,_loc3_));
+         this.daju.dispatch(Juc.make(RotmgParameters.lugiboso,_loc2_,-1,-1,"",false,_loc3_));
          return;
       }
 
@@ -1603,7 +1603,7 @@ package ducojoryn
                case StatData.jemoni:
                   param1.kukigim=_loc8_;
                   break;
-               case StatData.tibozimer:
+               case StatData.tiboActionMapperAbstracter:
                   param1.vypo=_loc8_;
                   break;
                case StatData.kyg:
@@ -2010,7 +2010,7 @@ package ducojoryn
          switch(null)
          {
             case Dumaly.joboqig:
-               _loc2_=Juc.make(Parameters.lugiboso,param1.resultString_);
+               _loc2_=Juc.make(RotmgParameters.lugiboso,param1.resultString_);
                this.daju.dispatch(_loc2_);
                break;
             case Dumaly.cubup:
@@ -2030,7 +2030,7 @@ package ducojoryn
          var _loc6_:* = true;
          var _loc2_:Kybidu = Kybidu.zed(param1.resultString_);
          var _loc3_:Boolean = param1.result_==Dumaly.coqybemib||param1.result_==Dumaly.byjuqe;
-         var _loc4_:Juc = Juc.make(_loc3_?Parameters.lugiboso:Parameters.kokapo,_loc2_.key);
+         var _loc4_:Juc = Juc.make(_loc3_?RotmgParameters.lugiboso:RotmgParameters.kokapo,_loc2_.key);
          _loc4_.tokens=_loc2_.tokens;
          this.daju.dispatch(_loc4_);
          return;
@@ -2108,7 +2108,7 @@ package ducojoryn
          else
          {
             _loc2_=Kybidu.zed(param1.lineBuilderJSON);
-            this.daju.dispatch(Juc.make(Parameters.kokapo,_loc2_.key,-1,-1,"",false,_loc2_.tokens));
+            this.daju.dispatch(Juc.make(RotmgParameters.kokapo,_loc2_.key,-1,-1,"",false,_loc2_.tokens));
             gs_.dispatchEvent(new Tamyte(param1.success_,_loc2_.key,_loc2_.tokens));
          }
          return;
@@ -2132,7 +2132,7 @@ package ducojoryn
       private function kabupuwo(param1:Hukadu) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(Parameters.data_.showGuildInvitePopup)
+         if(RotmgParameters.data_.showGuildInvitePopup)
          {
             gs_.hudView.interactPanel.setOverride(new Dazu(gs_,param1.name_,param1.guildName_));
          }
@@ -2176,7 +2176,7 @@ package ducojoryn
                if(this.toto<10)
                {
                   this.tiqy(this.toto++);
-                  this.daju.dispatch(Juc.make(Parameters.kokapo,"Connection failed!  Retrying..."));
+                  this.daju.dispatch(Juc.make(RotmgParameters.kokapo,"Connection failed!  Retrying..."));
                }
                else
                {
@@ -2206,7 +2206,7 @@ package ducojoryn
       private function vesajyj(param1:String) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         this.daju.dispatch(Juc.make(Parameters.kokapo,param1));
+         this.daju.dispatch(Juc.make(RotmgParameters.kokapo,param1));
          return;
       }
 
@@ -2233,7 +2233,7 @@ package ducojoryn
       private function cumyqug(param1:Matydufun) : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         this.daju.dispatch(Juc.make(Parameters.kokapo,param1.errorDescription_));
+         this.daju.dispatch(Juc.make(RotmgParameters.kokapo,param1.errorDescription_));
          this.player.jovi=0;
          return;
       }
@@ -2241,7 +2241,7 @@ package ducojoryn
       private function zude(param1:Matydufun) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         this.daju.dispatch(Juc.make(Parameters.kokapo,param1.errorDescription_));
+         this.daju.dispatch(Juc.make(RotmgParameters.kokapo,param1.errorDescription_));
          this.gihefaduh=false;
          gs_.closed.dispatch();
          return;
@@ -2253,7 +2253,7 @@ package ducojoryn
          var _loc2_:Dialog = new Dialog(Vibemod.buw,"",Vibemod.suvi,null,"/clientUpdate");
          _loc2_.vubah(Vibemod.gali,
             {
-               client:Parameters.hoci,
+               client:RotmgParameters.hoci,
                server:param1.errorDescription_
             }
          );
@@ -2266,7 +2266,7 @@ package ducojoryn
       private function jocihibo(param1:Matydufun) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         this.daju.dispatch(Juc.make(Parameters.kokapo,param1.errorDescription_));
+         this.daju.dispatch(Juc.make(RotmgParameters.kokapo,param1.errorDescription_));
          return;
       }
 

@@ -21,7 +21,7 @@ package luqawopad
 
       public var account:Account;
 
-      public var parameters:Fymarafi;
+      public var RotmgParameters:Fymarafi;
 
       public var ridecy:Boquzojul;
 
@@ -33,8 +33,8 @@ package luqawopad
          var _loc1_:* = true;
          var _loc2_:* = false;
          this.kabam=this.account as Suba;
-         this.kabam.signedRequest=this.parameters.bawyquhi();
-         this.kabam.userSession=this.parameters.muzemidyv();
+         this.kabam.signedRequest=this.RotmgParameters.bawyquhi();
+         this.kabam.userSession=this.RotmgParameters.muzemidyv();
          if(this.kabam.userSession==null)
          {
             this.ridecy.dispatch(new Tanuf());

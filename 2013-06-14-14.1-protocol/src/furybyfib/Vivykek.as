@@ -2,7 +2,7 @@ package furybyfib
 {
    import tytojonib.Kyjefe;
    import fytalis.ArenaPortalPanel;
-   import dovuz.Vagogi;
+   import aaa.NetworkHandler;
    import zugevygam.Byty;
    import cizagamym.Boquzojul;
    import cizagamym.Lebovas;
@@ -15,7 +15,7 @@ package furybyfib
    import com.company.assembleegameclient.util.Currency;
    import zipo.Gagininaj;
    import zukinigor.Lazapy;
-   import ducojoryn.Zim;
+   import aaa.ActionMapperAbstract;
    import komi.Vibemod;
    import sefylew.Fadyqe;
    import wenono.Jiwir;
@@ -40,7 +40,7 @@ package furybyfib
 
       public var view:ArenaPortalPanel;
 
-      public var gagoty:Vagogi;
+      public var gagoty:NetworkHandler;
 
       public var bufaz:Byty;
 
@@ -91,7 +91,7 @@ package furybyfib
             this.lohe.sojyw();
             _loc1_=this.difas.getInstance(Gagininaj);
             _loc1_.start();
-            _loc2_=this.bufaz.quseb(Zim.ENTER_ARENA) as Lazapy;
+            _loc2_=this.bufaz.quseb(ActionMapperAbstract.ENTER_ARENA) as Lazapy;
             _loc2_.currency=Currency.FAME;
             this.gagoty.sendMessage(_loc2_);
             this.rot.dispatch();
@@ -133,7 +133,7 @@ package furybyfib
                   this.lohe.sojyw();
                   _loc1_=this.difas.getInstance(Gagininaj);
                   _loc1_.start();
-                  _loc2_=this.bufaz.quseb(Zim.ENTER_ARENA) as Lazapy;
+                  _loc2_=this.bufaz.quseb(ActionMapperAbstract.ENTER_ARENA) as Lazapy;
                   _loc2_.currency=Currency.win;
                   this.gagoty.sendMessage(_loc2_);
                   this.rot.dispatch();

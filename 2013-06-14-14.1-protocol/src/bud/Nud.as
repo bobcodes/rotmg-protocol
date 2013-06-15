@@ -23,7 +23,7 @@ package bud
          this.sosa=param2;
          this.rikimymi=param3;
          this.wuro=param4;
-         this.injectParameters=param5;
+         this.injectRotmgParameters=param5;
          return;
       }
 
@@ -72,7 +72,7 @@ package bud
             }
             else
             {
-               _loc5_[_loc6_]=_loc8_.apply(param2,param3,injectParameters);
+               _loc5_[_loc6_]=_loc8_.apply(param2,param3,injectRotmgParameters);
                _loc6_++;
                continue;
             }

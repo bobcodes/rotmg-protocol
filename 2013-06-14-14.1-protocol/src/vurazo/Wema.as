@@ -5,7 +5,7 @@ package vurazo
    import __AS3__.vec.Vector;
    import jovurora.Server;
    import jovurora.Cyp;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Wema extends Object implements Divoceve
@@ -55,7 +55,7 @@ package vurazo
             }
             else
             {
-               if(_loc6_.name==Parameters.data_.preferredServer)
+               if(_loc6_.name==RotmgParameters.data_.preferredServer)
                {
                   return _loc6_;
                }

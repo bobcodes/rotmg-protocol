@@ -40,7 +40,7 @@ package com.company.assembleegameclient.objects
    import com.company.assembleegameclient.util.TextureRedrawer;
    import flash.utils.getTimer;
    import flash.geom.ColorTransform;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.display.GraphicsGradientFill;
    import flash.display.GradientType;
    import flash.utils.getQualifiedClassName;
@@ -1144,7 +1144,7 @@ package com.company.assembleegameclient.objects
          param1.push(this.bitmapFill_);
          param1.push(this.path_);
          param1.push(Dyrejocu.END_FILL);
-         if((!this.isPaused())&&(this.condition_)&&!Parameters.womo)
+         if((!this.isPaused())&&(this.condition_)&&!RotmgParameters.womo)
          {
             this.poliniru(param1,param2,param3);
          }

@@ -8,7 +8,7 @@ package fytalis
    import flash.events.Event;
    import flash.events.KeyboardEvent;
    import flash.events.MouseEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import com.company.assembleegameclient.game.Pajemiz;
    import com.company.assembleegameclient.objects.Player;
    import flash.text.TextFieldAutoSize;
@@ -108,7 +108,7 @@ package fytalis
       private function tuv(param1:KeyboardEvent) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(param1.keyCode==Parameters.data_.interact&&stage.focus==null)
+         if(param1.keyCode==RotmgParameters.data_.interact&&stage.focus==null)
          {
             this.enterPortal();
          }

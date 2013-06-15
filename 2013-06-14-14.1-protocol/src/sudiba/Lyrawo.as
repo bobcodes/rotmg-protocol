@@ -10,7 +10,7 @@ package sudiba
    import __AS3__.vec.Vector;
    import flash.display.IGraphicsData;
    import com.company.assembleegameclient.map.Qawosiwi;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.display.LineScaleMode;
    import flash.display.CapsStyle;
    import flash.display.JointStyle;
@@ -116,7 +116,7 @@ package sudiba
             visible=false;
             return true;
          }
-         if((this.sotug)&&!Parameters.data_.textBubbles)
+         if((this.sotug)&&!RotmgParameters.data_.textBubbles)
          {
             visible=false;
             return true;

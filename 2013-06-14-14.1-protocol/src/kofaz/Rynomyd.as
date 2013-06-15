@@ -7,7 +7,7 @@ package kofaz
    import com.company.assembleegameclient.game.GameSprite;
    import mukyrosu.Qanyduk;
    import flash.events.MouseEvent;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import flash.filters.DropShadowFilter;
    import jediwip.Vofezuzy;
    import com.company.util.AssetLibrary;
@@ -44,7 +44,7 @@ package kofaz
          this.draw(0,0);
          mouseEnabled=true;
          doubleClickEnabled=true;
-         addEventListener(MouseEvent.DOUBLE_CLICK,this.zimahuk,false,0,true);
+         addEventListener(MouseEvent.DOUBLE_CLICK,this.ActionMapperAbstractahuk,false,0,true);
          ryfoc.complete.add(this.nipawuf);
          return;
       }
@@ -85,10 +85,10 @@ package kofaz
          return;
       }
 
-      private function zimahuk(param1:MouseEvent) : void {
+      private function ActionMapperAbstractahuk(param1:MouseEvent) : void {
          var _loc2_:* = true;
          var _loc3_:* = false;
-         if(!this.jodori||(this.jodori.evalIsNotInCombatMapArea())||Parameters.data_.clickForGold==true)
+         if(!this.jodori||(this.jodori.evalIsNotInCombatMapArea())||RotmgParameters.data_.clickForGold==true)
          {
             this.cunif.dispatch();
          }

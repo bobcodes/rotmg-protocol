@@ -7,7 +7,7 @@ package zekeqa
    import com.company.assembleegameclient.game.Pajemiz;
    import huv.Buhata;
    import suzen.Kodufanin;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
 
 
    public class Jovapis extends Kyjefe
@@ -94,7 +94,7 @@ package zekeqa
          _loc1_.category="credits";
          _loc1_.hukepej=this.qyhowo.model.getConverted()?"buyConverted":"buy";
          _loc1_.label="Name Change";
-         _loc1_.value=Parameters.juf;
+         _loc1_.value=RotmgParameters.juf;
          this.trackEvent.dispatch(_loc1_);
          return;
       }

@@ -16,7 +16,7 @@ package zoho
    import fodusy.Puv;
    import fodusy.Fihygoce;
    import fodusy.Joqepeqa;
-   import ducojoryn.Zim;
+   import aaa.ActionMapperAbstract;
    import firo.Binifyra;
    import fodusy.Hyh;
 
@@ -48,7 +48,7 @@ package zoho
          this.pomih.map(Lyheve).sakytyf(Javoliz);
          this.pomih.map(Zyn).sakytyf(Puv);
          this.pomih.map(Fihygoce).sakytyf(Joqepeqa);
-         this.jyhako.map(Zim.RESKIN).titikokad(Binifyra).fymafo(Hyh);
+         this.jyhako.map(ActionMapperAbstract.RESKIN).titikokad(Binifyra).fymafo(Hyh);
          this.context.wumeci.pypygug(this.zofil);
          return;
       }

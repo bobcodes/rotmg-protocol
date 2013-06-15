@@ -4,7 +4,7 @@ package racitagy
    import cizagamym.Lebovas;
    import flash.events.Event;
    import com.company.googleanalytics.GA;
-   import com.company.assembleegameclient.parameters.Parameters;
+   import aaa.RotmgParameters.RotmgParameters;
    import sijizoh.Duq;
    import komi.Vibemod;
    import vysob.Dialog;
@@ -40,8 +40,8 @@ package racitagy
          var _loc3_:* = true;
          this.qyhowo.gsc_.escape();
          GA.global().trackEvent("enterPortal","Nexus Button");
-         Parameters.data_.needsRandomRealm=false;
-         Parameters.save();
+         RotmgParameters.data_.needsRandomRealm=false;
+         RotmgParameters.save();
          this.fysenus.dispatch();
          return;
       }
