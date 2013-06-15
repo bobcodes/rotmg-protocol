@@ -30,28 +30,11 @@ import rotmg.net.layer.WiresharkLogNetworkLayer;
 
 public class ReadLoggedBytesMain {
 
-    private static final File toServerLogs = new File("protocol-example" + File.separator + "2013-06-04-to-server.binary");
-    private static final File fromServerLogs = new File("protocol-example" + File.separator + "2013-06-04-from-server.binary");
     private static final File bothLogs = new File("protocol-example" + File.separator + "2013-06-05-both.binary");
     
     public static void main(String[] args) throws Exception {
         
-//        System.out.println("===========FROM SERVER==================");
-//        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(fromServerLogs))) {
-//            nw.run();
-//        } catch(Exception e) {
-//            e.printStackTrace();
-//        }
-//        
-//        System.out.println("===========TO SERVER====================");
-//        try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(toServerLogs))) {
-//            nw.run();
-//        } catch(Exception e) {
-//            e.printStackTrace();
-//        }
-        
-        // -723486936
-        System.out.println("===========BOTH====================");
+        System.out.println("===========BOTH===========");
         try(RotmgNetworkHandler nw = new RotmgNetworkHandler(new WiresharkLogNetworkLayer(bothLogs))) {
             nw.run();
         } catch(Exception e) {

@@ -35,14 +35,16 @@ public class LoadAction implements OutgoingAction {
     /**
      * TODO: pass this in dynamically
      */
-    private final int charId;
+    private final int _charId;
+    private final boolean _isFromArena;
     
     public LoadAction() {
-        this(UserConfig.CHAR_ID);
+        this(UserConfig.CHAR_ID, false);
     }
     
-    public LoadAction(int charId) {
-        this.charId = charId;
+    public LoadAction(int charId, boolean isFromArena) {
+        _charId = charId;
+        _isFromArena = isFromArena;
     }
 
 
@@ -59,13 +61,15 @@ public class LoadAction implements OutgoingAction {
      */
     @Override
     public void toBytes(DataOutputStream dout) throws IOException {
-        dout.writeInt(charId); 
+        dout.writeInt(_charId);
+        dout.writeBoolean(_isFromArena);
     }
 
     @Override
     public OutgoingAction fromBytes(DataInputStream din) throws IOException {
         int charId = din.readInt();
-        return new LoadAction(charId);
+        boolean isFromArena = din.readBoolean();
+        return new LoadAction(charId, isFromArena);
     }
 
     /**
@@ -78,6 +82,9 @@ public class LoadAction implements OutgoingAction {
 
     @Override
     public String toString() {
-        return "LoadAction [charId=" + charId + "]";
+        return "LoadAction [charId=" + _charId + ", isFromArena="
+                + _isFromArena + "]";
     }
+
+    
 }

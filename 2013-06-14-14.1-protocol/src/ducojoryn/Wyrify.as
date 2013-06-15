@@ -40,7 +40,7 @@ package ducojoryn
    import aaa.HelloAction;
    import firo.Mihoje;
    import firo.Cavy;
-   import firo.Seja;
+   import firo.LoadAction;
    import firo.Cyhalud;
    import firo.Teleport;
    import firo.Zameliky;
@@ -366,7 +366,7 @@ package ducojoryn
          [OFS125]_loc1_[/OFS].[OFS129]map[/OFS][OFS129]([/OFS][OFS126]HELLO[/OFS][OFS129])[/OFS].[OFS136]titikokad[/OFS][OFS136]([/OFS][OFS133]HelloAction[/OFS][OFS136])[/OFS];
          [OFS140]_loc1_[/OFS].[OFS144]map[/OFS][OFS144]([/OFS][OFS141]INVDROP[/OFS][OFS144])[/OFS].[OFS151]titikokad[/OFS][OFS151]([/OFS][OFS148]Mihoje[/OFS][OFS151])[/OFS];
          [OFS155]_loc1_[/OFS].[OFS159]map[/OFS][OFS159]([/OFS][OFS156]PONG[/OFS][OFS159])[/OFS].[OFS166]titikokad[/OFS][OFS166]([/OFS][OFS163]Cavy[/OFS][OFS166])[/OFS];
-         [OFS170]_loc1_[/OFS].[OFS174]map[/OFS][OFS174]([/OFS][OFS171]LOAD[/OFS][OFS174])[/OFS].[OFS181]titikokad[/OFS][OFS181]([/OFS][OFS178]Seja[/OFS][OFS181])[/OFS];
+         [OFS170]_loc1_[/OFS].[OFS174]map[/OFS][OFS174]([/OFS][OFS171]LOAD[/OFS][OFS174])[/OFS].[OFS181]titikokad[/OFS][OFS181]([/OFS][OFS178]LoadAction[/OFS][OFS181])[/OFS];
          [OFS185]_loc1_[/OFS].[OFS189]map[/OFS][OFS189]([/OFS][OFS186]SETCONDITION[/OFS][OFS189])[/OFS].[OFS196]titikokad[/OFS][OFS196]([/OFS][OFS193]Cyhalud[/OFS][OFS196])[/OFS];
          [OFS200]_loc1_[/OFS].[OFS204]map[/OFS][OFS204]([/OFS][OFS201]TELEPORT[/OFS][OFS204])[/OFS].[OFS211]titikokad[/OFS][OFS211]([/OFS][OFS208]Teleport[/OFS][OFS211])[/OFS];
          [OFS215]_loc1_[/OFS].[OFS219]map[/OFS][OFS219]([/OFS][OFS216]USEPORTAL[/OFS][OFS219])[/OFS].[OFS226]titikokad[/OFS][OFS226]([/OFS][OFS223]Zameliky[/OFS][OFS226])[/OFS];
@@ -619,7 +619,7 @@ package ducojoryn
       private function load() : void {
          var _loc2_:* = false;
          var _loc3_:* = true;
-         var _loc1_:Seja = this.bufaz.quseb(LOAD) as Seja;
+         var _loc1_:LoadAction = this.bufaz.quseb(LOAD) as LoadAction;
          _loc1_.charId_=charId_;
          _loc1_.isFromArena_=isFromArena_;
          vyquza.sendMessage(_loc1_);

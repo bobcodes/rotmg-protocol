@@ -8,7 +8,7 @@ package jytis
    import ziru.Bezisop;
    import ziru.Zyr;
    import ziru.Req;
-   import hepiwus.Sejano;
+   import hepiwus.LoadActionno;
    import hepiwus.Forugid;
 
 
@@ -34,7 +34,7 @@ package jytis
          this.difas.map(Bezisop).fezy();
          this.difas.map(Zyr).fezy();
          this.difas.map(Req).fezy();
-         this.mediatorMap.map(Sejano).lokiduf(Forugid);
+         this.mediatorMap.map(LoadActionno).lokiduf(Forugid);
          return;
       }
    }

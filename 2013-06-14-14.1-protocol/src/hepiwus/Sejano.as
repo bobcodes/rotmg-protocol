@@ -6,9 +6,9 @@ package hepiwus
    import com.company.assembleegameclient.objects.GameObject;
 
 
-   public class Sejano extends Sprite
+   public class LoadActionno extends Sprite
    {
-      public function Sejano() {
+      public function LoadActionno() {
          var _loc1_:* = true;
          var _loc2_:* = false;
          super();

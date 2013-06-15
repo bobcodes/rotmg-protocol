@@ -1,11 +1,11 @@
-package firo
+package aaa
 {
    import flash.utils.IDataOutput;
 
 
-   public class Seja extends Jicogu
+   public class LoadAction extends Jicogu
    {
-      public function Seja(param1:uint, param2:Function) {
+      public function LoadAction(param1:uint, param2:Function) {
          var _loc3_:* = false;
          var _loc4_:* = true;
          super(param1,param2);

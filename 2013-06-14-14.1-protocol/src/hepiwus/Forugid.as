@@ -25,7 +25,7 @@ package hepiwus
          return;
       }
 
-      public var view:Sejano;
+      public var view:LoadActionno;
 
       public var model:Ciqyl;
 

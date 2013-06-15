@@ -26,7 +26,7 @@ package hepiwus
    import aaa.RotmgParameters.RotmgParameters;
 
 
-   public class Qugywag extends Sejano
+   public class Qugywag extends LoadActionno
    {
       {
          var _loc1_:* = true;

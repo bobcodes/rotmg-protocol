@@ -49,7 +49,7 @@ package gabufo
 
       private var fes:Guzowoja;
 
-      private var seja:String = "</a></font>";
+      private var LoadAction:String = "</a></font>";
 
       private function bajek() : void {
          var _loc1_:* = true;
@@ -81,7 +81,7 @@ package gabufo
          this.hujalocyd.setStringBuilder(new Kybidu().setParams(Vibemod.keb,
             {
                signIn:_loc1_,
-               _signIn:this.seja
+               _signIn:this.LoadAction
             }
          ));
          this.hujalocyd.addEventListener(TextEvent.LINK,this.sinany);
@@ -98,9 +98,9 @@ package gabufo
          this.fes.setStringBuilder(new Kybidu().setParams(Vibemod.jakanyk,
             {
                tou:_loc1_,
-               _tou:this.seja,
+               _tou:this.LoadAction,
                policy:_loc2_,
-               _policy:this.seja
+               _policy:this.LoadAction
             }
          ));
          this.wuqyku(this.fes);
