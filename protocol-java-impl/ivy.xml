@@ -8,5 +8,6 @@
         <dependency org="commons-httpclient" name="commons-httpclient" rev="2.0"/>
         <dependency org="org.apache.httpcomponents" name="httpcomponents-client" rev="4.2.5"/>
         <dependency org="com.google.guava" name="guava" rev="14.0"/>
+        <dependency org="bouncycastle" name="bcprov-jdk15" rev="140"/>
     </dependencies>
 </ivy-module> 
