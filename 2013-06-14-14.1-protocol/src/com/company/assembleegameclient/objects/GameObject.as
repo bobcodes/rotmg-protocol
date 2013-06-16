@@ -16,7 +16,7 @@ package com.company.assembleegameclient.objects
    import flash.utils.Dictionary;
    import dorepoji.Kadido;
    import com.company.util.BitmapUtil;
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
    import flash.geom.Point;
    import flash.geom.Vector3D;
    import com.company.assembleegameclient.map.Map;
@@ -591,7 +591,7 @@ package com.company.assembleegameclient.objects
          return _loc1_;
       }
 
-      public function kam(param1:Rimukiz) : Number {
+      public function kam(param1:RotmgPoint) : Number {
          var _loc4_:* = true;
          var _loc5_:* = false;
          var _loc2_:Number = param1.x_-x_;
@@ -767,7 +767,7 @@ package com.company.assembleegameclient.objects
          {
             this.moveTo(this.dakejo.x,this.dakejo.y);
          }
-         this.quwezape=map_.gs_.lastUpdate_;
+         this.quwezape=map_.gs_.lastUpdateAction_;
          this.dakejo.x=param1;
          this.dakejo.y=param2;
          this.joqyf.x=x_;

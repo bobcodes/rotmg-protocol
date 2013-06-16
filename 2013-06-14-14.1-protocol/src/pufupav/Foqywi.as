@@ -28,7 +28,7 @@ package pufupav
 
       public var go_:GameObject;
 
-      public var lastUpdate_:int = -1;
+      public var lastUpdateAction_:int = -1;
 
       public var poketaq:Number;
 
@@ -50,18 +50,18 @@ package pufupav
          {
             return false;
          }
-         if(!this.lastUpdate_)
+         if(!this.lastUpdateAction_)
          {
-            this.lastUpdate_=param1;
+            this.lastUpdateAction_=param1;
             return true;
          }
-         _loc3_=int(this.lastUpdate_/this.poketaq);
+         _loc3_=int(this.lastUpdateAction_/this.poketaq);
          _loc4_=int(param1/this.poketaq);
          _loc8_=this.go_.x_;
          var _loc9_:Number = this.go_.y_;
-         if(this.lastUpdate_<0)
+         if(this.lastUpdateAction_<0)
          {
-            this.lastUpdate_=Math.max(0,param1-sytypiq);
+            this.lastUpdateAction_=Math.max(0,param1-sytypiq);
          }
          x_=_loc8_;
          y_=_loc9_;
@@ -78,7 +78,7 @@ package pufupav
             map_.addObj(_loc11_,_loc12_,_loc13_);
             _loc10_++;
          }
-         this.lastUpdate_=param1;
+         this.lastUpdateAction_=param1;
          return true;
       }
 

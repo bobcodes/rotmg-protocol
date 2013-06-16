@@ -1,7 +1,7 @@
 package wipivyv
 {
    import __AS3__.vec.Vector;
-   import dasefezy.Jowo;
+   import aaa.PhysicalObjectData;
    import flash.utils.IDataInput;
    import com.company.assembleegameclient.util.Tocaniw;
 
@@ -11,7 +11,7 @@ package wipivyv
       public function Buliwafa(param1:uint, param2:Function) {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         this.statuses_=new Vector.<Jowo>();
+         this.statuses_=new Vector.<PhysicalObjectData>();
          super(param1,param2);
          return;
       }
@@ -20,7 +20,7 @@ package wipivyv
 
       public var tickTime_:int;
 
-      public var statuses_:Vector.<Jowo>;
+      public var statuses_:Vector.<PhysicalObjectData>;
 
       override public function parseFromInput(param1:IDataInput) : void {
          var _loc4_:* = true;
@@ -38,7 +38,7 @@ package wipivyv
          this.statuses_.length=Math.min(_loc2_,this.statuses_.length);
          while(this.statuses_.length<_loc2_)
          {
-            this.statuses_.push(Tocaniw.dyzovot(Jowo) as Jowo);
+            this.statuses_.push(Tocaniw.dyzovot(PhysicalObjectData) as PhysicalObjectData);
          }
          _loc3_=0;
          while(_loc3_<_loc2_)

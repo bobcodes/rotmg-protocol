@@ -1,6 +1,6 @@
 package firo
 {
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
    import __AS3__.vec.Vector;
    import dasefezy.Fucyz;
    import flash.utils.IDataOutput;
@@ -11,7 +11,7 @@ package firo
       public function Pavinol(param1:uint, param2:Function) {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         this.newPosition_=new Rimukiz();
+         this.newPosition_=new RotmgPoint();
          this.records_=new Vector.<Fucyz>();
          super(param1,param2);
          return;
@@ -21,7 +21,7 @@ package firo
 
       public var time_:int;
 
-      public var newPosition_:Rimukiz;
+      public var newPosition_:RotmgPoint;
 
       public var records_:Vector.<Fucyz>;
 

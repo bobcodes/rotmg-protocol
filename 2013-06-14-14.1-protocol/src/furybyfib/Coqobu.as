@@ -133,7 +133,7 @@ package furybyfib
                         _loc7_.setItem(_loc2_.qavowykez());
                         _loc7_.qoleg(this.lizur(_loc2_));
                         _loc2_.setItem(Tope.puheqah);
-                        _loc2_.blockingItemUpdates=true;
+                        _loc2_.blockingItemUpdateActions=true;
                         _loc2_.wavuciwiz(this.view.curPlayer);
                      }
                   }
@@ -148,7 +148,7 @@ package furybyfib
          var itemSlot:Kuk = param1;
          return new function():void
          {
-            itemSlot.blockingItemUpdates=false;
+            itemSlot.blockingItemUpdateActions=false;
             return;
          };
       }
@@ -201,7 +201,7 @@ package furybyfib
          {
             return false;
          }
-         if((param1.blockingItemUpdates)||(param2.blockingItemUpdates))
+         if((param1.blockingItemUpdateActions)||(param2.blockingItemUpdateActions))
          {
             return false;
          }

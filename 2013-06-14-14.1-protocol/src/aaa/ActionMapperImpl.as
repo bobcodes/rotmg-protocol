@@ -73,7 +73,7 @@ package aaa
    import wipivyv.Damylaj;
    import wipivyv.Toraruq;
    import wipivyv.Damage;
-   import wipivyv.Update;
+   import aaa.UpdateAction;
    import wipivyv.Juco;
    import aaa.GlobalNotificationAction;
    import wipivyv.Buliwafa;
@@ -136,10 +136,10 @@ package aaa
    import com.company.assembleegameclient.map.Remo;
    import com.company.assembleegameclient.util.Tocaniw;
    import fytalis.TradeRequestPanel;
-   import dasefezy.Juqofip;
-   import dasefezy.Jowo;
+   import aaa.PhysicalObject;
+   import aaa.PhysicalObjectData;
    import micac.Leguwa;
-   import dasefezy.Hugotupi;
+   import aaa.Tile;
    import bicidikev.Fywudog;
    import jediwip.Kybidu;
    import cerywij.Hoheje;
@@ -166,7 +166,7 @@ package aaa
    import pufupav.Lohanyruq;
    import pufupav.Pebi;
    import pufupav.Pijo;
-   import dasefezy.StatData;
+   import aaa.StatData;
    import com.company.assembleegameclient.objects.Pet;
    import com.company.assembleegameclient.objects.Merchant;
    import com.company.assembleegameclient.objects.Portal;
@@ -400,7 +400,7 @@ package aaa
          _loc1_.map(CREATE_SUCCESS).titikokad(Damylaj).puk(this.tofumadyd);
          _loc1_.map(qemaryky).titikokad(Toraruq).puk(this.nitegu);
          _loc1_.map(DAMAGE).titikokad(Damage).puk(this.tybu);
-         _loc1_.map(UPDATE).titikokad(Update).puk(this.zebemak);
+         _loc1_.map(UPDATE).titikokad(UpdateAction).puk(this.zebemak);
          _loc1_.map(NOTIFICATION).titikokad(Juco).puk(this.welahy);
          _loc1_.map(GLOBAL_NOTIFICATION).titikokad(GlobalNotificationAction).puk(this.bicabiz);
          _loc1_.map(fekydygo).titikokad(Buliwafa).puk(this.pogiq);
@@ -737,7 +737,7 @@ package aaa
             [OFS16]return [/OFS]false;
          }
          var [OFS36]_loc8_:Kihivy = [/OFS]this.[OFS18]bufaz[/OFS].[OFS24]quseb[/OFS][OFS24]([/OFS][OFS21]INVSWAP[/OFS][OFS24])[/OFS][OFS31] as [/OFS][OFS28]Kihivy[/OFS];
-         [OFS35]_loc8_[/OFS].[OFS43]time_[/OFS][OFS43]=[/OFS][OFS38]gs_[/OFS].[OFS40]lastUpdate_[/OFS];
+         [OFS35]_loc8_[/OFS].[OFS43]time_[/OFS][OFS43]=[/OFS][OFS38]gs_[/OFS].[OFS40]lastUpdateAction_[/OFS];
          [OFS46]_loc8_[/OFS].[OFS48]position_[/OFS].[OFS54]x_[/OFS][OFS54]=[/OFS][OFS51]param1[/OFS].[OFS52]x_[/OFS];
          [OFS56]_loc8_[/OFS].[OFS58]position_[/OFS].[OFS64]y_[/OFS][OFS64]=[/OFS][OFS61]param1[/OFS].[OFS62]y_[/OFS];
          [OFS66]_loc8_[/OFS].[OFS68]slotObject1_[/OFS].[OFS74]objectId_[/OFS][OFS74]=[/OFS][OFS71]param2[/OFS].[OFS72]objectId_[/OFS];
@@ -762,7 +762,7 @@ package aaa
             return false;
          }
          var _loc8_:Kihivy = this.bufaz.quseb(INVSWAP) as Kihivy;
-         _loc8_.time_=gs_.lastUpdate_;
+         _loc8_.time_=gs_.lastUpdateAction_;
          _loc8_.position_.x_=param1.x_;
          _loc8_.position_.y_=param1.y_;
          _loc8_.slotObject1_.objectId_=param2.objectId_;
@@ -875,7 +875,7 @@ package aaa
          }
          var _loc5_:Pavinol = this.bufaz.quseb(MOVE) as Pavinol;
          _loc5_.tickId_=param1;
-         _loc5_.time_=gs_.lastUpdate_;
+         _loc5_.time_=gs_.lastUpdateAction_;
          _loc5_.newPosition_.x_=_loc3_;
          _loc5_.newPosition_.y_=_loc4_;
          var _loc6_:int = gs_.moveRecords_.lastClearTime_;
@@ -1158,12 +1158,12 @@ package aaa
             return;
          }
          var _loc4_:Projectile = Tocaniw.dyzovot(Projectile) as Projectile;
-         _loc4_.reset(param1.containerType_,0,param1.ownerId_,param1.bulletId_,param1.angle_,gs_.lastUpdate_);
+         _loc4_.reset(param1.containerType_,0,param1.ownerId_,param1.bulletId_,param1.angle_,gs_.lastUpdateAction_);
          _loc4_.wodeg(param1.damage_);
          gs_.map.addObj(_loc4_,param1.startingPos_.x_,param1.startingPos_.y_);
          if(_loc2_)
          {
-            this.lebety(gs_.lastUpdate_);
+            this.lebety(gs_.lastUpdateAction_);
          }
          return;
       }
@@ -1177,7 +1177,7 @@ package aaa
             return;
          }
          var _loc3_:Projectile = Tocaniw.dyzovot(Projectile) as Projectile;
-         _loc3_.reset(param1.containerType_,0,param1.ownerId_,param1.bulletId_,param1.angle_,gs_.lastUpdate_);
+         _loc3_.reset(param1.containerType_,0,param1.ownerId_,param1.bulletId_,param1.angle_,gs_.lastUpdateAction_);
          gs_.map.addObj(_loc3_,_loc2_.x_,_loc2_.y_);
          _loc2_.setAttack(param1.containerType_,param1.angle_);
          return;
@@ -1199,12 +1199,12 @@ package aaa
          {
             _loc4_=Tocaniw.dyzovot(Projectile) as Projectile;
             _loc5_=param1.angle_+param1.angleInc_*_loc3_;
-            _loc4_.reset(_loc2_.objectType_,param1.bulletType_,param1.ownerId_,(param1.bulletId_+_loc3_)%256,_loc5_,gs_.lastUpdate_);
+            _loc4_.reset(_loc2_.objectType_,param1.bulletType_,param1.ownerId_,(param1.bulletId_+_loc3_)%256,_loc5_,gs_.lastUpdateAction_);
             _loc4_.wodeg(param1.damage_);
             gs_.map.addObj(_loc4_,param1.startingPos_.x_,param1.startingPos_.y_);
             _loc3_++;
          }
-         this.lebety(gs_.lastUpdate_);
+         this.lebety(gs_.lastUpdateAction_);
          _loc2_.setAttack(_loc2_.objectType_,param1.angle_+param1.angleInc_*(param1.numShots_-1)/2);
          return;
       }
@@ -1261,7 +1261,7 @@ package aaa
          return;
       }
 
-      private function koby(param1:Juqofip) : void {
+      private function koby(param1:PhysicalObject) : void {
          var _loc5_:* = false;
          var _loc6_:* = true;
          var _loc2_:Remo = gs_.map;
@@ -1270,7 +1270,7 @@ package aaa
          {
             return;
          }
-         var _loc4_:Jowo = param1.syt;
+         var _loc4_:PhysicalObjectData = param1.syt;
          _loc3_.setObjectId(_loc4_.objectId_);
          _loc2_.addObj(_loc3_,_loc4_.pos_.x_,_loc4_.pos_.y_);
          if(_loc3_ is Player)
@@ -1300,11 +1300,11 @@ package aaa
          return;
       }
 
-      private function zebemak(param1:Update) : void {
+      private function zebemak(param1:UpdateAction) : void {
          var _loc5_:* = true;
          var _loc6_:* = false;
          var _loc3_:* = 0;
-         var _loc4_:Hugotupi = null;
+         var _loc4_:Tile = null;
          var _loc2_:Qamyro = this.bufaz.quseb(kom);
          vyquza.sendMessage(_loc2_);
          _loc3_=0;
@@ -1384,7 +1384,7 @@ package aaa
       private function pogiq(param1:Buliwafa) : void {
          var _loc5_:* = false;
          var _loc6_:* = true;
-         var _loc2_:Jowo = null;
+         var _loc2_:PhysicalObjectData = null;
          if(jitterWatcher_!=null)
          {
             jitterWatcher_.record();
@@ -1566,13 +1566,13 @@ package aaa
       private function zebojuzof(param1:Tum) : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         this.nedaquw(gs_.lastUpdate_);
+         this.nedaquw(gs_.lastUpdateAction_);
          var _loc2_:GameObject = gs_.map.goDict_[param1.objectId_];
          if(_loc2_==null)
          {
             return;
          }
-         _loc2_.zebojuzof(param1.pos_.x_,param1.pos_.y_,gs_.lastUpdate_);
+         _loc2_.zebojuzof(param1.pos_.x_,param1.pos_.y_,gs_.lastUpdateAction_);
          return;
       }
 
@@ -1828,7 +1828,7 @@ package aaa
          return;
       }
 
-      private function syzigeko(param1:Jowo, param2:int, param3:int) : void {
+      private function syzigeko(param1:PhysicalObjectData, param2:int, param3:int) : void {
          var _loc12_:* = true;
          var _loc13_:* = false;
          var _loc8_:* = 0;
@@ -2064,14 +2064,14 @@ package aaa
          var _loc5_:Vector.<uint> = null;
          if(this.player==null)
          {
-            this.hedinyt(gs_.lastUpdate_,0,0);
+            this.hedinyt(gs_.lastUpdateAction_,0,0);
             return;
          }
          var _loc2_:Hahopyk = new Hahopyk(param1.pos_.nydu(),param1.radius_,16711680);
          gs_.map.addObj(_loc2_,param1.pos_.x_,param1.pos_.y_);
          if((this.player.zonocor())||(this.player.isPaused()))
          {
-            this.hedinyt(gs_.lastUpdate_,this.player.x_,this.player.y_);
+            this.hedinyt(gs_.lastUpdateAction_,this.player.x_,this.player.y_);
             return;
          }
          var _loc3_:* = this.player.kam(param1.pos_)<param1.radius_;
@@ -2086,7 +2086,7 @@ package aaa
             }
             this.player.damage(param1.origType_,_loc4_,_loc5_,false,null);
          }
-         this.hedinyt(gs_.lastUpdate_,this.player.x_,this.player.y_);
+         this.hedinyt(gs_.lastUpdateAction_,this.player.x_,this.player.y_);
          return;
       }
 
@@ -2250,7 +2250,7 @@ package aaa
       private function vohyfone(param1:Matydufun) : void {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         var _loc2_:Dialog = new Dialog(Vibemod.buw,"",Vibemod.suvi,null,"/clientUpdate");
+         var _loc2_:Dialog = new Dialog(Vibemod.buw,"",Vibemod.suvi,null,"/clientUpdateAction");
          _loc2_.vubah(Vibemod.gali,
             {
                client:RotmgParameters.hoci,

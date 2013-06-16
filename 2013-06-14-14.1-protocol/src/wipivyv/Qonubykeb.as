@@ -1,6 +1,6 @@
 package wipivyv
 {
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
    import flash.utils.IDataInput;
 
 
@@ -9,7 +9,7 @@ package wipivyv
       public function Qonubykeb(param1:uint, param2:Function) {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         this.startingPos_=new Rimukiz();
+         this.startingPos_=new RotmgPoint();
          super(param1,param2);
          return;
       }
@@ -20,7 +20,7 @@ package wipivyv
 
       public var bulletType_:int;
 
-      public var startingPos_:Rimukiz;
+      public var startingPos_:RotmgPoint;
 
       public var angle_:Number;
 

@@ -65,7 +65,7 @@ package com.company.assembleegameclient.tutorial
 
       public static const nuf:String = "MoveRight";
 
-      public static const lugelo:String = "Update";
+      public static const lugelo:String = "UpdateAction";
 
       public static const wil:String = "Attack";
 

@@ -78,7 +78,6 @@ public class UpdateAction implements IncomingAction {
         List<PhysicalObject> physicalObjects = new ArrayList<PhysicalObject>();
         for (int i = 0; i < physicalObjectsSize; i++) {
             PhysicalObject po = PhysicalObject.fromBytes(din);
-            System.out.println(po);
             physicalObjects.add(po);
         }
         

@@ -1,6 +1,6 @@
 package firo
 {
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
    import flash.utils.IDataOutput;
 
 
@@ -9,7 +9,7 @@ package firo
       public function Jul(param1:uint, param2:Function) {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         this.startingPos_=new Rimukiz();
+         this.startingPos_=new RotmgPoint();
          super(param1,param2);
          return;
       }
@@ -20,7 +20,7 @@ package firo
 
       public var containerType_:int;
 
-      public var startingPos_:Rimukiz;
+      public var startingPos_:RotmgPoint;
 
       public var angle_:Number;
 

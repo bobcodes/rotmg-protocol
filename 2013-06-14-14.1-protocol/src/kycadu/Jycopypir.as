@@ -28,7 +28,7 @@ package kycadu
    import pejycaj.ArenaLeaderboardListItem;
    import pejycaj.Fefomen;
    import pejycaj.ArenaLeaderboardButton;
-   import pejycaj.Jowofidas;
+   import pejycaj.PhysicalObjectDatafidas;
    import pejycaj.Jajomara;
    import pejycaj.Fabipy;
    import pejycaj.Sihetyta;
@@ -73,7 +73,7 @@ package kycadu
          this.mediatorMap.map(ArenaQueryPanel).lokiduf(Mizywumy);
          this.mediatorMap.map(ArenaLeaderboard).lokiduf(Ryzibajik);
          this.mediatorMap.map(ArenaLeaderboardListItem).lokiduf(Fefomen);
-         this.mediatorMap.map(ArenaLeaderboardButton).lokiduf(Jowofidas);
+         this.mediatorMap.map(ArenaLeaderboardButton).lokiduf(PhysicalObjectDatafidas);
          this.mediatorMap.map(Jajomara).lokiduf(Fabipy);
          this.mediatorMap.map(Sihetyta).lokiduf(Taja);
          this.mediatorMap.map(BattleSummaryDialog).lokiduf(Sozapezy);

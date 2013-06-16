@@ -3,12 +3,12 @@ package pufupav
    import flash.geom.Point;
    import com.company.assembleegameclient.util.Kev;
    import com.company.assembleegameclient.objects.GameObject;
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
 
 
    public class Pyrar extends Miwimemo
    {
-      public function Pyrar(param1:GameObject, param2:Rimukiz, param3:int) {
+      public function Pyrar(param1:GameObject, param2:RotmgPoint, param3:int) {
          var _loc4_:* = false;
          var _loc5_:* = true;
          super();

@@ -315,11 +315,11 @@ package komi
 
       public static const fisacy:String = "IconButton.hotKey";
 
-      public static const buw:String = "ClientUpdate.title";
+      public static const buw:String = "ClientUpdateAction.title";
 
-      public static const suvi:String = "ClientUpdate.leftButton";
+      public static const suvi:String = "ClientUpdateAction.leftButton";
 
-      public static const gali:String = "ClientUpdate.description";
+      public static const gali:String = "ClientUpdateAction.description";
 
       public static const dusojup:String = "AgeVerificationDialog.title";
 

@@ -103,7 +103,6 @@ public class StatData {
     public static StatData fromBytes(DataInputStream din) throws IOException {
         int type = din.readUnsignedByte();
         if(hasStringData(type)){
-            System.out.println(type + "\t has string data");
             return new StatData(type, din.readUTF());
         } else {
             return new StatData(type, din.readInt());

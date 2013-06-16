@@ -1,4 +1,4 @@
-package dasefezy
+package aaa
 {
    import __AS3__.vec.Vector;
    import flash.utils.IDataInput;
@@ -6,12 +6,12 @@ package dasefezy
    import flash.utils.IDataOutput;
 
 
-   public class Jowo extends Object
+   public class PhysicalObjectData extends Object
    {
-      public function Jowo() {
+      public function PhysicalObjectData() {
          var _loc1_:* = false;
          var _loc2_:* = true;
-         this.pos_=new Rimukiz();
+         this.pos_=new RotmgPoint();
          this.piwewito=new Vector.<StatData>();
          super();
          return;
@@ -19,7 +19,7 @@ package dasefezy
 
       public var objectId_:int;
 
-      public var pos_:Rimukiz;
+      public var pos_:RotmgPoint;
 
       public var piwewito:Vector.<StatData>;
 

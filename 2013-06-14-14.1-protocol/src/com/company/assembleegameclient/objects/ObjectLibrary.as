@@ -10,7 +10,7 @@ package com.company.assembleegameclient.objects
    import pilage.Tope;
    import pilage.Patale;
    import com.company.util.ConversionUtil;
-   import dasefezy.StatData;
+   import aaa.StatData;
 
 
    public class ObjectLibrary extends Object

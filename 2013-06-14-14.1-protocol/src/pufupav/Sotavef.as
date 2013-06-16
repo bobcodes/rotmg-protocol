@@ -1,13 +1,13 @@
 package pufupav
 {
    import flash.geom.Point;
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
    import com.company.assembleegameclient.objects.GameObject;
 
 
    public class Sotavef extends Miwimemo
    {
-      public function Sotavef(param1:GameObject, param2:Rimukiz, param3:Number, param4:int) {
+      public function Sotavef(param1:GameObject, param2:RotmgPoint, param3:Number, param4:int) {
          var _loc5_:* = false;
          var _loc6_:* = true;
          super();
@@ -20,7 +20,7 @@ package pufupav
 
       public var start_:Point;
 
-      public var gynyjaco:Rimukiz;
+      public var gynyjaco:RotmgPoint;
 
       public var hobyw:Number;
 

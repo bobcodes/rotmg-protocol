@@ -3,19 +3,19 @@ package dasefezy
    import flash.utils.IDataInput;
 
 
-   public class Juqofip extends Object
+   public class PhysicalObject extends Object
    {
-      public function Juqofip() {
+      public function PhysicalObject() {
          var _loc1_:* = true;
          var _loc2_:* = false;
-         this.syt=new Jowo();
+         this.syt=new PhysicalObjectData();
          super();
          return;
       }
 
       public var objectType_:int;
 
-      public var syt:Jowo;
+      public var syt:PhysicalObjectData;
 
       public function parseFromInput(param1:IDataInput) : void {
          var _loc2_:* = true;

@@ -2,12 +2,12 @@ package pufupav
 {
    import flash.geom.Point;
    import com.company.assembleegameclient.objects.GameObject;
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
 
 
    public class Luqycope extends Miwimemo
    {
-      public function Luqycope(param1:GameObject, param2:Rimukiz, param3:Rimukiz, param4:int) {
+      public function Luqycope(param1:GameObject, param2:RotmgPoint, param3:RotmgPoint, param4:int) {
          var _loc5_:* = true;
          var _loc6_:* = false;
          super();

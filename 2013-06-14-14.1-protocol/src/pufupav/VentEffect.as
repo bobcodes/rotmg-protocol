@@ -23,7 +23,7 @@ package pufupav
 
       public var go_:GameObject;
 
-      public var lastUpdate_:int = -1;
+      public var lastUpdateAction_:int = -1;
 
       override public function update(param1:int, param2:int) : Boolean {
          var _loc10_:* = false;
@@ -38,13 +38,13 @@ package pufupav
          {
             return false;
          }
-         if(this.lastUpdate_<0)
+         if(this.lastUpdateAction_<0)
          {
-            this.lastUpdate_=Math.max(0,param1-400);
+            this.lastUpdateAction_=Math.max(0,param1-400);
          }
          x_=this.go_.x_;
          y_=this.go_.y_;
-         var _loc3_:int = int(this.lastUpdate_/bydewa);
+         var _loc3_:int = int(this.lastUpdateAction_/bydewa);
          while(_loc3_<int(param1/bydewa))
          {
             _loc4_=_loc3_*bydewa;
@@ -57,7 +57,7 @@ package pufupav
             map_.addObj(_loc5_,_loc8_,_loc9_);
             _loc3_++;
          }
-         this.lastUpdate_=param1;
+         this.lastUpdateAction_=param1;
          return true;
       }
    }

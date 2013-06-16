@@ -14,7 +14,7 @@ package mavew
    import com.company.util.BitmapUtil;
    import jediwip.Kybidu;
    import pilage.Warel;
-   import dasefezy.StatData;
+   import aaa.StatData;
    import hivaw.Woserev;
    import jediwip.Tunyhazo;
    import com.company.util.Coluf;

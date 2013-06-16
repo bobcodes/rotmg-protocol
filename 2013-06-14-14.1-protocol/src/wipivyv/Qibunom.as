@@ -1,6 +1,6 @@
 package wipivyv
 {
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
    import flash.utils.IDataInput;
 
 
@@ -9,12 +9,12 @@ package wipivyv
       public function Qibunom(param1:uint, param2:Function) {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         this.pos_=new Rimukiz();
+         this.pos_=new RotmgPoint();
          super(param1,param2);
          return;
       }
 
-      public var pos_:Rimukiz;
+      public var pos_:RotmgPoint;
 
       public var radius_:Number;
 

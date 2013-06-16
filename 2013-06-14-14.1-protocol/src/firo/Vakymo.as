@@ -1,6 +1,6 @@
 package firo
 {
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
    import flash.utils.IDataOutput;
 
 
@@ -9,14 +9,14 @@ package firo
       public function Vakymo(param1:uint, param2:Function) {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         this.position_=new Rimukiz();
+         this.position_=new RotmgPoint();
          super(param1,param2);
          return;
       }
 
       public var time_:int;
 
-      public var position_:Rimukiz;
+      public var position_:RotmgPoint;
 
       override public function writeToOutput(param1:IDataOutput) : void {
          var _loc2_:* = true;

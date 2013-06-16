@@ -1,12 +1,12 @@
 package pufupav
 {
    import flash.geom.Point;
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
 
 
    public class StreamEffect extends Miwimemo
    {
-      public function StreamEffect(param1:Rimukiz, param2:Rimukiz, param3:int) {
+      public function StreamEffect(param1:RotmgPoint, param2:RotmgPoint, param3:int) {
          var _loc4_:* = true;
          var _loc5_:* = false;
          super();

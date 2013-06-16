@@ -1,6 +1,6 @@
 package wipivyv
 {
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
    import flash.utils.IDataInput;
 
 
@@ -14,8 +14,8 @@ package wipivyv
       public function Bana(param1:uint, param2:Function) {
          var _loc3_:* = true;
          var _loc4_:* = false;
-         this.pos1_=new Rimukiz();
-         this.pos2_=new Rimukiz();
+         this.pos1_=new RotmgPoint();
+         this.pos2_=new RotmgPoint();
          super(param1,param2);
          return;
       }
@@ -64,9 +64,9 @@ package wipivyv
 
       public var targetObjectId_:int;
 
-      public var pos1_:Rimukiz;
+      public var pos1_:RotmgPoint;
 
-      public var pos2_:Rimukiz;
+      public var pos2_:RotmgPoint;
 
       public var color_:int;
 

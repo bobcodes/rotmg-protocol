@@ -40,18 +40,18 @@ package com.company.assembleegameclient.objects
 
       private var hehah:Dictionary;
 
-      private var lastUpdate_:int = -2147483648;
+      private var lastUpdateAction_:int = -2147483648;
 
       public function update(param1:int, param2:int) : void {
          var _loc8_:* = false;
          var _loc9_:* = true;
          var _loc4_:GameObject = null;
          var _loc5_:Player = null;
-         if(param1<this.lastUpdate_+500)
+         if(param1<this.lastUpdateAction_+500)
          {
             return;
          }
-         this.lastUpdate_=param1;
+         this.lastUpdateAction_=param1;
          this.gopodity.length=0;
          var _loc3_:Player = this.map_.player_;
          if(_loc3_==null)
@@ -93,7 +93,7 @@ package com.company.assembleegameclient.objects
          var _loc2_:* = false;
          var _loc3_:* = true;
          this.starred_[param1.accountId_]=1;
-         this.lastUpdate_=int.MIN_VALUE;
+         this.lastUpdateAction_=int.MIN_VALUE;
          this.map_.gs_.gsc_.editAccountList(0,true,param1.objectId_);
          return;
       }
@@ -103,7 +103,7 @@ package com.company.assembleegameclient.objects
          var _loc3_:* = true;
          GlobalNotificationActionte this.starred_[[param1.accountId_]];
          param1.starred_=false;
-         this.lastUpdate_=int.MIN_VALUE;
+         this.lastUpdateAction_=int.MIN_VALUE;
          this.map_.gs_.gsc_.editAccountList(0,false,param1.objectId_);
          return;
       }
@@ -117,7 +117,7 @@ package com.company.assembleegameclient.objects
          {
             _loc3_=param1.accountIds_[_loc2_];
             this.starred_[_loc3_]=1;
-            this.lastUpdate_=int.MIN_VALUE;
+            this.lastUpdateAction_=int.MIN_VALUE;
             _loc2_++;
          }
          return;
@@ -127,7 +127,7 @@ package com.company.assembleegameclient.objects
          var _loc2_:* = false;
          var _loc3_:* = true;
          this.hehah[param1.accountId_]=1;
-         this.lastUpdate_=int.MIN_VALUE;
+         this.lastUpdateAction_=int.MIN_VALUE;
          this.map_.gs_.gsc_.editAccountList(1,true,param1.objectId_);
          return;
       }
@@ -137,7 +137,7 @@ package com.company.assembleegameclient.objects
          var _loc3_:* = false;
          GlobalNotificationActionte this.hehah[[param1.accountId_]];
          param1.hehah=false;
-         this.lastUpdate_=int.MIN_VALUE;
+         this.lastUpdateAction_=int.MIN_VALUE;
          this.map_.gs_.gsc_.editAccountList(1,false,param1.objectId_);
          return;
       }
@@ -152,7 +152,7 @@ package com.company.assembleegameclient.objects
          {
             _loc3_=param1.accountIds_[_loc2_];
             this.hehah[_loc3_]=1;
-            this.lastUpdate_=int.MIN_VALUE;
+            this.lastUpdateAction_=int.MIN_VALUE;
             _loc2_++;
          }
          return;

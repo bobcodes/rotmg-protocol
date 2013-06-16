@@ -3,12 +3,12 @@ package pufupav
    import flash.geom.Point;
    import com.company.assembleegameclient.util.Kev;
    import com.company.assembleegameclient.objects.GameObject;
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
 
 
    public class Pedesom extends Miwimemo
    {
-      public function Pedesom(param1:GameObject, param2:Rimukiz, param3:int, param4:int) {
+      public function Pedesom(param1:GameObject, param2:RotmgPoint, param3:int, param4:int) {
          var _loc5_:* = false;
          var _loc6_:* = true;
          super();

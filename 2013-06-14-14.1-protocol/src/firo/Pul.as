@@ -1,7 +1,7 @@
 package firo
 {
    import dasefezy.Moceq;
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
    import flash.utils.IDataOutput;
 
 
@@ -11,7 +11,7 @@ package firo
          var _loc3_:* = false;
          var _loc4_:* = true;
          this.slotObject_=new Moceq();
-         this.itemUsePos_=new Rimukiz();
+         this.itemUsePos_=new RotmgPoint();
          super(param1,param2);
          return;
       }
@@ -20,7 +20,7 @@ package firo
 
       public var slotObject_:Moceq;
 
-      public var itemUsePos_:Rimukiz;
+      public var itemUsePos_:RotmgPoint;
 
       public var useType_:int;
 

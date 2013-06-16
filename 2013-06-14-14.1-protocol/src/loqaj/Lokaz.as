@@ -62,7 +62,7 @@ package loqaj
 
       public var dirisisy:Byz;
 
-      public var blockingItemUpdates:Boolean;
+      public var blockingItemUpdateActions:Boolean;
 
       public function guviqejy(param1:Array) : void {
          var _loc4_:* = false;
@@ -91,7 +91,7 @@ package loqaj
          {
             return false;
          }
-         if(this.blockingItemUpdates)
+         if(this.blockingItemUpdateActions)
          {
             return true;
          }

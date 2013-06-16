@@ -5,9 +5,9 @@ package pejycaj
    import flash.events.MouseEvent;
 
 
-   public class Jowofidas extends Kyjefe
+   public class PhysicalObjectDatafidas extends Kyjefe
    {
-      public function Jowofidas() {
+      public function PhysicalObjectDatafidas() {
          var _loc1_:* = true;
          var _loc2_:* = false;
          super();

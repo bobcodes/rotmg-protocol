@@ -1,13 +1,13 @@
-package dasefezy
+package aaa
 {
    import flash.geom.Point;
    import flash.utils.IDataInput;
    import flash.utils.IDataOutput;
 
 
-   public class Rimukiz extends Object
+   public class RotmgPoint extends Object
    {
-      public function Rimukiz() {
+      public function RotmgPoint() {
          var _loc1_:* = true;
          var _loc2_:* = false;
          super();

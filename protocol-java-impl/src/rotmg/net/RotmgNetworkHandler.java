@@ -104,10 +104,8 @@ public class RotmgNetworkHandler implements NetworkHandler, Closeable {
                     System.out.println("got unknown \tNO CLASS\t" + msgId + "\t" + payloadSize);
                 }
             } catch(IOException e) {
-                System.out.println("failed to parse\t" + msgId);
+                System.out.println("failed to parse\t" + msgId + "\t" + payloadSize);
             }
-            
-            //sendToNetwork(new EmptyAction());
         }
     }
     

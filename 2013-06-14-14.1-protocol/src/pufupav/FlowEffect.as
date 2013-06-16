@@ -2,12 +2,12 @@ package pufupav
 {
    import flash.geom.Point;
    import com.company.assembleegameclient.objects.GameObject;
-   import dasefezy.Rimukiz;
+   import dasefezy.RotmgPoint;
 
 
    public class FlowEffect extends Miwimemo
    {
-      public function FlowEffect(param1:Rimukiz, param2:GameObject, param3:int) {
+      public function FlowEffect(param1:RotmgPoint, param2:GameObject, param3:int) {
          var _loc4_:* = false;
          var _loc5_:* = true;
          super();

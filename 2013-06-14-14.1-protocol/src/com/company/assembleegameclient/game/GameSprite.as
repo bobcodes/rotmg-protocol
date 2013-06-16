@@ -431,7 +431,7 @@ package com.company.assembleegameclient.game
             this.mevi=true;
             gsc_.connect();
             this.dunyh.start(this);
-            lastUpdate_=getTimer();
+            lastUpdateAction_=getTimer();
             stage.addEventListener(Wofo.MONEY_CHANGED,this.wyqamip);
             stage.addEventListener(Event.ENTER_FRAME,this.onEnterFrame);
             Joqi.widenag(new Kedor(100,this.pofytem));
@@ -476,7 +476,7 @@ package com.company.assembleegameclient.game
          var _loc9_:* = false;
          var _loc7_:* = NaN;
          var _loc2_:int = getTimer();
-         var _loc3_:int = _loc2_-lastUpdate_;
+         var _loc3_:int = _loc2_-lastUpdateAction_;
          if(this.dunyh.update(_loc3_))
          {
             closed.dispatch();
@@ -534,7 +534,7 @@ package com.company.assembleegameclient.game
             }
             moveRecords_.addRecord(_loc2_,_loc5_.x_,_loc5_.y_);
          }
-         lastUpdate_=_loc2_;
+         lastUpdateAction_=_loc2_;
          var _loc6_:int = getTimer()-_loc2_;
          this.bilizaw.dispatch("GameSprite.loop",_loc6_);
          return;

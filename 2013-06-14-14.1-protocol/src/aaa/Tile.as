@@ -1,11 +1,11 @@
-package dasefezy
+package aaa
 {
    import flash.utils.IDataInput;
 
 
-   public class Hugotupi extends Object
+   public class Tile extends Object
    {
-      public function Hugotupi() {
+      public function Tile() {
          var _loc1_:* = true;
          var _loc2_:* = false;
          super();

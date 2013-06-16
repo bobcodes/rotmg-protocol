@@ -4,7 +4,7 @@ package ducojoryn
    import com.company.assembleegameclient.game.Pajemiz;
    import com.company.assembleegameclient.objects.Pet;
    import __AS3__.vec.Vector;
-   import dasefezy.StatData;
+   import aaa.StatData;
    import fanij.Kyruha;
    import fanij.Cun;
 

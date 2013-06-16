@@ -31,7 +31,7 @@ package com.company.assembleegameclient.game
 
       public var mui_:Tewezezu;
 
-      public var lastUpdate_:int;
+      public var lastUpdateAction_:int;
 
       public var moveRecords_:Dyluhadaz;
 

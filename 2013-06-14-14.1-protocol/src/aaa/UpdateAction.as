@@ -1,33 +1,31 @@
-package wipivyv
+package aaa
 {
    import __AS3__.vec.Vector;
-   import dasefezy.Hugotupi;
-   import dasefezy.Juqofip;
+   import aaa.Tile;
+   import aaa.PhysicalObject;
    import flash.utils.IDataInput;
    import com.company.assembleegameclient.util.Tocaniw;
 
 
-   public class Update extends Tezypama
+   public class UpdateAction extends Tezypama
    {
-      public function Update(param1:uint, param2:Function) {
+      public function UpdateAction(param1:uint, param2:Function) {
          var _loc3_:* = false;
          var _loc4_:* = true;
-         this.tiles_=new Vector.<Hugotupi>();
-         this.newObjs_=new Vector.<Juqofip>();
+         this.tiles_=new Vector.<Tile>();
+         this.newObjs_=new Vector.<PhysicalObject>();
          this.drops_=new Vector.<int>();
          super(param1,param2);
          return;
       }
 
-      public var tiles_:Vector.<Hugotupi>;
+      public var tiles_:Vector.<Tile>;
 
-      public var newObjs_:Vector.<Juqofip>;
+      public var newObjs_:Vector.<PhysicalObject>;
 
       public var drops_:Vector.<int>;
 
       override public function parseFromInput(param1:IDataInput) : void {
-         var _loc5_:* = true;
-         var _loc6_:* = false;
          var _loc2_:* = 0;
          var _loc3_:int = param1.readShort();
          _loc2_=_loc3_;
@@ -39,7 +37,7 @@ package wipivyv
          this.tiles_.length=Math.min(_loc3_,this.tiles_.length);
          while(this.tiles_.length<_loc3_)
          {
-            this.tiles_.push(Tocaniw.dyzovot(Hugotupi) as Hugotupi);
+            this.tiles_.push(Tocaniw.dyzovot(Tile) as Tile);
          }
          _loc2_=0;
          while(_loc2_<_loc3_)
@@ -58,7 +56,7 @@ package wipivyv
          this.newObjs_.length=Math.min(_loc3_,this.newObjs_.length);
          while(this.newObjs_.length<_loc3_)
          {
-            this.newObjs_.push(Tocaniw.dyzovot(Juqofip) as Juqofip);
+            this.newObjs_.push(Tocaniw.dyzovot(PhysicalObject) as PhysicalObject);
          }
          _loc2_=0;
          while(_loc2_<_loc3_)
